@@ -1,0 +1,17 @@
+{
+  "name": "unicorn-sovereign",
+  "version": "1.0.0",
+  "description": "Sovereign Marketing System — Self-Evolving AI Marketing Engine",
+  "type": "module",
+  "scripts": {
+    "scout": "node agents/scout/index.js",
+    "factory": "node agents/factory/index.js",
+    "factory:week": "node agents/factory/index.js --week",
+    "phoenix": "node agents/phoenix/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0"
+  }
+}

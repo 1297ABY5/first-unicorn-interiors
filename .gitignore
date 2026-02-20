@@ -1,0 +1,6 @@
+.env
+node_modules/
+*.log
+/var/log/sovereign/
+*.zip
+websites/

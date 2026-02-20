@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-02-20",
+  "notes": "All business-specific values (business name, service types, locations) come from /businesses/{name}/ config files at runtime. Do NOT hardcode business-specific enums here.",
+  "record_types": {
+    "organic_post": {
+      "fields": {
+        "id": "string — unique post identifier",
+        "business": "string — folder name from /businesses/",
+        "platform": "string — instagram|linkedin|tiktok|youtube|facebook|twitter|threads",
+        "type": "string — reel|carousel|single|story|short|article|text_post",
+        "hook_style": "string — question|statement|statistic|controversy|pov|before_after|how_to|listicle",
+        "topic": "string — from business content_themes in targets.md",
+        "service_featured": "string — from business services.md",
+        "location_mentioned": "string — from business locations.md or 'none'",
+        "posted_at": "datetime — ISO 8601",
+        "impressions": "integer",
+        "reach": "integer",
+        "saves": "integer",
+        "shares": "integer",
+        "comments": "integer",
+        "profile_visits": "integer",
+        "cta_clicks": "integer",
+        "dms_received": "integer",
+        "leads_generated": "integer",
+        "image_source": "string — real_photo|ai_generated|branded_graphic|stock|user_generated"
+      },
+      "score_formula": "leads_generated*100 + dms_received*50 + saves*10 + shares*5 + cta_clicks*20",
+      "rank_within": "business + platform + type"
+    },
+    "paid_ad": {
+      "fields": {
+        "id": "string — campaign/ad ID from platform",
+        "business": "string — folder name from /businesses/",
+        "platform": "string — google|meta|linkedin|tiktok|twitter",
+        "campaign_type": "string — search|pmax|display|awareness|consideration|conversion|lead_gen",
+        "headline": "string",
+        "creative_type": "string — image|video|carousel|text",
+        "hook_angle": "string — quality|price|urgency|social_proof|education|before_after|authority|fear",
+        "audience": "string — description of targeting",
+        "spend": "number — in business currency",
+        "impressions": "integer",
+        "clicks": "integer",
+        "ctr": "number — percentage",
+        "cpc": "number — in business currency",
+        "leads": "integer",
+        "cpl": "number — in business currency",
+        "primary_cta_clicks": "integer — WhatsApp clicks, trial signups, etc.",
+        "meetings_booked": "integer"
+      },
+      "score_formula": "meetings_booked*500 + leads*100 + primary_cta_clicks*50 - spend",
+      "rank_within": "business + platform + campaign_type"
+    },
+    "scraping_batch": {
+      "fields": {
+        "id": "string — batch identifier",
+        "business": "string — folder name from /businesses/",
+        "source": "string — from business scraping config",
+        "scraped_at": "datetime",
+        "records_found": "integer",
+        "records_qualified": "integer",
+        "outreach_sent": "integer",
+        "replies": "integer",
+        "meetings_booked": "integer"
+      },
+      "score_formula": "meetings_booked*500 + replies*50",
+      "rank_within": "business + source"
+    },
+    "followup_variant": {
+      "fields": {
+        "id": "string — variant identifier",
+        "business": "string — folder name from /businesses/",
+        "channel": "string — whatsapp|email|instagram_dm|linkedin_dm|sms|phone",
+        "sequence": "string — hot|warm|cold|post_quote|reactivation|referral",
+        "message_number": "integer — position in sequence",
+        "variant_label": "string — what's different about this variant",
+        "sent_count": "integer",
+        "reply_count": "integer",
+        "meetings_booked": "integer"
+      },
+      "score_formula": "meetings_booked*500 + reply_count*50",
+      "rank_within": "business + channel + sequence + message_number"
+    }
+  }
+}
