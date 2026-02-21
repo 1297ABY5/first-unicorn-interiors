@@ -1,0 +1,95 @@
+{
+  "content_type": "story_sequence",
+  "day_number": 7,
+  "day_theme": "Engagement",
+  "target_audience": "Premium Villa Owners (Primary)",
+  "service_focus": "villa-renovation",
+  "stories": [
+    {
+      "story_number": 1,
+      "visual_description": "Split-screen mood board — left side shows a warm, earthy villa interior (natural stone, timber accents, warm lighting, organic textures); right side shows a cool, minimal villa interior (white marble, brushed steel, floor-to-ceiling glass, monochrome palette). Both look premium. Bold 'A vs B' label centred across the divide. Unicorn Renovations logo top-right.",
+      "text_overlay": "Your villa. Your style. Which direction speaks to you? 👇",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "Which villa style is more YOU?",
+        "options": [
+          "Warm & Earthy 🌿",
+          "Cool & Minimal 🤍"
+        ]
+      }
+    },
+    {
+      "story_number": 2,
+      "visual_description": "Close-up behind-the-scenes clip or photo montage of the Unicorn Renovations in-house team at work — one shot of cabinetry being hand-fitted in a villa kitchen, one of a marble slab being measured, one of a project manager reviewing plans on-site. Warm, natural light. Feels real and human, not staged.",
+      "text_overlay": "Every room. Every detail. Every material. All handled by our in-house team — zero subcontractors. 🏡",
+      "sticker_type": "slider",
+      "sticker_config": {
+        "question": "How important is knowing exactly who is working in your home?",
+        "emoji": "🔑"
+      }
+    },
+    {
+      "story_number": 3,
+      "visual_description": "Elegant mood board graphic — four quadrant tiles showing: (1) a chef-worthy kitchen with handcrafted cabinetry and stone countertops, (2) a spa-style bathroom with floor-to-ceiling marble, (3) a light-filled living area with custom joinery and glass partition, (4) a landscaped outdoor terrace with pool. Subtle Unicorn Renovations branding bottom-left. Soft gold overlay on the grid lines.",
+      "text_overlay": "If you were renovating your villa tomorrow — which space would you tackle first? 👇",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "First room you'd renovate?",
+        "options": [
+          "Kitchen 🍳",
+          "Bathrooms 🚿"
+        ]
+      }
+    },
+    {
+      "story_number": 4,
+      "visual_description": "Clean, text-led story with a soft blurred villa background. A bold question sits centre-screen in large type. Small Unicorn Renovations wordmark top-left. Feels conversational and direct — like a message from a trusted friend, not a brand.",
+      "text_overlay": "What's the one thing holding you back from starting your villa renovation? We read every reply. 💬",
+      "sticker_type": "question",
+      "sticker_config": {
+        "prompt": "Tell us honestly — what's stopping you? 👇"
+      }
+    },
+    {
+      "story_number": 5,
+      "visual_description": "Side-by-side A vs B comparison — left shows an open-plan living and dining area with the kitchen fully integrated, flowing into the lounge (open plan); right shows a traditional layout with distinct, separate rooms (defined rooms). Both beautifully finished. Clean graphic labels: 'A — Open Plan' and 'B — Defined Rooms'. Feels like a real design decision, not a generic poll.",
+      "text_overlay": "2026 villa living — what's your preference? 🏡",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "How do you like your villa layout?",
+        "options": [
+          "Open Plan 🌊",
+          "Defined Rooms 🚪"
+        ]
+      }
+    },
+    {
+      "story_number": 6,
+      "visual_description": "Short, punchy text story — dark background with warm gold typography. A quick stat sits boldly in the centre, designed to stop the thumb. Unicorn Renovations logo small at the top. Feels confident, not salesy.",
+      "text_overlay": "800+ villa renovations completed across Dubai 🏆\n\n98% delivered within quote.\n1-year craftsmanship warranty on every project.\n\nSmarter renovations. No surprises.",
+      "sticker_type": "slider",
+      "sticker_config": {
+        "question": "How confident are you in your current renovation plan?",
+        "emoji": "💪"
+      }
+    },
+    {
+      "story_number": 7,
+      "visual_description": "Bright, premium final story — a stunning full-villa transformation hero image showing a completed Unicorn Renovations project (living area flowing to outdoors, immaculate finishes, natural light flooding in). Bold CTA text overlaid at the bottom third. Unicorn Renovations logo and tagline at top. WhatsApp icon visible near the link sticker. Feels like a natural, warm invitation — not a hard sell.",
+      "text_overlay": "Ready to start planning your villa renovation? 🦄\n\nWhatsApp us — we'll have your free consultation booked and a quote back within 48 hours. No pressure. No hidden costs. Just honest advice.",
+      "sticker_type": "link",
+      "sticker_config": {
+        "url": "https://wa.me/971526455121",
+        "label": "WhatsApp Us — Free Consultation 💬"
+      }
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-02-21T22:06:52.756Z",
+    "model": "claude-sonnet-4-6",
+    "business_slug": "unicorn-renovations",
+    "trend_informed": true,
+    "input_tokens": 2417,
+    "output_tokens": 1445
+  }
+}

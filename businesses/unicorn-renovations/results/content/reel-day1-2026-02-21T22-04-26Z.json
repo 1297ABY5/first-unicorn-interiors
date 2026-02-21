@@ -1,0 +1,57 @@
+{
+  "content_type": "reel",
+  "day_number": 1,
+  "day_theme": "Showcase",
+  "target_audience": "Premium Villa Owners (Primary)",
+  "service_focus": "villa-renovation",
+  "hook_text": "This villa changed everything.",
+  "scenes": [
+    {
+      "timestamp": "0-3s",
+      "visual": "Dramatic low-angle shot of the finished villa entrance — polished marble floors, statement chandelier, clean architectural lines. High contrast, cinematic grade. Text overlay fades in over the image.",
+      "text_overlay": "This villa changed everything.",
+      "voiceover": null
+    },
+    {
+      "timestamp": "3-8s",
+      "visual": "Quick cuts of the before state — worn flooring, dated kitchen cabinetry, scuffed walls, tired bathroom tiles. Slightly desaturated to emphasise the contrast to come.",
+      "text_overlay": null,
+      "voiceover": "This Dubai Hills villa was ten years old and showing every one of them. The owners loved their home — they just couldn't see its potential anymore."
+    },
+    {
+      "timestamp": "8-20s",
+      "visual": "Fast-cut sequence of the transformation in progress — our in-house team installing bespoke joinery, laying large-format marble, fitting frameless glass shower enclosures, hanging custom cabinetry, tiling the pool deck. Text overlays appear briefly across cuts.",
+      "text_overlay": "100% in-house. Zero subcontractors.",
+      "voiceover": "Every single person on site was our team. No subcontractors, no strangers in your home. From the joinery built in our workshop to the waterproofing laid before a single tile was placed — every detail handled by us, with daily WhatsApp updates keeping the owners in the loop throughout."
+    },
+    {
+      "timestamp": "20-28s",
+      "visual": "Slow cinematic reveal — camera glides from the entrance hall through to the open-plan living space, sweeping into the kitchen, then a master bathroom, ending on the pool area at golden hour. Rich colour grade, steady movement, no cuts — pure reveal.",
+      "text_overlay": null,
+      "voiceover": "The result? A home that finally reflects the life they've built here. Completed on time, on budget, with a 1-year craftsmanship warranty — and a family who haven't stopped sending us photos since."
+    },
+    {
+      "timestamp": "28-30s",
+      "visual": "Unicorn Renovations logo fades in on a clean dark background. CTA text appears beneath.",
+      "text_overlay": "WhatsApp us for a free consultation",
+      "voiceover": null
+    }
+  ],
+  "voiceover_full": "This Dubai Hills villa was ten years old and showing every one of them. The owners loved their home — they just couldn't see its potential anymore. Every single person on site was our team. No subcontractors, no strangers in your home. From the joinery built in our workshop to the waterproofing laid before a single tile was placed — every detail handled by us, with daily WhatsApp updates keeping the owners in the loop throughout. The result? A home that finally reflects the life they've built here. Completed on time, on budget, with a 1-year craftsmanship warranty — and a family who haven't stopped sending us photos since.",
+  "voiceover_word_count": 109,
+  "caption": {
+    "story": "Ten years of wear doesn't happen overnight — and neither does a transformation like this. This Dubai Hills villa went from tired and dated to something its owners are genuinely proud to come home to, every single day. Every room. Every material. Every detail. All handled by our in-house team, start to finish.",
+    "detail": "Full turnkey villa renovation — bespoke joinery, large-format marble, frameless glass works, anti-leak waterproofing systems, and a complete pool deck upgrade. 800+ villas transformed across Dubai. 98% of projects completed within the original quote. Fixed pricing, no hidden costs, and a 1-year craftsmanship warranty on every job we touch.",
+    "cta": "Thinking about transforming your villa? Let's talk — no pressure, no obligation. WhatsApp us for a free consultation → https://wa.me/971526455121",
+    "hashtags": "#UnicornRenovations #DubaiVillaRenovation #VillaTransformation #DubaiLuxuryHomes #VillaFitOut #InteriorDesignDubai #DubaiInteriors #DubaiHills #DubaiDesign #JoineryDubai #WaterproofingDubai #GlassWorks #SwimmingPoolDubai",
+    "location_tag": "Dubai Hills, Dubai"
+  },
+  "metadata": {
+    "generated_at": "2026-02-21T22:04:26.697Z",
+    "model": "claude-sonnet-4-6",
+    "business_slug": "unicorn-renovations",
+    "trend_informed": true,
+    "input_tokens": 2580,
+    "output_tokens": 1166
+  }
+}

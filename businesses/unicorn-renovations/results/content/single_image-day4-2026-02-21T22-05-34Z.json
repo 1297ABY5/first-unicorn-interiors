@@ -1,0 +1,25 @@
+{
+  "content_type": "single_image",
+  "day_number": 4,
+  "day_theme": "Trust",
+  "target_audience": "Premium Villa Owners (Primary)",
+  "service_focus": "glass-aluminium",
+  "image_direction": "differentiation",
+  "image_description": "A branded graphic split into two columns. Left column labelled 'Industry Standard' with a muted grey background and bullet points in plain text. Right column labelled 'Unicorn Renovations' with a deep charcoal or navy background, warm gold accent line, and bullet points in white. The Unicorn Renovations logo sits cleanly at the bottom centre. No stock photography — pure typographic brand graphic with subtle glass texture or frosted overlay element in the background to tie to the Glass & Aluminium theme.",
+  "text_overlay": "Not all glass work is equal. Here's what sets ours apart.",
+  "caption": {
+    "story": "When a villa owner in Emirates Hills came to us after a shower enclosure installed by another team started leaking within eight months, we knew exactly what had gone wrong — and exactly how to fix it. Our specialist glass team, led by Rajeev with over a decade of precision fitting experience, doesn't just install glass. They engineer it. Every seal, every bracket, every measurement is done in-house, on-site, by the same hands from start to finish.",
+    "detail": "Here's what our Glass & Aluminium Works actually includes that many teams skip: precision-templated measurements before a single panel is cut, anti-corrosion aluminium profiles rated for Dubai's humidity, silicon sealing applied in controlled layers — not rushed in one pass — and a full fit inspection before we hand back your space. No subcontractors. No handoffs. No surprises. From AED 45,000.",
+    "cta": "If your villa has glass that isn't performing the way it should — or you're planning a new shower enclosure, balustrade, or partition — let's talk. WhatsApp us for a free consultation and a 48-hour quote: https://wa.me/971526455121",
+    "hashtags": "#UnicornRenovations #GlassWorks #DubaiVillaRenovation #VillaFitOut #DubaiLuxuryHomes #InteriorDesignDubai #EmiratesHills #PalmJumeirah #DubaiHills #DubaiInteriors #JoineryDubai #VillaTransformation",
+    "location_tag": "Dubai, United Arab Emirates"
+  },
+  "metadata": {
+    "generated_at": "2026-02-21T22:05:34.643Z",
+    "model": "claude-sonnet-4-6",
+    "business_slug": "unicorn-renovations",
+    "trend_informed": true,
+    "input_tokens": 2363,
+    "output_tokens": 606
+  }
+}

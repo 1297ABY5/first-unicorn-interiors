@@ -1,0 +1,57 @@
+{
+  "content_type": "reel",
+  "day_number": 5,
+  "day_theme": "Showcase",
+  "target_audience": "Apartment & Townhouse Upgraders (Secondary)",
+  "service_focus": "joinery-cabinetry",
+  "hook_text": "Your walls are wasted space.",
+  "scenes": [
+    {
+      "timestamp": "0-3s",
+      "visual": "Tight close-up of a cluttered, bare-walled bedroom corner — clothes on a chair, boxes on the floor, no storage in sight. Shot is slightly moody, handheld feel. Text overlay slams on screen.",
+      "text_overlay": "Your walls are wasted space.",
+      "voiceover": null
+    },
+    {
+      "timestamp": "3-8s",
+      "visual": "Wide shot of the same room — cramped, generic wardrobe pushed against the wall, mismatched furniture. Camera slowly pans across the chaos.",
+      "text_overlay": null,
+      "voiceover": "This bedroom had the same square footage it always did. The problem wasn't the space — it was what was being done with it."
+    },
+    {
+      "timestamp": "8-20s",
+      "visual": "Timelapse sequence: our workshop team measuring and cutting panels, close-up of smooth-grain timber being routed, hands fitting soft-close hinges, units being loaded into a van branded with Unicorn Renovations. Cut to on-site: in-house team assembling floor-to-ceiling wardrobe panels, precision fitting around ceiling coving, close-up of internal pull-out drawers being slid into place, LED strip lights being fitted inside the unit. Text overlay appears mid-sequence.",
+      "text_overlay": "Built in our workshop. Fitted by our team.",
+      "voiceover": "Every piece is built to measure in our own workshop — then installed by the same team who made it. No subcontractors, no strangers in your home. Just craftsmen who take it personally."
+    },
+    {
+      "timestamp": "20-28s",
+      "visual": "Slow cinematic reveal — camera starts at the floor and glides upward along the finished floor-to-ceiling fitted wardrobe. Warm internal lighting glows from inside open panels. Neatly organised interiors visible. Cut to a wide shot of the transformed bedroom — clean, calm, considered. Owner walks in frame, opens a drawer effortlessly, smiles.",
+      "text_overlay": null,
+      "voiceover": "Same room. Same square footage. Smarter space — and a 1-year craftsmanship warranty on every piece we make."
+    },
+    {
+      "timestamp": "28-30s",
+      "visual": "Unicorn Renovations logo fades in on a clean white or deep charcoal background. WhatsApp CTA text appears beneath it.",
+      "text_overlay": "WhatsApp us for a free consultation",
+      "voiceover": null
+    }
+  ],
+  "voiceover_full": "This bedroom had the same square footage it always did. The problem wasn't the space — it was what was being done with it. Every piece is built to measure in our own workshop — then installed by the same team who made it. No subcontractors, no strangers in your home. Just craftsmen who take it personally. Same room. Same square footage. Smarter space — and a 1-year craftsmanship warranty on every piece we make.",
+  "voiceover_word_count": 79,
+  "caption": {
+    "story": "The most common thing we hear after a joinery fit-out? 'I can't believe I lived without this.' This bedroom didn't need knocking down or extending — it needed smarter built-in storage, designed around how the owner actually lives. In 2026, that's the renovation conversation Dubai homeowners are having: not bigger, but better.",
+    "detail": "This floor-to-ceiling fitted wardrobe was designed, built in our own workshop, and installed entirely by our in-house team — from first measurement to final soft-close hinge. Bespoke joinery starts from AED 35,000, and you'll receive a 48-hour quote and daily WhatsApp photo updates throughout your project.",
+    "cta": "Ready to stop wasting wall space? WhatsApp us for a free consultation and let's design something built for your life → https://wa.me/971526455121",
+    "hashtags": "#UnicornRenovations #JoineryDubai #DubaiInteriors #InteriorDesignDubai #VillaFitOut #DubaiLuxuryHomes #DubaiDesign #DubaiHills #ArabianRanches #TheSprings #JumeirahIslands",
+    "location_tag": "Dubai, United Arab Emirates"
+  },
+  "metadata": {
+    "generated_at": "2026-02-21T22:05:58.321Z",
+    "model": "claude-sonnet-4-6",
+    "business_slug": "unicorn-renovations",
+    "trend_informed": true,
+    "input_tokens": 2601,
+    "output_tokens": 1158
+  }
+}

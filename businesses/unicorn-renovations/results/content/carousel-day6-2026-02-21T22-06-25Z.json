@@ -1,0 +1,64 @@
+{
+  "content_type": "carousel",
+  "day_number": 6,
+  "day_theme": "Education/Trust",
+  "hook_format": "listicle",
+  "target_audience": "Investors & Property Managers (Tertiary)",
+  "service_focus": "swimming-pool",
+  "slides": [
+    {
+      "slide_number": 1,
+      "purpose": "hook",
+      "text": "5 pool renovation mistakes that cost Dubai investors time, money, and tenants 🏊‍♂️"
+    },
+    {
+      "slide_number": 2,
+      "purpose": "context",
+      "text": "With 180,000 new units entering Dubai's market by 2028, your property needs every edge it can get.\n\nA tired, cracked, or poorly maintained pool isn't just an eyesore — it's a vacancy risk.\n\nHere are the five mistakes we see investors make again and again. And how to avoid every single one."
+    },
+    {
+      "slide_number": 3,
+      "purpose": "detail",
+      "text": "❌ Mistake #1: Skipping waterproofing and paying for it twice\n\nPoor waterproofing is the number one cause of structural damage in Dubai pools. Water migrates into the shell, the deck, and eventually the surrounding structure.\n\n✅ What we do: Anti-leak waterproofing systems are built into every pool renovation as standard — not an optional extra. It's why our work carries a 1-year craftsmanship warranty."
+    },
+    {
+      "slide_number": 4,
+      "purpose": "detail",
+      "text": "❌ Mistake #2: Using subcontractors who disappear mid-project\n\nA pool renovation halted halfway through means a property that can't be listed — and rental income that evaporates by the day.\n\n✅ What we do: Our pool team is 100% in-house. No subcontractors. No handoffs. No delays caused by third parties who don't show up. Your timeline is our timeline."
+    },
+    {
+      "slide_number": 5,
+      "purpose": "detail",
+      "text": "❌ Mistake #3: Renovating the pool and ignoring the deck\n\nA gleaming pool next to cracked, faded deck tiling tells every prospective tenant exactly what the landlord thinks of the property.\n\n✅ What we do: We handle pool renovation, deck tiling, and outdoor living areas as a complete package — from AED 80,000. One team. One timeline. One finish that photographs well and rents faster.\n\n📸 You receive daily WhatsApp photo updates throughout. No chasing. No guessing."
+    },
+    {
+      "slide_number": 6,
+      "purpose": "reveal",
+      "text": "A renovated pool with proper waterproofing, quality deck tiling, and a clean outdoor living space doesn't just look better.\n\nIt justifies a higher asking rent.\nIt attracts better-quality tenants.\nIt photographs in a way that stops the scroll on Bayut and Property Finder.\n\nIn a market where 180,000 new units are coming, the properties that win are the ones that look and feel like they were designed for 2026 — not 2014.\n\nThat's exactly what we build. 🦄"
+    },
+    {
+      "slide_number": 7,
+      "purpose": "cta",
+      "text": "Ready to renovate your pool before your next listing?\n\nWe'll give you a fixed, transparent quote within 48 hours — no hidden costs, no surprises.\n\n💬 WhatsApp us now → https://wa.me/971526455121\n\nServing Palm Jumeirah, Emirates Hills, Arabian Ranches, Dubai Hills & Al Barari."
+    }
+  ],
+  "caption": {
+    "story": "Dubai investors are smart — but even smart investors make costly pool renovation mistakes that delay listings and eat into rental yield. We've completed pool renovations across 800+ villas in Dubai, and the same five errors come up time and again. This carousel breaks them down so you don't have to learn the hard way.",
+    "detail": "Every pool renovation we carry out includes anti-leak waterproofing systems as standard, deck tiling, and outdoor living areas — delivered by our 100% in-house team with daily WhatsApp photo updates and a fixed price from AED 80,000.",
+    "cta": "💬 WhatsApp us for a free consultation and a 48-hour quote → https://wa.me/971526455121",
+    "hashtags": "#UnicornRenovations #SwimmingPoolDubai #DubaiVillaRenovation #VillaTransformation #DubaiLuxuryHomes #WaterproofingDubai #VillaFitOut #PalmJumeirah #EmiratesHills #ArabianRanches #DubaiHills #DubaiInteriors #DubaiDesign",
+    "location_tag": "Dubai, UAE"
+  },
+  "visual_direction": {
+    "slide_1_image": "Dramatic split-image: left side shows a cracked, algae-stained pool with faded deck tiles; right side shows a crystal-clear renovated pool with premium stone deck tiling and lush outdoor furniture — bold white text overlaid on a dark gradient for contrast. Unicorn Renovations branding in the bottom corner.",
+    "overall_style": "mixed"
+  },
+  "metadata": {
+    "generated_at": "2026-02-21T22:06:25.202Z",
+    "model": "claude-sonnet-4-6",
+    "business_slug": "unicorn-renovations",
+    "trend_informed": true,
+    "input_tokens": 2795,
+    "output_tokens": 1349
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "content_type": "story_sequence",
+  "day_number": 3,
+  "day_theme": "Behind-the-scenes",
+  "target_audience": "Investors & Property Managers (Tertiary)",
+  "service_focus": "bathroom-renovation",
+  "stories": [
+    {
+      "story_number": 1,
+      "visual_description": "Close-up time-lapse or short video clip of a bathroom stripped back to bare walls and concrete floor — exposed pipes, raw substrate, nothing hidden. Unicorn Renovations logo watermark in corner. Warm, confident brand colour overlay (subtle).",
+      "text_overlay": "This is where every great bathroom renovation actually begins 👇",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "How many of your bathrooms have had waterproofing issues?",
+        "options": [
+          "At least one 😬",
+          "None so far 🤞"
+        ]
+      }
+    },
+    {
+      "story_number": 2,
+      "visual_description": "Team member (in Unicorn Renovations branded workwear) applying liquid waterproofing membrane across the bathroom floor and up the walls — methodical, precise, professional. A text badge in the corner reads: '100% in-house team. Zero subcontractors.'",
+      "text_overlay": "Layer 1 of our anti-leak waterproofing system going in. No shortcuts. No strangers. Our team only. 🛡️",
+      "sticker_type": "slider",
+      "sticker_config": {
+        "question": "How confident are you in your current bathroom waterproofing?",
+        "emoji": "💧"
+      }
+    },
+    {
+      "story_number": 3,
+      "visual_description": "Split-screen or quick-cut montage: left side shows a competitor-style rushed tiling job straight onto bare walls (no waterproofing visible, anonymous imagery — no brand names); right side shows the Unicorn team applying a second waterproofing coat with care. Bold dividing line between the two. Text is punchy and direct.",
+      "text_overlay": "With 180,000 new units hitting Dubai's market by 2028, tenants have options. A leaking bathroom is a vacancy waiting to happen. ⚠️",
+      "sticker_type": "null",
+      "sticker_config": null
+    },
+    {
+      "story_number": 4,
+      "visual_description": "Overhead POV shot of a craftsman laying large-format floor-to-ceiling marble slabs with precision — hands in frame, spirit level visible, absolute focus on alignment. The bathroom is starting to look premium. Brand watermark visible.",
+      "text_overlay": "Floor-to-ceiling marble. Every joint checked. Every tile set by hand. 🏛️\nThis is what 15+ years looks like on site.",
+      "sticker_type": "question",
+      "sticker_config": {
+        "prompt": "What's the biggest headache you've had with a previous bathroom renovation?"
+      }
+    },
+    {
+      "story_number": 5,
+      "visual_description": "Close-up slow-motion shot of a frameless glass shower enclosure being fitted — the glass catching the light beautifully, a craftsman aligning the frame with precision. Clean, luxurious, aspirational. Text overlaid cleanly.",
+      "text_overlay": "Frameless glass. Premium fixtures. The finish your tenants notice — and the reason they renew. ✨",
+      "sticker_type": "slider",
+      "sticker_config": {
+        "question": "How much do bathroom finishes influence your rental yield?",
+        "emoji": "💰"
+      }
+    },
+    {
+      "story_number": 6,
+      "visual_description": "Screen-style graphic designed to look like a WhatsApp message thread — showing the kind of daily photo update investors receive. Mock messages read: 'Waterproofing layer 2 complete ✅', 'Marble installation underway 📸', 'On schedule for Friday handover'. Clean, relatable, reassuring. Unicorn Renovations branding visible.",
+      "text_overlay": "Every project. Every day. You get a WhatsApp photo update — whether you're in Dubai or abroad. 📲\nNo chasing. No guessing.",
+      "sticker_type": "null",
+      "sticker_config": null
+    },
+    {
+      "story_number": 7,
+      "visual_description": "Polished final reveal shot of the completed bathroom — floor-to-ceiling marble, frameless glass shower, premium fixtures gleaming under warm lighting. Feels like a 5-star hotel. Text is clean and bold. CTA link sticker placed prominently at the bottom.",
+      "text_overlay": "Bathroom renovations from AED 65,000. 1-year waterproofing warranty included as standard. 48-hour quote guaranteed. 🦄\nReady to protect your investment?",
+      "sticker_type": "link",
+      "sticker_config": {
+        "url": "https://wa.me/971526455121",
+        "label": "WhatsApp Us — Free Consultation"
+      }
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-02-21T22:05:19.711Z",
+    "model": "claude-sonnet-4-6",
+    "business_slug": "unicorn-renovations",
+    "trend_informed": true,
+    "input_tokens": 2444,
+    "output_tokens": 1277
+  }
+}

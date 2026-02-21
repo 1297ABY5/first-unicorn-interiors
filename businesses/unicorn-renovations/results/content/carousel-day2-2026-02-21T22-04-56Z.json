@@ -1,0 +1,64 @@
+{
+  "content_type": "carousel",
+  "day_number": 2,
+  "day_theme": "Education",
+  "hook_format": "listicle",
+  "target_audience": "Apartment & Townhouse Upgraders (Secondary)",
+  "service_focus": "kitchen-renovation",
+  "slides": [
+    {
+      "slide_number": 1,
+      "purpose": "hook",
+      "text": "5 things to check before renovating your kitchen in Dubai 🍳"
+    },
+    {
+      "slide_number": 2,
+      "purpose": "context",
+      "text": "Most kitchen renovations in Dubai go over budget — not because the work was expensive, but because homeowners didn't know what to ask before they started.\n\nWe've completed 800+ villa and home renovations across Dubai. These are the five things we wish every client knew on day one."
+    },
+    {
+      "slide_number": 3,
+      "purpose": "detail",
+      "text": "1️⃣ Know what's behind your walls\n\nOld plumbing and hidden electrical runs can add cost and time if discovered mid-project. Ask your contractor to do a proper site assessment before a single tile is touched.\n\nAt Unicorn Renovations, this is included before we quote — no surprises, no excuses."
+    },
+    {
+      "slide_number": 4,
+      "purpose": "detail",
+      "text": "2️⃣ Understand your quote — line by line\n\nA low headline number often hides what's not included: appliance installation, stone fabrication, finishing works.\n\nOur quotes are fixed and fully itemised. Cabinetry, premium stone countertops, integrated appliances — every line is visible before you commit. 98% of our projects are completed within the original quote."
+    },
+    {
+      "slide_number": 5,
+      "purpose": "detail",
+      "text": "3️⃣ Ask who is actually doing the work\n\nMany contractors hand your project to whoever is available. That's how quality slips.\n\nOur entire team is in-house — joiners, fitters, tilers, electricians. Zero subcontractors. Zero strangers in your home. And you'll get daily WhatsApp photo updates so you always know what's happening.\n\n4️⃣ Set a realistic timeline — and protect it\n\nA kitchen renovation typically takes 4–8 weeks depending on scope. Build in a buffer. Agree on milestones in writing. A good contractor will welcome the structure.\n\n5️⃣ Think smarter, not just prettier\n\nIn 2026, the best kitchen upgrades aren't about looks alone — they're about how the space actually works for you. Handcrafted cabinetry built to your layout. Stone surfaces that last a decade. Integrated appliances that free up worktop space. That's a kitchen built for how you live."
+    },
+    {
+      "slide_number": 6,
+      "purpose": "reveal",
+      "text": "When all five boxes are ticked, something shifts.\n\nYou stop dreading your kitchen — and start actually enjoying it.\n\nThat worktop you've been eating breakfast on. The cabinet that finally holds everything. The morning light hitting stone that didn't exist six weeks ago.\n\nIt's not just a renovation. It's the part of your home you use every single day, finally working the way it should. ✨"
+    },
+    {
+      "slide_number": 7,
+      "purpose": "cta",
+      "text": "Ready to renovate your kitchen the right way? 🏡\n\nWe offer a free consultation and a detailed quote within 48 hours — fixed pricing, no hidden costs.\n\nWhatsApp us now 👇\nwa.me/971526455121\n\nOr save this post for when you're ready to start."
+    }
+  ],
+  "caption": {
+    "story": "Most kitchen renovation headaches aren't caused by the renovation itself — they're caused by not asking the right questions beforehand. After 800+ renovations across Dubai, we know exactly where things go wrong, and how to make sure they don't. This carousel breaks down the five checks every homeowner should make before a single cabinet is touched.",
+    "detail": "From fixed, fully itemised quotes and 100% in-house tradespeople to handcrafted cabinetry and premium stone countertops built around your layout — our kitchens start from AED 120,000 and are designed for how you actually live.",
+    "cta": "WhatsApp us for a free consultation → https://wa.me/971526455121 — we'll have your quote back within 48 hours.",
+    "hashtags": "#UnicornRenovations #KitchenRenovationDubai #DubaiInteriors #DubaiLuxuryHomes #VillaFitOut #InteriorDesignDubai #JoineryDubai #DubaiDesign #DubaiHills #ArabianRanches",
+    "location_tag": "Dubai, United Arab Emirates"
+  },
+  "visual_direction": {
+    "slide_1_image": "A bold, clean graphic with a dark background — deep charcoal or navy — and the headline text in crisp white. A subtle background image of a beautifully lit kitchen with stone countertops and handle-less cabinetry sits behind a semi-transparent overlay. The Unicorn Renovations logo sits small at the bottom right. Feels premium, editorial, and educational rather than salesy.",
+    "overall_style": "mixed"
+  },
+  "metadata": {
+    "generated_at": "2026-02-21T22:04:56.042Z",
+    "model": "claude-sonnet-4-6",
+    "business_slug": "unicorn-renovations",
+    "trend_informed": true,
+    "input_tokens": 2810,
+    "output_tokens": 1363
+  }
+}
