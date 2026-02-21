@@ -8,6 +8,8 @@
     "factory": "node agents/factory/index.js",
     "factory:week": "node agents/factory/index.js --week",
     "phoenix": "node agents/phoenix/index.js",
+    "darwin": "node agents/darwin/index.js",
+    "darwin:report": "node agents/darwin/index.js --report",
     "telegram:briefing": "node integrations/telegram-bot.js briefing",
     "telegram:weekly": "node integrations/telegram-bot.js weekly",
     "telegram:test": "node integrations/telegram-bot.js test"

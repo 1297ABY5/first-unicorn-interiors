@@ -77,6 +77,56 @@ function buildTrendContext(trends) {
     : '';
 }
 
+// --- Darwin performance loader ---
+
+/**
+ * Load latest Darwin performance recommendations (past 7 days).
+ */
+async function loadLatestDarwin(businessSlug) {
+  const darwinDir = join(BUSINESSES_DIR, businessSlug, 'results', 'darwin');
+  const today = new Date();
+
+  for (let i = 0; i < 7; i++) {
+    const date = new Date(today - i * 86400000).toISOString().split('T')[0];
+    const filePath = join(darwinDir, `${date}.json`);
+    try {
+      await access(filePath);
+      const data = JSON.parse(await readFile(filePath, 'utf-8'));
+      console.log(`  [generator] Loaded Darwin insights from ${date}`);
+      return data;
+    } catch {
+      continue;
+    }
+  }
+  return null;
+}
+
+/**
+ * Build a Darwin context block for injection into prompts.
+ */
+function buildDarwinContext(darwin) {
+  if (!darwin?.recommendations) return '';
+
+  const r = darwin.recommendations;
+  const parts = [
+    'PERFORMANCE INSIGHTS FROM LAST WEEK (from Darwin analysis):',
+  ];
+
+  if (r.create_more) parts.push(`- Create more: ${r.create_more}`);
+  if (r.stop_creating) parts.push(`- Stop creating: ${r.stop_creating}`);
+  if (r.focus_audience) parts.push(`- Focus audience: ${r.focus_audience}`);
+  if (r.focus_platform) parts.push(`- Focus platform: ${r.focus_platform}`);
+  if (r.bold_experiment) parts.push(`- Bold experiment: ${r.bold_experiment}`);
+
+  if (darwin.content_performance?.topics_that_resonate?.length) {
+    parts.push(`- Topics that resonated: ${darwin.content_performance.topics_that_resonate.join(', ')}`);
+  }
+
+  parts.push('\nApply these insights where relevant. Prioritise the recommended content types and audience focus.');
+
+  return '\n\n' + parts.join('\n');
+}
+
 // --- Prompt builders ---
 
 function buildSystemPrompt(brand, services, audiences) {
@@ -370,7 +420,14 @@ export async function generateContent(assignment, brand, services, audiences) {
     userPrompt += buildTrendContext(trends);
   }
 
-  console.log(`  [generator] Calling ${MODEL} for ${assignment.type}${trends ? ' (trend-informed)' : ''}...`);
+  // Inject Darwin performance insights if available
+  const darwin = await loadLatestDarwin(brand.slug);
+  if (darwin) {
+    userPrompt += buildDarwinContext(darwin);
+  }
+
+  const flags = [trends && 'trend', darwin && 'darwin'].filter(Boolean).join('+');
+  console.log(`  [generator] Calling ${MODEL} for ${assignment.type}${flags ? ` (${flags}-informed)` : ''}...`);
 
   const response = await getClient().messages.create({
     model: MODEL,
@@ -402,6 +459,7 @@ export async function generateContent(assignment, brand, services, audiences) {
     model: MODEL,
     business_slug: brand.slug,
     trend_informed: !!trends,
+    darwin_informed: !!darwin,
     input_tokens: response.usage?.input_tokens,
     output_tokens: response.usage?.output_tokens,
   };

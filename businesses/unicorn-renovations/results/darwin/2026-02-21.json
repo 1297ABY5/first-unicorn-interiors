@@ -1,0 +1,63 @@
+{
+  "content_performance": {
+    "summary": "Ten pieces of content were produced this week with reasonable format diversity across reels, carousels, single images, and story sequences. However, story sequences were heavily over-represented at four posts, all concentrated on Day 7 and all targeting the same primary audience for the same service. The two reels and two carousels were the standout formats, with strong hooks and captions suggesting higher engagement potential. The single image and story sequences lack the narrative depth or algorithmic reach of video and carousel formats.",
+    "top_performing_types": [
+      "reel",
+      "carousel"
+    ],
+    "topics_that_resonate": [
+      "Before-and-after villa transformations",
+      "Cost and mistake avoidance for investors",
+      "Joinery and space optimisation",
+      "Trust-building through problem-solving case studies"
+    ],
+    "content_variety_score": "needs_improvement"
+  },
+  "trend_accuracy": {
+    "summary": "Trend intelligence for the week was strong and well-sourced, with three highly relevant angles identified. Content did pick up on villa renovation as a value strategy and the smarter-not-bigger angle appeared in the joinery reel. However, the competitive urgency angle around Dubai's 180,000 incoming units was not directly addressed in any caption or hook, and the investment-framing angle was only partially used in the investor-facing pool carousel rather than being applied across primary audience content.",
+    "accurate_predictions": [
+      "Smarter space utilisation angle applied effectively in the joinery reel for secondary audience",
+      "Renovation as property value strategy reflected in villa transformation reel",
+      "Investor-focused education content aligned with pool renovation carousel"
+    ],
+    "missed_opportunities": [
+      "Competitive urgency angle — no content directly referenced Dubai's incoming housing supply or the risk of holding an unrenovated villa in a crowded market",
+      "Investment framing was underused for primary audience villa renovation content, which defaulted to aesthetic showcase rather than asset protection messaging",
+      "No content leveraged the Dubai population surge narrative to create urgency for apartment upgraders or property managers"
+    ]
+  },
+  "lead_quality": {
+    "summary": "No leads were received this week. This is a significant performance gap and should be treated as the primary concern for next week. With ten pieces of content produced, the absence of any lead activity suggests either insufficient call-to-action conversion pathways, content not yet generating enough reach or engagement, or a lag effect where leads are expected to follow in subsequent days.",
+    "total_leads": 0,
+    "hot_leads": 0,
+    "top_sources": [],
+    "top_services": []
+  },
+  "recommendations": {
+    "create_more": "Create reels and carousels with direct investment-framing hooks targeting Premium Villa Owners — specifically content that positions renovation as an asset protection and rental yield strategy. Use the competitive urgency angle ('Dubai's market is changing — is your villa ready?') as a hook structure. Produce at least two reels this week with strong before-and-after narratives tied to measurable outcomes such as rental premium or resale value uplift.",
+    "stop_creating": "Stop producing multiple story sequences targeting the same audience and service in a single day without differentiated messaging. Four near-identical story sequences on Day 7 for villa renovation adds no incremental value and dilutes content budget. Story sequences should complement anchor content, not replace it. Deprioritise story-only days entirely until lead volume recovers.",
+    "focus_audience": "Focus primarily on Premium Villa Owners next week, but shift messaging from aesthetic showcase to financial and strategic urgency. This is the highest-value segment and the investment-framing angle from trend intelligence is currently underleveraged for this group. Secondary effort should go to Investors and Property Managers using the competitive market supply angle.",
+    "focus_platform": "Prioritise Instagram Reels this week. Reels offer the highest organic reach potential and the two produced this week had the strongest hooks and captions of all content generated. Concentrate creative effort on producing three polished reels rather than spreading production across lower-impact formats. Ensure each reel includes a clear call-to-action driving to DM or a consultation link.",
+    "bold_experiment": "Produce a 60-second reel framed as 'The Dubai Villa Renovation Risk Report' — speaking directly to villa owners about what happens to property value when surrounding homes are renovated and theirs is not. Use real Dubai Hills or Emirates Hills context, cite the 180,000 new units statistic, and end with a direct consultation CTA. This urgency-driven, data-informed format has not been tested yet and could significantly outperform standard showcase content."
+  },
+  "config_adjustments": [
+    "Add a hard cap of two story sequences per week to prevent format over-indexing and force production effort toward higher-reach formats",
+    "Introduce a mandatory CTA review step for all content — every piece should have a trackable action (DM prompt, link in bio, consultation booking) to convert reach into leads",
+    "Update content brief templates to require trend angle integration at the hook level, not just in captions — this week's trend angles were present but buried rather than leading",
+    "Consider shifting Day 7 content generation to earlier in the week (Days 1-2) so momentum builds across the week rather than clustering output at the end",
+    "Add investment and yield-focused messaging as a required angle for all primary audience villa renovation content until lead volume recovers"
+  ],
+  "weekly_grade": "C",
+  "one_line_summary": "A creatively capable but conversion-empty week — ten solid pieces of content produced with no leads generated, revealing an urgent need to shift from awareness-mode messaging to urgency-driven, call-to-action-led content strategy.",
+  "metadata": {
+    "business": "unicorn-renovations",
+    "generated_at": "2026-02-21T22:16:13.707Z",
+    "model": "claude-sonnet-4-6",
+    "data_window_days": 7,
+    "content_pieces_analysed": 10,
+    "leads_analysed": 0,
+    "trend_reports_analysed": 1,
+    "input_tokens": 1166,
+    "output_tokens": 1339
+  }
+}

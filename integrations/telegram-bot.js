@@ -252,6 +252,65 @@ export async function sendWeeklySummary() {
   return sendAlert(lines.join('\n'));
 }
 
+/**
+ * Send the Darwin weekly performance report to Commander.
+ */
+export async function sendWeeklyDarwinReport() {
+  const entries = await readdir(BUSINESSES_DIR, { withFileTypes: true }).catch(() => []);
+  const businesses = entries
+    .filter(e => e.isDirectory() && !e.name.startsWith('.'))
+    .map(e => e.name);
+
+  for (const slug of businesses) {
+    const darwinDir = join(BUSINESSES_DIR, slug, 'results', 'darwin');
+    const today = new Date().toISOString().split('T')[0];
+
+    // Try today, then yesterday (Darwin runs Saturday 8am, telegram 10am)
+    let analysis = null;
+    for (const date of [today, new Date(Date.now() - 86400000).toISOString().split('T')[0]]) {
+      try {
+        analysis = JSON.parse(await readFile(join(darwinDir, `${date}.json`), 'utf-8'));
+        break;
+      } catch { continue; }
+    }
+
+    if (!analysis) continue;
+
+    const r = analysis.recommendations || {};
+    const cp = analysis.content_performance || {};
+    const lq = analysis.lead_quality || {};
+    const grade = analysis.weekly_grade || '?';
+
+    const lines = [
+      `🧬 <b>Darwin Weekly Report — ${slug}</b>`,
+      ``,
+      `<b>Grade:</b> ${grade}`,
+      `<b>Summary:</b> ${analysis.one_line_summary || 'N/A'}`,
+      ``,
+      `📊 <b>Content Performance</b>`,
+      cp.summary ? cp.summary.slice(0, 200) : 'No data',
+      `Variety: ${cp.content_variety_score || 'N/A'}`,
+      ``,
+      `👤 <b>Lead Quality</b>`,
+      `Total: ${lq.total_leads ?? 0} | Hot: ${lq.hot_leads ?? 0}`,
+      lq.summary ? lq.summary.slice(0, 150) : 'No leads this week',
+      ``,
+      `🎯 <b>Next Week</b>`,
+      `• More: ${(r.create_more || 'N/A').slice(0, 100)}`,
+      `• Stop: ${(r.stop_creating || 'N/A').slice(0, 100)}`,
+      `• Focus: ${(r.focus_audience || 'N/A').slice(0, 80)}`,
+      `• Experiment: ${(r.bold_experiment || 'N/A').slice(0, 100)}`,
+    ];
+
+    if (analysis.config_adjustments?.length) {
+      lines.push(``, `⚙️ <b>Config Suggestions</b>`);
+      analysis.config_adjustments.slice(0, 3).forEach(a => lines.push(`• ${a.slice(0, 120)}`));
+    }
+
+    await sendAlert(lines.join('\n'));
+  }
+}
+
 // CLI mode: run briefing or alert directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   const cmd = process.argv[2];
@@ -262,12 +321,16 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     await sendMorningBriefing();
   } else if (cmd === 'weekly') {
     await sendWeeklySummary();
+    await sendWeeklyDarwinReport();
+  } else if (cmd === 'darwin') {
+    await sendWeeklyDarwinReport();
   } else if (cmd === 'test') {
     await sendAlert('🧪 <b>Test alert</b>\n\nSovereign Telegram integration is working.');
   } else {
-    console.log('Usage: node integrations/telegram-bot.js [briefing|weekly|test]');
+    console.log('Usage: node integrations/telegram-bot.js [briefing|weekly|darwin|test]');
     console.log('  briefing  — send morning briefing');
-    console.log('  weekly    — send weekly summary');
+    console.log('  weekly    — send weekly summary + Darwin report');
+    console.log('  darwin    — send Darwin report only');
     console.log('  test      — send test alert');
   }
 }

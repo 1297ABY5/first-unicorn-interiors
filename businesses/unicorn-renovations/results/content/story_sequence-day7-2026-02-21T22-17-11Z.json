@@ -1,0 +1,96 @@
+{
+  "content_type": "story_sequence",
+  "day_number": 7,
+  "day_theme": "Engagement",
+  "target_audience": "Premium Villa Owners (Primary)",
+  "service_focus": "villa-renovation",
+  "stories": [
+    {
+      "story_number": 1,
+      "visual_description": "Split-screen mood board: Left side shows a dated villa interior — beige walls, tired marble, dated cabinetry. Right side shows a transformed version of the same space — rich stone, bespoke joinery, dramatic lighting. Bold dividing line down the centre with a subtle Unicorn Renovations watermark at the bottom.",
+      "text_overlay": "Your villa is one of your biggest assets in Dubai. Are you treating it like one? 👇",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "How would you describe your villa right now?",
+        "options": [
+          "Ready to impress",
+          "Due for a refresh"
+        ]
+      }
+    },
+    {
+      "story_number": 2,
+      "visual_description": "Two full-screen mood board panels shown side by side, labelled 'A' and 'B'. Option A: Warm, earthy tones — travertine stone, walnut joinery, aged brass fixtures, soft ambient lighting. Option B: Cool, contemporary monochrome — polished concrete effect, gloss white cabinetry, chrome fixtures, dramatic downlighting. Both feel luxurious but distinctly different. Unicorn Renovations branding at the top.",
+      "text_overlay": "A vs B — which renovation direction speaks to you? 🏡",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "Which style would you choose for your villa?",
+        "options": [
+          "A — Warm & Earthy",
+          "B — Cool & Contemporary"
+        ]
+      }
+    },
+    {
+      "story_number": 3,
+      "visual_description": "Behind-the-scenes photo collage from an active Unicorn Renovations full villa project — in-house team members laying large-format stone tiles, a joinery specialist fitting bespoke cabinetry, and a project manager reviewing plans on-site. Warm, natural light. Feels real and trustworthy. Text overlaid cleanly on a semi-transparent dark band.",
+      "text_overlay": "Every person you see here is part of our in-house team. No subcontractors. Ever. 800+ Dubai villas transformed — and counting. 💪",
+      "sticker_type": "slider",
+      "sticker_config": {
+        "question": "How important is it that the same team handles your entire renovation?",
+        "emoji": "🔑"
+      }
+    },
+    {
+      "story_number": 4,
+      "visual_description": "Clean, editorial-style graphic with a bold question centred on screen. Background is a softly blurred image of a stunning renovated villa living room — open plan, floor-to-ceiling glazing, lush greenery visible outside. Unicorn Renovations branding top right.",
+      "text_overlay": "Dubai just crossed 4 million residents. 180,000 new units are entering the market by 2028. What's your villa's plan? 🤔",
+      "sticker_type": "question",
+      "sticker_config": {
+        "prompt": "What's the one thing you'd most like to change about your villa right now?"
+      }
+    },
+    {
+      "story_number": 5,
+      "visual_description": "Elegant two-panel comparison visual. Top panel: A villa living and dining area before renovation — functional but flat, dated finishes, low ceilings feeling. Bottom panel: The same space after a Unicorn Renovations full villa transformation — custom joinery, statement stone feature wall, integrated lighting, frameless glass balustrade on the staircase. Clean 'Before' and 'After' labels in the Unicorn brand font.",
+      "text_overlay": "This is what a full turnkey transformation looks like. Every room. Every detail. Every material — chosen and installed by us. ✨",
+      "sticker_type": "slider",
+      "sticker_config": {
+        "question": "How much would a transformation like this change how you feel about your home?",
+        "emoji": "😍"
+      }
+    },
+    {
+      "story_number": 6,
+      "visual_description": "Bold, high-contrast graphic on a deep charcoal background with the Unicorn Renovations logo centred. Key trust signals listed in clean white text with subtle gold accent lines between each point. Feels premium and reassuring rather than salesy.",
+      "text_overlay": "Why villa owners across Palm Jumeirah, Emirates Hills and Dubai Hills trust us:\n\n✅ 100% in-house team — zero subcontractors\n✅ Fixed pricing — no hidden costs\n✅ Daily WhatsApp photo updates\n✅ 1-year craftsmanship warranty\n✅ 48-hour quote guarantee",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "Which of these matters most to you?",
+        "options": [
+          "No hidden costs",
+          "Daily updates"
+        ]
+      }
+    },
+    {
+      "story_number": 7,
+      "visual_description": "Warm, inviting final story — a beautifully lit renovated villa entrance hall or grand living space, full-bleed photography. Subtle dark gradient overlay at the bottom third. Unicorn Renovations logo top centre. CTA text is clean and prominent. Feels like an invitation, not an advert.",
+      "text_overlay": "Ready to find out what your villa could become? 💬 WhatsApp us for a free consultation — we'll get back to you within 48 hours, no pressure, no obligation.",
+      "sticker_type": "link",
+      "sticker_config": {
+        "url": "https://wa.me/971526455121",
+        "label": "WhatsApp Us Free Consultation"
+      }
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-02-21T22:17:11.102Z",
+    "model": "claude-sonnet-4-6",
+    "business_slug": "unicorn-renovations",
+    "trend_informed": true,
+    "darwin_informed": true,
+    "input_tokens": 2929,
+    "output_tokens": 1480
+  }
+}
