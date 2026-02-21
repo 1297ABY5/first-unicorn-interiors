@@ -1,8 +1,9 @@
 import Anthropic from '@anthropic-ai/sdk';
-import { readFile } from 'node:fs/promises';
+import { readFile, access } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const ROOT = process.env.SOVEREIGN_DATA_DIR || join(import.meta.dirname, '..', '..');
+const BUSINESSES_DIR = join(ROOT, 'businesses');
 const MODEL = process.env.FACTORY_MODEL || 'claude-sonnet-4-6';
 const MAX_TOKENS = 4096;
 
@@ -10,6 +11,70 @@ let client = null;
 function getClient() {
   if (!client) client = new Anthropic();
   return client;
+}
+
+// --- Trend loader ---
+
+/**
+ * Load latest trend intelligence from Scout.
+ * Checks today first, then yesterday. Returns null if none found.
+ */
+async function loadLatestTrends(businessSlug) {
+  const trendsDir = join(BUSINESSES_DIR, businessSlug, 'results', 'trends');
+  const today = new Date();
+  const dates = [
+    today.toISOString().split('T')[0],
+    new Date(today - 86400000).toISOString().split('T')[0],
+  ];
+
+  for (const date of dates) {
+    const filePath = join(trendsDir, `${date}.json`);
+    try {
+      await access(filePath);
+      const data = JSON.parse(await readFile(filePath, 'utf-8'));
+      console.log(`  [generator] Loaded trend intelligence from ${date}`);
+      return data;
+    } catch {
+      continue;
+    }
+  }
+  return null;
+}
+
+/**
+ * Build a trend context block for injection into prompts.
+ */
+function buildTrendContext(trends) {
+  if (!trends) return '';
+
+  const parts = [];
+
+  if (trends.recommended_angles?.length) {
+    parts.push('TRENDING ANGLES (use one of these to make content timely):');
+    trends.recommended_angles.forEach((a, i) => parts.push(`${i + 1}. ${typeof a === 'string' ? a : a.angle || JSON.stringify(a)}`));
+  }
+
+  if (trends.trending_topics?.length) {
+    parts.push('\nTRENDING TOPICS:');
+    trends.trending_topics.forEach(t => {
+      const topic = typeof t === 'string' ? t : t.topic || '';
+      const why = typeof t === 'string' ? '' : t.why_relevant ? ` — ${t.why_relevant}` : '';
+      parts.push(`- ${topic}${why}`);
+    });
+  }
+
+  if (trends.content_opportunities?.length) {
+    parts.push('\nCONTENT OPPORTUNITIES:');
+    trends.content_opportunities.forEach(c => {
+      const title = typeof c === 'string' ? c : c.title || '';
+      const format = c.format ? ` (${c.format})` : '';
+      parts.push(`- ${title}${format}`);
+    });
+  }
+
+  return parts.length > 0
+    ? '\n\n' + parts.join('\n') + '\n\nIncorporate a trending angle into the content if it fits naturally. Do not force it.'
+    : '';
 }
 
 // --- Prompt builders ---
@@ -297,9 +362,15 @@ export async function generateContent(assignment, brand, services, audiences) {
 
   const buildUserPrompt = PROMPT_BUILDERS[assignment.type];
   if (!buildUserPrompt) throw new Error(`Unknown content type: ${assignment.type}`);
-  const userPrompt = buildUserPrompt(assignment, brand, services, audiences);
+  let userPrompt = buildUserPrompt(assignment, brand, services, audiences);
 
-  console.log(`  [generator] Calling ${MODEL} for ${assignment.type}...`);
+  // Inject trend intelligence if available
+  const trends = await loadLatestTrends(brand.slug);
+  if (trends) {
+    userPrompt += buildTrendContext(trends);
+  }
+
+  console.log(`  [generator] Calling ${MODEL} for ${assignment.type}${trends ? ' (trend-informed)' : ''}...`);
 
   const response = await getClient().messages.create({
     model: MODEL,
@@ -330,6 +401,7 @@ export async function generateContent(assignment, brand, services, audiences) {
     generated_at: new Date().toISOString(),
     model: MODEL,
     business_slug: brand.slug,
+    trend_informed: !!trends,
     input_tokens: response.usage?.input_tokens,
     output_tokens: response.usage?.output_tokens,
   };

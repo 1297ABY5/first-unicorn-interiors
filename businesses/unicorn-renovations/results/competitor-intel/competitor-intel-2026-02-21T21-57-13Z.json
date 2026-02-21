@@ -1,0 +1,56 @@
+[
+  {
+    "business": "unicorn-renovations",
+    "competitor": "Luxury Renovations Dubai",
+    "platform": "instagram",
+    "date": "2026-02-21",
+    "observation": "Failed to scrape Instagram profile @N/A",
+    "suggested_response": "Retry next cycle — may be rate-limited or private",
+    "urgency": "low"
+  },
+  {
+    "business": "unicorn-renovations",
+    "competitor": "Luxury Renovations Dubai",
+    "platform": "website",
+    "date": "2026-02-21",
+    "observation": "Failed to scrape website: N/A",
+    "suggested_response": "Retry next cycle — check if URL is valid",
+    "urgency": "low"
+  },
+  {
+    "business": "unicorn-renovations",
+    "competitor": "Desert Group",
+    "platform": "instagram",
+    "date": "2026-02-21",
+    "observation": "Failed to scrape Instagram profile @desertgroup",
+    "suggested_response": "Retry next cycle — may be rate-limited or private",
+    "urgency": "low"
+  },
+  {
+    "business": "unicorn-renovations",
+    "competitor": "Desert Group",
+    "platform": "website",
+    "date": "2026-02-21",
+    "observation": "Homepage snapshot: Skip to content\n\n“Enhancing lives is our passion.”\n\nFacebookLinkedinX-twitter\n\nIlluminating the fairways with innovation and expertise—Desert Group celebrates the reopening of Montgomerie Golf Club, now shining brighter with cutting-edge Bermuda grass and energy-efficient LED lights.\n\n#DesertGroup #GolfCourse #Partnership #MontgomerieGolfClub #EuropeanGolfDesign\n\n“Enhancing lives is our passion.”\n\nFacebookLinkedinX-twitter\n\nBringing vision and precision to every green, Desert Group stands as a testament to timeless golf course artistry. Crafting more than just fairways—we sculpt experiences...",
+    "suggested_response": "Compare service positioning — identify gaps in our messaging",
+    "urgency": "low"
+  },
+  {
+    "business": "unicorn-renovations",
+    "competitor": "Zen Interiors",
+    "platform": "instagram",
+    "date": "2026-02-21",
+    "observation": "Failed to scrape Instagram profile @zeninteriors",
+    "suggested_response": "Retry next cycle — may be rate-limited or private",
+    "urgency": "low"
+  },
+  {
+    "business": "unicorn-renovations",
+    "competitor": "Zen Interiors",
+    "platform": "website",
+    "date": "2026-02-21",
+    "observation": "Homepage snapshot: This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.",
+    "suggested_response": "Compare service positioning — identify gaps in our messaging",
+    "urgency": "low"
+  }
+]

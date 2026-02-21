@@ -1,0 +1,94 @@
+{
+  "content_type": "story_sequence",
+  "day_number": 7,
+  "day_theme": "Engagement",
+  "target_audience": "Premium Villa Owners (Primary)",
+  "service_focus": "villa-renovation",
+  "stories": [
+    {
+      "story_number": 1,
+      "visual_description": "A stunning split-screen: left side shows a tired, dated villa interior with beige walls, old marble and heavy curtains; right side shows the same space completely transformed — open-plan, light stone, high ceilings with concealed lighting. Bold 'BEFORE vs AFTER' label across the centre in white.",
+      "text_overlay": "This is what 800+ villa renovations taught us. ✨\nEvery room has a hidden story.",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "Which side feels more like YOU?",
+        "options": [
+          "I'm living the BEFORE 😬",
+          "I'm already the AFTER 🙌"
+        ]
+      }
+    },
+    {
+      "story_number": 2,
+      "visual_description": "A beautifully composed mood board for a full villa renovation — two contrasting palettes side by side. Style A: Warm Organic — travertine stone, warm oak joinery, aged brass fixtures, linen textures, earthy greens. Style B: Cool Contemporary — white Carrara marble, matte black hardware, smoked glass, deep navy accents, polished concrete floors. Both look luxurious and liveable.",
+      "text_overlay": "Two directions. One question.\nWhich villa story would you tell?",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "Your dream villa aesthetic?",
+        "options": [
+          "A — Warm & Organic 🌿",
+          "B — Cool & Contemporary 🖤"
+        ]
+      }
+    },
+    {
+      "story_number": 3,
+      "visual_description": "Close-up behind-the-scenes footage of our in-house team at work — a craftsman laying large-format stone tiles with precision, another carefully fitting bespoke joinery units into a villa living room. Soft natural light floods the space. A small 'NO SUBCONTRACTORS — EVER' badge appears in the corner.",
+      "text_overlay": "Every single person on your project is our person. 💪\n100% in-house. Zero strangers in your home.",
+      "sticker_type": "slider",
+      "sticker_config": {
+        "question": "How important is knowing exactly WHO is working in your home?",
+        "emoji": "🔑"
+      }
+    },
+    {
+      "story_number": 4,
+      "visual_description": "A clean, minimal graphic — soft off-white background with a single question in elegant serif font centred on screen. Small Unicorn Renovations logo sits quietly at the bottom. The tone feels like a trusted conversation, not a sales pitch.",
+      "text_overlay": "We want to hear from you. 👇",
+      "sticker_type": "question",
+      "sticker_config": {
+        "prompt": "What's the ONE room in your villa you'd renovate first if budget wasn't a concern? 🏡"
+      }
+    },
+    {
+      "story_number": 5,
+      "visual_description": "A warm, editorial-style flat lay of renovation planning materials — material swatches, stone samples, cabinetry finish cards, a project timeline sheet, and a phone showing a WhatsApp conversation with daily photo updates. Everything arranged on a light marble surface. Feels aspirational but real.",
+      "text_overlay": "From first mood board to final handover —\nwe manage every detail. 📋✨\n\nFixed pricing. Daily updates. 1-year warranty.",
+      "sticker_type": "poll",
+      "sticker_config": {
+        "question": "What worries you most about renovating?",
+        "options": [
+          "Hidden costs 💸",
+          "Unreliable contractors 😤"
+        ]
+      }
+    },
+    {
+      "story_number": 6,
+      "visual_description": "A short looping video clip — a wide-angle shot slowly revealing a breathtaking completed villa living space in Palm Jumeirah or Dubai Hills. Herringbone oak flooring, bespoke built-in cabinetry, concealed lighting, floor-to-ceiling glass doors opening to a pool terrace. The Unicorn Renovations logo fades in softly at the top.",
+      "text_overlay": "This could be your villa. 🦄\n\nTurnkey renovation from AED 300,000.\nEvery room. Every detail. Done properly.",
+      "sticker_type": "slider",
+      "sticker_config": {
+        "question": "How ready are you to start your renovation journey?",
+        "emoji": "🚀"
+      }
+    },
+    {
+      "story_number": 7,
+      "visual_description": "Bold, confident closing story — deep charcoal background with the Unicorn Renovations logo prominent at the top. Below it, a clean white headline. A WhatsApp green CTA button sits clearly in the lower third. Small text beneath lists key trust signals in a single line. Feels premium and direct.",
+      "text_overlay": "Ready to talk about your villa? 🏡\n\nWe'll give you a full consultation — no pressure, no jargon.\nJust honest advice from 15+ years of Dubai renovations.\n\n📲 WhatsApp us today — we reply fast.",
+      "sticker_type": "link",
+      "sticker_config": {
+        "url": "https://wa.me/971526455121",
+        "label": "Get Your Free Consultation 💬"
+      }
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-02-21T21:15:01.868Z",
+    "model": "claude-sonnet-4-6",
+    "business_slug": "unicorn-renovations",
+    "input_tokens": 1925,
+    "output_tokens": 1417
+  }
+}
