@@ -10,6 +10,7 @@ import { generateFollowUp } from './message-generator.js';
 import {
   loadLeadInbox, loadExistingLead, saveLead, saveMessage, archiveInboxItem,
 } from './lead-store.js';
+import { sendHotLeadAlert } from '../../integrations/telegram-bot.js';
 
 const ROOT = process.env.SOVEREIGN_DATA_DIR || join(import.meta.dirname, '..', '..');
 const BUSINESSES_DIR = join(ROOT, 'businesses');
@@ -115,6 +116,9 @@ async function processLeads(slug, configs) {
       if (lead.tier === 'hot') {
         hotLeads++;
         console.log(`  [${slug}] 🔥 HOT LEAD: ${lead.name || leadId} (score: ${lead.score})`);
+        sendHotLeadAlert(lead, brand).catch(err =>
+          console.error(`  [${slug}] Telegram alert failed: ${err.message}`)
+        );
       }
 
       // Guardrail checks

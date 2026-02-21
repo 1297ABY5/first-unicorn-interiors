@@ -7,11 +7,15 @@
     "scout": "node agents/scout/index.js",
     "factory": "node agents/factory/index.js",
     "factory:week": "node agents/factory/index.js --week",
-    "phoenix": "node agents/phoenix/index.js"
+    "phoenix": "node agents/phoenix/index.js",
+    "telegram:briefing": "node integrations/telegram-bot.js briefing",
+    "telegram:weekly": "node integrations/telegram-bot.js weekly",
+    "telegram:test": "node integrations/telegram-bot.js test"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
     "axios": "^1.7.0",
-    "dotenv": "^16.4.0"
+    "dotenv": "^16.4.0",
+    "node-telegram-bot-api": "^0.67.0"
   }
 }
