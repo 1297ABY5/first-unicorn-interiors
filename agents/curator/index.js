@@ -10,7 +10,7 @@ import { getStats, appendLog } from './logger.js';
 
 // ─── SCAN ────────────────────────────────────────────────
 
-async function scan({ force = false } = {}) {
+async function scan({ force = false, limit = 0 } = {}) {
   console.log('[curator] Scanning vault/originals/ for new photos...\n');
 
   let files;
@@ -21,13 +21,18 @@ async function scan({ force = false } = {}) {
     return;
   }
 
-  const images = files.filter(isImage);
+  let images = files.filter(isImage);
   if (images.length === 0) {
     console.log('[curator] No images found in vault/originals/');
     return;
   }
 
-  console.log(`[curator] Found ${images.length} images`);
+  if (limit > 0 && images.length > limit) {
+    console.log(`[curator] Found ${images.length} images, limiting to ${limit}`);
+    images = images.slice(0, limit);
+  } else {
+    console.log(`[curator] Found ${images.length} images`);
+  }
 
   // Process in batches
   const filePaths = images.map(f => join(CONFIG.paths.originals, f));
@@ -212,10 +217,12 @@ async function runTest() {
 const command = process.argv[2];
 const arg = process.argv[3];
 const force = process.argv.includes('--force');
+const limitFlag = process.argv.find(a => a.startsWith('--limit='));
+const limit = limitFlag ? parseInt(limitFlag.split('=')[1], 10) : 0;
 
 switch (command) {
   case 'scan':
-    scan({ force }).catch(err => {
+    scan({ force, limit }).catch(err => {
       console.error(`[curator] Fatal: ${err.message}`);
       process.exit(1);
     });

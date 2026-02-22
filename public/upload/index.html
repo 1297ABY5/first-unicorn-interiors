@@ -267,6 +267,40 @@
     <!-- Recent thumbnails -->
     <div class="section-title" id="recentTitle" style="display:none">Recent Uploads</div>
     <div class="thumbnails hidden" id="thumbnails"></div>
+
+    <!-- TAB DIVIDER -->
+    <div style="margin:28px 0 16px;border-top:1px solid #222;"></div>
+
+    <!-- Curated Gallery -->
+    <div id="curatedSection">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <div class="section-title" style="margin:0">Curated Gallery</div>
+        <button id="refreshCurated" style="background:none;border:1px solid #333;color:#888;border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;">Refresh</button>
+      </div>
+
+      <div class="stats hidden" id="curatedStats">
+        <div><div class="stat-num" id="curatedTotal">0</div><div class="stat-label">Curated</div></div>
+        <div><div class="stat-num" id="heroTotal">0</div><div class="stat-label">Heroes</div></div>
+        <div><div class="stat-num" id="skipTotal">0</div><div class="stat-label">Skipped</div></div>
+      </div>
+
+      <!-- Category filter pills -->
+      <div id="catPills" class="brand-pills" style="margin-bottom:14px;"></div>
+
+      <!-- Gallery grid -->
+      <div id="curatedGallery" class="thumbnails" style="grid-template-columns:repeat(auto-fill,minmax(110px,1fr));"></div>
+
+      <div id="curatedEmpty" style="text-align:center;color:#555;font-size:13px;padding:20px 0;display:none;">
+        No curated photos yet. Run curator:scan to process uploads.
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:999;justify-content:center;align-items:center;flex-direction:column;padding:20px;">
+      <button id="lbClose" style="position:absolute;top:16px;right:16px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;">&times;</button>
+      <img id="lbImg" style="max-width:100%;max-height:80vh;border-radius:8px;">
+      <div id="lbCaption" style="color:#c8a55e;margin-top:12px;font-size:13px;text-align:center;max-width:90%;"></div>
+    </div>
   </div>
 
   <script>
@@ -483,7 +517,102 @@
           ).join('');
         }
       } catch { /* ignore */ }
+      loadCurated();
     }
+
+    // ─── CURATED GALLERY ──────────────────────
+    let curatedData = null;
+    let activeCategory = 'all';
+
+    async function loadCurated() {
+      try {
+        const res = await fetch(`${API_BASE}/api/curated`, { headers: headers() });
+        if (!res.ok) return;
+        curatedData = await res.json();
+
+        document.getElementById('curatedTotal').textContent = curatedData.totalCurated;
+        document.getElementById('heroTotal').textContent = curatedData.heroCount;
+        document.getElementById('skipTotal').textContent = curatedData.skippedCount;
+
+        if (curatedData.totalCurated > 0) {
+          document.getElementById('curatedStats').classList.remove('hidden');
+          document.getElementById('curatedEmpty').style.display = 'none';
+          renderCatPills();
+          renderCuratedGrid('all');
+        } else {
+          document.getElementById('curatedEmpty').style.display = 'block';
+        }
+      } catch { /* ignore */ }
+    }
+
+    function renderCatPills() {
+      const pills = document.getElementById('catPills');
+      const cats = Object.keys(curatedData.categories);
+      const priorityOrder = ['hero-shots', 'kitchen/after', 'bathroom/after', 'pool/after', 'exterior/after', 'living-room/after'];
+      cats.sort((a, b) => {
+        const ai = priorityOrder.indexOf(a), bi = priorityOrder.indexOf(b);
+        if (ai !== -1 && bi !== -1) return ai - bi;
+        if (ai !== -1) return -1;
+        if (bi !== -1) return 1;
+        return a.localeCompare(b);
+      });
+
+      let html = `<div class="brand-pill active" data-cat="all">All (${curatedData.totalCurated})</div>`;
+      for (const cat of cats) {
+        const count = curatedData.categories[cat].length;
+        if (count === 0) continue;
+        const label = cat.replace(/\//g, ' / ').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        html += `<div class="brand-pill" data-cat="${cat}">${label} (${count})</div>`;
+      }
+      pills.innerHTML = html;
+
+      pills.addEventListener('click', e => {
+        const pill = e.target.closest('.brand-pill');
+        if (!pill) return;
+        pills.querySelectorAll('.brand-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        activeCategory = pill.dataset.cat;
+        renderCuratedGrid(activeCategory);
+      });
+    }
+
+    function renderCuratedGrid(category) {
+      const grid = document.getElementById('curatedGallery');
+      let photos = [];
+      if (category === 'all') {
+        for (const arr of Object.values(curatedData.categories)) photos.push(...arr);
+      } else {
+        photos = curatedData.categories[category] || [];
+      }
+
+      if (photos.length === 0) {
+        grid.innerHTML = '<div style="color:#555;font-size:13px;grid-column:1/-1;text-align:center;padding:20px;">No photos in this category</div>';
+        return;
+      }
+
+      grid.innerHTML = photos.map(p =>
+        `<div class="thumb" onclick="openLightbox('${p.url}','${p.name.replace(/'/g, '')}')">` +
+        `<img src="${p.url}" alt="${p.name}" loading="lazy" onerror="this.parentElement.style.background='#333'">` +
+        `</div>`
+      ).join('');
+    }
+
+    // ─── LIGHTBOX ─────────────────────────────
+    function openLightbox(url, caption) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lbImg').src = url;
+      document.getElementById('lbCaption').textContent = caption;
+      lb.style.display = 'flex';
+    }
+
+    document.getElementById('lbClose').addEventListener('click', () => {
+      document.getElementById('lightbox').style.display = 'none';
+    });
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if (e.target === e.currentTarget) document.getElementById('lightbox').style.display = 'none';
+    });
+
+    document.getElementById('refreshCurated').addEventListener('click', loadCurated);
   </script>
 </body>
 </html>

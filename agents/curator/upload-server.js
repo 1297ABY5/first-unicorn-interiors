@@ -112,14 +112,80 @@ app.get('/api/status', auth, (_req, res) => {
   res.json({ todayCount, totalCount: allImages.length, recentFiles: files });
 });
 
+// ─── CURATED GALLERY ENDPOINT ────────────────────────────
+
+const CURATED_DIR = '/root/unicorn-sovereign/vault/curated';
+const MANIFEST_PATH = '/root/unicorn-sovereign/vault/curated/manifest.json';
+
+app.get('/api/curated', auth, (_req, res) => {
+  const imageFilter = /\.(jpg|jpeg|png|webp)$/i;
+  const categories = {};
+
+  try {
+    const dirs = readdirSync(CURATED_DIR, { withFileTypes: true })
+      .filter(d => d.isDirectory())
+      .map(d => d.name);
+
+    for (const dir of dirs) {
+      const dirPath = join(CURATED_DIR, dir);
+      const subdirs = readdirSync(dirPath, { withFileTypes: true });
+      const hasSubdirs = subdirs.some(s => s.isDirectory());
+
+      if (hasSubdirs) {
+        // Room with before/during/after
+        for (const sub of subdirs.filter(s => s.isDirectory())) {
+          const subPath = join(dirPath, sub.name);
+          const imgs = readdirSync(subPath).filter(f => imageFilter.test(f));
+          if (imgs.length > 0) {
+            const key = `${dir}/${sub.name}`;
+            categories[key] = imgs.map(f => ({
+              name: f,
+              url: `/media-curated/${dir}/${sub.name}/${f}`,
+              size: statSync(join(subPath, f)).size,
+            }));
+          }
+        }
+      }
+
+      // Also get images directly in the category folder
+      const directImgs = subdirs
+        .filter(s => !s.isDirectory() && imageFilter.test(s.name))
+        .map(s => s.name);
+      if (directImgs.length > 0) {
+        categories[dir] = (categories[dir] || []).concat(directImgs.map(f => ({
+          name: f,
+          url: `/media-curated/${dir}/${f}`,
+          size: statSync(join(dirPath, f)).size,
+        })));
+      }
+    }
+  } catch { /* curated dir may not exist yet */ }
+
+  // Load manifest for metadata
+  let manifest = { photos: [] };
+  try {
+    manifest = JSON.parse(require('fs').readFileSync(MANIFEST_PATH, 'utf-8'));
+  } catch { /* no manifest yet */ }
+
+  const totalCurated = Object.values(categories).reduce((sum, arr) => sum + arr.length, 0);
+
+  res.json({
+    totalCurated,
+    categoryCount: Object.keys(categories).length,
+    categories,
+    heroCount: (categories['hero-shots'] || []).length,
+    skippedCount: (categories['skip'] || []).length,
+  });
+});
+
 // ─── SERVE UPLOAD PAGE ───────────────────────────────────
 
 app.use('/upload', express.static('/root/unicorn-sovereign/public/upload'));
 
 // ─── SERVE THUMBNAIL PREVIEWS ────────────────────────────
-// Serves images from vault/originals/ for the thumbnail grid
 
 app.use('/media-upload', express.static(UPLOAD_DIR));
+app.use('/media-curated', express.static(CURATED_DIR));
 
 // ─── START ───────────────────────────────────────────────
 
