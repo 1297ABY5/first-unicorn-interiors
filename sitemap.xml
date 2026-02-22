@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://firstunicorninteriors.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+
+  <!-- Design & Approvals -->
+  <url><loc>https://firstunicorninteriors.com/design-approvals/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/design-approvals/architectural-design/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/design-approvals/engineering-drawings/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/design-approvals/3d-visualisation/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/design-approvals/municipality-approvals/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/design-approvals/building-permits/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/design-approvals/noc-processing/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Interiors -->
+  <url><loc>https://firstunicorninteriors.com/interiors/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/interiors/residential/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/interiors/commercial/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/interiors/villa-fit-out/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/interiors/furniture-lighting/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Renovation -->
+  <url><loc>https://firstunicorninteriors.com/renovation/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/renovation/full-villa/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/renovation/kitchen/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/renovation/bathroom/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/renovation/pool/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/renovation/glass-aluminium/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/renovation/joinery/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/renovation/flooring/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Contracting -->
+  <url><loc>https://firstunicorninteriors.com/contracting/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/contracting/villa-construction/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/contracting/low-rise/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/contracting/mid-rise/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/contracting/structural-works/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/contracting/civil-works/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Areas -->
+  <url><loc>https://firstunicorninteriors.com/areas/palm-jumeirah/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/areas/emirates-hills/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/areas/arabian-ranches/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/areas/dubai-hills/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/areas/al-barari/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/areas/tilal-al-ghaf/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Portfolio -->
+  <url><loc>https://firstunicorninteriors.com/portfolio/</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/portfolio/design-approvals/</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/portfolio/interiors/</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/portfolio/renovation/</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/portfolio/contracting/</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+
+  <!-- Other -->
+  <url><loc>https://firstunicorninteriors.com/about/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/blog/</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/contact/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://firstunicorninteriors.com/get-quote/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+</urlset>
