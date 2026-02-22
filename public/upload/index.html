@@ -184,7 +184,7 @@
       letter-spacing: 1px;
       margin-bottom: 10px;
     }
-    #fileInput { display: none; }
+    #fileInput, #folderInput { display: none; }
     .app-content.hidden { display: none; }
     .login-btn {
       display: block;
@@ -237,11 +237,13 @@
 
     <!-- Upload -->
     <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.heic,.heif">
+    <input type="file" id="folderInput" webkitdirectory directory multiple>
     <button class="upload-btn" id="uploadBtn">Tap to Select Photos</button>
+    <button class="upload-btn" id="folderBtn" style="background:transparent;border:2px solid #c8a55e;color:#c8a55e;margin-top:-8px;">Select Folder</button>
 
     <div class="upload-zone" id="dropZone">
-      Drop photos here
-      <div class="drop-hint">or use the button above on mobile</div>
+      Drop photos or folders here
+      <div class="drop-hint">or use the buttons above on mobile</div>
     </div>
 
     <!-- Progress -->
@@ -333,10 +335,30 @@
     const uploadBtn = document.getElementById('uploadBtn');
     const dropZone = document.getElementById('dropZone');
 
+    const folderInput = document.getElementById('folderInput');
+    const folderBtn = document.getElementById('folderBtn');
+
     uploadBtn.addEventListener('click', () => fileInput.click());
+    folderBtn.addEventListener('click', () => folderInput.click());
 
     fileInput.addEventListener('change', () => {
       if (fileInput.files.length > 0) uploadFiles(fileInput.files);
+    });
+
+    folderInput.addEventListener('change', () => {
+      if (folderInput.files.length > 0) {
+        // Filter to images only (folder may contain non-image files)
+        const imageExts = /\.(jpg|jpeg|png|webp|heic|heif)$/i;
+        const dt = new DataTransfer();
+        for (const f of folderInput.files) {
+          if (imageExts.test(f.name)) dt.items.add(f);
+        }
+        if (dt.files.length > 0) {
+          uploadFiles(dt.files);
+        } else {
+          showResults({ uploaded: 0, errors: 0, results: [{ name: 'folder', status: 'error', error: 'No images found in folder' }] });
+        }
+      }
     });
 
     // Drag and drop

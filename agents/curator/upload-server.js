@@ -28,7 +28,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage,
-  limits: { fileSize: 20 * 1024 * 1024 }, // 20MB
+  limits: { fileSize: 20 * 1024 * 1024, files: 2000 }, // 20MB per file, 2000 files max
   fileFilter: (_req, file, cb) => {
     const allowed = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
     if (allowed.includes(file.mimetype)) {
@@ -49,7 +49,7 @@ function auth(req, res, next) {
 
 // ─── UPLOAD ENDPOINT ─────────────────────────────────────
 
-app.post('/api/upload', auth, upload.array('photos', 100), async (req, res) => {
+app.post('/api/upload', auth, upload.any(), async (req, res) => {
   const results = [];
 
   for (const file of (req.files || [])) {
