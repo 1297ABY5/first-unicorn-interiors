@@ -23,6 +23,13 @@
     "publisher:status": "node agents/publisher/index.js status",
     "publisher:refresh": "node agents/publisher/index.js refresh-token",
     "publisher:test": "node agents/publisher/index.js test",
+    "curator": "node agents/curator/index.js",
+    "curator:scan": "node agents/curator/index.js scan",
+    "curator:sort": "node agents/curator/index.js sort",
+    "curator:deploy": "node agents/curator/index.js deploy",
+    "curator:full": "node agents/curator/index.js full",
+    "curator:status": "node agents/curator/index.js status",
+    "curator:test": "node agents/curator/index.js test",
     "telegram:briefing": "node integrations/telegram-bot.js briefing",
     "telegram:weekly": "node integrations/telegram-bot.js weekly",
     "telegram:test": "node integrations/telegram-bot.js test"
@@ -32,6 +39,7 @@
     "axios": "^1.7.0",
     "dotenv": "^16.4.0",
     "node-telegram-bot-api": "^0.67.0",
-    "puppeteer": "^24.37.5"
+    "puppeteer": "^24.37.5",
+    "sharp": "^0.34.5"
   }
 }
