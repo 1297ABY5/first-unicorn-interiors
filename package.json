@@ -30,6 +30,8 @@
     "curator:full": "node agents/curator/index.js full",
     "curator:status": "node agents/curator/index.js status",
     "curator:test": "node agents/curator/index.js test",
+    "upload-server": "node agents/curator/upload-server.js",
+    "telegram:photos": "node integrations/telegram-photo-receiver.js",
     "telegram:briefing": "node integrations/telegram-bot.js briefing",
     "telegram:weekly": "node integrations/telegram-bot.js weekly",
     "telegram:test": "node integrations/telegram-bot.js test"
@@ -38,6 +40,8 @@
     "@anthropic-ai/sdk": "^0.39.0",
     "axios": "^1.7.0",
     "dotenv": "^16.4.0",
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
     "node-telegram-bot-api": "^0.67.0",
     "puppeteer": "^24.37.5",
     "sharp": "^0.34.5"

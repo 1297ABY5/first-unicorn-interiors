@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Photo Upload — Unicorn</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0c0c0c;
+      color: #f2ece0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding: 20px;
+      padding-bottom: 40px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: #c8a55e;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .auth-section { margin-bottom: 20px; }
+    .auth-section.hidden { display: none; }
+    label {
+      display: block;
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    input[type="password"], input[type="text"] {
+      width: 100%;
+      padding: 14px 16px;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      color: #f2ece0;
+      font-size: 16px;
+      outline: none;
+    }
+    input:focus { border-color: #c8a55e; }
+    .brand-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .brand-pill {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid #333;
+      background: #1a1a1a;
+      color: #888;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .brand-pill.active {
+      border-color: #c8a55e;
+      color: #c8a55e;
+      background: rgba(200, 165, 94, 0.1);
+    }
+    .note-field { margin-bottom: 20px; }
+    .upload-zone {
+      border: 2px dashed #333;
+      border-radius: 16px;
+      padding: 40px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 20px;
+    }
+    .upload-zone:hover, .upload-zone.dragover {
+      border-color: #c8a55e;
+      background: rgba(200, 165, 94, 0.05);
+    }
+    .upload-btn {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      background: #c8a55e;
+      color: #0c0c0c;
+      border: none;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .upload-btn:active { transform: scale(0.98); }
+    .upload-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .drop-hint {
+      font-size: 13px;
+      color: #666;
+      margin-top: 12px;
+    }
+    .progress-section { margin-bottom: 20px; }
+    .progress-section.hidden { display: none; }
+    .progress-bar-wrap {
+      background: #1a1a1a;
+      border-radius: 6px;
+      overflow: hidden;
+      height: 8px;
+      margin-bottom: 8px;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #c8a55e;
+      width: 0%;
+      transition: width 0.3s;
+    }
+    .progress-text {
+      font-size: 13px;
+      color: #888;
+    }
+    .results { margin-bottom: 20px; }
+    .results.hidden { display: none; }
+    .result-ok { color: #4caf50; }
+    .result-err { color: #f44336; }
+    .result-summary {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .result-list {
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .stats {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .stats.hidden { display: none; }
+    .stat-num {
+      font-size: 28px;
+      font-weight: 700;
+      color: #c8a55e;
+      text-align: center;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .thumbnails {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 8px;
+    }
+    .thumbnails.hidden { display: none; }
+    .thumb {
+      aspect-ratio: 1;
+      background: #1a1a1a;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .section-title {
+      font-size: 12px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    #fileInput { display: none; }
+    .app-content.hidden { display: none; }
+    .login-btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: #c8a55e;
+      color: #0c0c0c;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    .error-msg {
+      color: #f44336;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    .error-msg.hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="logo">Unicorn Sovereign</div>
+
+  <!-- AUTH -->
+  <div class="auth-section" id="authSection">
+    <label>Password</label>
+    <input type="password" id="passwordInput" placeholder="Enter upload password" autocomplete="off">
+    <div class="error-msg hidden" id="authError">Invalid password</div>
+    <button class="login-btn" id="loginBtn">Unlock</button>
+  </div>
+
+  <!-- MAIN APP -->
+  <div class="app-content hidden" id="appContent">
+    <!-- Brand selector -->
+    <label>Brand</label>
+    <div class="brand-pills" id="brandPills">
+      <div class="brand-pill active" data-brand="auto">Auto-Detect</div>
+      <div class="brand-pill" data-brand="first-unicorn">First Unicorn</div>
+      <div class="brand-pill" data-brand="dubai-lux">Dubai Lux</div>
+      <div class="brand-pill" data-brand="rmr">RMR</div>
+    </div>
+
+    <!-- Note -->
+    <div class="note-field">
+      <label>Note (optional)</label>
+      <input type="text" id="noteInput" placeholder="e.g. Villa B144 Tilal Al Ghaf kitchen">
+    </div>
+
+    <!-- Upload -->
+    <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.heic,.heif">
+    <button class="upload-btn" id="uploadBtn">Tap to Select Photos</button>
+
+    <div class="upload-zone" id="dropZone">
+      Drop photos here
+      <div class="drop-hint">or use the button above on mobile</div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-section hidden" id="progressSection">
+      <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar"></div></div>
+      <div class="progress-text" id="progressText">Uploading...</div>
+    </div>
+
+    <!-- Results -->
+    <div class="results hidden" id="resultsSection">
+      <div class="result-summary" id="resultSummary"></div>
+      <div class="result-list" id="resultList"></div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats hidden" id="statsSection">
+      <div><div class="stat-num" id="todayCount">0</div><div class="stat-label">Today</div></div>
+      <div><div class="stat-num" id="totalCount">0</div><div class="stat-label">Total</div></div>
+    </div>
+
+    <!-- Recent thumbnails -->
+    <div class="section-title" id="recentTitle" style="display:none">Recent Uploads</div>
+    <div class="thumbnails hidden" id="thumbnails"></div>
+  </div>
+
+  <script>
+    const API_BASE = '';
+    let password = localStorage.getItem('upload_pw') || '';
+    let selectedBrand = 'auto';
+
+    // ─── AUTH ──────────────────────────────────
+    const authSection = document.getElementById('authSection');
+    const appContent = document.getElementById('appContent');
+    const passwordInput = document.getElementById('passwordInput');
+    const authError = document.getElementById('authError');
+
+    function headers() {
+      return { 'X-Upload-Password': password };
+    }
+
+    async function tryAuth() {
+      password = passwordInput.value;
+      try {
+        const res = await fetch(`${API_BASE}/api/status`, { headers: headers() });
+        if (res.ok) {
+          localStorage.setItem('upload_pw', password);
+          authSection.classList.add('hidden');
+          appContent.classList.remove('hidden');
+          loadStatus();
+        } else {
+          authError.classList.remove('hidden');
+        }
+      } catch {
+        authError.textContent = 'Connection error';
+        authError.classList.remove('hidden');
+      }
+    }
+
+    document.getElementById('loginBtn').addEventListener('click', tryAuth);
+    passwordInput.addEventListener('keydown', e => { if (e.key === 'Enter') tryAuth(); });
+
+    // Auto-login if password saved
+    if (password) {
+      fetch(`${API_BASE}/api/status`, { headers: headers() })
+        .then(r => {
+          if (r.ok) {
+            authSection.classList.add('hidden');
+            appContent.classList.remove('hidden');
+            loadStatus();
+          } else {
+            localStorage.removeItem('upload_pw');
+            password = '';
+          }
+        })
+        .catch(() => {});
+    }
+
+    // ─── BRAND PILLS ──────────────────────────
+    document.getElementById('brandPills').addEventListener('click', e => {
+      const pill = e.target.closest('.brand-pill');
+      if (!pill) return;
+      document.querySelectorAll('.brand-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      selectedBrand = pill.dataset.brand;
+    });
+
+    // ─── FILE SELECT ──────────────────────────
+    const fileInput = document.getElementById('fileInput');
+    const uploadBtn = document.getElementById('uploadBtn');
+    const dropZone = document.getElementById('dropZone');
+
+    uploadBtn.addEventListener('click', () => fileInput.click());
+
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length > 0) uploadFiles(fileInput.files);
+    });
+
+    // Drag and drop
+    dropZone.addEventListener('dragover', e => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+    dropZone.addEventListener('drop', e => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      if (e.dataTransfer.files.length > 0) uploadFiles(e.dataTransfer.files);
+    });
+
+    // ─── UPLOAD ───────────────────────────────
+    async function uploadFiles(files) {
+      const progressSection = document.getElementById('progressSection');
+      const progressBar = document.getElementById('progressBar');
+      const progressText = document.getElementById('progressText');
+      const resultsSection = document.getElementById('resultsSection');
+
+      progressSection.classList.remove('hidden');
+      resultsSection.classList.add('hidden');
+      uploadBtn.disabled = true;
+      uploadBtn.textContent = 'Uploading...';
+
+      const formData = new FormData();
+      for (const file of files) {
+        formData.append('photos', file);
+      }
+      formData.append('brand', selectedBrand);
+      formData.append('note', document.getElementById('noteInput').value);
+
+      try {
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', `${API_BASE}/api/upload`);
+        xhr.setRequestHeader('X-Upload-Password', password);
+
+        xhr.upload.onprogress = e => {
+          if (e.lengthComputable) {
+            const pct = Math.round((e.loaded / e.total) * 100);
+            progressBar.style.width = pct + '%';
+            progressText.textContent = `Uploading ${files.length} photo${files.length > 1 ? 's' : ''}... ${pct}%`;
+          }
+        };
+
+        xhr.onload = () => {
+          progressSection.classList.add('hidden');
+          uploadBtn.disabled = false;
+          uploadBtn.textContent = 'Tap to Select Photos';
+          fileInput.value = '';
+
+          if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+            showResults(data);
+            loadStatus();
+          } else if (xhr.status === 401) {
+            authError.textContent = 'Password expired — please re-enter';
+            authError.classList.remove('hidden');
+            authSection.classList.remove('hidden');
+            appContent.classList.add('hidden');
+          } else {
+            showResults({ uploaded: 0, errors: files.length, results: [{ name: 'batch', status: 'error', error: 'Server error ' + xhr.status }] });
+          }
+        };
+
+        xhr.onerror = () => {
+          progressSection.classList.add('hidden');
+          uploadBtn.disabled = false;
+          uploadBtn.textContent = 'Tap to Select Photos';
+          showResults({ uploaded: 0, errors: files.length, results: [{ name: 'batch', status: 'error', error: 'Network error' }] });
+        };
+
+        xhr.send(formData);
+      } catch (err) {
+        progressSection.classList.add('hidden');
+        uploadBtn.disabled = false;
+        uploadBtn.textContent = 'Tap to Select Photos';
+        showResults({ uploaded: 0, errors: files.length, results: [{ name: 'batch', status: 'error', error: err.message }] });
+      }
+    }
+
+    // ─── RESULTS ──────────────────────────────
+    function showResults(data) {
+      const section = document.getElementById('resultsSection');
+      const summary = document.getElementById('resultSummary');
+      const list = document.getElementById('resultList');
+
+      section.classList.remove('hidden');
+
+      const parts = [];
+      if (data.uploaded > 0) parts.push(`<span class="result-ok">${data.uploaded} uploaded</span>`);
+      if (data.errors > 0) parts.push(`<span class="result-err">${data.errors} failed</span>`);
+      summary.innerHTML = parts.join(' &middot; ');
+
+      list.innerHTML = data.results.map(r =>
+        r.status === 'ok'
+          ? `<div class="result-ok">${r.name}${r.converted ? ' (' + r.converted + ')' : ''}</div>`
+          : `<div class="result-err">${r.name}: ${r.error}</div>`
+      ).join('');
+    }
+
+    // ─── STATUS ───────────────────────────────
+    async function loadStatus() {
+      try {
+        const res = await fetch(`${API_BASE}/api/status`, { headers: headers() });
+        if (!res.ok) return;
+        const data = await res.json();
+
+        document.getElementById('todayCount').textContent = data.todayCount;
+        document.getElementById('totalCount').textContent = data.totalCount;
+        document.getElementById('statsSection').classList.remove('hidden');
+
+        // Thumbnails
+        const thumbs = document.getElementById('thumbnails');
+        const title = document.getElementById('recentTitle');
+        if (data.recentFiles && data.recentFiles.length > 0) {
+          title.style.display = 'block';
+          thumbs.classList.remove('hidden');
+          thumbs.innerHTML = data.recentFiles.slice(0, 10).map(f =>
+            `<div class="thumb"><img src="/media-upload/${f.name}" alt="" loading="lazy" onerror="this.parentElement.style.background='#333'"></div>`
+          ).join('');
+        }
+      } catch { /* ignore */ }
+    }
+  </script>
+</body>
+</html>
