@@ -21,8 +21,8 @@
     .lp-header { position:fixed; top:0; left:0; width:100%; z-index:100; padding:16px 32px; display:flex; justify-content:space-between; align-items:center; background:rgba(10,10,10,0.92); backdrop-filter:blur(16px); border-bottom:1px solid rgba(200,165,94,0.1); }
     .logo { font-family:'Playfair Display',serif; font-size:1.2rem; color:#f2ece0; font-weight:600; }
     .logo span { color:#c8a55e; }
-    .header-cta { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; background:#25D366; color:#fff; font-size:0.85rem; font-weight:600; border-radius:50px; transition:all 0.3s; }
-    .header-cta:hover { background:#1da851; transform:translateY(-1px); }
+    .header-cta { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; background:#15803d; color:#fff; font-size:0.85rem; font-weight:600; border-radius:50px; transition:all 0.3s; }
+    .header-cta:hover { background:#16a34a; transform:translateY(-1px); }
     .header-cta svg { width:16px; height:16px; fill:#fff; }
 
     /* HERO */
@@ -36,8 +36,8 @@
     .hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2.4rem, 5vw, 4.2rem); font-weight:600; line-height:1.1; color:#f2ece0; letter-spacing:-0.02em; margin-bottom:20px; }
     .hero-sub { font-size:1.1rem; color:#a09888; max-width:600px; margin:0 auto 36px; line-height:1.7; }
     .hero-ctas { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:48px; }
-    .btn-wa { display:inline-flex; align-items:center; gap:10px; padding:16px 36px; background:#25D366; color:#fff; font-weight:600; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.08em; border:none; border-radius:0; cursor:pointer; transition:all 0.3s; }
-    .btn-wa:hover { background:#1da851; transform:translateY(-2px); box-shadow:0 8px 30px rgba(37,211,102,0.25); }
+    .btn-wa { display:inline-flex; align-items:center; gap:10px; padding:16px 36px; background:#15803d; color:#fff; font-weight:600; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.08em; border:none; border-radius:0; cursor:pointer; transition:all 0.3s; }
+    .btn-wa:hover { background:#16a34a; transform:translateY(-2px); box-shadow:0 8px 30px rgba(21,128,61,0.25); }
     .btn-wa svg { width:18px; height:18px; fill:#fff; }
     .btn-call { display:inline-flex; align-items:center; gap:10px; padding:16px 36px; background:transparent; color:#c8a55e; font-weight:600; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.08em; border:1.5px solid #c8a55e; cursor:pointer; transition:all 0.3s; }
     .btn-call:hover { background:rgba(200,165,94,0.1); transform:translateY(-2px); }
@@ -112,8 +112,8 @@
     .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
 
     /* FOOTER */
-    .lp-footer { padding:24px 32px; text-align:center; font-size:0.78rem; color:#666; border-top:1px solid rgba(200,165,94,0.06); }
-    .lp-footer a { color:#c8a55e; }
+    .lp-footer { padding:24px 32px; text-align:center; font-size:0.78rem; color:#9a9a9a; border-top:1px solid rgba(200,165,94,0.06); }
+    .lp-footer a { color:#c8a55e; text-decoration:underline; }
 
     /* MOBILE */
     @media (max-width:768px) {
@@ -144,11 +144,13 @@
   <!-- HEADER -->
   <header class="lp-header">
     <a href="/" class="logo">First Unicorn <span>Interiors</span></a>
-    <a href="https://wa.me/971526455121?text=Hi%2C%20I%27m%20interested%20in%20bathroom%20renovation.%20I%27d%20like%20to%20discuss%20my%20project." target="_blank" rel="noopener" class="header-cta" onclick="trackWA()">
+    <a href="https://wa.me/971526455121?text=Hi%2C%20I%27m%20interested%20in%20bathroom%20renovation.%20I%27d%20like%20to%20discuss%20my%20project." target="_blank" rel="noopener" class="header-cta" aria-label="Chat on WhatsApp" onclick="trackWA()">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.723-6.396-1.96l-.447-.31-3.174 1.064 1.064-3.174-.31-.447A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       WhatsApp Us
     </a>
   </header>
+
+  <main>
 
   <!-- HERO -->
   <section class="hero">
@@ -160,7 +162,7 @@
       <h1>Luxury Bathroom<br>Renovation</h1>
       <p class="hero-sub">From dated to breathtaking. Floor-to-ceiling luxury bathroom transformations by our in-house team.</p>
       <div class="hero-ctas">
-        <a href="https://wa.me/971526455121?text=Hi%2C%20I%27m%20interested%20in%20bathroom%20renovation.%20I%27d%20like%20to%20discuss%20my%20project." target="_blank" rel="noopener" class="btn-wa" onclick="trackWA()">
+        <a href="https://wa.me/971526455121?text=Hi%2C%20I%27m%20interested%20in%20bathroom%20renovation.%20I%27d%20like%20to%20discuss%20my%20project." target="_blank" rel="noopener" class="btn-wa" aria-label="Chat on WhatsApp" onclick="trackWA()">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
           Get Free Consultation
         </a>
@@ -302,7 +304,7 @@
       <h2>Ready to Start Your Bathroom Renovation?</h2>
       <p>Book your free consultation. We visit your bathroom, discuss your vision, and deliver a detailed quote within 5 working days. No obligation.</p>
       <div class="cta-btns">
-        <a href="https://wa.me/971526455121?text=Hi%2C%20I%27m%20interested%20in%20bathroom%20renovation.%20I%27d%20like%20to%20discuss%20my%20project." target="_blank" rel="noopener" class="btn-wa" onclick="trackWA()">
+        <a href="https://wa.me/971526455121?text=Hi%2C%20I%27m%20interested%20in%20bathroom%20renovation.%20I%27d%20like%20to%20discuss%20my%20project." target="_blank" rel="noopener" class="btn-wa" aria-label="Chat on WhatsApp" onclick="trackWA()">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
           Get Free Consultation
         </a>
@@ -313,6 +315,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="lp-footer">
