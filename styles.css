@@ -288,7 +288,8 @@ p { max-width: 720px; }
 }
 .division-card:hover { transform: translateY(-4px); border-color: var(--gold-glow); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
 .division-card:hover::before { transform: scaleX(1); }
-.division-card-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.division-card-icon { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--gold); line-height: 1; }
+.division-card-icon svg { width: 40px; height: 40px; stroke: var(--gold); }
 .division-card h3 { margin-bottom: 1rem; }
 .division-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.7; }
 .division-card-link {
@@ -333,7 +334,8 @@ p { max-width: 720px; }
   padding: 2.5rem 2rem; transition: all 0.4s;
 }
 .feature-card:hover { border-color: var(--gold-glow); transform: translateY(-3px); }
-.feature-card-icon { font-size: 2rem; margin-bottom: 1.2rem; color: var(--gold); }
+.feature-card-icon { font-size: 2rem; margin-bottom: 1.2rem; color: var(--gold); line-height: 1; }
+.feature-card-icon svg { width: 36px; height: 36px; stroke: var(--gold); }
 .feature-card h3 { font-size: 1.15rem; margin-bottom: 0.8rem; }
 .feature-card p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; }
 
@@ -344,7 +346,8 @@ p { max-width: 720px; }
   padding: 2.5rem 2rem; transition: all 0.4s;
 }
 .edu-card:hover { border-color: var(--gold-glow); transform: translateY(-3px); }
-.edu-card-icon { font-size: 2rem; margin-bottom: 1rem; }
+.edu-card-icon { font-size: 2rem; margin-bottom: 1rem; color: var(--gold); line-height: 1; }
+.edu-card-icon svg { width: 36px; height: 36px; stroke: var(--gold); }
 .edu-card h3 { font-size: 1.15rem; margin-bottom: 0.8rem; }
 .edu-card p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.2rem; }
 .edu-card-link { font-size: 0.85rem; font-weight: 600; color: var(--gold); display: inline-flex; align-items: center; gap: 0.4rem; }
