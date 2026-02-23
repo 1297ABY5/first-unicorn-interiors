@@ -675,6 +675,21 @@ p { max-width: 720px; }
 }
 
 @media (max-width: 768px) {
+  .gallery-scroll {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding: 0;
+    cursor: default;
+  }
+  .gallery-card {
+    flex: none;
+    aspect-ratio: 3/4;
+  }
+
+@media (max-width: 768px) {
   .features-grid { grid-template-columns: 1fr; }
   .stats-bar { grid-template-columns: 1fr; }
   .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 2rem 1rem; }
@@ -690,7 +705,6 @@ p { max-width: 720px; }
   .team-grid { grid-template-columns: 1fr; max-width: 300px; margin: 0 auto; }
   .credentials-grid { grid-template-columns: repeat(2, 1fr); }
   .services-list { grid-template-columns: 1fr; }
-  .gallery-card { flex: 0 0 85vw; }
   .hero { min-height: 90vh; }
   .page-hero { min-height: 40vh; padding-top: 8rem; }
   .division-card-icon img { height: 200px; }
@@ -1270,22 +1284,22 @@ body > * { position: relative; z-index: 1; }
 }
 @media (max-width: 900px) {
   .vtesti-grid {
-    grid-template-columns: repeat(4, 72vw);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
-  .vtesti-grid::-webkit-scrollbar { display: none; }
-  .vtesti-card { scroll-snap-align: center; }
+}
+@media (max-width: 550px) {
+  .vtesti-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 /* ─── VIDEO REEL ─── */
 .video-reel {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
   margin-top: 3rem;
 }
 .video-card {
@@ -1294,6 +1308,10 @@ body > * { position: relative; z-index: 1; }
   overflow: hidden;
   aspect-ratio: 9/16;
   background: var(--bg-secondary);
+}
+.video-card-featured {
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 30px rgba(183,149,87,0.15);
 }
 .video-card video {
   width: 100%;
@@ -1308,24 +1326,24 @@ body > * { position: relative; z-index: 1; }
   right: 0;
   padding: 32px 16px 16px;
   background: linear-gradient(transparent, rgba(10,10,10,0.85));
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--text-primary);
   text-transform: uppercase;
 }
+.video-card-featured .video-card-label { color: var(--gold); }
 @media (max-width: 900px) {
   .video-reel {
-    grid-template-columns: repeat(4, 70vw);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 14px;
-    padding-bottom: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
-  .video-reel::-webkit-scrollbar { display: none; }
-  .video-card { scroll-snap-align: center; }
+}
+@media (max-width: 550px) {
+  .video-reel {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 /* ─── SELECTION STYLING ─── */
