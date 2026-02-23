@@ -303,7 +303,7 @@ p { max-width: 720px; }
 }
 .division-card-link:hover { gap: 0.8rem; }
 
-/* ═══ PORTFOLIO GALLERY (horizontal scroll) ═══ */
+/* ═══ PORTFOLIO GALLERY (horizontal scroll desktop, grid mobile) ═══ */
 .gallery-scroll {
   display: flex; gap: 1.5rem; overflow-x: auto;
   padding: 1rem 0 2rem; cursor: grab;
@@ -675,21 +675,6 @@ p { max-width: 720px; }
 }
 
 @media (max-width: 768px) {
-  .gallery-scroll {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    overflow-x: visible;
-    scroll-snap-type: none;
-    padding: 0;
-    cursor: default;
-  }
-  .gallery-card {
-    flex: none;
-    aspect-ratio: 3/4;
-  }
-
-@media (max-width: 768px) {
   .features-grid { grid-template-columns: 1fr; }
   .stats-bar { grid-template-columns: 1fr; }
   .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 2rem 1rem; }
@@ -705,6 +690,16 @@ p { max-width: 720px; }
   .team-grid { grid-template-columns: 1fr; max-width: 300px; margin: 0 auto; }
   .credentials-grid { grid-template-columns: repeat(2, 1fr); }
   .services-list { grid-template-columns: 1fr; }
+  .gallery-scroll {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding: 0;
+    cursor: default;
+  }
+  .gallery-card { flex: none; }
   .hero { min-height: 90vh; }
   .page-hero { min-height: 40vh; padding-top: 8rem; }
   .division-card-icon img { height: 200px; }
