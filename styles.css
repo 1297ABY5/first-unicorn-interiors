@@ -1190,6 +1190,97 @@ body > * { position: relative; z-index: 1; }
   -webkit-backdrop-filter: blur(20px) saturate(1.5);
 }
 
+/* ─── VIDEO TESTIMONIALS ─── */
+.vtesti-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 3rem;
+}
+.vtesti-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s;
+}
+.vtesti-card:hover { border-color: var(--gold); }
+.vtesti-video {
+  position: relative;
+  aspect-ratio: 9/13;
+  overflow: hidden;
+  cursor: pointer;
+}
+.vtesti-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.vtesti-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.vtesti-play svg { width: 20px; height: 20px; fill: #fff; margin-left: 3px; }
+.vtesti-play:hover { background: var(--gold); border-color: var(--gold); }
+.vtesti-play:hover svg { fill: #000; }
+.vtesti-play.playing { opacity: 0; pointer-events: none; }
+.vtesti-video:hover .vtesti-play.playing { opacity: 1; pointer-events: auto; }
+.vtesti-text {
+  padding: 20px;
+}
+.vtesti-stars {
+  color: var(--gold);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.vtesti-text blockquote {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 14px 0;
+  padding: 0;
+  border: none;
+  font-style: italic;
+}
+.vtesti-author {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+.vtesti-loc {
+  font-size: 0.78rem;
+  color: var(--gold);
+  margin-top: 2px;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 900px) {
+  .vtesti-grid {
+    grid-template-columns: repeat(4, 72vw);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 14px;
+  }
+  .vtesti-grid::-webkit-scrollbar { display: none; }
+  .vtesti-card { scroll-snap-align: center; }
+}
+
 /* ─── VIDEO REEL ─── */
 .video-reel {
   display: grid;
