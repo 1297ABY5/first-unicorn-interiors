@@ -51,7 +51,54 @@
     });
   }
 
-  // 5. ANIMATED COUNTER
+  // 5. EMAIL CAPTURE — inject above footer on all pages
+  function injectEmailCapture() {
+    var footer = document.querySelector('.footer');
+    if (!footer) return;
+    if (document.querySelector('.email-capture')) return; // already present (e.g. homepage)
+    if (window.location.pathname.indexOf('/get-quote/') === 0) return;
+    if (window.location.pathname.indexOf('/free-design/') === 0) return;
+    if (window.location.pathname.indexOf('/calculator/') === 0) return;
+    var sec = document.createElement('section');
+    sec.className = 'email-capture';
+    sec.innerHTML = '<div class="container" style="max-width:680px;text-align:center;">' +
+      '<div class="label">Free Download</div>' +
+      '<h2>Get the 2026 Dubai Villa Renovation Cost Guide</h2>' +
+      '<p style="color:var(--text-secondary);margin-bottom:2rem;">Real pricing from 800+ projects. Material comparisons, community breakdowns, and red flags to watch for.</p>' +
+      '<div class="ec-form">' +
+      '<input type="email" class="ec-input" placeholder="Your email address">' +
+      '<button class="ec-btn">Send Me the Guide</button>' +
+      '</div>' +
+      '<div class="ec-privacy">No spam, ever. Unsubscribe anytime.</div>' +
+      '</div>';
+    footer.parentNode.insertBefore(sec, footer);
+  }
+
+  // 6. LEAD MAGNET BANNER — inject on service + community pages
+  function injectLeadMagnetBanner() {
+    var path = window.location.pathname;
+    var isService = path.indexOf('/renovation/') === 0 || path.indexOf('/interiors/') === 0 || path.indexOf('/contracting/') === 0;
+    var isCommunity = path.indexOf('/areas/') === 0 || path.indexOf('/communities/') === 0;
+    if (!isService && !isCommunity) return;
+    var main = document.querySelector('main');
+    if (!main) return;
+    var lastSection = main.querySelector('section:last-of-type');
+    if (!lastSection) return;
+    var banner = document.createElement('div');
+    banner.className = 'lm-banner';
+    banner.style.margin = '0 auto 3rem';
+    banner.style.maxWidth = '960px';
+    if (isCommunity) {
+      banner.innerHTML = '<div><h3>Free 3D Design Concept</h3><p>See your renovation before it starts. Send us a few photos and our design team will create a custom concept &mdash; free, no obligation.</p></div>' +
+        '<a href="/free-design/" class="btn-primary">Get My Free Design</a>';
+    } else {
+      banner.innerHTML = '<div><h3>Download the 2026 Cost Guide</h3><p>Real pricing from 800+ projects. Community breakdowns, material comparisons, and red flags to watch for.</p></div>' +
+        '<a href="/blog/kitchen-renovation-cost-dubai/" class="btn-primary">Read the Guide</a>';
+    }
+    lastSection.parentNode.insertBefore(banner, lastSection.nextSibling);
+  }
+
+  // 7. ANIMATED COUNTER
   function animateCounters() {
     var counters = document.querySelectorAll('.stat-number');
     if (!counters.length) return;
@@ -84,6 +131,8 @@
   function init() {
     injectStickyCTA();
     injectExitPopup();
+    injectEmailCapture();
+    injectLeadMagnetBanner();
     trackClicks();
     animateCounters();
   }
