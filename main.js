@@ -270,4 +270,38 @@
     });
   });
 
+  // ─── HERO PARALLAX ────────────────────────────────
+  const heroBg = document.querySelector('.hero-bg');
+  if (heroBg) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrolled = window.pageYOffset;
+          if (scrolled < window.innerHeight) {
+            heroBg.style.transform = 'translateY(' + (scrolled * 0.3) + 'px) scale(1.05)';
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // ─── NAVBAR HIDE ON SCROLL DOWN, SHOW ON SCROLL UP ─
+  let lastScrollY = 0;
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      const currentY = window.pageYOffset;
+      if (currentY > 400 && currentY > lastScrollY) {
+        navbar.style.transform = 'translateY(-100%)';
+      } else {
+        navbar.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentY;
+    }, { passive: true });
+    navbar.style.transition = 'transform 0.35s ease, background 0.3s ease, padding 0.3s ease';
+  }
+
 })();
