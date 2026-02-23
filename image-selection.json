@@ -1,0 +1,1216 @@
+{
+  "summary": {
+    "total_images": 119,
+    "total_size_kb": 22819,
+    "total_size_mb": 22.28,
+    "within_budget": true,
+    "files_over_400kb": 18,
+    "categories": {
+      "kitchen": {
+        "count": 7,
+        "quota": 7,
+        "size_kb": 959
+      },
+      "bathroom": {
+        "count": 7,
+        "quota": 7,
+        "size_kb": 557
+      },
+      "pool": {
+        "count": 7,
+        "quota": 7,
+        "size_kb": 430
+      },
+      "glass": {
+        "count": 7,
+        "quota": 7,
+        "size_kb": 546
+      },
+      "joinery": {
+        "count": 7,
+        "quota": 7,
+        "size_kb": 1297
+      },
+      "interiors": {
+        "count": 20,
+        "quota": 20,
+        "size_kb": 4986
+      },
+      "team": {
+        "count": 7,
+        "quota": 7,
+        "size_kb": 462
+      },
+      "approvals": {
+        "count": 6,
+        "quota": 6,
+        "size_kb": 1731
+      },
+      "community": {
+        "count": 6,
+        "quota": 6,
+        "size_kb": 864
+      },
+      "construction": {
+        "count": 30,
+        "quota": 30,
+        "size_kb": 9944
+      },
+      "hero": {
+        "count": 15,
+        "quota": 15,
+        "size_kb": 1041
+      }
+    }
+  },
+  "selections": {
+    "kitchen": {
+      "count": 7,
+      "quota": 7,
+      "total_size_kb": 959,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/kitchen/after/kitchen-after-exposed-red-brick-accent-wall-070.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/kitchen/kitchen-after-exposed-red-brick-accent-wall-070.webp",
+          "size_kb": 59,
+          "room_type": "kitchen",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/kitchen/after/kitchen-after-smart-home-digital-interface-w-002.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/kitchen/kitchen-after-smart-home-digital-interface-w-002.webp",
+          "size_kb": 71,
+          "room_type": "kitchen",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/kitchen/after/kitchen-after-high-gloss-black-kitchen-cabin-017.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/kitchen/kitchen-after-high-gloss-black-kitchen-cabin-017.webp",
+          "size_kb": 115,
+          "room_type": "kitchen",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/kitchen/after/kitchen-after-large-black-framed-bi-fold-doo-083.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/kitchen/kitchen-after-large-black-framed-bi-fold-doo-083.webp",
+          "size_kb": 104,
+          "room_type": "kitchen",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/kitchen/after/kitchen-after-white-marble-waterfall-island-030.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/kitchen/kitchen-after-white-marble-waterfall-island-030.webp",
+          "size_kb": 124,
+          "room_type": "kitchen",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/kitchen/after/kitchen-after-black-fluted-wood-island-desig-032.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/kitchen/kitchen-after-black-fluted-wood-island-desig-032.webp",
+          "size_kb": 218,
+          "room_type": "kitchen",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/kitchen/after/kitchen-after-black-marble-feature-wall-with-018.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/kitchen/kitchen-after-black-marble-feature-wall-with-018.webp",
+          "size_kb": 268,
+          "room_type": "kitchen",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        }
+      ]
+    },
+    "bathroom": {
+      "count": 7,
+      "quota": 7,
+      "total_size_kb": 557,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bathroom/after/bathroom-after-black-framed-glass-shower-encl-091.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/bathroom/bathroom-after-black-framed-glass-shower-encl-091.webp",
+          "size_kb": 70,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bathroom/after/bathroom-after-chrome-framed-glass-shower-enc-096.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/bathroom/bathroom-after-chrome-framed-glass-shower-enc-096.webp",
+          "size_kb": 51,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bathroom/after/bathroom-after-floating-wooden-vanity-unit-092.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/bathroom/bathroom-after-floating-wooden-vanity-unit-092.webp",
+          "size_kb": 39,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bathroom/after/bathroom-after-glass-shower-enclosure-with-ch-095.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/bathroom/bathroom-after-glass-shower-enclosure-with-ch-095.webp",
+          "size_kb": 69,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bathroom/after/bathroom-after-glass-sliding-doors-on-bathtub-144.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/bathroom/bathroom-after-glass-sliding-doors-on-bathtub-144.webp",
+          "size_kb": 85,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bathroom/after/bathroom-after-freestanding-white-bathtub-wit-177.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/bathroom/bathroom-after-freestanding-white-bathtub-wit-177.webp",
+          "size_kb": 100,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bathroom/after/bathroom-after-walk-in-marble-shower-with-gla-176.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/bathroom/bathroom-after-walk-in-marble-shower-with-gla-176.webp",
+          "size_kb": 143,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        }
+      ]
+    },
+    "pool": {
+      "count": 7,
+      "quota": 7,
+      "total_size_kb": 430,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-infinity-edge-pool-009.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/pool/pool-after-infinity-edge-pool-009.webp",
+          "size_kb": 99,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-infinity-edge-pool-with-dark-s-010.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/pool/pool-after-infinity-edge-pool-with-dark-s-010.webp",
+          "size_kb": 91,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-knife-edge-infinity-pool-desig-149.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/pool/pool-after-knife-edge-infinity-pool-desig-149.webp",
+          "size_kb": 81,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-long-rectangular-lap-pool-desi-164.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/pool/pool-after-long-rectangular-lap-pool-desi-164.webp",
+          "size_kb": 37,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-mediterranean-architectural-st-150.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/pool/pool-after-mediterranean-architectural-st-150.webp",
+          "size_kb": 36,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-rectangular-infinity-edge-pool-163.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/pool/pool-after-rectangular-infinity-edge-pool-163.webp",
+          "size_kb": 49,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-rectangular-lap-pool-design-165.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/pool/pool-after-rectangular-lap-pool-design-165.webp",
+          "size_kb": 37,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        }
+      ]
+    },
+    "glass": {
+      "count": 7,
+      "quota": 7,
+      "total_size_kb": 546,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/glass-aluminium/after/glass-aluminium-after-black-aluminum-frame-090.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/glass/glass-aluminium-after-black-aluminum-frame-090.webp",
+          "size_kb": 81,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/glass-aluminium/after/glass-aluminium-after-curved-glass-panels-with-alumi-111.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/glass/glass-aluminium-after-curved-glass-panels-with-alumi-111.webp",
+          "size_kb": 55,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/glass-aluminium/after/glass-aluminium-after-dark-aluminum-frame-with-clean-109.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/glass/glass-aluminium-after-dark-aluminum-frame-with-clean-109.webp",
+          "size_kb": 87,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/glass-aluminium/after/glass-aluminium-after-floor-to-ceiling-glass-panels-097.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/glass/glass-aluminium-after-floor-to-ceiling-glass-panels-097.webp",
+          "size_kb": 91,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/glass-aluminium/after/glass-aluminium-after-floor-to-ceiling-glass-partiti-153.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/glass/glass-aluminium-after-floor-to-ceiling-glass-partiti-153.webp",
+          "size_kb": 100,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/glass-aluminium/after/glass-aluminium-after-four-geometric-skylights-with--103.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/glass/glass-aluminium-after-four-geometric-skylights-with--103.webp",
+          "size_kb": 53,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/glass-aluminium/after/glass-aluminium-after-four-large-roof-skylights-with-104.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/glass/glass-aluminium-after-four-large-roof-skylights-with-104.webp",
+          "size_kb": 79,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        }
+      ]
+    },
+    "joinery": {
+      "count": 7,
+      "quota": 7,
+      "total_size_kb": 1297,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-after-dark-marble-or-stone-staircase-170.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/joinery/other-after-dark-marble-or-stone-staircase-170.webp",
+          "size_kb": 137,
+          "room_type": "other",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-after-modular-wooden-meeting-pods-wi-045.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/joinery/other-after-modular-wooden-meeting-pods-wi-045.webp",
+          "size_kb": 119,
+          "room_type": "other",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-after-wood-look-tile-flooring-061.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/joinery/other-after-wood-look-tile-flooring-061.webp",
+          "size_kb": 157,
+          "room_type": "other",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-after-built-in-wooden-entertainment--041.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/joinery/other-after-built-in-wooden-entertainment--041.webp",
+          "size_kb": 286,
+          "room_type": "other",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/joinery/after/joinery-after-vertical-wood-slat-accent-wall-001.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/joinery/joinery-after-vertical-wood-slat-accent-wall-001.jpg",
+          "size_kb": 50,
+          "room_type": "joinery",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 985
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-after-dark-fluted-wood-bar-front-228.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/joinery/other-after-dark-fluted-wood-bar-front-228.jpg",
+          "size_kb": 71,
+          "room_type": "other",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 985
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-after-floating-wooden-staircase-with-025.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/joinery/other-after-floating-wooden-staircase-with-025.webp",
+          "size_kb": 477,
+          "room_type": "other",
+          "stage": "after",
+          "format": ".webp",
+          "score": 985
+        }
+      ]
+    },
+    "interiors": {
+      "count": 20,
+      "quota": 20,
+      "total_size_kb": 4986,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-black-framed-tilt-and-turn-win-089.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-black-framed-tilt-and-turn-win-089.webp",
+          "size_kb": 62,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-floor-to-ceiling-sliding-glass-086.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-floor-to-ceiling-sliding-glass-086.webp",
+          "size_kb": 93,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-organic-curved-sofa-and-armcha-141.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-organic-curved-sofa-and-armcha-141.webp",
+          "size_kb": 94,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-smart-home-technology-integrat-003.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-smart-home-technology-integrat-003.webp",
+          "size_kb": 28,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-curved-white-sectional-sofa-016.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-curved-white-sectional-sofa-016.webp",
+          "size_kb": 159,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-custom-golden-tube-pendant-cha-021.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-custom-golden-tube-pendant-cha-021.webp",
+          "size_kb": 197,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-neutral-color-palette-121.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-neutral-color-palette-121.webp",
+          "size_kb": 122,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bedroom/after/bedroom-after-custom-wall-paneling-with-rais-180.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/bedroom-after-custom-wall-paneling-with-rais-180.webp",
+          "size_kb": 254,
+          "room_type": "bedroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/full-villa/after/full-villa-after-contemporary-cubic-architectur-145.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/full-villa-after-contemporary-cubic-architectur-145.webp",
+          "size_kb": 267,
+          "room_type": "full-villa",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-black-marble-dining-table-with-179.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-black-marble-dining-table-with-179.webp",
+          "size_kb": 295,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-emerald-green-sculptural-chand-173.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-emerald-green-sculptural-chand-173.webp",
+          "size_kb": 359,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-gold-leaf-decorative-ceiling-w-034.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-gold-leaf-decorative-ceiling-w-034.webp",
+          "size_kb": 368,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-nested-circular-coffee-tables--148.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-nested-circular-coffee-tables--148.webp",
+          "size_kb": 207,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-white-quilted-sectional-sofas--172.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-white-quilted-sectional-sofas--172.webp",
+          "size_kb": 236,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bedroom/after/bedroom-after-crystal-chandelier-with-coffer-169.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/bedroom-after-crystal-chandelier-with-coffer-169.webp",
+          "size_kb": 488,
+          "room_type": "bedroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 985
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bedroom/after/bedroom-after-crystal-chandelier-with-hangin-035.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/bedroom-after-crystal-chandelier-with-hangin-035.webp",
+          "size_kb": 415,
+          "room_type": "bedroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 985
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bedroom/after/bedroom-after-dark-navy-painted-accent-wall-223.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/bedroom-after-dark-navy-painted-accent-wall-223.jpg",
+          "size_kb": 41,
+          "room_type": "bedroom",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 985
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bedroom/after/bedroom-after-statement-gold-branch-chandeli-028.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/bedroom-after-statement-gold-branch-chandeli-028.webp",
+          "size_kb": 636,
+          "room_type": "bedroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 985
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/bedroom/after/bedroom-after-upholstered-beige-headboard-wi-243.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/bedroom-after-upholstered-beige-headboard-wi-243.jpg",
+          "size_kb": 92,
+          "room_type": "bedroom",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 985
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/living-room/after/living-room-after-built-in-dark-wood-entertainme-033.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/interiors/living-room-after-built-in-dark-wood-entertainme-033.webp",
+          "size_kb": 573,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 985
+        }
+      ]
+    },
+    "team": {
+      "count": 7,
+      "quota": 7,
+      "total_size_kb": 462,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/team/team-not-applicable-professional-business-attire-134.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/team/team-not-applicable-professional-business-attire-134.webp",
+          "size_kb": 39,
+          "room_type": "team",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/team/team-not-applicable-professional-lighting-131.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/team/team-not-applicable-professional-lighting-131.webp",
+          "size_kb": 48,
+          "room_type": "team",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/team/team-not-applicable-professional-lighting-136.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/team/team-not-applicable-professional-lighting-136.webp",
+          "size_kb": 71,
+          "room_type": "team",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/team/team-not-applicable-professional-lighting-137.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/team/team-not-applicable-professional-lighting-137.webp",
+          "size_kb": 76,
+          "room_type": "team",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/team/team-not-applicable-professional-portrait-lighting-135.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/team/team-not-applicable-professional-portrait-lighting-135.webp",
+          "size_kb": 27,
+          "room_type": "team",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/team/team-not-applicable-professional-styling-132.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/team/team-not-applicable-professional-styling-132.webp",
+          "size_kb": 87,
+          "room_type": "team",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/team/team-not-applicable-professional-lighting-and-comp-133.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/team/team-not-applicable-professional-lighting-and-comp-133.webp",
+          "size_kb": 114,
+          "room_type": "team",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 970
+        }
+      ]
+    },
+    "approvals": {
+      "count": 6,
+      "quota": 6,
+      "total_size_kb": 1731,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-contemporary-horizontal-panel--107.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/approvals/exterior-after-contemporary-horizontal-panel--107.webp",
+          "size_kb": 52,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-grey-metal-cladding-panels-102.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/approvals/exterior-after-grey-metal-cladding-panels-102.webp",
+          "size_kb": 86,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-curved-modern-facade-with-mixe-142.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/approvals/exterior-after-curved-modern-facade-with-mixe-142.webp",
+          "size_kb": 151,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-contemporary-concrete-and-glas-022.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/approvals/exterior-after-contemporary-concrete-and-glas-022.webp",
+          "size_kb": 486,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 985
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-contemporary-curved-architectu-280.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/approvals/exterior-after-contemporary-curved-architectu-280.jpg",
+          "size_kb": 485,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-contemporary-geometric-archite-315.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/approvals/exterior-after-contemporary-geometric-archite-315.jpg",
+          "size_kb": 471,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 965
+        }
+      ]
+    },
+    "community": {
+      "count": 6,
+      "quota": 6,
+      "total_size_kb": 864,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-black-aluminum-pergola-with-ho-106.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/community/exterior-after-black-aluminum-pergola-with-ho-106.webp",
+          "size_kb": 86,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-custom-putting-green-with-sand-168.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/community/exterior-after-custom-putting-green-with-sand-168.webp",
+          "size_kb": 190,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-glass-panel-infinity-pool-with-031.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/community/pool-after-glass-panel-infinity-pool-with-031.webp",
+          "size_kb": 132,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-glass-walled-infinity-pool-wit-008.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/community/pool-after-glass-walled-infinity-pool-wit-008.webp",
+          "size_kb": 155,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-infinity-edge-pool-design-014.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/community/pool-after-infinity-edge-pool-design-014.webp",
+          "size_kb": 129,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/pool/after/pool-after-infinity-edge-pool-with-mosaic-006.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/community/pool-after-infinity-edge-pool-with-mosaic-006.webp",
+          "size_kb": 172,
+          "room_type": "pool",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1000
+        }
+      ]
+    },
+    "construction": {
+      "count": 30,
+      "quota": 30,
+      "total_size_kb": 9944,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-transparent-acrylic-dome-110.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-transparent-acrylic-dome-110.webp",
+          "size_kb": 78,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-after-exposed-brick-accent-wall-068.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-after-exposed-brick-accent-wall-068.webp",
+          "size_kb": 60,
+          "room_type": "other",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-large-solar-panel-array-instal-128.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-large-solar-panel-array-instal-128.webp",
+          "size_kb": 211,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-large-solar-panel-array-instal-129.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-large-solar-panel-array-instal-129.webp",
+          "size_kb": 211,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-after-industrial-black-ceiling-with--059.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-after-industrial-black-ceiling-with--059.webp",
+          "size_kb": 205,
+          "room_type": "other",
+          "stage": "after",
+          "format": ".webp",
+          "score": 995
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-blue-solar-panel-arrays-coveri-073.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-blue-solar-panel-arrays-coveri-073.webp",
+          "size_kb": 2000,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 980
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-floor-to-ceiling-glass-walls-208.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-floor-to-ceiling-glass-walls-208.jpg",
+          "size_kb": 141,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 980
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/exterior-not-applicable-smart-home-automation-system-166.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-not-applicable-smart-home-automation-system-166.webp",
+          "size_kb": 62,
+          "room_type": "exterior",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/exterior-not-applicable-solar-panel-installation-127.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-not-applicable-solar-panel-installation-127.webp",
+          "size_kb": 95,
+          "room_type": "exterior",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-not-applicable-central-hvac-unit-in-attic-081.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-not-applicable-central-hvac-unit-in-attic-081.webp",
+          "size_kb": 67,
+          "room_type": "other",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-not-applicable-solar-panel-array-system-159.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-not-applicable-solar-panel-array-system-159.webp",
+          "size_kb": 57,
+          "room_type": "other",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-not-applicable-stainless-steel-construction-112.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-not-applicable-stainless-steel-construction-112.webp",
+          "size_kb": 18,
+          "room_type": "other",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 975
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/exterior-not-applicable-multiple-high-capacity-hvac-un-130.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-not-applicable-multiple-high-capacity-hvac-un-130.webp",
+          "size_kb": 194,
+          "room_type": "exterior",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 970
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/exterior-not-applicable-solar-panel-installations-126.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-not-applicable-solar-panel-installations-126.webp",
+          "size_kb": 147,
+          "room_type": "exterior",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 970
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-not-applicable-exposed-industrial-ceiling-wit-051.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-not-applicable-exposed-industrial-ceiling-wit-051.webp",
+          "size_kb": 189,
+          "room_type": "other",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 970
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-not-applicable-exposed-industrial-ceiling-wit-056.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-not-applicable-exposed-industrial-ceiling-wit-056.webp",
+          "size_kb": 141,
+          "room_type": "other",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 970
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-not-applicable-industrial-exposed-ceiling-wit-054.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-not-applicable-industrial-exposed-ceiling-wit-054.webp",
+          "size_kb": 187,
+          "room_type": "other",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 970
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-not-applicable-industrial-grade-air-handling--123.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-not-applicable-industrial-grade-air-handling--123.webp",
+          "size_kb": 113,
+          "room_type": "other",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 970
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-not-applicable-industrial-hvac-units-122.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-not-applicable-industrial-hvac-units-122.webp",
+          "size_kb": 104,
+          "room_type": "other",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 970
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/other/other-not-applicable-industrial-style-exposed-ceili-064.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/other-not-applicable-industrial-style-exposed-ceili-064.webp",
+          "size_kb": 169,
+          "room_type": "other",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 970
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-contemporary-geometric-archite-332.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-contemporary-geometric-archite-332.jpg",
+          "size_kb": 532,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-curved-architectural-walls-313.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-curved-architectural-walls-313.jpg",
+          "size_kb": 566,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-curved-modern-entrance-with-ho-322.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-curved-modern-entrance-with-ho-322.jpg",
+          "size_kb": 687,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-curved-modern-facade-271.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-curved-modern-facade-271.jpg",
+          "size_kb": 589,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-cylindrical-architectural-elem-331.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-cylindrical-architectural-elem-331.jpg",
+          "size_kb": 610,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-floor-to-ceiling-glass-windows-285.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-floor-to-ceiling-glass-windows-285.jpg",
+          "size_kb": 673,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-modern-minimalist-architecture-310.jpg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-modern-minimalist-architecture-310.jpg",
+          "size_kb": 543,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-red-clay-tile-roof-319.jpeg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-red-clay-tile-roof-319.jpeg",
+          "size_kb": 444,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpeg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/after/exterior-after-wooden-pergola-with-slatted-ro-306.jpeg",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-after-wooden-pergola-with-slatted-ro-306.jpeg",
+          "size_kb": 460,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".jpeg",
+          "score": 965
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/exterior/exterior-not-applicable-jumeirah-golf-estates-artificial-putting-green-036.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/construction/exterior-not-applicable-jumeirah-golf-estates-artificial-putting-green-036.webp",
+          "size_kb": 391,
+          "room_type": "exterior",
+          "stage": "not-applicable",
+          "format": ".webp",
+          "score": 965
+        }
+      ]
+    },
+    "hero": {
+      "count": 15,
+      "quota": 15,
+      "total_size_kb": 1041,
+      "files": [
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/bathroom-after-black-framed-glass-shower-encl-091.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/bathroom-after-black-framed-glass-shower-encl-091.webp",
+          "size_kb": 70,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/bathroom-after-chrome-framed-glass-shower-enc-096.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/bathroom-after-chrome-framed-glass-shower-enc-096.webp",
+          "size_kb": 51,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/bathroom-after-floating-wooden-vanity-unit-092.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/bathroom-after-floating-wooden-vanity-unit-092.webp",
+          "size_kb": 39,
+          "room_type": "bathroom",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/exterior-after-black-aluminum-pergola-with-ho-106.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/exterior-after-black-aluminum-pergola-with-ho-106.webp",
+          "size_kb": 86,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/exterior-after-contemporary-horizontal-panel--107.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/exterior-after-contemporary-horizontal-panel--107.webp",
+          "size_kb": 52,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/exterior-after-grey-metal-cladding-panels-102.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/exterior-after-grey-metal-cladding-panels-102.webp",
+          "size_kb": 86,
+          "room_type": "exterior",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/glass-aluminium-after-black-aluminum-frame-090.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/glass-aluminium-after-black-aluminum-frame-090.webp",
+          "size_kb": 81,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/glass-aluminium-after-curved-glass-panels-with-alumi-111.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/glass-aluminium-after-curved-glass-panels-with-alumi-111.webp",
+          "size_kb": 55,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/glass-aluminium-after-dark-aluminum-frame-with-clean-109.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/glass-aluminium-after-dark-aluminum-frame-with-clean-109.webp",
+          "size_kb": 87,
+          "room_type": "glass-aluminium",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/kitchen-after-exposed-red-brick-accent-wall-070.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/kitchen-after-exposed-red-brick-accent-wall-070.webp",
+          "size_kb": 59,
+          "room_type": "kitchen",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/kitchen-after-smart-home-digital-interface-w-002.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/kitchen-after-smart-home-digital-interface-w-002.webp",
+          "size_kb": 71,
+          "room_type": "kitchen",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/living-room-after-black-framed-tilt-and-turn-win-089.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/living-room-after-black-framed-tilt-and-turn-win-089.webp",
+          "size_kb": 62,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/living-room-after-floor-to-ceiling-sliding-glass-086.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/living-room-after-floor-to-ceiling-sliding-glass-086.webp",
+          "size_kb": 93,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/living-room-after-organic-curved-sofa-and-armcha-141.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/living-room-after-organic-curved-sofa-and-armcha-141.webp",
+          "size_kb": 94,
+          "room_type": "living-room",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        },
+        {
+          "source": "/root/unicorn-sovereign/vault/curated/hero-shots/other-after-curved-glass-panel-railing-sys-117.webp",
+          "destination": "/home/openclaw/sites/first-unicorn-interiors/images/hero/other-after-curved-glass-panel-railing-sys-117.webp",
+          "size_kb": 55,
+          "room_type": "other",
+          "stage": "after",
+          "format": ".webp",
+          "score": 1005
+        }
+      ]
+    }
+  }
+}
