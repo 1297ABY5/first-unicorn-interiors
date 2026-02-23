@@ -280,23 +280,29 @@ p { max-width: 720px; }
   background: var(--bg-secondary); border: 1px solid var(--border);
   padding: 0; position: relative; overflow: hidden;
   transition: all 0.4s ease; display: flex; flex-direction: column;
+  min-height: 360px;
 }
 .division-card::before {
   content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
   background: linear-gradient(90deg, var(--gold), transparent);
-  transform: scaleX(0); transform-origin: left; transition: transform 0.5s; z-index: 1;
+  transform: scaleX(0); transform-origin: left; transition: transform 0.5s; z-index: 3;
+}
+.division-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 70%;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+  z-index: 1; pointer-events: none;
 }
 .division-card:hover { transform: translateY(-4px); border-color: var(--gold-glow); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
 .division-card:hover::before { transform: scaleX(1); }
-.division-card-icon { margin: 0; line-height: 0; }
-.division-card-icon img { width: 100%; height: 220px; object-fit: fill; display: block; border: none; border-radius: 0; background: var(--bg-primary); }
-.division-card h3 { margin-bottom: 0.8rem; padding: 1.5rem 2rem 0; }
-.division-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.7; padding: 0 2rem; }
+.division-card-icon { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 0; line-height: 0; }
+.division-card-icon img { width: 100%; height: 100%; object-fit: cover; display: block; border: none; border-radius: 0; }
+.division-card h3 { margin-bottom: 0.5rem; padding: 0 2rem; position: relative; z-index: 2; margin-top: auto; }
+.division-card p { color: rgba(255,255,255,0.8); font-size: 0.92rem; margin-bottom: 1rem; line-height: 1.6; padding: 0 2rem; position: relative; z-index: 2; }
 .division-card-link {
   font-size: 0.85rem; font-weight: 600; color: var(--gold);
   text-transform: uppercase; letter-spacing: 0.08em;
   display: inline-flex; align-items: center; gap: 0.5rem;
-  transition: gap 0.3s; padding: 0 2rem 1.8rem;
+  transition: gap 0.3s; padding: 0 2rem 1.8rem; position: relative; z-index: 2;
 }
 .division-card-link:hover { gap: 0.8rem; }
 
@@ -332,25 +338,37 @@ p { max-width: 720px; }
 .feature-card {
   background: var(--bg-secondary); border: 1px solid var(--border);
   padding: 0; transition: all 0.4s; overflow: hidden;
+  position: relative; display: flex; flex-direction: column; min-height: 300px;
+}
+.feature-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 70%;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+  z-index: 1; pointer-events: none;
 }
 .feature-card:hover { border-color: var(--gold-glow); transform: translateY(-3px); }
-.feature-card-icon { margin: 0; line-height: 0; }
-.feature-card-icon img { width: 100%; height: 180px; object-fit: fill; display: block; border: none; border-radius: 0; background: var(--bg-primary); }
-.feature-card h3 { font-size: 1.15rem; margin-bottom: 0.8rem; padding: 1.5rem 1.5rem 0; }
-.feature-card p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; padding: 0 1.5rem 1.5rem; }
+.feature-card-icon { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 0; line-height: 0; }
+.feature-card-icon img { width: 100%; height: 100%; object-fit: cover; display: block; border: none; border-radius: 0; }
+.feature-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; padding: 0 1.5rem; position: relative; z-index: 2; margin-top: auto; }
+.feature-card p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.6; padding: 0 1.5rem 1.5rem; position: relative; z-index: 2; }
 
 /* ═══ EDUCATION CARDS ═══ */
 .edu-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .edu-card {
   background: var(--bg-secondary); border: 1px solid var(--border);
   padding: 0; transition: all 0.4s; overflow: hidden;
+  position: relative; display: flex; flex-direction: column; min-height: 300px;
+}
+.edu-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 70%;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+  z-index: 1; pointer-events: none;
 }
 .edu-card:hover { border-color: var(--gold-glow); transform: translateY(-3px); }
-.edu-card-icon { margin: 0; line-height: 0; }
-.edu-card-icon img { width: 100%; height: 180px; object-fit: fill; display: block; border: none; border-radius: 0; background: var(--bg-primary); }
-.edu-card h3 { font-size: 1.15rem; margin-bottom: 0.8rem; padding: 1.5rem 1.5rem 0; }
-.edu-card p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.2rem; padding: 0 1.5rem; }
-.edu-card-link { font-size: 0.85rem; font-weight: 600; color: var(--gold); display: inline-flex; align-items: center; gap: 0.4rem; padding: 0 1.5rem 1.5rem; }
+.edu-card-icon { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 0; line-height: 0; }
+.edu-card-icon img { width: 100%; height: 100%; object-fit: cover; display: block; border: none; border-radius: 0; }
+.edu-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; padding: 0 1.5rem; position: relative; z-index: 2; margin-top: auto; }
+.edu-card p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 1rem; padding: 0 1.5rem; position: relative; z-index: 2; }
+.edu-card-link { font-size: 0.85rem; font-weight: 600; color: var(--gold); display: inline-flex; align-items: center; gap: 0.4rem; padding: 0 1.5rem 1.5rem; position: relative; z-index: 2; }
 
 /* ═══ STATS BAR ═══ */
 .stats-bar {
@@ -675,9 +693,9 @@ p { max-width: 720px; }
   .gallery-card { flex: 0 0 85vw; }
   .hero { min-height: 90vh; }
   .page-hero { min-height: 40vh; padding-top: 8rem; }
-  .division-card-icon img { height: 200px; object-fit: fill; }
-  .feature-card-icon img { height: 160px; object-fit: fill; }
-  .edu-card-icon img { height: 160px; object-fit: fill; }
+  .division-card { min-height: 300px; }
+  .feature-card { min-height: 260px; }
+  .edu-card { min-height: 260px; }
 }
 
 @media (min-width: 1440px) {
