@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════
    CONVERSION ENGINE — First Unicorn Group
-   Urgency Bar, Sticky CTA, Exit-Intent Popup, Tracking
+   Sticky CTA, Exit-Intent Popup, Tracking
 ═══════════════════════════════════════ */
 (function(){
   'use strict';
