@@ -677,3 +677,267 @@ p { max-width: 720px; }
 @media (min-width: 1440px) {
   :root { --container-width: 1400px; }
 }
+
+/* ═══════════════════════════════════════
+   10X CONVERSION ELEMENTS
+   Urgency, Sticky CTA, Exit Popup, Testimonials
+═══════════════════════════════════════ */
+
+/* ─── URGENCY BAR ─────────────────────────────── */
+.urgency-bar {
+  background: linear-gradient(90deg, #15803d 0%, #166534 100%);
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1001;
+}
+.urgency-bar strong { color: var(--gold-light); }
+.urgency-bar a { color: var(--gold-light); text-decoration: underline; }
+.urgency-bar .ub-close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+.urgency-bar .ub-close:hover { color: #fff; }
+
+/* Push nav down when urgency bar is present */
+body.has-urgency-bar .nav { top: 0; }
+
+/* ─── STICKY MOBILE CTA ──────────────────────── */
+.sticky-mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 10px 12px;
+  z-index: 999;
+  gap: 8px;
+  align-items: center;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+}
+.sticky-mobile-cta a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 8px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: none;
+  cursor: pointer;
+}
+.sticky-mobile-cta .smc-wa {
+  background: #15803d;
+  color: #fff;
+}
+.sticky-mobile-cta .smc-wa:hover { background: #16a34a; }
+.sticky-mobile-cta .smc-call {
+  background: var(--gold);
+  color: var(--bg-primary);
+}
+.sticky-mobile-cta .smc-call:hover { background: var(--gold-light); }
+
+@media (max-width: 768px) {
+  .sticky-mobile-cta { display: flex; }
+  body.has-sticky-cta { padding-bottom: 68px; }
+}
+
+/* ─── EXIT-INTENT POPUP ──────────────────────── */
+.exit-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.exit-popup-overlay.visible { display: flex; }
+
+.exit-popup {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  max-width: 440px;
+  width: 100%;
+  padding: 40px 32px;
+  text-align: center;
+  position: relative;
+  animation: popSlide 0.35s ease;
+}
+@keyframes popSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.exit-popup::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--gold);
+  margin: 0 auto 24px;
+}
+.exit-popup .ep-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+.exit-popup .ep-close:hover { color: var(--text-primary); }
+.exit-popup h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.exit-popup p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 auto 24px;
+  max-width: 360px;
+  line-height: 1.6;
+}
+.exit-popup input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.exit-popup input:focus { border-color: var(--gold); }
+.exit-popup input::placeholder { color: var(--text-dim); }
+.exit-popup .ep-btn {
+  width: 100%;
+  padding: 14px;
+  background: #15803d;
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.exit-popup .ep-btn:hover { background: #16a34a; }
+.exit-popup .ep-privacy {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-top: 12px;
+}
+.exit-popup .ep-social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.exit-popup .ep-avatars {
+  display: flex;
+}
+.exit-popup .ep-avatars span {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--bg-secondary);
+  margin-left: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: var(--bg-primary);
+  font-weight: 700;
+}
+.exit-popup .ep-avatars span:first-child { margin-left: 0; }
+
+/* ─── INLINE TESTIMONIALS (service pages) ────── */
+.testimonials-section {
+  padding: var(--section-padding) 0;
+  background: var(--bg-secondary);
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.testimonial-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 32px 24px;
+  position: relative;
+}
+.testimonial-card::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 20px;
+}
+.tc-stars {
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.tc-quote {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.tc-author {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+.tc-location {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+@media (max-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .testimonials-grid { grid-template-columns: 1fr; max-width: 480px; } }
