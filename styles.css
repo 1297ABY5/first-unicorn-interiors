@@ -692,14 +692,14 @@ p { max-width: 720px; }
   .services-list { grid-template-columns: 1fr; }
   .gallery-scroll {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 16px;
     overflow-x: visible;
     scroll-snap-type: none;
     padding: 0;
     cursor: default;
   }
-  .gallery-card { flex: none; }
+  .gallery-card { flex: none; aspect-ratio: 4/3; }
   .hero { min-height: 90vh; }
   .page-hero { min-height: 40vh; padding-top: 8rem; }
   .division-card-icon img { height: 200px; }
@@ -1283,10 +1283,13 @@ body > * { position: relative; z-index: 1; }
     gap: 14px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .vtesti-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1334,10 +1337,13 @@ body > * { position: relative; z-index: 1; }
     gap: 10px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .video-reel {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
