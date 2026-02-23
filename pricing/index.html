@@ -54,6 +54,9 @@
     .pr-card.feat::before{opacity:1}
     .pr-pop{position:absolute;top:0;right:0;padding:6px 14px;background:var(--gd);color:var(--bk);font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
     .pr-ic{font-size:2rem;margin-bottom:12px}
+    .pr-img{width:100%;height:140px;overflow:hidden;margin:-32px -28px 20px;width:calc(100% + 56px);border-bottom:1px solid var(--bd)}
+    .pr-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.65);transition:filter .4s}
+    .pr-card:hover .pr-img img{filter:brightness(.8)}
     .pr-nm{font-family:var(--fd);font-size:1.15rem;font-weight:600;color:var(--cr);margin-bottom:4px}
     .pr-desc{font-size:.82rem;color:var(--mu);margin-bottom:20px;line-height:1.5}
     .pr-from{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--mu);margin-bottom:4px}
@@ -69,7 +72,8 @@
     .inc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .inc-card{background:var(--cd);border:1px solid var(--bd);padding:24px 20px;text-align:center;transition:all .3s}
     .inc-card:hover{border-color:rgba(200,165,94,.2)}
-    .inc-ic{font-size:1.6rem;margin-bottom:10px}
+    .inc-ic{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--gd06);border:1px solid rgba(200,165,94,.1);border-radius:8px;margin:0 auto 10px}
+    .inc-ic svg{width:20px;height:20px;stroke:var(--gd);fill:none;stroke-width:1.5}
     .inc-nm{font-size:.88rem;font-weight:600;color:var(--cr);margin-bottom:6px}
     .inc-ds{font-size:.78rem;color:var(--mu);line-height:1.5}
 
@@ -161,7 +165,7 @@
       <!-- Kitchen -->
       <div class="pr-card feat">
         <div class="pr-pop">Most Popular</div>
-        <div class="pr-ic">🍳</div>
+        <div class="pr-img"><img src="/images/kitchen/kitchen-after-black-marble-feature-wall-with-018.webp" alt="Kitchen renovation Dubai" loading="lazy"></div>
         <div class="pr-nm">Kitchen Renovation</div>
         <div class="pr-desc">Complete redesign including cabinetry, countertops, appliances, lighting, and flooring.</div>
         <div class="pr-from">Starting from</div>
@@ -179,7 +183,7 @@
 
       <!-- Bathroom -->
       <div class="pr-card">
-        <div class="pr-ic">🚿</div>
+        <div class="pr-img"><img src="/images/bathroom/bathroom-after-dark-hexagonal-tile-accent-wal-178.webp" alt="Bathroom renovation Dubai" loading="lazy"></div>
         <div class="pr-nm">Bathroom Renovation</div>
         <div class="pr-desc">Full gut and rebuild including tiling, fixtures, vanity, shower enclosure, and waterproofing.</div>
         <div class="pr-from">Starting from</div>
@@ -197,7 +201,7 @@
 
       <!-- Full Villa -->
       <div class="pr-card">
-        <div class="pr-ic">🏠</div>
+        <div class="pr-img"><img src="/images/interiors/living-room-after-floor-to-ceiling-glass-wall-an-042.webp" alt="Full villa renovation Dubai" loading="lazy"></div>
         <div class="pr-nm">Full Villa Renovation</div>
         <div class="pr-desc">Complete transformation — every room redesigned, rebuilt, and handed over turnkey.</div>
         <div class="pr-from">Starting from</div>
@@ -217,7 +221,7 @@
     <!-- More services -->
     <div class="pr-grid">
       <div class="pr-card">
-        <div class="pr-ic">🏊</div>
+        <div class="pr-img"><img src="/images/pool/pool-after-infinity-edge-pool-009.webp" alt="Pool renovation Dubai" loading="lazy"></div>
         <div class="pr-nm">Pool Renovation</div>
         <div class="pr-desc">Retiling, equipment upgrade, deck area, water features.</div>
         <div class="pr-from">Starting from</div>
@@ -226,7 +230,7 @@
         <a href="https://wa.me/971526455121?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20pool%20renovation." class="pr-cta">Get Pool Quote →</a>
       </div>
       <div class="pr-card">
-        <div class="pr-ic">🪟</div>
+        <div class="pr-img"><img src="/images/glass/glass-aluminium-after-floor-to-ceiling-glass-curtain-098.webp" alt="Glass and aluminium works Dubai" loading="lazy"></div>
         <div class="pr-nm">Glass &amp; Aluminium</div>
         <div class="pr-desc">Shower enclosures, partitions, balustrades, facades.</div>
         <div class="pr-from">Starting from</div>
@@ -235,7 +239,7 @@
         <a href="https://wa.me/971526455121?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20glass%20and%20aluminium%20works." class="pr-cta">Get Glass Quote →</a>
       </div>
       <div class="pr-card">
-        <div class="pr-ic">🔨</div>
+        <div class="pr-img"><img src="/images/interiors/bedroom-after-built-in-wardrobes-with-led-st-318.webp" alt="Painting and flooring Dubai" loading="lazy"></div>
         <div class="pr-nm">Painting &amp; Flooring</div>
         <div class="pr-desc">Interior painting, marble, porcelain, engineered wood.</div>
         <div class="pr-from">Starting from</div>
@@ -254,14 +258,14 @@
     <h2>No Hidden Costs — Everything Listed</h2>
     <p class="sec-sub">Other contractors surprise you at the end. We itemise everything upfront.</p>
     <div class="inc-grid">
-      <div class="inc-card"><div class="inc-ic">🎨</div><div class="inc-nm">Design &amp; 3D</div><div class="inc-ds">Free consultation and 3D visualisation of your space before any work begins</div></div>
-      <div class="inc-card"><div class="inc-ic">🧱</div><div class="inc-nm">All Materials</div><div class="inc-ds">Every tile, fixture, and fitting specified and costed. Direct sourcing, no middlemen</div></div>
-      <div class="inc-card"><div class="inc-ic">👷</div><div class="inc-nm">All Labour</div><div class="inc-ds">In-house team for every trade — no subcontractors, one point of accountability</div></div>
-      <div class="inc-card"><div class="inc-ic">📋</div><div class="inc-nm">Project Management</div><div class="inc-ds">Dedicated project manager with daily WhatsApp photo updates</div></div>
-      <div class="inc-card"><div class="inc-ic">📄</div><div class="inc-nm">Permits &amp; Approvals</div><div class="inc-ds">Developer NOCs, DM approvals, and all community requirements handled</div></div>
-      <div class="inc-card"><div class="inc-ic">📅</div><div class="inc-nm">Contractual Timeline</div><div class="inc-ds">Locked completion date in your contract. We mean what we write</div></div>
-      <div class="inc-card"><div class="inc-ic">💳</div><div class="inc-nm">Milestone Payments</div><div class="inc-ds">Pay only as work completes — no large upfront deposits</div></div>
-      <div class="inc-card"><div class="inc-ic">🛡️</div><div class="inc-nm">1-Year Warranty</div><div class="inc-ds">Craftsmanship warranty on all works. We stand behind everything</div></div>
+      <div class="inc-card"><div class="inc-ic"><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div><div class="inc-nm">Design &amp; 3D</div><div class="inc-ds">Free consultation and 3D visualisation of your space before any work begins</div></div>
+      <div class="inc-card"><div class="inc-ic"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="22" height="12" rx="2" ry="2"/><path d="M1 10h22"/></svg></div><div class="inc-nm">All Materials</div><div class="inc-ds">Every tile, fixture, and fitting specified and costed. Direct sourcing, no middlemen</div></div>
+      <div class="inc-card"><div class="inc-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="inc-nm">All Labour</div><div class="inc-ds">In-house team for every trade — no subcontractors, one point of accountability</div></div>
+      <div class="inc-card"><div class="inc-ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div class="inc-nm">Project Management</div><div class="inc-ds">Dedicated project manager with daily WhatsApp photo updates</div></div>
+      <div class="inc-card"><div class="inc-ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div><div class="inc-nm">Permits &amp; Approvals</div><div class="inc-ds">Developer NOCs, DM approvals, and all community requirements handled</div></div>
+      <div class="inc-card"><div class="inc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="inc-nm">Contractual Timeline</div><div class="inc-ds">Locked completion date in your contract. We mean what we write</div></div>
+      <div class="inc-card"><div class="inc-ic"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="inc-nm">Milestone Payments</div><div class="inc-ds">Pay only as work completes — no large upfront deposits</div></div>
+      <div class="inc-card"><div class="inc-ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="inc-nm">1-Year Warranty</div><div class="inc-ds">Craftsmanship warranty on all works. We stand behind everything</div></div>
     </div>
   </div>
 </section>
