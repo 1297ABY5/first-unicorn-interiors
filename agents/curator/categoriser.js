@@ -58,73 +58,78 @@ export async function categoriseAll() {
       continue; // file removed, skip
     }
 
-    index++;
-    const newFilename = buildFilename(analysis, filename, index);
-    const roomType = analysis.room_type || 'other';
-    const stage = analysis.stage || 'not-applicable';
-    const quality = analysis.quality_score || 5;
+    try {
+      index++;
+      const newFilename = buildFilename(analysis, filename, index);
+      const roomType = analysis.room_type || 'other';
+      const stage = analysis.stage || 'not-applicable';
+      const quality = analysis.quality_score || 5;
 
-    const destinations = [];
+      const destinations = [];
 
-    // Skip low quality
-    if (quality <= CONFIG.skipThreshold) {
-      const skipDest = join(CONFIG.paths.skip, newFilename);
-      await mkdir(CONFIG.paths.skip, { recursive: true });
-      await copyFile(originalPath, skipDest);
-      destinations.push(`skip/${newFilename}`);
-      skipped++;
-      await appendLog(`SKIP ${filename} → skip/ (quality ${quality})`);
-      console.log(`  [skip] ${filename} → skip/ (quality ${quality}/10)`);
+      // Skip low quality
+      if (quality <= CONFIG.skipThreshold) {
+        const skipDest = join(CONFIG.paths.skip, newFilename);
+        await mkdir(CONFIG.paths.skip, { recursive: true });
+        await copyFile(originalPath, skipDest);
+        destinations.push(`skip/${newFilename}`);
+        skipped++;
+        await appendLog(`SKIP ${filename} → skip/ (quality ${quality})`);
+        console.log(`  [skip] ${filename} → skip/ (quality ${quality}/10)`);
 
-    } else {
-      // Copy to room/stage directory
-      if (CONFIG.categories.rooms.includes(roomType)) {
-        const roomDir = CONFIG.categories.stages.includes(stage)
-          ? join(CONFIG.paths.curated, roomType, stage)
-          : join(CONFIG.paths.curated, roomType);
-        await mkdir(roomDir, { recursive: true });
-        await copyFile(originalPath, join(roomDir, newFilename));
-        destinations.push(`${roomType}/${stage}/${newFilename}`);
       } else {
-        // team, site-progress, other
-        const otherDir = join(CONFIG.paths.curated, roomType);
-        await mkdir(otherDir, { recursive: true });
-        await copyFile(originalPath, join(otherDir, newFilename));
-        destinations.push(`${roomType}/${newFilename}`);
+        // Copy to room/stage directory
+        if (CONFIG.categories.rooms.includes(roomType)) {
+          const roomDir = CONFIG.categories.stages.includes(stage)
+            ? join(CONFIG.paths.curated, roomType, stage)
+            : join(CONFIG.paths.curated, roomType);
+          await mkdir(roomDir, { recursive: true });
+          await copyFile(originalPath, join(roomDir, newFilename));
+          destinations.push(`${roomType}/${stage}/${newFilename}`);
+        } else {
+          // team, site-progress, other
+          const otherDir = join(CONFIG.paths.curated, roomType);
+          await mkdir(otherDir, { recursive: true });
+          await copyFile(originalPath, join(otherDir, newFilename));
+          destinations.push(`${roomType}/${newFilename}`);
+        }
+
+        // Hero shots
+        if (quality >= CONFIG.heroThreshold) {
+          await mkdir(CONFIG.paths.heroShots, { recursive: true });
+          await copyFile(originalPath, join(CONFIG.paths.heroShots, newFilename));
+          destinations.push(`hero-shots/${newFilename}`);
+          heroes++;
+
+          // Also copy to forge originals for branded asset creation
+          await copyFile(originalPath, join(CONFIG.paths.forgeOriginals, newFilename));
+          destinations.push(`forge-originals/${newFilename}`);
+        }
+
+        categorised++;
+        console.log(`  [sort] ${filename} → ${destinations[0]} (quality ${quality}/10)`);
       }
 
-      // Hero shots
-      if (quality >= CONFIG.heroThreshold) {
-        await mkdir(CONFIG.paths.heroShots, { recursive: true });
-        await copyFile(originalPath, join(CONFIG.paths.heroShots, newFilename));
-        destinations.push(`hero-shots/${newFilename}`);
-        heroes++;
-
-        // Also copy to forge originals for branded asset creation
-        await copyFile(originalPath, join(CONFIG.paths.forgeOriginals, newFilename));
-        destinations.push(`forge-originals/${newFilename}`);
-      }
-
-      categorised++;
-      console.log(`  [sort] ${filename} → ${destinations[0]} (quality ${quality}/10)`);
+      // Add to manifest
+      manifest.photos.push({
+        originalFilename: filename,
+        newFilename,
+        roomType,
+        stage,
+        community: analysis.community || 'unknown',
+        quality,
+        description: analysis.description,
+        suggestedCaption: analysis.suggested_caption,
+        notableFeatures: analysis.notable_features,
+        websitePlacement: analysis.website_placement,
+        isBeforeAfterPair: analysis.is_before_after_pair,
+        destinations,
+        categorisedAt: new Date().toISOString(),
+      });
+    } catch (err) {
+      console.error(`  [sort] Failed: ${filename} — ${err.message}`);
+      await appendLog(`SORT_ERROR ${filename} — ${err.message}`).catch(() => {});
     }
-
-    // Add to manifest
-    manifest.photos.push({
-      originalFilename: filename,
-      newFilename,
-      roomType,
-      stage,
-      community: analysis.community || 'unknown',
-      quality,
-      description: analysis.description,
-      suggestedCaption: analysis.suggested_caption,
-      notableFeatures: analysis.notable_features,
-      websitePlacement: analysis.website_placement,
-      isBeforeAfterPair: analysis.is_before_after_pair,
-      destinations,
-      categorisedAt: new Date().toISOString(),
-    });
   }
 
   manifest.lastUpdated = new Date().toISOString();

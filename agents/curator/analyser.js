@@ -1,16 +1,51 @@
-import { readFile } from 'node:fs/promises';
 import { basename, extname } from 'node:path';
+import sharp from 'sharp';
 import axios from 'axios';
 import Anthropic from '@anthropic-ai/sdk';
 import { CONFIG, VISION_PROMPT } from './config.js';
 import { getAnalysis, appendAnalysis, appendLog } from './logger.js';
 
-const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp']);
+const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.heic', '.heif', '.tiff', '.tif']);
 
-function mimeType(filePath) {
-  const ext = extname(filePath).toLowerCase();
-  const map = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp' };
-  return map[ext] || 'image/jpeg';
+function formatToMime(format) {
+  const map = {
+    jpeg: 'image/jpeg',
+    png: 'image/png',
+    webp: 'image/webp',
+    gif: 'image/gif',
+    tiff: 'image/tiff',
+    heif: 'image/heif',
+  };
+  return map[format] || 'image/jpeg';
+}
+
+// ─── IMAGE PREPROCESSING ────────────────────────────────
+
+const MAX_DIMENSION = 2048;
+const MAX_BYTES = 4 * 1024 * 1024; // 4 MB
+const QUALITY_STEPS = [85, 70, 55, 40];
+
+async function prepareImageForApi(filePath) {
+  const meta = await sharp(filePath).metadata();
+  const needsResize = (meta.width && meta.width > MAX_DIMENSION) ||
+                      (meta.height && meta.height > MAX_DIMENSION);
+
+  let pipeline = sharp(filePath);
+  if (needsResize) {
+    pipeline = pipeline.resize(MAX_DIMENSION, MAX_DIMENSION, { fit: 'inside', withoutEnlargement: true });
+  }
+
+  // Convert to JPEG — handles HEIC, TIFF, etc. universally
+  for (const q of QUALITY_STEPS) {
+    const buffer = await pipeline.clone().jpeg({ quality: q, progressive: true }).toBuffer();
+    if (buffer.length <= MAX_BYTES) {
+      return { buffer, mime: 'image/jpeg' };
+    }
+  }
+
+  // Last resort: lowest quality result (will still be under most limits)
+  const buffer = await pipeline.jpeg({ quality: QUALITY_STEPS[QUALITY_STEPS.length - 1], progressive: true }).toBuffer();
+  return { buffer, mime: 'image/jpeg' };
 }
 
 // ─── OPENAI VISION ───────────────────────────────────────
@@ -94,10 +129,9 @@ export async function analysePhoto(filePath, { force = false } = {}) {
     }
   }
 
-  // Read image as base64
-  const buffer = await readFile(filePath);
+  // Preprocess image: resize, convert to JPEG, ensure under 4 MB
+  const { buffer, mime } = await prepareImageForApi(filePath);
   const base64 = buffer.toString('base64');
-  const mime = mimeType(filePath);
 
   console.log(`  [vision] Analysing ${filename} via ${CONFIG.vision.provider}...`);
 
@@ -131,7 +165,11 @@ export async function analyseBatch(filePaths, { force = false } = {}) {
       results.push({ filePath, filename: basename(filePath), analysis, success: true });
     } catch (err) {
       console.error(`  [vision] Failed: ${basename(filePath)} — ${err.message}`);
-      await appendLog(`ANALYSE_ERROR ${basename(filePath)} — ${err.message}`);
+      try {
+        await appendLog(`ANALYSE_ERROR ${basename(filePath)} — ${err.message}`);
+      } catch (logErr) {
+        console.error(`  [vision] Could not write log: ${logErr.message}`);
+      }
       results.push({ filePath, filename: basename(filePath), error: err.message, success: false });
     }
 
@@ -140,6 +178,10 @@ export async function analyseBatch(filePaths, { force = false } = {}) {
       await new Promise(r => setTimeout(r, CONFIG.delayBetweenCalls));
     }
   }
+
+  const succeeded = results.filter(r => r.success).length;
+  const failed = results.length - succeeded;
+  console.log(`\n[curator] Batch complete: ${succeeded} succeeded, ${failed} failed out of ${results.length}`);
 
   return results;
 }
