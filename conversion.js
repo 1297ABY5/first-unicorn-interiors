@@ -8,22 +8,6 @@
   var PHONE = 'tel:+971526455121';
   var WA_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>';
 
-  // 1. URGENCY BAR
-  function injectUrgencyBar() {
-    if (sessionStorage.getItem('ub_closed')) return;
-    if (document.querySelector('.urgency-bar')) return;
-    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    var now = new Date();
-    var nextMonth = months[(now.getMonth() + 1) % 12];
-    var slots = Math.floor(Math.random() * 2) + 2;
-    var bar = document.createElement('div');
-    bar.className = 'urgency-bar';
-    bar.innerHTML = '<strong>Limited Availability:</strong> Only ' + slots + ' project slots remaining for ' + nextMonth + '. <a href="' + WA + encodeURIComponent("Hi, I'd like to book a consultation for " + nextMonth) + '" target="_blank" rel="noopener" style="color:#fbbf24;text-decoration:underline;font-weight:600;">Book your free consultation \u2192</a> <button onclick="this.parentElement.remove();sessionStorage.setItem(\'ub_closed\',\'1\')" style="background:none;border:none;color:#fbbf24;cursor:pointer;font-size:1.2rem;margin-left:12px;vertical-align:middle;">&times;</button>';
-    var trustBar = document.querySelector('.trust-bar');
-    if (trustBar && trustBar.nextSibling) { trustBar.parentNode.insertBefore(bar, trustBar.nextSibling); }
-    else { var main = document.querySelector('main'); if (main) main.insertBefore(bar, main.firstChild); }
-  }
-
   // 2. STICKY SCROLL CTA BAR
   function injectStickyCTA() {
     if (document.querySelector('.sticky-cta')) return;
@@ -98,7 +82,6 @@
 
   // INIT
   function init() {
-    injectUrgencyBar();
     injectStickyCTA();
     injectExitPopup();
     trackClicks();

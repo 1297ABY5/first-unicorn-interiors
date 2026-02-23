@@ -707,45 +707,6 @@ p { max-width: 720px; }
    Urgency, Sticky CTA, Exit Popup, Testimonials
 ═══════════════════════════════════════ */
 
-/* ─── URGENCY BAR ─────────────────────────────── */
-.urgency-bar {
-  background: linear-gradient(90deg, #15803d 0%, #166534 100%);
-  color: #fff;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1.4;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1001;
-}
-.urgency-bar strong { color: var(--gold-light); }
-.urgency-bar a { color: var(--gold-light); text-decoration: underline; }
-.urgency-bar .ub-close {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: rgba(255,255,255,0.5);
-  font-size: 1.1rem;
-  cursor: pointer;
-  padding: 4px;
-  line-height: 1;
-}
-.urgency-bar .ub-close:hover { color: #fff; }
-
-/* Push nav down when urgency bar is present */
-body.has-urgency-bar .nav { top: 38px; }
-body.has-urgency-bar .hero { margin-top: 38px; }
-body.has-urgency-bar .page-hero { margin-top: 38px; }
-body.has-urgency-bar .mobile-menu { top: 38px; height: calc(100vh - 38px); }
-
 /* ─── STICKY MOBILE CTA ──────────────────────── */
 .sticky-mobile-cta {
   display: none;
@@ -1033,14 +994,6 @@ body.has-urgency-bar .mobile-menu { top: 38px; height: calc(100vh - 38px); }
 .testimonial-card blockquote { font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1.2rem; padding-top: 1rem; }
 .testimonial-card .testimonial-author { font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem; }
 .testimonial-card .testimonial-stars { color: var(--gold); font-size: 0.85rem; }
-
-/* ═══ URGENCY BANNER ═══ */
-.urgency-bar {
-  background: linear-gradient(90deg, #7c2d12, #9a3412, #7c2d12);
-  padding: 10px 0; text-align: center;
-  font-size: 0.88rem; color: #fff; font-weight: 500; letter-spacing: 0.02em;
-}
-.urgency-bar strong { color: #fbbf24; }
 
 /* ═══ EXIT INTENT POPUP ═══ */
 .exit-popup-overlay {
