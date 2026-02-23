@@ -27,9 +27,7 @@
     a{text-decoration:none;color:inherit;transition:color .3s}img{max-width:100%;display:block}
 
     /* URGENCY */
-    .urg{background:linear-gradient(90deg,#1a1206,#2a1f0e,#1a1206);text-align:center;padding:10px 20px;font-size:.78rem;color:var(--gd);letter-spacing:.05em;border-bottom:1px solid var(--gd12)}
-    .urg strong{color:var(--cr)}
-    .pulse{display:inline-block;width:6px;height:6px;background:#ef4444;border-radius:50%;margin-right:8px;animation:pls 2s infinite}
+    
     @keyframes pls{0%,100%{opacity:1}50%{opacity:.3}}
 
     /* HEADER */
@@ -200,7 +198,7 @@
       .prc-st{grid-template-columns:repeat(3,1fr);gap:20px}.prc-st::before{display:none}.prc-st .stp:nth-child(n+4){margin-top:20px}
     }
     @media(max-width:680px){
-      .sec{padding:64px 20px}.hero{padding:140px 20px 80px}.urg{font-size:.7rem;padding:8px 14px}.hdr{padding:0 16px}
+      .sec{padding:64px 20px}.hero{padding:140px 20px 80px}.hdr{padding:0 16px}
       .tbar{gap:16px;padding:20px 16px}.ti{font-size:.72rem}.ti-ic{width:30px;height:30px}.ti-ic svg{width:14px;height:14px}
       .ba-c{aspect-ratio:4/3}.gal-g{grid-template-columns:1fr 1fr;gap:8px}.tst-g{grid-template-columns:1fr}
       .prc-st{grid-template-columns:1fr 1fr}
@@ -211,9 +209,6 @@
   </style>
 </head>
 <body>
-
-<!-- Urgency -->
-<div class="urg"><span class="pulse"></span><strong>3 consultation slots</strong> remaining for March — Book your free site visit today</div>
 
 <!-- Header -->
 <header class="hdr wu">
@@ -429,9 +424,6 @@ document.getElementById('exP').addEventListener('click',e=>{if(e.target===e.curr
 document.getElementById('pSub').addEventListener('click',()=>{const p=document.getElementById('pPh').value.trim();if(p.length>6){window.open('https://wa.me/971526455121?text=Hi%2C%20I%27d%20like%20a%20free%203D%20design%20concept.%20My%20number%20is%20'+encodeURIComponent(p),'_blank');document.getElementById('exP').classList.remove('act');if(window.dataLayer)window.dataLayer.push({event:'popup_lead',phone:p})}});
 // Tracking
 document.querySelectorAll('[data-t]').forEach(e=>{e.addEventListener('click',()=>{if(window.dataLayer)window.dataLayer.push({event:'cta_click',cta:e.dataset.t,page:location.pathname})})});
-// Urgency scroll
-const ub=document.querySelector('.urg'),hd=document.querySelector('.hdr');
-window.addEventListener('scroll',()=>{if(scrollY>200){ub.style.transform='translateY(-100%)';ub.style.transition='transform .3s';hd.classList.remove('wu');hd.style.top='0'}else{ub.style.transform='translateY(0)';hd.classList.add('wu')}});
 </script>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="../../conversion.js" defer></script>
