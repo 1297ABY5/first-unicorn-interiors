@@ -318,10 +318,17 @@
         <p style="margin-top:12px">See our frameless glass installations and slim-profile aluminium work across Dubai villas.</p>
       </div>
       <div class="fade-in" style="margin-top:40px;aspect-ratio:16/9;background:var(--bg-tertiary);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
-        <!-- Replace data-video-id with your YouTube video ID -->
-        <div class="video-placeholder" data-video-id="YOUR_VIDEO_ID" style="cursor:pointer;text-align:center;padding:40px;width:100%">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--gold);margin-bottom:16px"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16" fill="var(--gold)" stroke="none"/></svg>
-          <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--text-primary);margin-bottom:6px">Watch the Walkthrough</div>
+        <div style="position:relative;width:100%;height:100%">
+          <video id="walkthrough-video" playsinline preload="metadata" poster="/images/glass/glass-aluminium-after-floor-to-ceiling-glass-curtain-098.webp" style="width:100%;height:100%;object-fit:cover"
+            onclick="if(this.paused){this.play();this.nextElementSibling.style.display='none'}else{this.pause();this.nextElementSibling.style.display='flex'}">
+            <source src="/videos/palm-jumeirah/pj-project-3.mp4" type="video/mp4">
+          </video>
+          <div onclick="this.previousElementSibling.play();this.style.display='none'" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;background:rgba(0,0,0,0.3)">
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" style="color:var(--gold);margin-bottom:16px"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1"/><polygon points="10 8 16 12 10 16" fill="var(--gold)"/></svg>
+            <div style="font-family:var(--font-display);font-size:1.1rem;color:#fff;margin-bottom:6px">Watch the Walkthrough</div>
+            <div style="font-size:0.82rem;color:rgba(255,255,255,0.7)">Tap to play</div>
+          </div>
+        </div>
           <div style="font-size:0.82rem;color:var(--text-dim)">60-second project tour — tap to play</div>
         </div>
       </div>
