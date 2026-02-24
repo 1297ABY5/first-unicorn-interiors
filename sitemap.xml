@@ -98,22 +98,22 @@
   <url>
     <loc>https://firstunicorninteriors.com/communities/arabian-ranches/</loc>
     <lastmod>2026-02-24</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://firstunicorninteriors.com/communities/dubai-hills/</loc>
     <lastmod>2026-02-24</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://firstunicorninteriors.com/communities/emirates-hills/</loc>
     <lastmod>2026-02-24</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://firstunicorninteriors.com/communities/palm-jumeirah/</loc>
     <lastmod>2026-02-24</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://firstunicorninteriors.com/contact/</loc>
@@ -229,6 +229,11 @@
     <loc>https://firstunicorninteriors.com/get-quote/villa-renovation/</loc>
     <lastmod>2026-02-24</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://firstunicorninteriors.com/guides/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstunicorninteriors.com/guides/arabian-ranches/</loc>

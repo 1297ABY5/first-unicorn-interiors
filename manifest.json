@@ -1,0 +1,16 @@
+{
+  "name": "First Unicorn Interiors",
+  "short_name": "FUI",
+  "description": "Dubai's premier villa renovation specialists",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0a0a0a",
+  "theme_color": "#b79557",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
