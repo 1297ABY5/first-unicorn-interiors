@@ -1600,3 +1600,31 @@ body > * { position: relative; z-index: 1; }
 .guide-hub-card .ghc-link::after{content:'\2192';transition:transform .3s}
 .guide-hub-card:hover .ghc-link::after{transform:translateX(4px)}
 @media(max-width:600px){.guide-hub-grid{grid-template-columns:1fr}}
+
+/* Hero Stats Bar */
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  text-align: left;
+}
+.hero-stat-number {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.hero-stat-label {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 600px) {
+  .hero-stats { gap: 20px; }
+  .hero-stat-number { font-size: 1.2rem; }
+}
