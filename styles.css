@@ -515,6 +515,32 @@ p { max-width: 720px; }
   width: 100%; height: 100%; object-fit: cover;
 }
 
+/* ═══ VIDEO TESTIMONIALS ═══ */
+.video-testimonials {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;
+}
+.video-testimonial-card {
+  background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+}
+.video-testimonial-video {
+  aspect-ratio: 9/16; max-height: 400px; overflow: hidden;
+}
+.video-testimonial-video video {
+  width: 100%; height: 100%; object-fit: cover; cursor: pointer;
+}
+.video-testimonial-info {
+  padding: 1.5rem;
+}
+.video-testimonial-stars {
+  color: var(--gold); font-size: 1.1rem; margin-bottom: 0.8rem; letter-spacing: 2px;
+}
+.video-testimonial-info p {
+  color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; font-style: italic; margin-bottom: 0.8rem;
+}
+.video-testimonial-name {
+  color: var(--text-primary); font-size: 0.85rem; font-weight: 600;
+}
+
 /* ═══ PRICING TIERS ═══ */
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .pricing-card {
@@ -671,6 +697,7 @@ p { max-width: 720px; }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .service-gallery { grid-template-columns: repeat(2, 1fr); }
   .video-gallery { grid-template-columns: repeat(2, 1fr); }
+  .video-testimonials { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
   .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
