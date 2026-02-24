@@ -22,9 +22,9 @@
   <link rel="dns-prefetch" href="//www.googletagmanager.com">
   <link rel="dns-prefetch" href="//connect.facebook.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <script src="/analytics.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=3">
+  <script src="../analytics.js" defer></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Article","headline":"Palm Jumeirah Villa Renovation Guide 2026","description":"Community-specific renovation guide for Palm Jumeirah homeowners.","author":{"@type":"Organization","name":"First Unicorn Interiors"},"publisher":{"@type":"Organization","name":"First Unicorn Interiors","url":"https://firstunicorninteriors.com"}}
   </script>
@@ -35,22 +35,71 @@
 </head>
 <body>
   <nav class="nav">
-    <div class="container nav-container">
-      <a href="/" class="logo"><span class="logo-icon">U</span> <span class="logo-text">First <em>Unicorn</em></span></a>
-      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-      <div class="nav-links">
-        <a href="/renovation/">Renovation</a>
-        <a href="/interiors/">Interiors</a>
-        <a href="/contracting/">Contracting</a>
-        <a href="/portfolio/">Portfolio</a>
-        <a href="/guides/">Guides</a>
-        <a href="/contact/">Contact</a>
-        <a href="https://wa.me/971526455121?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="btn-whatsapp" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-          WhatsApp Us
-        </a>
-      </div>
+    <div class="nav-brand">
+      <a href="/" class="nav-brand-link">
+        <img class="nav-logo" src="/logo-nav.png" alt="First Unicorn" width="44" height="44">
+        <div class="nav-name">First <span>Unicorn</span></div>
+      </a>
     </div>
+    <ul class="nav-links">
+      <li>
+        <a href="/design-approvals/">Design & Approvals <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/design-approvals/architectural-design/">Architectural Design</a>
+          <a href="/design-approvals/engineering-drawings/">Engineering Drawings</a>
+          <a href="/design-approvals/3d-visualisation/">3D Visualisation</a>
+          <a href="/design-approvals/municipality-approvals/">Municipality Approvals</a>
+          <a href="/design-approvals/building-permits/">Building Permits</a>
+          <a href="/design-approvals/noc-processing/">NOC Processing</a>
+        </div>
+      </li>
+      <li>
+        <a href="/interiors/">Interiors <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/interiors/residential/">Residential Interiors</a>
+          <a href="/interiors/commercial/">Commercial Interiors</a>
+          <a href="/interiors/villa-fit-out/">Villa Fit-Out</a>
+          <a href="/interiors/furniture-lighting/">Furniture & Lighting</a>
+        </div>
+      </li>
+      <li>
+        <a href="/renovation/">Renovation <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/renovation/full-villa/">Full Villa Renovation</a>
+          <a href="/renovation/kitchen/">Kitchen Renovation</a>
+          <a href="/renovation/bathroom/">Bathroom Renovation</a>
+          <a href="/renovation/pool/">Swimming Pool</a>
+          <a href="/renovation/glass-aluminium/">Glass & Aluminium</a>
+          <a href="/renovation/joinery/">Joinery & Cabinetry</a>
+          <a href="/renovation/flooring/">Flooring</a>
+        </div>
+      </li>
+      <li>
+        <a href="/contracting/">Contracting <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/contracting/villa-construction/">Villa Construction</a>
+          <a href="/contracting/low-rise/">Low-Rise (G+2 to G+5)</a>
+          <a href="/contracting/mid-rise/">Mid-Rise (G+5 to G+10)</a>
+          <a href="/contracting/structural-works/">Structural Works</a>
+          <a href="/contracting/civil-works/">Civil Works</a>
+        </div>
+      </li>
+      <li><a href="/portfolio/">Portfolio</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/guides/">Guides</a></li>
+      <li>
+        <a href="https://wa.me/971526455121?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="nav-cta" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          WhatsApp
+        </a>
+      </li>
+    </ul>
+    <div class="nav-hamburger" style="display:none">
+      <span></span><span></span><span></span>
+    </div>
+    <a href="https://wa.me/971526455121?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="nav-wa" target="_blank" rel="noopener" style="display:none">
+      <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+    </a>
   </nav>
 
   <div class="guide-hero">
@@ -68,6 +117,87 @@
   </div>
 
   <main>
+
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu">
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-title">Design & Approvals</div>
+      <a href="/design-approvals/">Overview</a>
+      <a href="/design-approvals/architectural-design/">Architectural Design</a>
+      <a href="/design-approvals/engineering-drawings/">Engineering Drawings</a>
+      <a href="/design-approvals/3d-visualisation/">3D Visualisation</a>
+      <a href="/design-approvals/municipality-approvals/">Municipality Approvals</a>
+      <a href="/design-approvals/building-permits/">Building Permits</a>
+      <a href="/design-approvals/noc-processing/">NOC Processing</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-title">Interiors</div>
+      <a href="/interiors/">Overview</a>
+      <a href="/interiors/residential/">Residential</a>
+      <a href="/interiors/commercial/">Commercial</a>
+      <a href="/interiors/villa-fit-out/">Villa Fit-Out</a>
+      <a href="/interiors/furniture-lighting/">Furniture & Lighting</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-title">Renovation</div>
+      <a href="/renovation/">Overview</a>
+      <a href="/renovation/full-villa/">Full Villa</a>
+      <a href="/renovation/kitchen/">Kitchen</a>
+      <a href="/renovation/bathroom/">Bathroom</a>
+      <a href="/renovation/pool/">Swimming Pool</a>
+      <a href="/renovation/glass-aluminium/">Glass & Aluminium</a>
+      <a href="/renovation/joinery/">Joinery & Cabinetry</a>
+      <a href="/renovation/flooring/">Flooring</a>
+    </div>
+    <div class="mobile-menu-section">
+      <div class="mobile-menu-title">Contracting</div>
+      <a href="/contracting/">Overview</a>
+      <a href="/contracting/villa-construction/">Villa Construction</a>
+      <a href="/contracting/low-rise/">Low-Rise (G+5)</a>
+      <a href="/contracting/mid-rise/">Mid-Rise (G+10)</a>
+      <a href="/contracting/structural-works/">Structural Works</a>
+      <a href="/contracting/civil-works/">Civil Works</a>
+    </div>
+    <div class="mobile-menu-section">
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/about/">About</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+    </div>
+    <a href="https://wa.me/971526455121?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="btn-whatsapp" target="_blank" rel="noopener">
+      WhatsApp Us
+    </a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero hero-sub">
+    <div class="hero-bg" style="background-image:url('/images/portfolio/villa-exterior-modern-pool.jpg');background-size:cover;background-position:center;background-color:var(--bg-secondary)"></div>
+    <div class="hero-content">
+      <div class="breadcrumb fade-in">
+        <a href="/">Home</a> / <a href="/areas/damac-hills/">Areas</a> / <span>DAMAC Hills</span>
+      </div>
+      <h1>DAMAC Hills</h1>
+      <p>18 projects completed across DAMAC Hills and DAMAC Hills 2.</p>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="label">Community Expertise</div>
+        <h2>What Makes DAMAC Hills Unique</h2>
+      </div>
+      <div class="two-col fade-in">
+        <div>
+          <p>DAMAC Hills is one of Dubai's most established master-planned communities, developed by DAMAC Properties around the Trump International Golf Club. With a mix of villas, townhouses and apartments set across manicured fairways and parklands, it has become home to thousands of families who value space, greenery and community living. The neighbouring DAMAC Hills 2 offers more affordable villa options while maintaining the same resort-style lifestyle, making both communities significant sources of renovation demand across Dubai.</p>
+
+<p>Villas in DAMAC Hills range from compact three-bedroom townhouses to expansive six-bedroom estates, each with varying levels of developer-standard finishes. As many of these properties are now five to eight years old, homeowners are increasingly looking to refresh kitchens, bathrooms and living spaces that have started to show their age. The community's HOA, managed by DAMAC, requires approval for any external modifications including facade changes, garden structures, pool additions and boundary wall alterations. Our team has navigated these approval processes across 18 projects and maintains familiarity with the specific requirements and timelines involved.</p>
+
+<p>The most popular upgrades in DAMAC Hills reflect the community's family-oriented character. Kitchen renovations dominate — homeowners want larger islands, better storage solutions and premium appliances to support the entertaining lifestyle that comes with villa living. Bathroom upgrades are a close second, with many residents replacing builder-grade sanitaryware and tiles with designer fixtures, walk-in showers and freestanding baths. Swimming pool construction remains consistently popular, particularly among villas with larger plots that face the golf course. Outdoor living — pergolas, barbecue areas, landscaping and lighting — rounds out the most requested services, as residents seek to maximise their garden spaces for year-round use.</p>
+        </div>
+      </div>
+
     <section class="section">
       <div class="container" style="max-width:900px">
 
@@ -136,21 +266,66 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <div class="footer-brand"><a href="/" class="logo"><span class="logo-icon">U</span> <span class="logo-text">First <em>Unicorn</em></span></a><p>Design. Build. Transform.</p></div>
-        <div class="footer-col"><h4>Renovation</h4><a href="/renovation/kitchen/">Kitchen</a><a href="/renovation/bathroom/">Bathroom</a><a href="/renovation/full-villa/">Full Villa</a><a href="/renovation/glass-aluminium/">Glass &amp; Aluminium</a></div>
-        <div class="footer-col"><h4>Services</h4><a href="/interiors/">Interior Design</a><a href="/contracting/">Contracting</a><a href="/design-approvals/">Design Approvals</a><a href="/portfolio/">Portfolio</a></div>
-        <div class="footer-col"><h4>Free Resources</h4><a href="/guides/">All Guides</a><a href="/guides/cost-guide/">Cost Guide</a><a href="/guides/lookbook/">Lookbook</a><a href="/guides/timeline/">Timeline Planner</a><a href="/calculator/">Calculator</a><a href="/blog/">Blog</a></div>
-        <div class="footer-col"><h4>Company</h4><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/faq/">FAQ</a><a href="/pricing/">Pricing</a></div>
+        <div class="footer-brand">
+          <a href="/" class="nav-brand-link">
+            <img class="nav-logo" src="/logo-nav.png" alt="First Unicorn" width="44" height="44">
+            <div class="nav-name">First <span>Unicorn</span></div>
+          </a>
+          <p>Dubai's premier design, renovation & construction company. From concept to completion, under one roof.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Design & Approvals</h3>
+          <a href="/design-approvals/architectural-design/">Architectural Design</a>
+          <a href="/design-approvals/engineering-drawings/">Engineering Drawings</a>
+          <a href="/design-approvals/municipality-approvals/">Municipality Approvals</a>
+          <a href="/design-approvals/building-permits/">Building Permits</a>
+        </div>
+        <div class="footer-col">
+          <h3>Renovation</h3>
+          <a href="/renovation/full-villa/">Full Villa</a>
+          <a href="/renovation/kitchen/">Kitchen</a>
+          <a href="/renovation/bathroom/">Bathroom</a>
+          <a href="/renovation/pool/">Swimming Pool</a>
+          <a href="/renovation/glass-aluminium/">Glass & Aluminium</a>
+        </div>
+        <div class="footer-col">
+          <h3>Communities</h3>
+          <a href="/areas/palm-jumeirah/">Palm Jumeirah</a>
+          <a href="/areas/emirates-hills/">Emirates Hills</a>
+          <a href="/areas/arabian-ranches/">Arabian Ranches</a>
+          <a href="/areas/dubai-hills/">Dubai Hills</a>
+          <a href="/areas/al-barari/">Al Barari</a>
+        </div>
+        <div class="footer-col">
+          <h3>Free Resources</h3>
+          <a href="/guides/">All Guides</a>
+          <a href="/guides/cost-guide/">Cost Guide</a>
+          <a href="/calculator/">Calculator</a>
+          <a href="/guides/lookbook/">Lookbook</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <a href="tel:+971526455121">+971 52 645 5121</a>
+          <a href="https://wa.me/971526455121" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:info@firstunicorninteriors.com">info@firstunicorninteriors.com</a>
+          <a href="/contact/">Dubai, UAE</a>
+        </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 First Unicorn Interiors. All rights reserved. Dubai, UAE.</p>
-        <p>Dubai Municipality Licensed &middot; <a href="tel:+971526455121">+971 52 645 5121</a></p>
+        <span>&copy; 2026 First Unicorn Group. Dubai Municipality Licensed.</span>
+        <span><a href="/contact/">Contact</a> &middot; <a href="/get-quote/">Get Quote</a></span>
       </div>
     </div>
   </footer>
 
-  <script src="/main.js"></script>
-  <script src="/conversion.js"></script>
+  <a href="https://wa.me/971526455121?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+  </a>
+
+
+  <script src="../main.js"></script>
+  <script src="../conversion.js?v=4"></script>
   <script>
   function submitGuide(){
     var n=document.getElementById('gName').value.trim();
