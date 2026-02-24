@@ -1436,3 +1436,74 @@ body > * { position: relative; z-index: 1; }
 @media (max-width: 768px) {
   .lm-banner { grid-template-columns: 1fr; text-align: center; }
 }
+
+/* ═══ LEAD MAGNET BANNERS ═══ */
+.lm-banner{background:linear-gradient(135deg,rgba(183,149,87,.08),rgba(183,149,87,.03));border:1px solid rgba(183,149,87,.18);border-radius:12px;padding:2.5rem;display:flex;align-items:center;gap:2rem;margin:3rem 0}
+.lm-banner .lm-icon{width:64px;height:64px;min-width:64px;background:rgba(183,149,87,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+.lm-banner .lm-body h3{font-family:var(--font-display);font-size:1.1rem;color:var(--text-primary);margin-bottom:.4rem;font-weight:600}
+.lm-banner .lm-body p{color:var(--text-secondary);font-size:.88rem;margin-bottom:.8rem;line-height:1.5}
+.lm-banner .lm-body a{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-weight:600;font-size:.88rem;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
+.lm-banner .lm-body a:hover{border-bottom-color:var(--gold)}
+.lm-banner .lm-body a::after{content:'→'}
+@media(max-width:600px){
+  .lm-banner{flex-direction:column;text-align:center;padding:2rem 1.5rem;gap:1rem}
+  .lm-banner .lm-body a{justify-content:center}
+}
+
+/* ═══ RESOURCES GRID ═══ */
+.resources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+.resource-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:border-color .3s,transform .3s}
+.resource-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.resource-card .rc-type{font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem}
+.resource-card h3{font-family:var(--font-display);font-size:1.05rem;color:var(--text-primary);margin-bottom:.5rem;font-weight:600;line-height:1.3}
+.resource-card p{color:var(--text-secondary);font-size:.85rem;line-height:1.6;margin-bottom:1rem}
+.resource-card .rc-link{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-weight:600;font-size:.85rem;text-decoration:none}
+.resource-card .rc-link::after{content:'→';transition:transform .3s}
+.resource-card:hover .rc-link::after{transform:translateX(4px)}
+
+/* ═══ GUIDE PAGE HERO ═══ */
+.guide-hero{text-align:center;padding:5rem 0 3rem}
+.guide-hero .badge{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding:8px 20px;background:rgba(183,149,87,.08);border:1px solid rgba(183,149,87,.15);border-radius:50px;margin-bottom:1.5rem}
+.guide-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;line-height:1.15;color:var(--text-primary);margin-bottom:1rem}
+.guide-hero h1 em{font-style:normal;color:var(--gold)}
+.guide-hero p{color:var(--text-secondary);font-size:.95rem;max-width:560px;margin:0 auto 2rem}
+.guide-features{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-top:2rem}
+.guide-features .gf{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--text-secondary)}
+.guide-features .gf svg{width:18px;height:18px;color:var(--gold)}
+.guide-form-wrap{max-width:480px;margin:2.5rem auto 0;background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:2.5rem}
+.guide-form-wrap h2{font-family:var(--font-display);font-size:1.2rem;color:var(--text-primary);text-align:center;margin-bottom:1.5rem}
+.guide-form-wrap .gf-field{margin-bottom:1rem}
+.guide-form-wrap .gf-field label{display:block;font-size:.8rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;letter-spacing:.05em;text-transform:uppercase}
+.guide-form-wrap .gf-field input,.guide-form-wrap .gf-field select{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:6px;background:var(--bg-primary);color:var(--text-primary);font-size:.88rem;font-family:var(--font-body);outline:none;transition:border-color .3s;box-sizing:border-box}
+.guide-form-wrap .gf-field input:focus,.guide-form-wrap .gf-field select:focus{border-color:var(--gold)}
+.guide-form-wrap .gf-submit{width:100%;padding:14px;background:var(--gold);color:#fff;border:none;border-radius:6px;font-weight:600;font-size:.95rem;cursor:pointer;transition:background .3s;margin-top:.5rem}
+.guide-form-wrap .gf-submit:hover{background:#a08548}
+.guide-form-wrap .gf-privacy{text-align:center;font-size:.75rem;color:var(--text-dim);margin-top:1rem}
+
+/* ═══ LOOKBOOK ═══ */
+.lb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+.lb-card{border-radius:12px;overflow:hidden;background:var(--bg-secondary);border:1px solid var(--border)}
+.lb-card .lb-compare{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.lb-card .lb-compare img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.lb-card .lb-info{padding:1.2rem 1.5rem}
+.lb-card .lb-info .lb-tag{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:.4rem}
+.lb-card .lb-info h3{font-size:.95rem;color:var(--text-primary);margin-bottom:.3rem;font-weight:600}
+.lb-card .lb-info p{font-size:.82rem;color:var(--text-secondary);line-height:1.5}
+@media(max-width:768px){
+  .lb-grid{grid-template-columns:1fr}
+  .lb-card{max-width:400px;margin:0 auto}
+}
+
+/* ═══ TIMELINE PLANNER ═══ */
+.tl-track{position:relative;padding:2rem 0}
+.tl-track::before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:var(--border)}
+.tl-step{position:relative;padding-left:64px;margin-bottom:2.5rem}
+.tl-step .tl-dot{position:absolute;left:14px;top:4px;width:22px;height:22px;border-radius:50%;background:var(--gold);border:3px solid var(--bg-primary);box-shadow:0 0 0 2px var(--gold)}
+.tl-step .tl-week{font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.tl-step h3{font-family:var(--font-display);font-size:1.05rem;color:var(--text-primary);margin-bottom:.4rem;font-weight:600}
+.tl-step p{font-size:.88rem;color:var(--text-secondary);line-height:1.6}
+@media(max-width:600px){
+  .tl-track::before{left:16px}
+  .tl-step{padding-left:48px}
+  .tl-step .tl-dot{left:6px}
+}

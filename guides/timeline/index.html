@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renovation Timeline Planner — When to Start Your Dubai Villa Project | First Unicorn Interiors</title>
+  <meta name="description" content="Plan your renovation timeline backwards from your target date. See week-by-week breakdowns for kitchens, bathrooms, and full villa projects in Dubai.">
+  <link rel="canonical" href="https://firstunicorninteriors.com/guides/timeline/">
+  <link rel="icon" href="/favicon.ico">
+  <meta property="og:title" content="Dubai Villa Renovation Timeline Planner — First Unicorn Interiors">
+  <meta property="og:description" content="Plan backwards from your deadline. When to start, what happens each week, and how to avoid delays.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://firstunicorninteriors.com/guides/timeline/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/analytics.js" defer></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="/" class="logo"><span class="logo-icon">U</span> <span class="logo-text">First <em>Unicorn</em></span></a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="/renovation/">Renovation</a>
+        <a href="/interiors/">Interiors</a>
+        <a href="/contracting/">Contracting</a>
+        <a href="/portfolio/">Portfolio</a>
+        <a href="/contact/">Contact</a>
+        <a href="https://wa.me/971526455121?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="guide-hero">
+    <div class="container">
+      <div class="badge">Interactive Planner</div>
+      <h1>When Should You <em>Start</em><br>Your Renovation?</h1>
+      <p>Most homeowners start planning too late. Use our timeline planner to work backwards from your target completion date and see exactly when each phase needs to begin.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="container" style="max-width:800px">
+
+        <!-- Interactive deadline calculator -->
+        <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:2.5rem;margin-bottom:3rem;text-align:center">
+          <h2 style="font-family:var(--font-display);font-size:1.2rem;color:var(--text-primary);margin-bottom:1.2rem">Calculate Your Start Date</h2>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem">
+            <div style="flex:1;min-width:200px">
+              <label style="display:block;font-size:.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.1em">Project Type</label>
+              <select id="tlType" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:6px;background:var(--bg-primary);color:var(--text-primary);font-size:.88rem" onchange="calcTimeline()">
+                <option value="4">Bathroom (4-6 weeks)</option>
+                <option value="6">Kitchen (6-8 weeks)</option>
+                <option value="10">Multiple Rooms (8-12 weeks)</option>
+                <option value="16" selected>Full Villa (12-20 weeks)</option>
+              </select>
+            </div>
+            <div style="flex:1;min-width:200px">
+              <label style="display:block;font-size:.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.1em">Target Completion</label>
+              <input type="date" id="tlDate" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:6px;background:var(--bg-primary);color:var(--text-primary);font-size:.88rem;box-sizing:border-box" onchange="calcTimeline()">
+            </div>
+          </div>
+          <div id="tlResult" style="padding:1.5rem;background:rgba(183,149,87,.08);border:1px solid rgba(183,149,87,.15);border-radius:8px;display:none">
+            <div style="font-size:.78rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.4rem">You Need to Start By</div>
+            <div id="tlStartDate" style="font-family:var(--font-display);font-size:1.8rem;color:var(--text-primary);font-weight:600"></div>
+            <div id="tlDaysLeft" style="font-size:.88rem;color:var(--text-secondary);margin-top:.3rem"></div>
+          </div>
+        </div>
+
+        <!-- Timeline breakdown -->
+        <h2 style="font-family:var(--font-display);font-size:1.3rem;color:var(--text-primary);margin-bottom:.5rem">What Happens at Each Stage</h2>
+        <p style="color:var(--text-secondary);font-size:.9rem;margin-bottom:2rem">A typical full villa renovation, week by week. Bathroom and kitchen timelines are condensed versions of this same sequence.</p>
+
+        <div class="tl-track">
+          <div class="tl-step fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-week">Week 1-2 — Pre-Construction</div>
+            <h3>Design Finalisation &amp; Material Orders</h3>
+            <p>Final design sign-off, material selections locked, NOC application submitted. This is when tile, marble, fixtures, and cabinetry are ordered — some materials have 3-4 week lead times, so delays here cascade through the entire project.</p>
+          </div>
+          <div class="tl-step fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-week">Week 3-4 — Demolition &amp; Rough Works</div>
+            <h3>Strip-Out &amp; Structural Prep</h3>
+            <p>Demolition of existing finishes, plumbing rough-in, electrical rewiring, waterproofing. The villa will look worse before it looks better — this is normal. Your project manager sends daily WhatsApp photo updates so nothing is a surprise.</p>
+          </div>
+          <div class="tl-step fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-week">Week 5-8 — Core Works</div>
+            <h3>Tiling, Joinery &amp; Glass Installation</h3>
+            <p>Floor and wall tiling, kitchen and wardrobe installation, glass enclosures and partitions fitted. This is where the vision starts to come together. Each trade works in sequence — our in-house team means zero coordination delays between subcontractors.</p>
+          </div>
+          <div class="tl-step fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-week">Week 9-12 — Finishing</div>
+            <h3>Paint, Fixtures &amp; Detail Work</h3>
+            <p>Painting, lighting installation, sanitaryware fitting, hardware, final glass polishing. Every detail is checked against the original design specification. Your dedicated project manager walks the site with the snagging list.</p>
+          </div>
+          <div class="tl-step fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-week">Week 13-14 — Handover</div>
+            <h3>Deep Clean &amp; Final Walkthrough</h3>
+            <p>Professional deep clean, client walkthrough, snagging corrections (if any), handover documentation. You receive your 1-year craftsmanship warranty certificate and maintenance guide. Move-in ready.</p>
+          </div>
+        </div>
+
+        <!-- Seasonal tip -->
+        <div class="lm-banner" style="margin-top:3rem">
+          <div class="lm-icon">&#9728;</div>
+          <div class="lm-body">
+            <h3>Pro Tip: Summer is the Best Time to Renovate in Dubai</h3>
+            <p>Most families travel June-August. Start your renovation before you leave and come home to a transformed villa. We manage everything while you're away — daily photo updates on WhatsApp.</p>
+            <a href="https://wa.me/971526455121?text=Hi%2C%20I%27m%20interested%20in%20starting%20a%20summer%20renovation%20project">Talk to us about summer scheduling</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Capture section -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="guide-form-wrap" id="tlForm">
+          <h2>Get Your Personalised Timeline</h2>
+          <p style="text-align:center;color:var(--text-secondary);font-size:.85rem;margin-bottom:1.5rem">Tell us your project and deadline — we will send you a custom week-by-week plan</p>
+          <form onsubmit="return false;">
+            <div class="gf-field"><label>First Name</label><input type="text" id="tlName" placeholder="e.g. Sarah" required></div>
+            <div class="gf-field"><label>Phone / WhatsApp</label><input type="tel" id="tlPhone" placeholder="+971 5X XXX XXXX" required></div>
+            <div class="gf-field"><label>What are you renovating?</label>
+              <select id="tlProject">
+                <option value="" disabled selected>Select project type</option>
+                <option value="Kitchen">Kitchen</option>
+                <option value="Bathroom">Bathroom(s)</option>
+                <option value="Full Villa">Full Villa</option>
+                <option value="Multiple Rooms">Multiple Rooms</option>
+                <option value="Other">Something Else</option>
+              </select>
+            </div>
+            <div class="gf-field"><label>When do you want it finished?</label>
+              <select id="tlDeadline">
+                <option value="" disabled selected>Select target</option>
+                <option value="Before Summer 2026">Before Summer (Jun 2026)</option>
+                <option value="Before Eid Al Adha">Before Eid Al Adha</option>
+                <option value="Q3 2026">Q3 2026 (Jul-Sep)</option>
+                <option value="Q4 2026">Q4 2026 (Oct-Dec)</option>
+                <option value="Q1 2027">Q1 2027 (Jan-Mar)</option>
+                <option value="Flexible">Flexible / No Rush</option>
+              </select>
+            </div>
+            <button type="submit" class="gf-submit" onclick="submitTimeline()">Get My Custom Timeline</button>
+            <div class="gf-privacy">No spam. Your details are never shared.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><a href="/" class="logo"><span class="logo-icon">U</span> <span class="logo-text">First <em>Unicorn</em></span></a><p>Design. Build. Transform.</p></div>
+        <div class="footer-col"><h4>Renovation</h4><a href="/renovation/kitchen/">Kitchen</a><a href="/renovation/bathroom/">Bathroom</a><a href="/renovation/full-villa/">Full Villa</a><a href="/renovation/glass-aluminium/">Glass &amp; Aluminium</a></div>
+        <div class="footer-col"><h4>Services</h4><a href="/interiors/">Interior Design</a><a href="/contracting/">Contracting</a><a href="/design-approvals/">Design Approvals</a><a href="/portfolio/">Portfolio</a></div>
+        <div class="footer-col"><h4>Free Resources</h4><a href="/guides/cost-guide/">Cost Guide</a><a href="/guides/checklist/">Renovation Checklist</a><a href="/calculator/">Cost Calculator</a><a href="/blog/">Blog</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/faq/">FAQ</a><a href="/pricing/">Pricing</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 First Unicorn Interiors. All rights reserved. Dubai, UAE.</p>
+        <p>Dubai Municipality Licensed &middot; <a href="tel:+971526455121">+971 52 645 5121</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+  <script src="/conversion.js"></script>
+  <script>
+  // Set default date to 3 months from now
+  var d=new Date();d.setMonth(d.getMonth()+3);
+  document.getElementById('tlDate').value=d.toISOString().split('T')[0];
+  calcTimeline();
+
+  function calcTimeline(){
+    var weeks=parseInt(document.getElementById('tlType').value);
+    var target=document.getElementById('tlDate').value;
+    if(!target)return;
+    var tDate=new Date(target);
+    var start=new Date(tDate);
+    start.setDate(start.getDate()-(weeks*7+14)); // +2 weeks buffer for design phase
+    var today=new Date();
+    var daysLeft=Math.ceil((start-today)/(1000*60*60*24));
+    document.getElementById('tlStartDate').textContent=start.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    var msg='';
+    if(daysLeft<0)msg='That\'s '+Math.abs(daysLeft)+' days ago. Contact us NOW to discuss an accelerated schedule.';
+    else if(daysLeft<14)msg='Only '+daysLeft+' days away. Book a consultation this week to stay on track.';
+    else if(daysLeft<30)msg='About '+Math.ceil(daysLeft/7)+' weeks away. Time to start planning materials and design.';
+    else msg='You have '+daysLeft+' days. Perfect time to explore options and get quotes.';
+    document.getElementById('tlDaysLeft').textContent=msg;
+    document.getElementById('tlResult').style.display='block';
+  }
+
+  function submitTimeline(){
+    var n=document.getElementById('tlName').value.trim();
+    var p=document.getElementById('tlPhone').value.trim();
+    if(!n||!p){alert('Please enter your name and phone number');return}
+    var proj=document.getElementById('tlProject').value;
+    var dl=document.getElementById('tlDeadline').value;
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'timeline_request',name:n,phone:p,project:proj,deadline:dl});
+    var msg='Hi, I would like a personalised renovation timeline. My name is '+n+'. Project: '+proj+'. Target completion: '+dl+'.';
+    window.open('https://wa.me/971526455121?text='+encodeURIComponent(msg),'_blank');
+    document.getElementById('tlForm').innerHTML='<div style="text-align:center;padding:2rem"><h2 style="color:var(--gold);margin-bottom:.5rem">Timeline Request Received!</h2><p style="color:var(--text-secondary)">Our team will send your custom week-by-week plan via WhatsApp shortly.</p></div>';
+  }
+  </script>
+</body>
+</html>
