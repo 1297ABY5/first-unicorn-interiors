@@ -239,7 +239,7 @@
         message ? `Details: ${message}` : '',
       ].filter(Boolean).join('\n');
 
-      window.open(`https://wa.me/971526455121?text=${encodeURIComponent(text)}`, '_blank');
+      window.open(`https://wa.me/971585658002?text=${encodeURIComponent(text)}`, '_blank');
     });
   });
 

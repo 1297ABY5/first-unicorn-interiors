@@ -27,7 +27,7 @@ function initGate(guideId, guideName) {
     msg += '\nI\'d love to learn more about renovation options.';
 
     // Send to WhatsApp silently (open in background)
-    var waUrl = 'https://wa.me/971526455121?text=' + encodeURIComponent(msg);
+    var waUrl = 'https://wa.me/971585658002?text=' + encodeURIComponent(msg);
 
     // Show success + download
     card.style.display = 'none';
