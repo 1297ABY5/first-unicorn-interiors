@@ -415,22 +415,23 @@
   <!-- ═══ VIDEO WALKTHROUGH ═══ -->
   <section class="section">
     <div class="container">
-      <div class="section-header fade-in">
-        <h4 class="label">See the Process</h4>
-        <h2>Kitchen Renovation Walkthrough</h2>
-        <p style="margin-top:12px">Watch our team walk through a recent kitchen transformation in Arabian Ranches — from stripped-back shell to handover in 6 weeks.</p>
+      <div class="section-header fade-in" style="text-align:center">
+        <h4 class="label">Kitchen Walkthrough</h4>
+        <h2>Step Inside Your <em style="font-style:normal;color:var(--gold)">Future Kitchen</em></h2>
+        <p style="margin-top:12px;max-width:500px;margin-left:auto;margin-right:auto">A glimpse of what precision craftsmanship and thoughtful design look like — before we even start on yours.</p>
       </div>
-      <div class="fade-in" style="margin-top:40px;aspect-ratio:16/9;background:var(--bg-tertiary);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
-        <div style="position:relative;width:100%;height:100%">
-          <video id="walkthrough-video" playsinline preload="metadata" poster="/images/kitchen/kitchen-after-handleless-beige-kitchen-cabin-287.webp" style="width:100%;height:100%;object-fit:cover"
-            onclick="if(this.paused){this.play();this.nextElementSibling.style.display='none'}else{this.pause();this.nextElementSibling.style.display='flex'}">
-            <source src="/videos/palm-jumeirah/pj-project-1.mp4" type="video/mp4">
+      <div class="fade-in" style="margin-top:40px;display:flex;flex-direction:column;align-items:center">
+        <div style="position:relative;max-width:380px;width:100%;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(183,149,87,0.15),0 0 0 1px rgba(183,149,87,0.1)">
+          <video autoplay muted loop playsinline preload="auto" style="width:100%;display:block;border-radius:16px">
+            <source src="/videos/kitchen-walkthrough.mp4" type="video/mp4">
           </video>
-          <div onclick="this.previousElementSibling.play();this.style.display='none'" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;background:rgba(0,0,0,0.3)">
-            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" style="color:var(--gold);margin-bottom:16px"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1"/><polygon points="10 8 16 12 10 16" fill="var(--gold)"/></svg>
-            <div style="font-family:var(--font-display);font-size:1.1rem;color:#fff;margin-bottom:6px">Watch the Walkthrough</div>
-            <div style="font-size:0.82rem;color:rgba(255,255,255,0.7)">Tap to play</div>
-          </div>
+          <!-- Gold corner accents -->
+          <div style="position:absolute;top:12px;left:12px;width:40px;height:40px;border-top:2px solid rgba(183,149,87,0.4);border-left:2px solid rgba(183,149,87,0.4);pointer-events:none"></div>
+          <div style="position:absolute;bottom:12px;right:12px;width:40px;height:40px;border-bottom:2px solid rgba(183,149,87,0.4);border-right:2px solid rgba(183,149,87,0.4);pointer-events:none"></div>
+        </div>
+        <p style="margin-top:24px;font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);text-align:center">Concept visualisation — handcrafted kitchen design</p>
+        <div style="margin-top:24px;text-align:center">
+          <a href="https://wa.me/971585658002?text=Hi%2C%20I%27m%20interested%20in%20a%20kitchen%20renovation.%20Can%20we%20discuss%3F" class="btn-primary" target="_blank" rel="noopener">Discuss Your Kitchen Project</a>
         </div>
       </div>
     </div>
