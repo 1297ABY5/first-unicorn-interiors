@@ -1,0 +1,723 @@
+{
+  "campaign_name": "First Unicorn Interiors - Complete Image Extensions",
+  "base_url": "https://firstunicorninteriors.com",
+  "total_ad_groups": 26,
+  "total_primary_images": 78,
+  "total_backup_images": 52,
+  "google_requirements": {
+    "min_square": "300x300px",
+    "min_landscape": "600x314px",
+    "max_file_size": "5120 KB",
+    "formats": "JPG or PNG (convert webp first)",
+    "rules": [
+      "No text overlays",
+      "No collages",
+      "No logos >20%",
+      "Must represent actual service"
+    ]
+  },
+  "ad_groups": {
+    "Full Villa Renovation": {
+      "status": "DEPLOYED",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-organic-curved-sofa-and-armcha-141.webp",
+          "description": "Luxury villa living room transformation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/full-villa-after-contemporary-cubic-architectur-145.webp",
+          "description": "Contemporary villa interior - turnkey renovation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-white-marble-waterfall-island-030.webp",
+          "description": "Premium kitchen with marble waterfall island"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-double-height-ceilings-with-co-079.webp",
+          "description": "Double height ceiling villa living space"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/full-villa-after-floating-cantilever-staircase--279.webp",
+          "description": "Statement staircase - full villa transformation"
+        }
+      ]
+    },
+    "Kitchen Renovation": {
+      "status": "DEPLOYED",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-handleless-beige-kitchen-cabin-251.webp",
+          "description": "Handleless beige kitchen with island"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-veined-marble-waterfall-island-182.webp",
+          "description": "Veined marble waterfall island kitchen"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-two-tone-cabinet-design-with-w-195.webp",
+          "description": "Two-tone kitchen cabinet design"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-dark-wood-veneer-cabinetry-wit-027.webp",
+          "description": "Dark wood veneer kitchen cabinetry"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-light-oak-kitchen-cabinetry-wi-244.webp",
+          "description": "Light oak kitchen with modern finish"
+        }
+      ]
+    },
+    "Bathroom Renovation": {
+      "status": "DEPLOYED",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/bathroom/bathroom-after-walk-in-marble-shower-with-gla-176.webp",
+          "description": "Walk-in marble shower with glass enclosure"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/bathroom/bathroom-after-floating-wooden-vanity-with-du-143.webp",
+          "description": "Floating wooden vanity with dual basins"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/bathroom/bathroom-after-freestanding-white-bathtub-wit-177.webp",
+          "description": "Freestanding bathtub in luxury bathroom"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/bathroom/bathroom-after-large-format-beige-marble-wall-207.webp",
+          "description": "Large format marble wall tiles"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/bathroom/bathroom-after-black-framed-glass-shower-encl-080.webp",
+          "description": "Black framed glass shower enclosure"
+        }
+      ]
+    },
+    "Glass and Aluminium": {
+      "status": "DEPLOYED",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/glass/glass-aluminium-after-floor-to-ceiling-glass-curtain-098.webp",
+          "description": "Floor-to-ceiling glass curtain wall"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/glass/glass-aluminium-after-frameless-glass-panels-116.webp",
+          "description": "Frameless glass panel installation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/glass/glass-aluminium-after-stainless-steel-posts-and-hand-114.webp",
+          "description": "Glass balustrade with stainless steel posts"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/glass/glass-aluminium-after-floor-to-ceiling-glass-partiti-085.webp",
+          "description": "Glass partition wall system"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/glass/glass-aluminium-after-four-geometric-skylights-with--103.webp",
+          "description": "Geometric glass skylights"
+        }
+      ]
+    },
+    "Swimming Pool": {
+      "status": "READY-HIGH ROI",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/pool/pool-after-infinity-edge-pool-009.webp",
+          "description": "Infinity edge pool installation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/pool/pool-after-modern-rectangular-pool-with-m-004.webp",
+          "description": "Modern rectangular pool with mosaic finish"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/pool/pool-after-knife-edge-infinity-pool-desig-149.webp",
+          "description": "Knife-edge infinity pool design"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/pool/pool-after-blue-mosaic-tile-pool-finish-005.webp",
+          "description": "Blue mosaic tile pool finish"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/pool/pool-after-rectangular-infinity-edge-pool-163.webp",
+          "description": "Rectangular infinity edge swimming pool"
+        }
+      ]
+    },
+    "Landscaping Outdoor": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/community/exterior-after-black-aluminum-pergola-with-ho-106.webp",
+          "description": "Black aluminium pergola with outdoor living"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/pool/pool-after-modern-pergola-with-horizontal-327.webp",
+          "description": "Modern pergola with pool area"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/community/exterior-after-custom-putting-green-with-sand-168.webp",
+          "description": "Custom putting green and landscaping"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-wooden-pergola-with-slatted-ro-306.webp",
+          "description": "Wooden slatted pergola roofing"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/pool/pool-after-modern-outdoor-furniture-with--293.webp",
+          "description": "Modern outdoor furniture and pool area"
+        }
+      ]
+    },
+    "Solar Panels": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-blue-solar-panel-arrays-coveri-073.webp",
+          "description": "Solar panel array on villa roof"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-large-solar-panel-array-instal-128.webp",
+          "description": "Large solar panel installation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-not-applicable-solar-panel-installation-127.webp",
+          "description": "Professional solar panel installation"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-large-solar-panel-array-instal-129.webp",
+          "description": "Villa rooftop solar array"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/other-not-applicable-solar-panel-array-system-159.webp",
+          "description": "Solar panel array system"
+        }
+      ]
+    },
+    "Solar Water Heater": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-not-applicable-solar-panel-installations-126.webp",
+          "description": "Solar installations on villa roof"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-large-solar-panel-array-instal-128.webp",
+          "description": "Solar heating system installation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-blue-solar-panel-arrays-coveri-073.webp",
+          "description": "Solar panel system on residential roof"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-large-solar-panel-array-instal-129.webp",
+          "description": "Professional solar installation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/other-not-applicable-solar-panel-array-system-159.webp",
+          "description": "Complete solar array system"
+        }
+      ]
+    },
+    "Palm Jumeirah": {
+      "status": "DEPLOYED",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-palm-3P9A2251-scaled.jpg",
+          "description": "Palm Jumeirah villa - actual project photo"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-palm-3P9A2282-scaled.jpg",
+          "description": "Palm Jumeirah interior transformation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-palm-3P9A2302-scaled.jpg",
+          "description": "Palm Jumeirah completed project"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-palm-3P9A2265-scaled.jpg",
+          "description": "Palm Jumeirah renovation detail"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-palm-3P9A2315-scaled.jpg",
+          "description": "Palm Jumeirah project showcase"
+        }
+      ]
+    },
+    "Arabian Ranches": {
+      "status": "DEPLOYED",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-ar-savannah-3P9A1695-scaled.jpg",
+          "description": "Arabian Ranches Savannah villa renovation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-ar-savannah-3P9A1752-scaled.jpg",
+          "description": "Arabian Ranches interior transformation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-ar2-yasmine-3P9A2652-scaled.jpg",
+          "description": "Arabian Ranches 2 Yasmine project"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-ar-savannah-3P9A1834-scaled.jpg",
+          "description": "Arabian Ranches Savannah detail"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-ar2-yasmine-3P9A2741-scaled.jpg",
+          "description": "Arabian Ranches 2 Yasmine interior"
+        }
+      ]
+    },
+    "Emirates Hills": {
+      "status": "DEPLOYED",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-crystal-tiered-chandelier-175.webp",
+          "description": "Ultra-luxury living room - Emirates Hills standard"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-gold-leaf-decorative-ceiling-w-034.webp",
+          "description": "Gold leaf ceiling - premium villa interior"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-crystal-chandelier-with-hangin-035.webp",
+          "description": "Crystal chandelier master bedroom"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-ornate-ceiling-moldings-and-ch-218.webp",
+          "description": "Ornate ceiling with chandelier"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-multiple-circular-gold-rimmed--171.webp",
+          "description": "Gold-rimmed decor elements"
+        }
+      ]
+    },
+    "Dubai Hills": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-curved-modular-sofa-in-neutral-335.webp",
+          "description": "Modern neutral living room - Dubai Hills style"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-handleless-beige-kitchen-cabin-287.webp",
+          "description": "Contemporary kitchen renovation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-curved-upholstered-headboard-i-323.webp",
+          "description": "Modern bedroom upholstered headboard"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-floor-to-ceiling-windows-with--267.webp",
+          "description": "Floor-to-ceiling windows living space"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-custom-light-wood-floating-she-245.webp",
+          "description": "Light wood floating shelves design"
+        }
+      ]
+    },
+    "Tilal Al Ghaf": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-natural-wood-paneling-and-cabi-226.webp",
+          "description": "Natural wood paneling modern interior"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-light-oak-kitchen-cabinetry-wi-244.webp",
+          "description": "Light oak kitchen contemporary feel"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-exposed-white-wooden-beam-ceil-234.webp",
+          "description": "White wooden beam ceiling living room"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-grey-sectional-sofa-with-plush-260.webp",
+          "description": "Grey sectional modern living space"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-minimalist-scandinavian-design-077.webp",
+          "description": "Minimalist Scandinavian bedroom"
+        }
+      ]
+    },
+    "Damac Hills": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-light-blue-sectional-sofa-with-212.webp",
+          "description": "Light blue sectional modern villa living"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-marble-countertops-with-grey-v-220.webp",
+          "description": "Marble countertops grey veining"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-custom-upholstered-fabric-head-312.webp",
+          "description": "Custom upholstered bedroom headboard"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-floor-to-ceiling-windows-with--254.webp",
+          "description": "Floor-to-ceiling windows villa"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-cane-webbed-dining-chairs-with-222.webp",
+          "description": "Cane-webbed dining area"
+        }
+      ]
+    },
+    "JVC and JVT": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-neutral-color-palette-121.webp",
+          "description": "Neutral colour palette living room"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-white-handleless-kitchen-cabin-192.webp",
+          "description": "White handleless kitchen clean look"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/bathroom/bathroom-after-floating-white-vanity-with-int-071.webp",
+          "description": "Floating white vanity bathroom"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-neutral-beige-color-palette-th-215.webp",
+          "description": "Neutral beige living room"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-handle-less-grey-cabinet-doors-196.webp",
+          "description": "Handleless grey cabinet kitchen"
+        }
+      ]
+    },
+    "Jumeirah Golf Estates": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-jge-flame-Jumeirah-Golf-Estate-Flame-Tree-Ridge-.jpg",
+          "description": "JGE Flame Tree Ridge actual project"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-jge-limeval-GWD_JGE-A25_INTERIOR-113-scaled.jpg",
+          "description": "JGE Lime Tree Valley interior renovation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-jge-sanctuary-DSC08659-HDR-scaled.jpg",
+          "description": "JGE Sanctuary Falls villa project"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-jge-flame-Jumeirah-Golf-Estate-Flame-Tree-Ridge-3.jpg",
+          "description": "JGE Flame Tree Ridge renovation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-jge-lime-Jumeirah-Golf-Estate-Lime-Tree-Valley-2.jpg",
+          "description": "JGE Lime Tree Valley exterior"
+        }
+      ]
+    },
+    "Springs and Meadows": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-meadows-3P9A1941-scaled.jpg",
+          "description": "Meadows villa renovation actual project"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-meadows-3P9A1973-scaled.jpg",
+          "description": "Meadows interior transformation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-meadows-3P9A2080-scaled.jpg",
+          "description": "Meadows villa completed renovation"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-meadows-3P9A1958-scaled.jpg",
+          "description": "Meadows project detail shot"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/portfolio/sl-meadows-3P9A2112-scaled.jpg",
+          "description": "Meadows renovation showcase"
+        }
+      ]
+    },
+    "Al Barsha and Mirdif": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-custom-wooden-slat-entertainme-236.webp",
+          "description": "Modern entertainment unit renovation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-two-tone-gray-cabinetry-with-m-193.webp",
+          "description": "Two-tone grey kitchen cabinetry"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/bathroom/bathroom-after-chrome-framed-glass-shower-enc-096.webp",
+          "description": "Chrome framed glass shower enclosure"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-vertical-striped-accent-wall-t-238.webp",
+          "description": "Feature accent wall living room"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-teal-textured-upholstered-head-209.webp",
+          "description": "Teal textured bedroom headboard"
+        }
+      ]
+    },
+    "Al Barari": {
+      "status": "READY",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-emerald-green-sculptural-chand-173.webp",
+          "description": "Emerald green chandelier luxury interior"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-dark-walnut-dining-table-with--233.webp",
+          "description": "Dark walnut dining premium villa"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-classical-ornate-wall-moldings-214.webp",
+          "description": "Classical ornate wall moldings premium"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-white-quilted-sectional-sofas--172.webp",
+          "description": "White quilted sectional premium living"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-sculptural-white-staircase-wit-231.webp",
+          "description": "Sculptural white staircase"
+        }
+      ]
+    },
+    "Villa Fit Out": {
+      "status": "NEW",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-organic-curved-sofa-and-armcha-141.webp",
+          "description": "Luxury living room full villa fit out"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/full-villa-after-contemporary-cubic-architectur-145.webp",
+          "description": "Contemporary villa turnkey fit out"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-handleless-beige-kitchen-cabin-287.webp",
+          "description": "Modern handleless kitchen villa fit out"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-double-height-ceiling-with-exp-225.webp",
+          "description": "Double height villa living space"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-custom-wall-paneling-with-rais-180.webp",
+          "description": "Premium bedroom custom wall paneling"
+        }
+      ]
+    },
+    "Interior Design": {
+      "status": "NEW",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-curved-contemporary-sofa-seati-265.webp",
+          "description": "Designer living room curved sofa"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-crystal-chandelier-with-coffer-169.webp",
+          "description": "Luxury bedroom crystal chandelier"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-custom-golden-tube-pendant-cha-021.webp",
+          "description": "Statement lighting design living room"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-floor-to-ceiling-marble-firepl-229.webp",
+          "description": "Marble fireplace feature wall"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-dark-botanical-feature-wall-wi-219.webp",
+          "description": "Botanical feature wall design"
+        }
+      ]
+    },
+    "Villa Painting": {
+      "status": "NEW",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-dark-navy-painted-accent-wall-223.webp",
+          "description": "Dark navy accent wall luxury bedroom"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-neutral-beige-color-palette-th-215.webp",
+          "description": "Neutral beige colour palette"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-vertical-striped-accent-wall-t-238.webp",
+          "description": "Vertical stripe feature wall treatment"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-neutral-color-palette-121.webp",
+          "description": "Neutral colour palette living space"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-exposed-brick-accent-wall-257.webp",
+          "description": "Feature accent wall treatment"
+        }
+      ]
+    },
+    "Flooring": {
+      "status": "NEW",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/joinery/other-after-wood-look-tile-flooring-061.webp",
+          "description": "Wood-look tile flooring installation"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/joinery/other-after-dark-marble-or-stone-staircase-170.webp",
+          "description": "Dark marble staircase precision install"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-floor-to-ceiling-marble-firepl-229.webp",
+          "description": "Marble floor and fireplace surround"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/other-after-geometric-patterned-tile-backs-309.webp",
+          "description": "Geometric patterned tile work"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/joinery/other-after-floating-wooden-staircase-with-025.webp",
+          "description": "Floating staircase wood and glass"
+        }
+      ]
+    },
+    "Joinery and Wardrobes": {
+      "status": "NEW",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/bedroom-after-built-in-wardrobes-with-led-st-318.webp",
+          "description": "Built-in wardrobes LED strip lighting"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/other-after-illuminated-glass-wardrobes-wi-184.webp",
+          "description": "Illuminated glass-front wardrobes"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-handleless-beige-cabinet-doors-253.webp",
+          "description": "Handleless cabinetry clean lines"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/joinery/joinery-after-vertical-wood-slat-accent-wall-001.webp",
+          "description": "Custom wood slat joinery wall"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-custom-wooden-slat-entertainme-236.webp",
+          "description": "Custom entertainment unit joinery"
+        }
+      ]
+    },
+    "Villa Extensions": {
+      "status": "NEW",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-modern-minimalist-architecture-310.webp",
+          "description": "Modern villa exterior structural capability"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-curved-modern-entrance-with-ho-322.webp",
+          "description": "Modern villa entrance structural features"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-floor-to-ceiling-glass-walls-208.webp",
+          "description": "Villa floor-to-ceiling glass extension"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/construction/exterior-after-wooden-pergola-with-slatted-ro-306.webp",
+          "description": "Pergola structure common extension"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/approvals/exterior-after-contemporary-concrete-and-glas-022.webp",
+          "description": "Contemporary concrete glass exterior"
+        }
+      ]
+    },
+    "Renovation Cost Queries": {
+      "status": "NEW",
+      "primary_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/kitchen/kitchen-after-white-marble-waterfall-island-030.webp",
+          "description": "White marble waterfall kitchen island"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/bathroom/bathroom-after-walk-in-marble-shower-with-gla-176.webp",
+          "description": "Walk-in marble shower glass enclosure"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/living-room-after-curved-velvet-sofa-262.webp",
+          "description": "Luxury living room result"
+        }
+      ],
+      "backup_images": [
+        {
+          "url": "https://firstunicorninteriors.com/images/interiors/full-villa-after-floating-cantilever-staircase--279.webp",
+          "description": "Full villa statement staircase"
+        },
+        {
+          "url": "https://firstunicorninteriors.com/images/pool/pool-after-modern-rectangular-pool-with-m-004.webp",
+          "description": "Modern pool cross-sell visual"
+        }
+      ]
+    }
+  }
+}
