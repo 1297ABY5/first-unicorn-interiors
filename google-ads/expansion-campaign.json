@@ -1,0 +1,520 @@
+{
+  "campaign_name": "First Unicorn Interiors - Expansion Campaign",
+  "deployment_date": "2026-02-25",
+  "total_new_ad_groups": 7,
+  "total_new_keywords": 72,
+  "combined_daily_budget_aed": 100,
+  "combined_monthly_budget_aed": 3000,
+
+  "sitelink_fixes": [
+    {"sitelink": "Kitchen Renovation", "broken_url": "firstunicorninteriors.com/kitchen-renovation", "correct_url": "firstunicorninteriors.com/renovation/kitchen/"},
+    {"sitelink": "Bathroom Renovation", "broken_url": "firstunicorninteriors.com/bathroom-renovation", "correct_url": "firstunicorninteriors.com/renovation/bathroom/"},
+    {"sitelink": "Swimming Pools", "broken_url": "firstunicorninteriors.com/swimming-pool", "correct_url": "firstunicorninteriors.com/renovation/pool/"},
+    {"sitelink": "Solar Panels", "broken_url": "firstunicorninteriors.com/solar-panels", "correct_url": "firstunicorninteriors.com/renovation/solar/"}
+  ],
+
+  "new_sitelinks": [
+    {"text": "Villa Fit Out", "desc1": "Post-handover specialists", "desc2": "From AED 80K turnkey", "url": "firstunicorninteriors.com/interiors/villa-fit-out/"},
+    {"text": "Renovation Cost Guide", "desc1": "Free Dubai pricing guide", "desc2": "Real costs from 800+ projects", "url": "firstunicorninteriors.com/guides/cost-guide/"},
+    {"text": "Interior Design", "desc1": "In-house design team", "desc2": "3D concept included free", "url": "firstunicorninteriors.com/interiors/residential/"},
+    {"text": "Custom Wardrobes", "desc1": "In-house joinery workshop", "desc2": "Walk-in closet experts", "url": "firstunicorninteriors.com/renovation/joinery/"}
+  ],
+
+  "new_negative_keywords": [
+    {"keyword": "commercial", "match": "broad"},
+    {"keyword": "office fit out", "match": "phrase"},
+    {"keyword": "retail fit out", "match": "phrase"},
+    {"keyword": "restaurant", "match": "broad"},
+    {"keyword": "warehouse", "match": "broad"},
+    {"keyword": "hotel", "match": "broad"},
+    {"keyword": "partition only", "match": "phrase"},
+    {"keyword": "painting price per sqm", "match": "phrase"},
+    {"keyword": "paint calculator", "match": "phrase"},
+    {"keyword": "wardrobe ikea", "match": "phrase"},
+    {"keyword": "ready made wardrobe", "match": "phrase"},
+    {"keyword": "extension cord", "match": "phrase"},
+    {"keyword": "hair extension", "match": "phrase"},
+    {"keyword": "eyelash extension", "match": "phrase"},
+    {"keyword": "visa extension", "match": "phrase"}
+  ],
+
+  "ad_groups": [
+    {
+      "name": "Villa Fit Out",
+      "type": "Service - HIGH INTENT",
+      "budget_daily_aed": 20,
+      "landing_page": "https://firstunicorninteriors.com/interiors/villa-fit-out/",
+      "whatsapp_cta": "https://wa.me/971526455121?text=Hi%20I%27m%20interested%20in%20villa%20fit%20out",
+      "keywords": [
+        {"keyword": "villa fit out dubai", "match": "phrase"},
+        {"keyword": "villa fitout dubai", "match": "phrase"},
+        {"keyword": "residential fit out dubai", "match": "phrase"},
+        {"keyword": "fit out company dubai villa", "match": "phrase"},
+        {"keyword": "fit out contractor dubai", "match": "phrase"},
+        {"keyword": "post handover fit out dubai", "match": "phrase"},
+        {"keyword": "villa fitout company dubai", "match": "phrase"},
+        {"keyword": "new villa fit out dubai", "match": "phrase"},
+        {"keyword": "turnkey fit out dubai villa", "match": "phrase"},
+        {"keyword": "home fit out dubai", "match": "phrase"},
+        {"keyword": "fit out companies near me dubai", "match": "phrase"}
+      ],
+      "rsa_a": {
+        "strategy": "Post-Handover Expert",
+        "headlines": [
+          {"text": "Villa Fit Out Dubai", "pin": "1"},
+          {"text": "Just Got Your Keys?", "pin": "2"},
+          {"text": "Post-Handover Specialists", "pin": null},
+          {"text": "In-House Team No Subs", "pin": null},
+          {"text": "Turnkey Villa Fit Out", "pin": null},
+          {"text": "Kitchen Bath Flooring", "pin": null},
+          {"text": "Done in 4-8 Weeks", "pin": null},
+          {"text": "800+ Villas Completed", "pin": null},
+          {"text": "Free Villa Site Visit", "pin": null},
+          {"text": "From AED 80K Complete", "pin": null},
+          {"text": "We Know Emaar Nakheel", "pin": null},
+          {"text": "1-Year Written Warranty", "pin": null},
+          {"text": "Milestone Payments Only", "pin": null},
+          {"text": "WhatsApp Us Right Now", "pin": null},
+          {"text": "Book Free Consult Today", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Just got villa keys? We handle full fit out from design to handover. In-house team.", "pin": "1"},
+          {"text": "Kitchen, bathrooms, flooring, paint, joinery. One team. One timeline. One price.", "pin": null},
+          {"text": "Post-handover villa fit out specialists. 800+ projects. Milestone payments only.", "pin": null},
+          {"text": "From AED 80K turnkey villa fit out. Full material breakdown. 1-year warranty.", "pin": null}
+        ]
+      },
+      "rsa_b": {
+        "strategy": "Premium Turnkey",
+        "headlines": [
+          {"text": "Turnkey Villa Fit Out", "pin": "1"},
+          {"text": "Move Into Perfection", "pin": "2"},
+          {"text": "Villa Fit Out Dubai", "pin": null},
+          {"text": "Design Build Deliver", "pin": null},
+          {"text": "Italian Materials Direct", "pin": null},
+          {"text": "Custom Joinery In-House", "pin": null},
+          {"text": "Smart Home Ready Wiring", "pin": null},
+          {"text": "15+ Years Dubai Experts", "pin": null},
+          {"text": "Transparent Fixed Pricing", "pin": null},
+          {"text": "One Team Start to Finish", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Your new villa deserves a proper fit out. Design, materials, build — all in-house.", "pin": "1"},
+          {"text": "Premium villa fit out from concept to keys. Italian stone. Custom joinery. No subs.", "pin": null},
+          {"text": "We handle everything so you walk into a finished home. 800+ Dubai villas done.", "pin": null},
+          {"text": "Free villa consultation this week. 3D design concept included. WhatsApp us now.", "pin": null}
+        ]
+      }
+    },
+    {
+      "name": "Interior Design",
+      "type": "Service - UPPER FUNNEL",
+      "budget_daily_aed": 15,
+      "landing_page": "https://firstunicorninteriors.com/interiors/residential/",
+      "whatsapp_cta": "https://wa.me/971526455121?text=Hi%20I%27m%20interested%20in%20interior%20design",
+      "keywords": [
+        {"keyword": "interior design dubai villa", "match": "phrase"},
+        {"keyword": "villa interior designer dubai", "match": "phrase"},
+        {"keyword": "home interior design dubai", "match": "phrase"},
+        {"keyword": "residential interior design dubai", "match": "phrase"},
+        {"keyword": "interior designer near me dubai", "match": "phrase"},
+        {"keyword": "interior design company dubai", "match": "phrase"},
+        {"keyword": "villa interior dubai", "match": "phrase"},
+        {"keyword": "luxury interior design dubai", "match": "phrase"},
+        {"keyword": "best interior designer dubai", "match": "phrase"},
+        {"keyword": "interior design consultation dubai", "match": "phrase"}
+      ],
+      "rsa_a": {
+        "strategy": "Design-First Approach",
+        "headlines": [
+          {"text": "Interior Design Dubai", "pin": "1"},
+          {"text": "Design + Build In-House", "pin": "2"},
+          {"text": "Villa Interior Experts", "pin": null},
+          {"text": "See It Before We Build", "pin": null},
+          {"text": "3D Design Walkthrough", "pin": null},
+          {"text": "We Design and Execute", "pin": null},
+          {"text": "Free Design Consultation", "pin": null},
+          {"text": "800+ Villas Designed", "pin": null},
+          {"text": "15+ Years Dubai Interiors", "pin": null},
+          {"text": "In-House Design Team", "pin": null},
+          {"text": "No Outsourced Designers", "pin": null},
+          {"text": "Italian Material Experts", "pin": null},
+          {"text": "Concept to Completion", "pin": null},
+          {"text": "WhatsApp Us for Ideas", "pin": null},
+          {"text": "Book Free Visit Today", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "In-house design team creates your concept. Same team builds it. No lost in translation.", "pin": "1"},
+          {"text": "3D walkthrough before construction starts. See every detail. Approve every material.", "pin": null},
+          {"text": "Villa interior design and build under one roof. 800+ projects across Dubai communities.", "pin": null},
+          {"text": "Free design consultation at your villa this week. Mood boards and 3D concept included.", "pin": null}
+        ]
+      },
+      "rsa_b": {
+        "strategy": "Luxury Interiors",
+        "headlines": [
+          {"text": "Luxury Villa Interiors", "pin": "1"},
+          {"text": "Your Vision Brought to Life", "pin": "2"},
+          {"text": "Interior Design Dubai", "pin": null},
+          {"text": "Premium Material Library", "pin": null},
+          {"text": "Italian Stone and Marble", "pin": null},
+          {"text": "Custom Joinery Designs", "pin": null},
+          {"text": "Smart Home Integration", "pin": null},
+          {"text": "Lighting Design Included", "pin": null},
+          {"text": "Palm to Ranches Experts", "pin": null},
+          {"text": "One Team Does Everything", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Luxury villa interior design tailored to your lifestyle. Premium materials. In-house team.", "pin": "1"},
+          {"text": "From mood board to move-in. We design and build your dream villa interior. No subs used.", "pin": null},
+          {"text": "Custom joinery, Italian marble, smart lighting — designed and installed by one team.", "pin": null},
+          {"text": "Book a free design consultation. See 3D renders of your villa before any work begins.", "pin": null}
+        ]
+      }
+    },
+    {
+      "name": "Villa Painting",
+      "type": "Service - VOLUME ENTRY",
+      "budget_daily_aed": 15,
+      "landing_page": "https://firstunicorninteriors.com/renovation/",
+      "whatsapp_cta": "https://wa.me/971526455121?text=Hi%20I%20need%20a%20painting%20quote",
+      "keywords": [
+        {"keyword": "villa painting dubai", "match": "phrase"},
+        {"keyword": "house painting dubai", "match": "phrase"},
+        {"keyword": "painting contractor dubai", "match": "phrase"},
+        {"keyword": "interior painting dubai", "match": "phrase"},
+        {"keyword": "villa painter dubai", "match": "phrase"},
+        {"keyword": "painting company dubai", "match": "phrase"},
+        {"keyword": "wall painting dubai", "match": "phrase"},
+        {"keyword": "home painting services dubai", "match": "phrase"},
+        {"keyword": "exterior painting dubai villa", "match": "phrase"},
+        {"keyword": "painting quote dubai", "match": "phrase"}
+      ],
+      "rsa_a": {
+        "strategy": "Professional Painters",
+        "headlines": [
+          {"text": "Villa Painting Dubai", "pin": "1"},
+          {"text": "In-House Painting Team", "pin": "2"},
+          {"text": "From AED 8K Full Villa", "pin": null},
+          {"text": "Done in 3-5 Days", "pin": null},
+          {"text": "Jotun Dulux Only", "pin": null},
+          {"text": "Zero Mess Guaranteed", "pin": null},
+          {"text": "Furniture Protection", "pin": null},
+          {"text": "Free Colour Consultation", "pin": null},
+          {"text": "800+ Villas Painted", "pin": null},
+          {"text": "Interior and Exterior", "pin": null},
+          {"text": "Licensed Dubai Painters", "pin": null},
+          {"text": "Accent Walls Included", "pin": null},
+          {"text": "1-Year Paint Warranty", "pin": null},
+          {"text": "WhatsApp for Quick Quote", "pin": null},
+          {"text": "Book Painter This Week", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Professional villa painting from AED 8K. In-house team. Jotun and Dulux premium paints.", "pin": "1"},
+          {"text": "Full villa repainted in 3-5 days. We protect all furniture and clean up completely.", "pin": null},
+          {"text": "Interior and exterior villa painting. Accent walls. Feature walls. Colour consultation.", "pin": null},
+          {"text": "Free painting quote within 24 hours. WhatsApp us photos and get a fixed price today.", "pin": null}
+        ]
+      },
+      "rsa_b": {
+        "strategy": "Fresh Start",
+        "headlines": [
+          {"text": "Fresh Paint Fresh Start", "pin": "1"},
+          {"text": "Transform Your Villa Fast", "pin": "2"},
+          {"text": "Villa Painting Dubai", "pin": null},
+          {"text": "Fastest Villa Painters", "pin": null},
+          {"text": "Premium Paints Only", "pin": null},
+          {"text": "Same Week Availability", "pin": null},
+          {"text": "Feature Wall Experts", "pin": null},
+          {"text": "Colour Matching Service", "pin": null},
+          {"text": "15+ Years Dubai Villas", "pin": null},
+          {"text": "No Hidden Costs Ever", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Quickest way to transform your villa. Professional painting done in days, not weeks.", "pin": "1"},
+          {"text": "Premium paint brands only. Full furniture protection. We leave your villa spotless.", "pin": null},
+          {"text": "From accent walls to full villa. Interior and exterior. Free colour consultation.", "pin": null},
+          {"text": "WhatsApp us photos of your villa for an instant painting quote. Same week start.", "pin": null}
+        ]
+      }
+    },
+    {
+      "name": "Flooring",
+      "type": "Service - CROSS-SELL",
+      "budget_daily_aed": 10,
+      "landing_page": "https://firstunicorninteriors.com/renovation/flooring/",
+      "whatsapp_cta": "https://wa.me/971526455121?text=Hi%20I%27m%20interested%20in%20villa%20flooring",
+      "keywords": [
+        {"keyword": "flooring dubai villa", "match": "phrase"},
+        {"keyword": "marble flooring dubai", "match": "phrase"},
+        {"keyword": "villa flooring dubai", "match": "phrase"},
+        {"keyword": "porcelain tiles dubai", "match": "phrase"},
+        {"keyword": "engineered wood flooring dubai", "match": "phrase"},
+        {"keyword": "floor tiling dubai", "match": "phrase"},
+        {"keyword": "marble installation dubai", "match": "phrase"},
+        {"keyword": "flooring contractor dubai", "match": "phrase"},
+        {"keyword": "vinyl flooring dubai villa", "match": "phrase"},
+        {"keyword": "tile installation dubai", "match": "phrase"}
+      ],
+      "rsa_a": {
+        "strategy": "Material Authority",
+        "headlines": [
+          {"text": "Villa Flooring Dubai", "pin": "1"},
+          {"text": "Marble Porcelain Wood", "pin": "2"},
+          {"text": "In-House Tiling Team", "pin": null},
+          {"text": "Direct Material Sourcing", "pin": null},
+          {"text": "Italian Marble Experts", "pin": null},
+          {"text": "Engineered Wood Options", "pin": null},
+          {"text": "No Middleman Markup", "pin": null},
+          {"text": "Free Flooring Consult", "pin": null},
+          {"text": "800+ Villas Floored", "pin": null},
+          {"text": "Precision Installation", "pin": null},
+          {"text": "Underfloor Heating Ready", "pin": null},
+          {"text": "1-Year Warranty Included", "pin": null},
+          {"text": "From AED 35 Per Sqm", "pin": null},
+          {"text": "WhatsApp for Samples", "pin": null},
+          {"text": "Book Free Visit Today", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Villa flooring experts. Marble, porcelain, engineered wood. In-house tiling team.", "pin": "1"},
+          {"text": "Direct material sourcing from Italy and Spain. No middleman. Better price and quality.", "pin": null},
+          {"text": "Precision floor installation. We prep, level, waterproof and tile. One team, one price.", "pin": null},
+          {"text": "Free flooring consultation with material samples at your villa. WhatsApp us today.", "pin": null}
+        ]
+      },
+      "rsa_b": {
+        "strategy": "Transform Underfoot",
+        "headlines": [
+          {"text": "New Floors New Villa", "pin": "1"},
+          {"text": "Walk on Luxury Daily", "pin": "2"},
+          {"text": "Flooring Dubai Villa", "pin": null},
+          {"text": "Calacatta Marble Floors", "pin": null},
+          {"text": "Large Format Porcelain", "pin": null},
+          {"text": "Herringbone Wood Floors", "pin": null},
+          {"text": "Pool Deck Tiling Too", "pin": null},
+          {"text": "Staircase Marble Experts", "pin": null},
+          {"text": "15+ Years Floor Experts", "pin": null},
+          {"text": "Transparent Fixed Pricing", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Transform your villa from the ground up. Italian marble. Large format porcelain. Wood.", "pin": "1"},
+          {"text": "In-house tiling experts install your new floors with precision. No subcontractors used.", "pin": null},
+          {"text": "From hallway to pool deck. One team handles all your villa flooring. 800+ projects done.", "pin": null},
+          {"text": "See and touch material samples at your villa. Free consultation. No obligation at all.", "pin": null}
+        ]
+      }
+    },
+    {
+      "name": "Joinery and Wardrobes",
+      "type": "Service - HIGH TICKET",
+      "budget_daily_aed": 15,
+      "landing_page": "https://firstunicorninteriors.com/renovation/joinery/",
+      "whatsapp_cta": "https://wa.me/971526455121?text=Hi%20I%20need%20custom%20wardrobes",
+      "keywords": [
+        {"keyword": "custom wardrobe dubai", "match": "phrase"},
+        {"keyword": "built in wardrobe dubai", "match": "phrase"},
+        {"keyword": "joinery company dubai", "match": "phrase"},
+        {"keyword": "custom cabinetry dubai", "match": "phrase"},
+        {"keyword": "walk in closet dubai", "match": "phrase"},
+        {"keyword": "fitted wardrobe dubai", "match": "phrase"},
+        {"keyword": "wardrobe design dubai", "match": "phrase"},
+        {"keyword": "bespoke joinery dubai", "match": "phrase"},
+        {"keyword": "custom closet dubai", "match": "phrase"},
+        {"keyword": "kitchen cabinets maker dubai", "match": "phrase"},
+        {"keyword": "vanity unit custom dubai", "match": "phrase"}
+      ],
+      "rsa_a": {
+        "strategy": "In-House Craftsmanship",
+        "headlines": [
+          {"text": "Custom Wardrobes Dubai", "pin": "1"},
+          {"text": "Built by Our Own Team", "pin": "2"},
+          {"text": "Walk-In Closet Experts", "pin": null},
+          {"text": "In-House Joinery Workshop", "pin": null},
+          {"text": "Fitted Wardrobes Villa", "pin": null},
+          {"text": "Custom Vanity Units", "pin": null},
+          {"text": "Soft-Close Everything", "pin": null},
+          {"text": "LED Interior Lighting", "pin": null},
+          {"text": "Free Wardrobe Design", "pin": null},
+          {"text": "800+ Projects Completed", "pin": null},
+          {"text": "From AED 12K Per Unit", "pin": null},
+          {"text": "Premium Laminate Veneer", "pin": null},
+          {"text": "1-Year Warranty Included", "pin": null},
+          {"text": "WhatsApp for Catalogue", "pin": null},
+          {"text": "Book Free Measure Today", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Custom wardrobes built by our in-house joinery team. Not outsourced. Better quality.", "pin": "1"},
+          {"text": "Walk-in closets, fitted wardrobes, vanities. Soft-close. LED lit. Precision built.", "pin": null},
+          {"text": "We measure, design, build and install. One team. No middlemen. Premium materials only.", "pin": null},
+          {"text": "Free wardrobe design consultation. 3D render of your exact layout. WhatsApp us today.", "pin": null}
+        ]
+      },
+      "rsa_b": {
+        "strategy": "Storage Perfection",
+        "headlines": [
+          {"text": "Dream Wardrobe Built", "pin": "1"},
+          {"text": "Custom Fitted for You", "pin": "2"},
+          {"text": "Joinery Dubai Villa", "pin": null},
+          {"text": "Handleless Modern Design", "pin": null},
+          {"text": "Luxury Closet Systems", "pin": null},
+          {"text": "His and Hers Wardrobes", "pin": null},
+          {"text": "Shoe Display Built-In", "pin": null},
+          {"text": "Island Dresser Options", "pin": null},
+          {"text": "15+ Years Joinery Pros", "pin": null},
+          {"text": "Transparent Fixed Price", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Your wardrobe designed around your lifestyle. Every shelf, drawer and rail customised.", "pin": "1"},
+          {"text": "Premium joinery for Dubai villas. Wardrobes, vanities, TV units. All built in-house.", "pin": null},
+          {"text": "Handleless soft-close joinery with LED lighting. Fitted to your exact villa layout.", "pin": null},
+          {"text": "Free measurement and 3D design at your villa. See your wardrobe before we build it.", "pin": null}
+        ]
+      }
+    },
+    {
+      "name": "Villa Extensions",
+      "type": "Service - HIGH TICKET",
+      "budget_daily_aed": 10,
+      "landing_page": "https://firstunicorninteriors.com/contracting/villa-construction/",
+      "whatsapp_cta": "https://wa.me/971526455121?text=Hi%20I%20need%20a%20villa%20extension",
+      "keywords": [
+        {"keyword": "villa extension dubai", "match": "phrase"},
+        {"keyword": "villa addition dubai", "match": "phrase"},
+        {"keyword": "room addition dubai", "match": "phrase"},
+        {"keyword": "villa modification dubai", "match": "phrase"},
+        {"keyword": "house extension dubai", "match": "phrase"},
+        {"keyword": "extra room dubai villa", "match": "phrase"},
+        {"keyword": "villa expansion dubai", "match": "phrase"},
+        {"keyword": "maid room extension dubai", "match": "phrase"},
+        {"keyword": "villa structural modification", "match": "phrase"},
+        {"keyword": "pergola room conversion dubai", "match": "phrase"}
+      ],
+      "rsa_a": {
+        "strategy": "Licensed Builder",
+        "headlines": [
+          {"text": "Villa Extension Dubai", "pin": "1"},
+          {"text": "Licensed for Structural", "pin": "2"},
+          {"text": "Extra Rooms Built Right", "pin": null},
+          {"text": "Municipality Approved", "pin": null},
+          {"text": "Maid Room Extensions", "pin": null},
+          {"text": "Full Permit Handling", "pin": null},
+          {"text": "Design Build Deliver", "pin": null},
+          {"text": "In-House Build Team", "pin": null},
+          {"text": "15+ Years Construction", "pin": null},
+          {"text": "Structural Engineer Team", "pin": null},
+          {"text": "Free Site Assessment", "pin": null},
+          {"text": "800+ Villa Projects Done", "pin": null},
+          {"text": "1-Year Written Warranty", "pin": null},
+          {"text": "WhatsApp for Assessment", "pin": null},
+          {"text": "Book Free Visit Today", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Licensed villa extensions. We handle permits, structure, MEP and finishing. One team.", "pin": "1"},
+          {"text": "Need more space? We build villa extensions with full municipality approval handled.", "pin": null},
+          {"text": "Maid rooms, extra bedrooms, garage conversions. Structural engineering included.", "pin": null},
+          {"text": "Free structural assessment at your villa. Full scope and pricing within 7 days.", "pin": null}
+        ]
+      },
+      "rsa_b": {
+        "strategy": "More Space More Value",
+        "headlines": [
+          {"text": "More Space for Your Family", "pin": "1"},
+          {"text": "Extend Dont Relocate", "pin": "2"},
+          {"text": "Villa Extension Dubai", "pin": null},
+          {"text": "Add Rooms to Your Villa", "pin": null},
+          {"text": "Garage to Living Space", "pin": null},
+          {"text": "Pergola Conversion Done", "pin": null},
+          {"text": "Property Value Increase", "pin": null},
+          {"text": "One Contractor Everything", "pin": null},
+          {"text": "Permits to Paint One Team", "pin": null},
+          {"text": "Transparent Fixed Pricing", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Extend your villa instead of moving. We add rooms, convert spaces, increase value.", "pin": "1"},
+          {"text": "One licensed contractor handles structure, permits, MEP, and interior finishing.", "pin": null},
+          {"text": "Villa extensions from concept to completion. Engineering drawings. Full permits.", "pin": null},
+          {"text": "Free assessment of extension possibilities for your villa. WhatsApp us your layout.", "pin": null}
+        ]
+      }
+    },
+    {
+      "name": "Renovation Cost Queries",
+      "type": "Service - BOTTOM FUNNEL",
+      "budget_daily_aed": 15,
+      "landing_page": "https://firstunicorninteriors.com/guides/cost-guide/",
+      "whatsapp_cta": "https://wa.me/971526455121?text=Hi%20I%20need%20a%20renovation%20cost%20estimate",
+      "keywords": [
+        {"keyword": "villa renovation cost dubai", "match": "phrase"},
+        {"keyword": "how much villa renovation dubai", "match": "phrase"},
+        {"keyword": "renovation price dubai", "match": "phrase"},
+        {"keyword": "cost of renovation dubai", "match": "phrase"},
+        {"keyword": "villa renovation budget dubai", "match": "phrase"},
+        {"keyword": "renovation cost per sqft dubai", "match": "phrase"},
+        {"keyword": "full villa renovation price", "match": "phrase"},
+        {"keyword": "renovation estimate dubai", "match": "phrase"},
+        {"keyword": "renovation quote dubai", "match": "phrase"},
+        {"keyword": "how much to renovate villa dubai", "match": "phrase"}
+      ],
+      "rsa_a": {
+        "strategy": "Transparent Pricing",
+        "headlines": [
+          {"text": "Villa Renovation Cost Dubai", "pin": "1"},
+          {"text": "Get Real Prices Not Guesses", "pin": "2"},
+          {"text": "Free Cost Guide Download", "pin": null},
+          {"text": "From AED 80K Full Villa", "pin": null},
+          {"text": "Kitchen From AED 45K", "pin": null},
+          {"text": "Bathroom From AED 25K", "pin": null},
+          {"text": "Every AED Itemised", "pin": null},
+          {"text": "No Hidden Costs Ever", "pin": null},
+          {"text": "Transparent Fixed Pricing", "pin": null},
+          {"text": "Free Quote Within 5 Days", "pin": null},
+          {"text": "800+ Villas Priced Fairly", "pin": null},
+          {"text": "Milestone Payments Only", "pin": null},
+          {"text": "Material Breakdown Given", "pin": null},
+          {"text": "WhatsApp for Quick Quote", "pin": null},
+          {"text": "See Our Price Calculator", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Real renovation costs for Dubai villas. Full breakdown. No surprises. No allowances.", "pin": "1"},
+          {"text": "From AED 80K full villa to AED 25K per bathroom. Every dirham itemised in your quote.", "pin": null},
+          {"text": "Download our free Dubai renovation cost guide. Real prices from 800+ completed projects.", "pin": null},
+          {"text": "Get a detailed renovation quote within 5 working days. Free site visit included.", "pin": null}
+        ]
+      },
+      "rsa_b": {
+        "strategy": "Budget Clarity",
+        "headlines": [
+          {"text": "Know Before You Commit", "pin": "1"},
+          {"text": "Dubai Renovation Prices", "pin": "2"},
+          {"text": "Renovation Cost Guide", "pin": null},
+          {"text": "Full Villa From AED 80K", "pin": null},
+          {"text": "Honest Pricing Always", "pin": null},
+          {"text": "Compare Our Quote Free", "pin": null},
+          {"text": "No Allowances Used", "pin": null},
+          {"text": "15+ Years Price Knowledge", "pin": null},
+          {"text": "Direct Material Sourcing", "pin": null},
+          {"text": "You Pay Only As We Build", "pin": null}
+        ],
+        "descriptions": [
+          {"text": "Worried about renovation costs? We show you every line item before you commit. Free.", "pin": "1"},
+          {"text": "Direct material sourcing means lower prices. No middleman markup on any material.", "pin": null},
+          {"text": "Compare our quote against anyone. We welcome it. Transparent pricing is our standard.", "pin": null},
+          {"text": "Free renovation cost estimate. WhatsApp us your villa photos for a ballpark today.", "pin": null}
+        ]
+      }
+    }
+  ],
+
+  "deployment_priority": [
+    "1. FIX BROKEN SITELINKS (4 URLs sending paid traffic to 404s)",
+    "2. Deploy Swimming Pool ad group from ULTIMATE file (125 historical conversions, AED 30/day)",
+    "3. Deploy Solar Panels from ULTIMATE file (killed too early, AED 15/day)",
+    "4. Deploy Villa Fit Out (this file - highest intent new group)",
+    "5. Deploy Renovation Cost Queries (this file - bottom funnel captures)",
+    "6. Deploy Villa Painting (this file - volume entry, low CPA cross-sell)",
+    "7. Deploy Joinery and Wardrobes (this file - high ticket)",
+    "8. Deploy Interior Design (this file - upper funnel intercept)",
+    "9. Deploy remaining ULTIMATE groups (Solar Water Heater, communities)",
+    "10. Deploy Flooring and Villa Extensions (this file - test budget)"
+  ]
+}
