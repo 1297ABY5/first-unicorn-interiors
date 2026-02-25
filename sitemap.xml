@@ -6,11 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://firstunicorninteriors.com/404.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://firstunicorninteriors.com/about/</loc>
     <lastmod>2026-02-24</lastmod>
     <priority>0.7</priority>
@@ -246,17 +241,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://firstunicorninteriors.com/guides/checklist/guide.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://firstunicorninteriors.com/guides/cost-guide/</loc>
-    <lastmod>2026-02-24</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://firstunicorninteriors.com/guides/cost-guide/guide.html</loc>
     <lastmod>2026-02-24</lastmod>
     <priority>0.8</priority>
   </url>
@@ -379,5 +364,40 @@
     <loc>https://firstunicorninteriors.com/renovation/pool/</loc>
     <lastmod>2026-02-24</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://firstunicorninteriors.com/areas/al-barsha-mirdif/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstunicorninteriors.com/areas/damac-hills/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstunicorninteriors.com/areas/jumeirah-golf-estates/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstunicorninteriors.com/areas/jvc-jvt/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstunicorninteriors.com/areas/springs-meadows/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstunicorninteriors.com/renovation/landscaping/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstunicorninteriors.com/renovation/solar/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
