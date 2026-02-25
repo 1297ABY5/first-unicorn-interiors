@@ -1,0 +1,427 @@
+{
+  "campaign": {
+    "name": "Search - Villa Renovation Dubai",
+    "budget_amount_micros": 150000000,
+    "budget_name": "Villa Renovation Daily Budget",
+    "bidding_strategy": "MAXIMIZE_CONVERSIONS",
+    "network": "SEARCH",
+    "geo_targets": ["Dubai, AE"],
+    "language": "en",
+    "ad_schedule": {
+      "note": "All days, optimise by time after data collection"
+    },
+    "start_date": "2026-02-25",
+    "status": "PAUSED"
+  },
+
+  "negative_keywords": [
+    "cheap", "cheapest", "free", "DIY", "do it yourself",
+    "jobs", "job", "salary", "career", "hiring", "vacancy",
+    "course", "courses", "training", "certification", "diploma",
+    "Abu Dhabi", "Sharjah", "Ajman", "RAK", "Fujairah",
+    "how to", "tutorial", "youtube", "video",
+    "used", "second hand", "rent", "rental",
+    "tools", "paint brush", "drill",
+    "insurance", "claim", "complaint",
+    "near me salary", "apprentice", "intern"
+  ],
+
+  "ad_groups": [
+    {
+      "name": "Full Villa Renovation",
+      "landing_page": "https://firstunicorninteriors.com/services",
+      "keywords": [
+        {"text": "villa renovation dubai", "match": "EXACT"},
+        {"text": "villa renovation dubai", "match": "PHRASE"},
+        {"text": "full villa renovation dubai", "match": "EXACT"},
+        {"text": "villa renovation company dubai", "match": "EXACT"},
+        {"text": "villa renovation company dubai", "match": "PHRASE"},
+        {"text": "villa renovation contractors dubai", "match": "EXACT"},
+        {"text": "villa renovation contractors dubai", "match": "PHRASE"},
+        {"text": "home renovation dubai", "match": "PHRASE"},
+        {"text": "house renovation dubai", "match": "PHRASE"},
+        {"text": "villa makeover dubai", "match": "PHRASE"},
+        {"text": "villa refurbishment dubai", "match": "PHRASE"},
+        {"text": "luxury villa renovation dubai", "match": "EXACT"},
+        {"text": "best villa renovation company dubai", "match": "PHRASE"},
+        {"text": "villa interior renovation dubai", "match": "PHRASE"},
+        {"text": "complete villa renovation dubai", "match": "PHRASE"}
+      ],
+      "ad": {
+        "headlines": [
+          "Villa Renovation Dubai",
+          "15+ Years UAE Experience",
+          "In-House Team, No Subcontractors",
+          "800+ Villas Transformed",
+          "Free Design Consultation",
+          "Turnkey Villa Renovation",
+          "Licensed Dubai Contractor",
+          "Fixed Price, No Surprises",
+          "1-Year Craftsmanship Warranty",
+          "WhatsApp Us Today",
+          "Direct Material Sourcing",
+          "Milestone-Based Payments",
+          "Premium Villa Specialists",
+          "Transform Your Villa Now",
+          "Dubai Municipality Licensed"
+        ],
+        "descriptions": [
+          "Dubai's trusted villa renovation specialists. End-to-end in-house team. Design, build, deliver. 800+ projects completed. WhatsApp for free quote.",
+          "Full villa renovation from AED 80K. No subcontractors, no hidden costs. Transparent milestone payments. Book your free site visit today.",
+          "15+ years transforming Dubai villas. Kitchen, bathroom, flooring, painting & more. In-house design team. Call now for a free consultation.",
+          "Premium villa renovation across Palm Jumeirah, Arabian Ranches, Emirates Hills & Dubai Hills. Quality craftsmanship with 1-year warranty."
+        ]
+      }
+    },
+    {
+      "name": "Kitchen Renovation",
+      "landing_page": "https://firstunicorninteriors.com/kitchen-renovation",
+      "keywords": [
+        {"text": "kitchen renovation dubai", "match": "EXACT"},
+        {"text": "kitchen renovation dubai", "match": "PHRASE"},
+        {"text": "kitchen remodel dubai", "match": "PHRASE"},
+        {"text": "kitchen design dubai", "match": "PHRASE"},
+        {"text": "modular kitchen dubai", "match": "PHRASE"},
+        {"text": "kitchen renovation cost dubai", "match": "EXACT"},
+        {"text": "kitchen renovation company dubai", "match": "EXACT"},
+        {"text": "kitchen cabinets dubai", "match": "PHRASE"},
+        {"text": "custom kitchen dubai", "match": "PHRASE"},
+        {"text": "luxury kitchen renovation dubai", "match": "EXACT"},
+        {"text": "kitchen makeover dubai", "match": "PHRASE"},
+        {"text": "villa kitchen renovation", "match": "PHRASE"}
+      ],
+      "ad": {
+        "headlines": [
+          "Kitchen Renovation Dubai",
+          "Custom Kitchen Design",
+          "Handleless Cabinets & More",
+          "Free Kitchen Consultation",
+          "Delivered in 4-6 Weeks",
+          "15+ Years Experience",
+          "In-House Joinery Team",
+          "Premium Kitchen Makeover",
+          "800+ Kitchens Completed",
+          "Fixed Price Guarantee",
+          "Italian Countertops",
+          "No Subcontractors Used",
+          "WhatsApp for Free Quote",
+          "Transform Your Kitchen",
+          "Book a Free Site Visit"
+        ],
+        "descriptions": [
+          "Complete kitchen renovation from design to installation. Custom cabinetry, premium countertops, integrated appliances. In-house team, no subcontractors.",
+          "Transform your kitchen in 4-6 weeks. Handleless cabinets, engineered stone countertops, soft-close everything. Free design consultation today.",
+          "Dubai's kitchen renovation specialists. 800+ projects completed. Direct material sourcing means better prices. WhatsApp us for a free quote.",
+          "Premium kitchen renovation across Dubai. Transparent pricing, milestone payments, 1-year warranty. Visit our showroom or book a free site visit."
+        ]
+      }
+    },
+    {
+      "name": "Bathroom Renovation",
+      "landing_page": "https://firstunicorninteriors.com/bathroom-renovation",
+      "keywords": [
+        {"text": "bathroom renovation dubai", "match": "EXACT"},
+        {"text": "bathroom renovation dubai", "match": "PHRASE"},
+        {"text": "bathroom remodel dubai", "match": "PHRASE"},
+        {"text": "bathroom design dubai", "match": "PHRASE"},
+        {"text": "bathroom renovation cost dubai", "match": "EXACT"},
+        {"text": "bathroom renovation company dubai", "match": "EXACT"},
+        {"text": "luxury bathroom renovation dubai", "match": "EXACT"},
+        {"text": "bathroom makeover dubai", "match": "PHRASE"},
+        {"text": "shower renovation dubai", "match": "PHRASE"},
+        {"text": "bathroom tiling dubai", "match": "PHRASE"},
+        {"text": "marble bathroom dubai", "match": "PHRASE"},
+        {"text": "villa bathroom renovation", "match": "PHRASE"}
+      ],
+      "ad": {
+        "headlines": [
+          "Bathroom Renovation Dubai",
+          "Luxury Bathroom Design",
+          "Italian Marble Finishes",
+          "Free Bathroom Consultation",
+          "Completed in 3-4 Weeks",
+          "Frameless Glass Enclosures",
+          "In-House Tiling Team",
+          "800+ Bathrooms Transformed",
+          "Premium Fixtures & Fittings",
+          "No Hidden Costs",
+          "Waterproofing Guaranteed",
+          "WhatsApp for Free Quote",
+          "Walk-In Shower Specialists",
+          "Rain Shower Installation",
+          "15+ Years Experience"
+        ],
+        "descriptions": [
+          "Complete bathroom renovation. Italian marble, frameless glass, brushed gold fixtures. In-house tiling and waterproofing team. Free consultation today.",
+          "Transform your bathroom in 3-4 weeks. Floor-to-ceiling marble, walk-in rain shower, floating vanity. 800+ bathrooms completed across Dubai.",
+          "Dubai's bathroom renovation experts. Premium materials, certified waterproofing, 1-year warranty. WhatsApp us for a free design consultation.",
+          "Luxury bathroom makeover from AED 25K. No subcontractors, transparent pricing, milestone payments. Book your free site visit today."
+        ]
+      }
+    },
+    {
+      "name": "Glass & Aluminium",
+      "landing_page": "https://firstunicorninteriors.com/services",
+      "keywords": [
+        {"text": "glass partition dubai", "match": "EXACT"},
+        {"text": "glass partition dubai", "match": "PHRASE"},
+        {"text": "aluminium works dubai", "match": "PHRASE"},
+        {"text": "shower glass dubai", "match": "PHRASE"},
+        {"text": "shower enclosure dubai", "match": "PHRASE"},
+        {"text": "glass balustrade dubai", "match": "PHRASE"},
+        {"text": "frameless glass dubai", "match": "PHRASE"},
+        {"text": "glass railing dubai", "match": "PHRASE"},
+        {"text": "aluminium fabrication dubai", "match": "PHRASE"},
+        {"text": "glass door dubai", "match": "PHRASE"},
+        {"text": "office glass partition dubai", "match": "PHRASE"}
+      ],
+      "ad": {
+        "headlines": [
+          "Glass & Aluminium Dubai",
+          "Frameless Glass Partitions",
+          "Shower Enclosures Dubai",
+          "Glass Balustrades & Rails",
+          "Custom Aluminium Works",
+          "Free Measurement & Quote",
+          "In-House Installation Team",
+          "15+ Years Experience",
+          "Premium Tempered Glass",
+          "Office Partitions Dubai",
+          "Quick Turnaround",
+          "WhatsApp for Free Quote",
+          "Villa Glass Specialists",
+          "Precision-Built Aluminium",
+          "Licensed & Insured"
+        ],
+        "descriptions": [
+          "Custom glass and aluminium solutions for villas and offices. Shower enclosures, partitions, balustrades, facades. In-house fabrication team in Dubai.",
+          "Premium frameless glass installation. Tempered safety glass, precision aluminium frames. Free measurement and quote. 800+ projects completed.",
+          "Dubai's glass and aluminium specialists. Shower enclosures, office partitions, balustrades. Direct sourcing, competitive prices. Call today.",
+          "Expert glass & aluminium works across Dubai. Fast turnaround, professional installation, 1-year warranty. WhatsApp for a free site visit."
+        ]
+      }
+    },
+    {
+      "name": "Palm Jumeirah",
+      "landing_page": "https://firstunicorninteriors.com/palm-jumeirah",
+      "keywords": [
+        {"text": "villa renovation palm jumeirah", "match": "EXACT"},
+        {"text": "renovation palm jumeirah", "match": "PHRASE"},
+        {"text": "interior design palm jumeirah", "match": "PHRASE"},
+        {"text": "palm jumeirah villa renovation", "match": "EXACT"},
+        {"text": "contractor palm jumeirah", "match": "PHRASE"},
+        {"text": "kitchen renovation palm jumeirah", "match": "PHRASE"},
+        {"text": "bathroom renovation palm jumeirah", "match": "PHRASE"},
+        {"text": "palm jumeirah home renovation", "match": "PHRASE"}
+      ],
+      "ad": {
+        "headlines": [
+          "Palm Jumeirah Renovation",
+          "Villa Specialists Since 2010",
+          "50+ Palm Jumeirah Projects",
+          "Free Design Consultation",
+          "In-House Team, No Subs",
+          "Luxury Villa Makeover",
+          "Premium Materials Only",
+          "WhatsApp for Free Quote",
+          "Turnkey Renovation Service",
+          "800+ Dubai Villas Done",
+          "Book a Site Visit Today",
+          "We Know Palm Jumeirah",
+          "Fixed Price, No Surprises",
+          "1-Year Warranty Included",
+          "Direct Material Sourcing"
+        ],
+        "descriptions": [
+          "Palm Jumeirah villa renovation specialists. 50+ projects completed on the Palm. Full turnkey service from design to handover. Free consultation.",
+          "We know Palm Jumeirah villas inside out. Kitchen, bathroom, full renovation. In-house team, transparent pricing. WhatsApp us today.",
+          "Premium renovation for Palm Jumeirah homes. No subcontractors, direct material sourcing, milestone payments. Book your free site visit.",
+          "Transform your Palm Jumeirah villa. 15+ years experience, 800+ projects across Dubai. Licensed contractor with 1-year craftsmanship warranty."
+        ]
+      }
+    },
+    {
+      "name": "Arabian Ranches",
+      "landing_page": "https://firstunicorninteriors.com/arabian-ranches",
+      "keywords": [
+        {"text": "villa renovation arabian ranches", "match": "EXACT"},
+        {"text": "renovation arabian ranches", "match": "PHRASE"},
+        {"text": "arabian ranches villa renovation", "match": "EXACT"},
+        {"text": "contractor arabian ranches", "match": "PHRASE"},
+        {"text": "kitchen renovation arabian ranches", "match": "PHRASE"},
+        {"text": "bathroom renovation arabian ranches", "match": "PHRASE"},
+        {"text": "arabian ranches home renovation", "match": "PHRASE"},
+        {"text": "interior design arabian ranches", "match": "PHRASE"}
+      ],
+      "ad": {
+        "headlines": [
+          "Arabian Ranches Renovation",
+          "47+ Ranches Villas Done",
+          "Villa Renovation Experts",
+          "Free Design Consultation",
+          "In-House Team, No Subs",
+          "From AED 80K Full Reno",
+          "15+ Years Experience",
+          "WhatsApp for Free Quote",
+          "We Know Arabian Ranches",
+          "Fixed Price Guarantee",
+          "Book a Site Visit Today",
+          "Turnkey Villa Renovation",
+          "Premium but Fair Pricing",
+          "1-Year Warranty Included",
+          "800+ Dubai Projects Done"
+        ],
+        "descriptions": [
+          "Arabian Ranches villa renovation specialists. 47+ projects in the community. Kitchen, bathroom, full renovation. Free design consultation today.",
+          "We know every Arabian Ranches villa type. Transparent pricing from AED 80K. In-house team, milestone payments. WhatsApp us for a free quote.",
+          "Transform your Arabian Ranches villa. No subcontractors, no hidden costs. Direct material sourcing for better prices. Book a free site visit.",
+          "Trusted by Arabian Ranches families for 15+ years. Full renovation service with 1-year warranty. Licensed Dubai contractor. Call today."
+        ]
+      }
+    },
+    {
+      "name": "Emirates Hills",
+      "landing_page": "https://firstunicorninteriors.com/emirates-hills",
+      "keywords": [
+        {"text": "villa renovation emirates hills", "match": "EXACT"},
+        {"text": "renovation emirates hills", "match": "PHRASE"},
+        {"text": "emirates hills villa renovation", "match": "EXACT"},
+        {"text": "contractor emirates hills", "match": "PHRASE"},
+        {"text": "luxury renovation emirates hills", "match": "PHRASE"},
+        {"text": "interior design emirates hills", "match": "PHRASE"},
+        {"text": "emirates hills home renovation", "match": "PHRASE"}
+      ],
+      "ad": {
+        "headlines": [
+          "Emirates Hills Renovation",
+          "Ultra-Luxury Specialists",
+          "Villa Renovation Experts",
+          "Free Design Consultation",
+          "In-House Team, No Subs",
+          "Premium Materials Only",
+          "15+ Years Experience",
+          "WhatsApp for Free Quote",
+          "We Know Emirates Hills",
+          "Italian Marble & Stone",
+          "Book a Site Visit Today",
+          "Turnkey Luxury Service",
+          "Bespoke Design Team",
+          "1-Year Warranty Included",
+          "800+ Dubai Villas Done"
+        ],
+        "descriptions": [
+          "Emirates Hills villa renovation for discerning homeowners. Premium materials, in-house design team, turnkey service. Free consultation today.",
+          "Ultra-luxury renovation for Emirates Hills villas. Italian marble, custom joinery, smart home integration. 15+ years UAE experience.",
+          "Transform your Emirates Hills home. No subcontractors, direct material sourcing, dedicated project manager. WhatsApp us for a free quote.",
+          "Dubai's premier renovation service for Emirates Hills. Transparent pricing, milestone payments, 1-year craftsmanship warranty. Call today."
+        ]
+      }
+    },
+    {
+      "name": "Dubai Hills",
+      "landing_page": "https://firstunicorninteriors.com/dubai-hills",
+      "keywords": [
+        {"text": "villa renovation dubai hills", "match": "EXACT"},
+        {"text": "renovation dubai hills", "match": "PHRASE"},
+        {"text": "dubai hills villa renovation", "match": "EXACT"},
+        {"text": "dubai hills estate renovation", "match": "PHRASE"},
+        {"text": "contractor dubai hills", "match": "PHRASE"},
+        {"text": "kitchen renovation dubai hills", "match": "PHRASE"},
+        {"text": "bathroom renovation dubai hills", "match": "PHRASE"},
+        {"text": "interior design dubai hills", "match": "PHRASE"}
+      ],
+      "ad": {
+        "headlines": [
+          "Dubai Hills Renovation",
+          "Villa Renovation Experts",
+          "New Handover Specialists",
+          "Free Design Consultation",
+          "In-House Team, No Subs",
+          "From AED 80K Full Reno",
+          "15+ Years Experience",
+          "WhatsApp for Free Quote",
+          "We Know Dubai Hills",
+          "Post-Handover Upgrades",
+          "Book a Site Visit Today",
+          "Turnkey Villa Service",
+          "Fixed Price, No Surprises",
+          "1-Year Warranty Included",
+          "800+ Dubai Projects Done"
+        ],
+        "descriptions": [
+          "Dubai Hills villa renovation specialists. Post-handover upgrades and full renovations. In-house team, transparent pricing. Free consultation.",
+          "Just got your Dubai Hills keys? We specialise in handover upgrades. Kitchen, bathroom, flooring, painting. WhatsApp us for a free quote.",
+          "Transform your Dubai Hills Estate villa. No subcontractors, no hidden costs, milestone payments. 800+ projects completed. Book a site visit.",
+          "Premium renovation for Dubai Hills homes. 15+ years UAE experience, direct material sourcing, 1-year warranty. Licensed contractor. Call today."
+        ]
+      }
+    }
+  ],
+
+  "extensions": {
+    "sitelinks": [
+      {
+        "text": "Kitchen Renovation",
+        "description1": "Custom kitchen design & build",
+        "description2": "In-house joinery team",
+        "url": "https://firstunicorninteriors.com/kitchen-renovation"
+      },
+      {
+        "text": "Bathroom Renovation",
+        "description1": "Luxury bathroom makeovers",
+        "description2": "Italian marble & glass",
+        "url": "https://firstunicorninteriors.com/bathroom-renovation"
+      },
+      {
+        "text": "Our Projects",
+        "description1": "800+ villas transformed",
+        "description2": "See before & after results",
+        "url": "https://firstunicorninteriors.com/projects"
+      },
+      {
+        "text": "Free Consultation",
+        "description1": "Book a free site visit",
+        "description2": "No obligation quote",
+        "url": "https://firstunicorninteriors.com/contact"
+      }
+    ],
+    "callouts": [
+      "15+ Years Experience",
+      "In-House Team",
+      "Free Site Visit",
+      "1-Year Warranty",
+      "No Subcontractors",
+      "Transparent Pricing",
+      "Direct Material Sourcing",
+      "Dubai Municipality Licensed"
+    ],
+    "call": {
+      "phone_number": "+971585658002",
+      "country_code": "AE"
+    },
+    "structured_snippets": [
+      {
+        "header": "Services",
+        "values": [
+          "Full Villa Renovation",
+          "Kitchen Design",
+          "Bathroom Renovation",
+          "Glass & Aluminium",
+          "Joinery & Cabinetry",
+          "Flooring & Tiling"
+        ]
+      },
+      {
+        "header": "Neighborhoods",
+        "values": [
+          "Palm Jumeirah",
+          "Arabian Ranches",
+          "Emirates Hills",
+          "Dubai Hills",
+          "Al Barsha",
+          "JVC"
+        ]
+      }
+    ]
+  }
+}
