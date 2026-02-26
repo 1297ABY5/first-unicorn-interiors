@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="docGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="#111111"/>
+  
+  <!-- Subtle grid pattern -->
+  <g opacity="0.03">
+    <line x1="0" y1="50" x2="600" y2="50" stroke="#c8a55e" stroke-width="0.5"/>
+    <line x1="0" y1="100" x2="600" y2="100" stroke="#c8a55e" stroke-width="0.5"/>
+    <line x1="0" y1="150" x2="600" y2="150" stroke="#c8a55e" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="600" y2="200" stroke="#c8a55e" stroke-width="0.5"/>
+    <line x1="0" y1="250" x2="600" y2="250" stroke="#c8a55e" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="600" y2="300" stroke="#c8a55e" stroke-width="0.5"/>
+    <line x1="0" y1="350" x2="600" y2="350" stroke="#c8a55e" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Document 1 (main, tilted slightly) -->
+  <g transform="translate(180, 35) rotate(-2)">
+    <rect x="0" y="0" width="240" height="320" rx="4" fill="#1c1c1c" stroke="rgba(200,165,94,0.2)" stroke-width="1"/>
+    
+    <!-- Header bar -->
+    <rect x="0" y="0" width="240" height="40" rx="4" fill="rgba(200,165,94,0.08)"/>
+    <rect x="16" y="14" width="80" height="4" rx="2" fill="#c8a55e" opacity="0.6"/>
+    <rect x="16" y="22" width="50" height="3" rx="1.5" fill="#c8a55e" opacity="0.3"/>
+    
+    <!-- Line items -->
+    <g transform="translate(16, 55)">
+      <!-- Item 1 - highlighted green -->
+      <rect x="-4" y="-4" width="216" height="28" rx="3" fill="rgba(80,200,120,0.08)" stroke="rgba(80,200,120,0.15)" stroke-width="0.5"/>
+      <circle cx="8" cy="10" r="6" fill="none" stroke="#50c878" stroke-width="1.5"/>
+      <path d="M5,10 L7,12.5 L11,7" stroke="#50c878" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="22" y="6" width="120" height="3" rx="1.5" fill="#f2ece0" opacity="0.5"/>
+      <rect x="170" y="6" width="35" height="3" rx="1.5" fill="#50c878" opacity="0.6"/>
+      
+      <!-- Item 2 - highlighted green -->
+      <g transform="translate(0, 36)">
+        <rect x="-4" y="-4" width="216" height="28" rx="3" fill="rgba(80,200,120,0.08)" stroke="rgba(80,200,120,0.15)" stroke-width="0.5"/>
+        <circle cx="8" cy="10" r="6" fill="none" stroke="#50c878" stroke-width="1.5"/>
+        <path d="M5,10 L7,12.5 L11,7" stroke="#50c878" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="22" y="6" width="100" height="3" rx="1.5" fill="#f2ece0" opacity="0.5"/>
+        <rect x="170" y="6" width="35" height="3" rx="1.5" fill="#50c878" opacity="0.6"/>
+      </g>
+      
+      <!-- Item 3 - warning red -->
+      <g transform="translate(0, 72)">
+        <rect x="-4" y="-4" width="216" height="28" rx="3" fill="rgba(220,80,60,0.08)" stroke="rgba(220,80,60,0.15)" stroke-width="0.5"/>
+        <circle cx="8" cy="10" r="6" fill="none" stroke="#dc503c" stroke-width="1.5"/>
+        <text x="8" y="14" font-family="Arial" font-size="10" fill="#dc503c" text-anchor="middle" font-weight="bold">!</text>
+        <rect x="22" y="6" width="90" height="3" rx="1.5" fill="#f2ece0" opacity="0.5"/>
+        <rect x="170" y="6" width="35" height="3" rx="1.5" fill="#dc503c" opacity="0.6"/>
+      </g>
+      
+      <!-- Item 4 - highlighted green -->
+      <g transform="translate(0, 108)">
+        <rect x="-4" y="-4" width="216" height="28" rx="3" fill="rgba(80,200,120,0.08)" stroke="rgba(80,200,120,0.15)" stroke-width="0.5"/>
+        <circle cx="8" cy="10" r="6" fill="none" stroke="#50c878" stroke-width="1.5"/>
+        <path d="M5,10 L7,12.5 L11,7" stroke="#50c878" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="22" y="6" width="110" height="3" rx="1.5" fill="#f2ece0" opacity="0.5"/>
+        <rect x="170" y="6" width="35" height="3" rx="1.5" fill="#50c878" opacity="0.6"/>
+      </g>
+      
+      <!-- Item 5 - warning red -->
+      <g transform="translate(0, 144)">
+        <rect x="-4" y="-4" width="216" height="28" rx="3" fill="rgba(220,80,60,0.08)" stroke="rgba(220,80,60,0.15)" stroke-width="0.5"/>
+        <circle cx="8" cy="10" r="6" fill="none" stroke="#dc503c" stroke-width="1.5"/>
+        <text x="8" y="14" font-family="Arial" font-size="10" fill="#dc503c" text-anchor="middle" font-weight="bold">!</text>
+        <rect x="22" y="6" width="80" height="3" rx="1.5" fill="#f2ece0" opacity="0.5"/>
+        <rect x="170" y="6" width="35" height="3" rx="1.5" fill="#dc503c" opacity="0.6"/>
+      </g>
+      
+      <!-- Subtotal line -->
+      <g transform="translate(0, 185)">
+        <line x1="0" y1="0" x2="208" y2="0" stroke="rgba(200,165,94,0.3)" stroke-width="0.5"/>
+        <rect x="120" y="8" width="48" height="3" rx="1.5" fill="#c8a55e" opacity="0.5"/>
+        <rect x="170" y="8" width="38" height="4" rx="2" fill="#c8a55e" opacity="0.8"/>
+      </g>
+      
+      <!-- Total line -->
+      <g transform="translate(0, 210)">
+        <line x1="0" y1="0" x2="208" y2="0" stroke="rgba(200,165,94,0.5)" stroke-width="1"/>
+        <rect x="100" y="8" width="68" height="4" rx="2" fill="#f2ece0" opacity="0.4"/>
+        <rect x="170" y="6" width="38" height="8" rx="3" fill="#c8a55e" opacity="0.9"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Magnifying glass annotation -->
+  <g transform="translate(410, 130)" filter="url(#glow1)">
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#c8a55e" stroke-width="2" opacity="0.7"/>
+    <line x1="25" y1="25" x2="45" y2="45" stroke="#c8a55e" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <!-- Inner magnified text -->
+    <rect x="-20" y="-8" width="40" height="3" rx="1.5" fill="#f2ece0" opacity="0.6"/>
+    <rect x="-15" y="-1" width="30" height="3" rx="1.5" fill="#dc503c" opacity="0.8"/>
+    <rect x="-20" y="6" width="40" height="3" rx="1.5" fill="#f2ece0" opacity="0.6"/>
+  </g>
+  
+  <!-- Annotation arrows/callouts -->
+  <g opacity="0.5">
+    <!-- Arrow to red item -->
+    <path d="M430,200 L410,175" stroke="#c8a55e" stroke-width="1" fill="none" marker-end="none" stroke-dasharray="4,3"/>
+    <text x="435" y="215" font-family="Arial" font-size="11" fill="#c8a55e">Hidden fees?</text>
+    
+    <!-- Arrow to green total -->
+    <path d="M440,300 L415,305" stroke="#50c878" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+    <text x="445" y="305" font-family="Arial" font-size="11" fill="#50c878">Verified ✓</text>
+  </g>
+  
+  <!-- Corner accent -->
+  <path d="M0,0 L60,0 L0,60 Z" fill="rgba(200,165,94,0.04)"/>
+  <path d="M600,400 L540,400 L600,340 Z" fill="rgba(200,165,94,0.04)"/>
+</svg>

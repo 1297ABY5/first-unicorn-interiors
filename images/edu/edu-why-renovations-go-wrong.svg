@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="splitLeft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0a0a"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="splitRight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a0f"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="#111111"/>
+  
+  <!-- Left half - danger zone -->
+  <rect x="0" y="0" width="295" height="400" fill="url(#splitLeft)"/>
+  
+  <!-- Right half - safe zone -->
+  <rect x="305" y="0" width="295" height="400" fill="url(#splitRight)"/>
+  
+  <!-- Center divider -->
+  <line x1="300" y1="30" x2="300" y2="370" stroke="rgba(200,165,94,0.3)" stroke-width="1"/>
+  
+  <!-- 70% header left -->
+  <text x="148" y="55" font-family="Arial, sans-serif" font-size="36" fill="#dc503c" text-anchor="middle" font-weight="700" opacity="0.9">70%</text>
+  <text x="148" y="73" font-family="Arial, sans-serif" font-size="11" fill="#dc503c" text-anchor="middle" opacity="0.7" letter-spacing="2">GO WRONG</text>
+  
+  <!-- 30% header right -->
+  <text x="450" y="55" font-family="Arial, sans-serif" font-size="36" fill="#50c878" text-anchor="middle" font-weight="700" opacity="0.9">30%</text>
+  <text x="450" y="73" font-family="Arial, sans-serif" font-size="11" fill="#50c878" text-anchor="middle" opacity="0.7" letter-spacing="2">GET IT RIGHT</text>
+  
+  <!-- Divider lines under headers -->
+  <line x1="60" y1="85" x2="240" y2="85" stroke="rgba(220,80,60,0.2)" stroke-width="0.5"/>
+  <line x1="360" y1="85" x2="540" y2="85" stroke="rgba(80,200,120,0.2)" stroke-width="0.5"/>
+  
+  <!-- LEFT: Bad contractor signs -->
+  <g transform="translate(30, 105)">
+    <!-- Item 1 -->
+    <g>
+      <circle cx="14" cy="10" r="10" fill="rgba(220,80,60,0.12)" stroke="rgba(220,80,60,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="12" fill="#dc503c" text-anchor="middle" font-weight="bold">✕</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">Subcontracted labour</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">No control over quality</text>
+    </g>
+    
+    <!-- Item 2 -->
+    <g transform="translate(0, 48)">
+      <circle cx="14" cy="10" r="10" fill="rgba(220,80,60,0.12)" stroke="rgba(220,80,60,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="12" fill="#dc503c" text-anchor="middle" font-weight="bold">✕</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">"Allowances" in quote</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">Final bill 40% higher</text>
+    </g>
+    
+    <!-- Item 3 -->
+    <g transform="translate(0, 96)">
+      <circle cx="14" cy="10" r="10" fill="rgba(220,80,60,0.12)" stroke="rgba(220,80,60,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="12" fill="#dc503c" text-anchor="middle" font-weight="bold">✕</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">No project manager</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">Weeks without updates</text>
+    </g>
+    
+    <!-- Item 4 -->
+    <g transform="translate(0, 144)">
+      <circle cx="14" cy="10" r="10" fill="rgba(220,80,60,0.12)" stroke="rgba(220,80,60,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="12" fill="#dc503c" text-anchor="middle" font-weight="bold">✕</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">50% deposit upfront</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">Disappears with your money</text>
+    </g>
+    
+    <!-- Item 5 -->
+    <g transform="translate(0, 192)">
+      <circle cx="14" cy="10" r="10" fill="rgba(220,80,60,0.12)" stroke="rgba(220,80,60,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="12" fill="#dc503c" text-anchor="middle" font-weight="bold">✕</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">No warranty offered</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">Problems = your problem</text>
+    </g>
+  </g>
+  
+  <!-- RIGHT: Good contractor signs -->
+  <g transform="translate(332, 105)">
+    <!-- Item 1 -->
+    <g>
+      <circle cx="14" cy="10" r="10" fill="rgba(80,200,120,0.12)" stroke="rgba(80,200,120,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="11" fill="#50c878" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">In-house team</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">Direct quality control</text>
+    </g>
+    
+    <!-- Item 2 -->
+    <g transform="translate(0, 48)">
+      <circle cx="14" cy="10" r="10" fill="rgba(80,200,120,0.12)" stroke="rgba(80,200,120,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="11" fill="#50c878" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">Itemised quote</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">Every AED accounted for</text>
+    </g>
+    
+    <!-- Item 3 -->
+    <g transform="translate(0, 96)">
+      <circle cx="14" cy="10" r="10" fill="rgba(80,200,120,0.12)" stroke="rgba(80,200,120,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="11" fill="#50c878" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">Dedicated PM</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">WhatsApp updates daily</text>
+    </g>
+    
+    <!-- Item 4 -->
+    <g transform="translate(0, 144)">
+      <circle cx="14" cy="10" r="10" fill="rgba(80,200,120,0.12)" stroke="rgba(80,200,120,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="11" fill="#50c878" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">Milestone payments</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">Pay as work completes</text>
+    </g>
+    
+    <!-- Item 5 -->
+    <g transform="translate(0, 192)">
+      <circle cx="14" cy="10" r="10" fill="rgba(80,200,120,0.12)" stroke="rgba(80,200,120,0.3)" stroke-width="0.5"/>
+      <text x="14" y="14" font-family="Arial" font-size="11" fill="#50c878" text-anchor="middle" font-weight="bold">✓</text>
+      <text x="32" y="9" font-family="Arial, sans-serif" font-size="11" fill="#f2ece0" opacity="0.8">3-year warranty</text>
+      <text x="32" y="22" font-family="Arial, sans-serif" font-size="9" fill="#a09888">Full craftsmanship cover</text>
+    </g>
+  </g>
+  
+  <!-- Bottom CTA hint -->
+  <text x="300" y="375" font-family="Arial, sans-serif" font-size="10" fill="#c8a55e" text-anchor="middle" opacity="0.5" letter-spacing="1">LEARN HOW TO PROTECT YOURSELF →</text>
+  
+  <!-- Corner accents -->
+  <path d="M0,0 L40,0 L0,40 Z" fill="rgba(220,80,60,0.04)"/>
+  <path d="M600,0 L560,0 L600,40 Z" fill="rgba(80,200,120,0.04)"/>
+</svg>
