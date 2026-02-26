@@ -37,11 +37,11 @@
 
     var variants = [
       { id: 'cost_guide',
-        html: '<h2>Wait \u2014 Take This With You</h2><p>Download our <strong>free 2026 Villa Renovation Cost Guide</strong> \u2014 real pricing from 800+ projects, community breakdowns, and red flags to watch for.</p><a href="/guides/cost-guide/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">Download the Free Guide</a><br><a href="' + PHONE + '" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;">Or Call +971 52 645 5121</a><p style="font-size:0.8rem;color:#888;margin-top:1.2rem;margin-bottom:0;">Downloaded by 320+ homeowners this month</p>' },
+        html: '<h2>Wait \u2014 Take This With You</h2><p>Download our <strong>free 2026 Villa Renovation Cost Guide</strong> \u2014 real pricing from 800+ projects, community breakdowns, and red flags to watch for.</p><a href="/guides/cost-guide/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">Download the Free Guide</a><br><a href="' + PHONE + '" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;">Or Call +971 58 565 8002</a>' },
       { id: '3d_design',
-        html: '<h2>Wait \u2014 Don\'t Leave Without This</h2><p>Get a <strong>free 3D design concept</strong> for your villa. See your renovation before it starts. No obligation.</p><a href="/free-design/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">' + WA_SVG + ' Get My Free Design</a><br><a href="' + PHONE + '" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;">Or Call +971 52 645 5121</a><p style="font-size:0.8rem;color:#888;margin-top:1.2rem;margin-bottom:0;">47 homeowners requested this month</p>' },
+        html: '<h2>Wait \u2014 Don\'t Leave Without This</h2><p>Get a <strong>free 3D design concept</strong> for your villa. See your renovation before it starts. No obligation.</p><a href="/free-design/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">' + WA_SVG + ' Get My Free Design</a><br><a href="' + PHONE + '" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;">Or Call +971 58 565 8002</a>' },
       { id: 'calculator',
-        html: '<h2>Curious What It\u2019ll Cost?</h2><p>Our <strong>free renovation calculator</strong> gives you a personalised estimate in 60 seconds. 5 quick questions, instant results.</p><a href="/calculator/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">Try the Free Calculator</a><br><a href="/guides/lookbook/" style="display:inline-flex;font-size:0.85rem;color:#b79557;text-decoration:none;">Or browse 50 Before &amp; After transformations \u2192</a><p style="font-size:0.8rem;color:#888;margin-top:1.2rem;margin-bottom:0;">Used by 180+ homeowners this month</p>' }
+        html: '<h2>Curious What It\u2019ll Cost?</h2><p>Our <strong>free renovation calculator</strong> gives you a personalised estimate in 60 seconds. 5 quick questions, instant results.</p><a href="/calculator/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">Try the Free Calculator</a><br><a href="/guides/lookbook/" style="display:inline-flex;font-size:0.85rem;color:#b79557;text-decoration:none;">Or browse 50 Before &amp; After transformations \u2192</a>' }
     ];
 
     var idx;
@@ -92,15 +92,8 @@
     for (var i = 0; i < skip.length; i++) { if (location.pathname.indexOf(skip[i]) === 0) return; }
     var sec = document.createElement('section');
     sec.className = 'email-capture';
-    sec.innerHTML = '<div class="container" style="max-width:680px;text-align:center;"><div class="label">Free Download</div><h2>Get the 2026 Dubai Villa Renovation Cost Guide</h2><p style="color:var(--text-secondary);margin-bottom:2rem;">Real pricing from 800+ projects. Material comparisons, community breakdowns, and red flags to watch for.</p><div class="ec-form"><input type="email" class="ec-input" placeholder="Your email address" id="ecEmail"><button class="ec-btn" id="ecSubmit">Send Me the Guide</button></div><div class="ec-privacy">No spam, ever. Unsubscribe anytime.</div></div>';
+    sec.innerHTML = '<div class="container" style="max-width:680px;text-align:center;"><div class="label">Free Resource</div><h2>The 2026 Dubai Villa Renovation Cost Guide</h2><p style="color:var(--text-secondary);margin-bottom:2rem;">Real pricing from 800+ projects. Material comparisons, community breakdowns, and red flags to watch for.</p><a href="/guides/cost-guide/" class="btn-primary" style="display:inline-flex;padding:14px 32px;font-size:.9rem;">Read the Free Guide</a></div>';
     footer.parentNode.insertBefore(sec, footer);
-    document.getElementById('ecSubmit').addEventListener('click', function() {
-      var input = document.getElementById('ecEmail');
-      var email = input.value.trim();
-      if (!email || email.indexOf('@') < 0) { input.style.borderColor = '#e74c3c'; return; }
-      track('email_capture', { email: email, source: 'footer_cost_guide' });
-      input.parentNode.innerHTML = '<p style="color:var(--gold,#b79557);font-weight:600;padding:12px 0;">Check your inbox! The guide is on its way.</p>';
-    });
   }
 
   // ═══ 4. SCROLL DEPTH TRACKING ═══

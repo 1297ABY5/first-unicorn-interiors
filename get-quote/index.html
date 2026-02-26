@@ -130,6 +130,23 @@
               </select>
             </div>
             <div class="form-group">
+              <label class="form-label" for="quote-budget">Budget Range</label>
+              <select class="form-select" id="quote-budget" name="budget">
+                <option value="" disabled selected>Select approximate budget</option>
+                <option value="Under AED 50K">Under AED 50,000</option>
+                <option value="AED 50K-100K">AED 50,000 – 100,000</option>
+                <option value="AED 100K-250K">AED 100,000 – 250,000</option>
+                <option value="AED 250K-500K">AED 250,000 – 500,000</option>
+                <option value="AED 500K-1M">AED 500,000 – 1,000,000</option>
+                <option value="AED 1M+">AED 1,000,000+</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quote-email">Email <span style="color:var(--text-dim);font-weight:400">(optional)</span></label>
+              <input class="form-input" type="email" id="quote-email" name="email" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
               <label class="form-label" for="quote-message">Tell us about your project</label>
               <textarea class="form-textarea" id="quote-message" name="message" placeholder="Brief description — what you want to change, rough budget and timeline..."></textarea>
             </div>

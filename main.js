@@ -221,6 +221,8 @@
       const phone = data.get('phone') || '';
       const service = data.get('service') || '';
       const community = data.get('community') || '';
+      const budget = data.get('budget') || '';
+      const email = data.get('email') || '';
       const message = data.get('message') || '';
 
       // Validate
@@ -236,6 +238,8 @@
         phone ? `Phone: ${phone}` : '',
         service ? `Service: ${service}` : '',
         community ? `Community: ${community}` : '',
+        budget ? `Budget: ${budget}` : '',
+        email ? `Email: ${email}` : '',
         message ? `Details: ${message}` : '',
       ].filter(Boolean).join('\n');
 
