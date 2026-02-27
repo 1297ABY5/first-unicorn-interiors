@@ -1714,3 +1714,17 @@ a img, button img, [data-lightbox] img, .btn-primary img, .btn-secondary img,
     transition: all 0.3s ease;
   }
 }
+
+/* ═══ SOLAR PAGE — PRICING & PROCESS OVERRIDES ═══ */
+.pricing-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.process-timeline-6 { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.process-timeline-6::before { display: none; }
+
+@media (max-width: 1024px) {
+  .pricing-grid-4 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+  .process-timeline-6 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .pricing-grid-4 { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .process-timeline-6 { grid-template-columns: 1fr; }
+}
