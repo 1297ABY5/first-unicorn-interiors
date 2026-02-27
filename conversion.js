@@ -25,7 +25,15 @@
     var hero = document.querySelector('.hero, .page-hero, .article-hero, .guide-hero, .calc-hero');
     if (hero) heroH = hero.offsetHeight;
     window.addEventListener('scroll', function() {
-      bar.classList.toggle('visible', window.pageYOffset > heroH);
+      var show = window.pageYOffset > heroH;
+      bar.classList.toggle('visible', show);
+      var waFloat = document.querySelector('.whatsapp-float');
+      if (waFloat && window.innerWidth <= 768) {
+        waFloat.style.opacity = show ? '0' : '1';
+        waFloat.style.pointerEvents = show ? 'none' : 'auto';
+        waFloat.style.transform = show ? 'translateY(80px)' : 'none';
+        waFloat.style.transition = 'all 0.3s ease';
+      }
     }, { passive: true });
   }
 
