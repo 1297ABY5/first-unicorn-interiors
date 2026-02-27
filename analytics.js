@@ -1,12 +1,12 @@
 /* ═══════════════════════════════════════
    ANALYTICS — GA4 + Meta Pixel
-   Replace G-XXXXXXXXXX and PIXEL_ID with real IDs
+   Replace G-47FB832GF5 and PIXEL_ID with real IDs
 ═══════════════════════════════════════ */
 
 // GA4
 (function(){
-  var id = 'G-XXXXXXXXXX'; // ← Replace with your GA4 Measurement ID
-  if (id === 'G-XXXXXXXXXX') return; // Skip if not configured
+  var id = 'G-47FB832GF5'; // ← Replace with your GA4 Measurement ID
+  if (id === 'G-PLACEHOLDER') return; // Skip if not configured
   var s = document.createElement('script');
   s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
   document.head.appendChild(s);
