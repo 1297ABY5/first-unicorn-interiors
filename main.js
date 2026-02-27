@@ -309,3 +309,74 @@
   }
 
 })();
+
+/* ═══ IMAGE PROTECTION ═══ */
+(function() {
+  'use strict';
+
+  // Block right-click on images (prevents "Save image as" and "Search image on Google")
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG' || e.target.closest('img') || 
+        window.getComputedStyle(e.target).backgroundImage !== 'none') {
+      e.preventDefault();
+      return false;
+    }
+  }, true);
+
+  // Block drag on all images
+  document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+      return false;
+    }
+  }, true);
+
+  // Block long-press on mobile (prevents "Download image" / "Search with Google Lens")
+  var longPressTimer;
+  document.addEventListener('touchstart', function(e) {
+    if (e.target.tagName === 'IMG' || e.target.closest('img')) {
+      longPressTimer = setTimeout(function() {
+        e.preventDefault();
+      }, 500);
+    }
+  }, { passive: false });
+
+  document.addEventListener('touchend', function() {
+    clearTimeout(longPressTimer);
+  }, true);
+
+  document.addEventListener('touchmove', function() {
+    clearTimeout(longPressTimer);
+  }, true);
+
+  // Prevent keyboard shortcuts for saving (Ctrl+S, Ctrl+Shift+I)
+  document.addEventListener('keydown', function(e) {
+    // Block Ctrl+S (save page)
+    if (e.ctrlKey && e.key === 's') {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Disable image src access via dev tools workaround - add crossorigin
+  document.querySelectorAll('img').forEach(function(img) {
+    img.setAttribute('draggable', 'false');
+  });
+
+  // Also handle dynamically loaded images
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.tagName === 'IMG') {
+          node.setAttribute('draggable', 'false');
+        }
+        if (node.querySelectorAll) {
+          node.querySelectorAll('img').forEach(function(img) {
+            img.setAttribute('draggable', 'false');
+          });
+        }
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();

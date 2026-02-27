@@ -1628,3 +1628,51 @@ body > * { position: relative; z-index: 1; }
   .hero-stats { gap: 20px; }
   .hero-stat-number { font-size: 1.2rem; }
 }
+
+/* ═══ IMAGE PROTECTION ═══ */
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+}
+/* Re-enable pointer events on clickable image wrappers */
+a img, button img, [data-lightbox] img, .btn-primary img, .btn-secondary img,
+.community-card img, .gallery-card img, .division-card img, .service-gallery-item img {
+  pointer-events: auto;
+}
+/* Transparent overlay on gallery/portfolio images to block direct access */
+.service-gallery-item,
+.gallery-card,
+.community-card,
+[data-lightbox] {
+  position: relative;
+}
+.service-gallery-item::after,
+.gallery-card::after,
+.community-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: transparent;
+}
+
+/* Lightbox image protection */
+.lightbox img {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+}

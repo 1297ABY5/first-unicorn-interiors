@@ -1,3 +1,25 @@
 User-agent: *
 Allow: /
 Sitemap: https://firstunicorninteriors.com/sitemap.xml
+
+# Block AI image scrapers and training bots
+User-agent: CCBot
+Disallow: /images/
+
+User-agent: GPTBot
+Disallow: /images/
+
+User-agent: Google-Extended
+Disallow: /images/
+
+User-agent: anthropic-ai
+Disallow: /images/
+
+User-agent: FacebookBot
+Disallow: /images/
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /images/

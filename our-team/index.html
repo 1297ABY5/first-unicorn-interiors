@@ -1,237 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Team at Work | First Unicorn Interiors — Dubai Villa Renovation</title>
-  <meta name="description" content="See our in-house renovation team at work across Dubai's luxury villas. No subcontractors — every trade under one roof. 800+ projects completed.">
-  <meta name="keywords" content="villa renovation team dubai, in-house contractors dubai, renovation company dubai">
-  <meta property="og:title" content="Our In-House Team | First Unicorn Interiors">
-  <meta property="og:description" content="No subcontractors. Every trade under one roof. See our team transforming Dubai's finest villas.">
-  <meta property="og:image" content="https://firstunicorninteriors.com/images/team/unicorn-flooring-installation-team.jpg">
-  <link rel="canonical" href="https://firstunicorninteriors.com/our-team/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=6">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <script src="/analytics.js" defer></script>
-  <style>
-    .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:3rem}
-    .tg-i{position:relative;overflow:hidden;border-radius:6px;cursor:pointer;aspect-ratio:3/4}
-    .tg-i.w{grid-column:span 2;aspect-ratio:16/9}
-    .tg-i img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
-    .tg-i:hover img{transform:scale(1.05)}
-    .tg-c{position:absolute;bottom:0;left:0;right:0;padding:3rem 1.2rem 1.2rem;background:linear-gradient(transparent,rgba(0,0,0,.85));opacity:0;transform:translateY(8px);transition:all .4s}
-    .tg-i:hover .tg-c{opacity:1;transform:translateY(0)}
-    .tg-tag{display:inline-block;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);background:rgba(200,165,94,.15);padding:3px 8px;border-radius:3px;margin-bottom:4px}
-    .tg-c p{font-size:.85rem;color:rgba(255,255,255,.9);font-weight:300;max-width:none}
-    .ts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.5rem;margin-top:3rem}
-    .ts-card{background:var(--bg-tertiary);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .3s,border-color .3s}
-    .ts-card:hover{transform:translateY(-4px);border-color:rgba(200,165,94,.3)}
-    .ts-card-img{height:220px;overflow:hidden}
-    .ts-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-    .ts-card:hover .ts-card-img img{transform:scale(1.05)}
-    .ts-card-body{padding:1.5rem}
-    .ts-card-body h3{margin-bottom:.5rem}
-    .ts-card-body p{font-size:.9rem;margin-bottom:1rem}
-    .ts-link{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-weight:600;transition:gap .3s}
-    .ts-link:hover{gap:10px}
-    .tl{position:relative;padding-left:3rem;margin-top:3rem}
-    .tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),rgba(200,165,94,.15),transparent)}
-    .tl-item{position:relative;margin-bottom:3rem;display:grid;grid-template-columns:200px 1fr;gap:2rem;align-items:start}
-    .tl-item::before{content:'';position:absolute;left:-3rem;top:.5rem;width:9px;height:9px;background:var(--gold);border-radius:50%;transform:translateX(-4px)}
-    .tl-img{width:200px;height:140px;border-radius:6px;overflow:hidden}
-    .tl-img img{width:100%;height:100%;object-fit:cover}
-    .tl-step{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
-    .tp{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;text-align:center;padding:2.5rem 0}
-    .tp-i{padding:.8rem}
-    .tp-icon{width:40px;height:40px;margin:0 auto .6rem;border:1px solid rgba(200,165,94,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.85rem}
-    .tp-text{font-size:.82rem}
-    .tp-text strong{display:block;color:var(--text-primary);font-weight:500;margin-bottom:2px;font-size:.9rem}
-    .team-lb{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.95);justify-content:center;align-items:center;padding:2rem;cursor:pointer}
-    .team-lb.active{display:flex}
-    .team-lb img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px}
-    .team-lb-x{position:absolute;top:1.5rem;right:1.5rem;color:#fff;font-size:1.8rem;cursor:pointer;width:48px;height:48px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.2);border-radius:50%;transition:border-color .3s}
-    .team-lb-x:hover{border-color:var(--gold)}
-    @media(max-width:768px){
-      .tg{grid-template-columns:repeat(2,1fr);gap:6px}
-      .tg-i.w{grid-column:span 2}
-      .tg-c{opacity:1;transform:translateY(0)}
-      .ts-grid{grid-template-columns:1fr}
-      .tl-item{grid-template-columns:1fr;gap:1rem}
-      .tl-img{width:100%;height:200px}
-    }
-    @media(max-width:480px){.tg{grid-template-columns:1fr}.tg-i.w{grid-column:span 1}}
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Our Team at Work | First Unicorn Interiors — Dubai Villa Renovation</title>
+ <meta name="description" content="See our in-house renovation team at work across Dubai's luxury villas. No subcontractors — every trade under one roof. 800+ projects completed.">
+ <meta name="keywords" content="villa renovation team dubai, in-house contractors dubai, renovation company dubai">
+ <meta property="og:title" content="Our In-House Team | First Unicorn Interiors">
+ <meta property="og:description" content="No subcontractors. Every trade under one roof. See our team transforming Dubai's finest villas.">
+ <meta property="og:image" content="https://firstunicorninteriors.com/images/team/unicorn-flooring-installation-team.jpg">
+ <link rel="canonical" href="https://firstunicorninteriors.com/our-team/">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/styles.css?v=7">
+ <link rel="icon" href="/favicon.ico" sizes="48x48">
+ <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+ <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+ <script src="/analytics.js" defer></script>
+ <style>
+ .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:3rem}
+ .tg-i{position:relative;overflow:hidden;border-radius:6px;cursor:pointer;aspect-ratio:3/4}
+ .tg-i.w{grid-column:span 2;aspect-ratio:16/9}
+ .tg-i img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
+ .tg-i:hover img{transform:scale(1.05)}
+ .tg-c{position:absolute;bottom:0;left:0;right:0;padding:3rem 1.2rem 1.2rem;background:linear-gradient(transparent,rgba(0,0,0,.85));opacity:0;transform:translateY(8px);transition:all .4s}
+ .tg-i:hover .tg-c{opacity:1;transform:translateY(0)}
+ .tg-tag{display:inline-block;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);background:rgba(200,165,94,.15);padding:3px 8px;border-radius:3px;margin-bottom:4px}
+ .tg-c p{font-size:.85rem;color:rgba(255,255,255,.9);font-weight:300;max-width:none}
+ .ts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.5rem;margin-top:3rem}
+ .ts-card{background:var(--bg-tertiary);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .3s,border-color .3s}
+ .ts-card:hover{transform:translateY(-4px);border-color:rgba(200,165,94,.3)}
+ .ts-card-img{height:220px;overflow:hidden}
+ .ts-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+ .ts-card:hover .ts-card-img img{transform:scale(1.05)}
+ .ts-card-body{padding:1.5rem}
+ .ts-card-body h3{margin-bottom:.5rem}
+ .ts-card-body p{font-size:.9rem;margin-bottom:1rem}
+ .ts-link{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-weight:600;transition:gap .3s}
+ .ts-link:hover{gap:10px}
+ .tl{position:relative;padding-left:3rem;margin-top:3rem}
+ .tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),rgba(200,165,94,.15),transparent)}
+ .tl-item{position:relative;margin-bottom:3rem;display:grid;grid-template-columns:200px 1fr;gap:2rem;align-items:start}
+ .tl-item::before{content:'';position:absolute;left:-3rem;top:.5rem;width:9px;height:9px;background:var(--gold);border-radius:50%;transform:translateX(-4px)}
+ .tl-img{width:200px;height:140px;border-radius:6px;overflow:hidden}
+ .tl-img img{width:100%;height:100%;object-fit:cover}
+ .tl-step{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+ .tp{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;text-align:center;padding:2.5rem 0}
+ .tp-i{padding:.8rem}
+ .tp-icon{width:40px;height:40px;margin:0 auto .6rem;border:1px solid rgba(200,165,94,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.85rem}
+ .tp-text{font-size:.82rem}
+ .tp-text strong{display:block;color:var(--text-primary);font-weight:500;margin-bottom:2px;font-size:.9rem}
+ .team-lb{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.95);justify-content:center;align-items:center;padding:2rem;cursor:pointer}
+ .team-lb.active{display:flex}
+ .team-lb img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px}
+ .team-lb-x{position:absolute;top:1.5rem;right:1.5rem;color:#fff;font-size:1.8rem;cursor:pointer;width:48px;height:48px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.2);border-radius:50%;transition:border-color .3s}
+ .team-lb-x:hover{border-color:var(--gold)}
+ @media(max-width:768px){
+ .tg{grid-template-columns:repeat(2,1fr);gap:6px}
+ .tg-i.w{grid-column:span 2}
+ .tg-c{opacity:1;transform:translateY(0)}
+ .ts-grid{grid-template-columns:1fr}
+ .tl-item{grid-template-columns:1fr;gap:1rem}
+ .tl-img{width:100%;height:200px}
+ }
+ @media(max-width:480px){.tg{grid-template-columns:1fr}.tg-i.w{grid-column:span 1}}
+ </style>
 </head>
 <body>
 
-  <!-- NAV (exact match) -->
-  <nav class="nav">
-    <div class="nav-brand">
-      <a href="/" class="nav-brand-link">
-        <img class="nav-logo" src="/logo-nav.png" alt="First Unicorn" width="44" height="44">
-        <div class="nav-name">First <span>Unicorn</span> Interiors</div>
-      </a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="/design-approvals/">Design & Approvals <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a><div class="nav-dropdown-menu"><a href="/design-approvals/architectural-design/">Architectural Design</a><a href="/design-approvals/engineering-drawings/">Engineering Drawings</a><a href="/design-approvals/3d-visualisation/">3D Visualisation</a><a href="/design-approvals/municipality-approvals/">Municipality Approvals</a><a href="/design-approvals/building-permits/">Building Permits</a><a href="/design-approvals/noc-processing/">NOC Processing</a></div></li>
-      <li><a href="/interiors/">Interiors <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a><div class="nav-dropdown-menu"><a href="/interiors/residential/">Residential Interiors</a><a href="/interiors/commercial/">Commercial Interiors</a><a href="/interiors/villa-fit-out/">Villa Fit-Out</a><a href="/interiors/furniture-lighting/">Furniture & Lighting</a></div></li>
-      <li><a href="/renovation/">Renovation <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a><div class="nav-dropdown-menu"><a href="/renovation/full-villa/">Full Villa Renovation</a><a href="/renovation/kitchen/">Kitchen Renovation</a><a href="/renovation/bathroom/">Bathroom Renovation</a><a href="/renovation/pool/">Swimming Pool</a><a href="/renovation/glass-aluminium/">Glass & Aluminium</a><a href="/renovation/joinery/">Joinery & Cabinetry</a><a href="/renovation/flooring/">Flooring</a>
-          <a href="/renovation/landscaping/">Landscaping</a>
-          <a href="/renovation/solar/">Solar</a></div></li>
-      <li><a href="/contracting/">Contracting <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a><div class="nav-dropdown-menu"><a href="/contracting/villa-construction/">Villa Construction</a><a href="/contracting/low-rise/">Low-Rise (G+2 to G+5)</a><a href="/contracting/mid-rise/">Mid-Rise (G+5 to G+10)</a><a href="/contracting/structural-works/">Structural Works</a><a href="/contracting/civil-works/">Civil Works</a></div></li>
-      <li><a href="/portfolio/">Portfolio</a></li>
-      <li><a href="/about/" class="active">About</a></li>
-      <li><a href="/guides/">Guides</a></li>
-      <li><a href="https://wa.me/971585658002?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="nav-cta" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.52 5.855L.054 23.52l5.805-1.522A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.63-.5-5.14-1.38l-.37-.22-3.44.9.92-3.37-.24-.38A9.77 9.77 0 012.18 12c0-5.41 4.41-9.82 9.82-9.82 5.41 0 9.82 4.41 9.82 9.82 0 5.41-4.41 9.82-9.82 9.82z"/></svg> WhatsApp</a></li>
-    </ul>
-    <div class="nav-mobile-actions">
-      <a href="https://wa.me/971585658002?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="nav-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
-      <div class="nav-hamburger"><span></span><span></span><span></span></div>
-    </div>
-  </nav>
+ <!-- NAV (exact match) -->
+ <nav class="nav">
+ <div class="nav-brand">
+ <a href="/" class="nav-brand-link">
+ <img class="nav-logo" src="/logo-nav.png" alt="First Unicorn" width="44" height="44">
+ <div class="nav-name">First <span>Unicorn</span> Interiors</div>
+ </a>
+ </div>
+ <ul class="nav-links">
+ <li><a href="/design-approvals/">Design & Approvals <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a><div class="nav-dropdown-menu"><a href="/design-approvals/architectural-design/">Architectural Design</a><a href="/design-approvals/engineering-drawings/">Engineering Drawings</a><a href="/design-approvals/3d-visualisation/">3D Visualisation</a><a href="/design-approvals/municipality-approvals/">Municipality Approvals</a><a href="/design-approvals/building-permits/">Building Permits</a><a href="/design-approvals/noc-processing/">NOC Processing</a></div></li>
+ <li><a href="/interiors/">Interiors <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a><div class="nav-dropdown-menu"><a href="/interiors/residential/">Residential Interiors</a><a href="/interiors/commercial/">Commercial Interiors</a><a href="/interiors/villa-fit-out/">Villa Fit-Out</a><a href="/interiors/furniture-lighting/">Furniture & Lighting</a></div></li>
+ <li><a href="/renovation/">Renovation <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a><div class="nav-dropdown-menu"><a href="/renovation/full-villa/">Full Villa Renovation</a><a href="/renovation/kitchen/">Kitchen Renovation</a><a href="/renovation/bathroom/">Bathroom Renovation</a><a href="/renovation/pool/">Swimming Pool</a><a href="/renovation/glass-aluminium/">Glass & Aluminium</a><a href="/renovation/joinery/">Joinery & Cabinetry</a><a href="/renovation/flooring/">Flooring</a>
+ <a href="/renovation/landscaping/">Landscaping</a>
+ <a href="/renovation/solar/">Solar</a></div></li>
+ <li><a href="/contracting/">Contracting <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M5 6L0 0h10z"/></svg></a><div class="nav-dropdown-menu"><a href="/contracting/villa-construction/">Villa Construction</a><a href="/contracting/low-rise/">Low-Rise (G+2 to G+5)</a><a href="/contracting/mid-rise/">Mid-Rise (G+5 to G+10)</a><a href="/contracting/structural-works/">Structural Works</a><a href="/contracting/civil-works/">Civil Works</a></div></li>
+ <li><a href="/portfolio/">Portfolio</a></li>
+ <li><a href="/about/" class="active">About</a></li>
+ <li><a href="/guides/">Guides</a></li>
+ <li><a href="https://wa.me/971585658002?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="nav-cta" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.52 5.855L.054 23.52l5.805-1.522A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.63-.5-5.14-1.38l-.37-.22-3.44.9.92-3.37-.24-.38A9.77 9.77 0 012.18 12c0-5.41 4.41-9.82 9.82-9.82 5.41 0 9.82 4.41 9.82 9.82 0 5.41-4.41 9.82-9.82 9.82z"/></svg> WhatsApp</a></li>
+ </ul>
+ <div class="nav-mobile-actions">
+ <a href="https://wa.me/971585658002?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="nav-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
+ <div class="nav-hamburger"><span></span><span></span><span></span></div>
+ </div>
+ </nav>
 
-  <main>
+ <main>
 
-  <!-- HERO -->
-  <section class="hero" style="min-height:80vh">
-    <div class="hero-bg" style="background-image:url('/images/team/unicorn-flooring-installation-team.jpg');background-size:cover;background-position:center;background-color:var(--bg-secondary)"></div>
-    <div class="hero-content">
-      <span class="label">Behind the Scenes</span>
-      <h1>One Team. Every Trade.<br>Your Entire Renovation.</h1>
-      <p>No subcontractors. No finger-pointing. Just our crew, in your villa, from day one to handover.</p>
-      <div class="btn-group">
-        <a href="https://wa.me/971585658002?text=Hi%2C%20I%20saw%20your%20team%20page%20and%20I'm%20interested%20in%20a%20consultation" class="btn-whatsapp" target="_blank" rel="noopener">WhatsApp Us Now</a>
-        <a href="/portfolio/" class="btn-secondary">View Portfolio</a>
-      </div>
-    </div>
-  </section>
+ <!-- HERO -->
+ <section class="hero" style="min-height:80vh">
+ <div class="hero-bg" style="background-image:url('/images/team/unicorn-flooring-installation-team.jpg');background-size:cover;background-position:center;background-color:var(--bg-secondary)"></div>
+ <div class="hero-content">
+ <span class="label">Behind the Scenes</span>
+ <h1>One Team. Every Trade.<br>Your Entire Renovation.</h1>
+ <p>No subcontractors. No finger-pointing. Just our crew, in your villa, from day one to handover.</p>
+ <div class="btn-group">
+ <a href="https://wa.me/971585658002?text=Hi%2C%20I%20saw%20your%20team%20page%20and%20I'm%20interested%20in%20a%20consultation" class="btn-whatsapp" target="_blank" rel="noopener">WhatsApp Us Now</a>
+ <a href="/portfolio/" class="btn-secondary">View Portfolio</a>
+ </div>
+ </div>
+ </section>
 
-  <!-- PROOF STRIP -->
-  <section style="background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0">
-    <div class="container">
-      <div class="tp">
-        <div class="tp-i"><div class="tp-icon">&#9670;</div><div class="tp-text"><strong>Zero Subcontractors</strong>Every worker wears our name</div></div>
-        <div class="tp-i"><div class="tp-icon">&#9671;</div><div class="tp-text"><strong>Daily Photo Updates</strong>WhatsApp progress every day</div></div>
-        <div class="tp-i"><div class="tp-icon">&#9672;</div><div class="tp-text"><strong>Municipality Licensed</strong>Fully compliant operations</div></div>
-        <div class="tp-i"><div class="tp-icon">&#10023;</div><div class="tp-text"><strong>Milestone Payments</strong>Pay only as work completes</div></div>
-      </div>
-    </div>
-  </section>
+ <!-- PROOF STRIP -->
+ <section style="background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0">
+ <div class="container">
+ <div class="tp">
+ <div class="tp-i"><div class="tp-icon">&#9670;</div><div class="tp-text"><strong>Zero Subcontractors</strong>Every worker wears our name</div></div>
+ <div class="tp-i"><div class="tp-icon">&#9671;</div><div class="tp-text"><strong>Daily Photo Updates</strong>WhatsApp progress every day</div></div>
+ <div class="tp-i"><div class="tp-icon">&#9672;</div><div class="tp-text"><strong>Municipality Licensed</strong>Fully compliant operations</div></div>
+ <div class="tp-i"><div class="tp-icon">&#10023;</div><div class="tp-text"><strong>Milestone Payments</strong>Pay only as work completes</div></div>
+ </div>
+ </div>
+ </section>
 
-  <!-- GALLERY -->
-  <section style="padding:var(--section-padding) 0">
-    <div class="container">
-      <span class="label">Our Team at Work</span>
-      <h2>This Is What "In-House" Actually Looks Like</h2>
-      <p>These aren't stock photos. This is our team — the same crew you'll see in your villa from day one to handover.</p>
-      <div class="tg">
-        <div class="tg-i w" onclick="openTLB(this)"><img src="/images/team/unicorn-flooring-installation-team.jpg" alt="Unicorn Group team directing timber flooring installation in luxury Dubai villa" loading="lazy"><div class="tg-c"><span class="tg-tag">Flooring</span><p>Our site team directing timber flooring installation across a double-height villa</p></div></div>
-        <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-team-drywall-villa-renovation.jpg" alt="First Unicorn Group team installing drywall in Dubai villa" loading="lazy"><div class="tg-c"><span class="tg-tag">Drywall</span><p>Coordinating gypsum board installation across a massive living space</p></div></div>
-        <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-glass-balustrade-installation.jpg" alt="In-house glass team installing balustrade on villa mezzanine" loading="lazy"><div class="tg-c"><span class="tg-tag">Glass Works</span><p>Glass balustrade installation — our specialist Rajeev leads every panel</p></div></div>
-        <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-carpentry-timber-beam-assembly.jpg" alt="Carpentry team assembling custom timber beams" loading="lazy"><div class="tg-c"><span class="tg-tag">Carpentry</span><p>Custom timber beam frames — measured, cut, installed to the millimetre</p></div></div>
-        <div class="tg-i w" onclick="openTLB(this)"><img src="/images/team/unicorn-full-villa-renovation-team.jpg" alt="Full renovation team across two levels of Dubai villa" loading="lazy"><div class="tg-c"><span class="tg-tag">Full Villa</span><p>Every trade, every level — structural, glass, timber, tiling, paint — one roof</p></div></div>
-        <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-painting-crew-villa-corridor.jpg" alt="Painting crew preparing villa corridor walls" loading="lazy"><div class="tg-c"><span class="tg-tag">Painting</span><p>Proper prep, proper primers, proper finish — no shortcuts</p></div></div>
-        <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-team-gypsum-timber-ceiling.jpg" alt="Crew working beneath timber beam ceiling" loading="lazy"><div class="tg-c"><span class="tg-tag">Boarding</span><p>Gypsum boarding in progress beneath hand-finished timber beams</p></div></div>
-        <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-villa-finishing-staircase.jpg" alt="Multiple trades finishing villa staircase" loading="lazy"><div class="tg-c"><span class="tg-tag">Finishing</span><p>Multiple trades working simultaneously — painting, electrical, detailing</p></div></div>
-        <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-joinery-shelving-installation.jpg" alt="Custom shelving installation by joinery team" loading="lazy"><div class="tg-c"><span class="tg-tag">Joinery</span><p>Handcrafted shelving installed to exact specifications</p></div></div>
-        <div class="tg-i w" onclick="openTLB(this)"><img src="/images/team/unicorn-high-level-drywall-scaffolding.jpg" alt="Drywall installation at height with branded safety vests" loading="lazy"><div class="tg-c"><span class="tg-tag">High-Level Works</span><p>Scaffolding work at ceiling height — safety first, always</p></div></div>
-        <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-structural-renovation-scaffolding.jpg" alt="Structural renovation works in double-height villa" loading="lazy"><div class="tg-c"><span class="tg-tag">Structural</span><p>Raw block walls being clad — the bones of a luxury transformation</p></div></div>
-      </div>
-    </div>
-  </section>
+ <!-- GALLERY -->
+ <section style="padding:var(--section-padding) 0">
+ <div class="container">
+ <span class="label">Our Team at Work</span>
+ <h2>This Is What "In-House" Actually Looks Like</h2>
+ <p>These aren't stock photos. This is our team — the same crew you'll see in your villa from day one to handover.</p>
+ <div class="tg">
+ <div class="tg-i w" onclick="openTLB(this)"><img src="/images/team/unicorn-flooring-installation-team.jpg" alt="Unicorn Group team directing timber flooring installation in luxury Dubai villa" loading="lazy"><div class="tg-c"><span class="tg-tag">Flooring</span><p>Our site team directing timber flooring installation across a double-height villa</p></div></div>
+ <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-team-drywall-villa-renovation.jpg" alt="First Unicorn Group team installing drywall in Dubai villa" loading="lazy"><div class="tg-c"><span class="tg-tag">Drywall</span><p>Coordinating gypsum board installation across a massive living space</p></div></div>
+ <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-glass-balustrade-installation.jpg" alt="In-house glass team installing balustrade on villa mezzanine" loading="lazy"><div class="tg-c"><span class="tg-tag">Glass Works</span><p>Glass balustrade installation — our specialist Rajeev leads every panel</p></div></div>
+ <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-carpentry-timber-beam-assembly.jpg" alt="Carpentry team assembling custom timber beams" loading="lazy"><div class="tg-c"><span class="tg-tag">Carpentry</span><p>Custom timber beam frames — measured, cut, installed to the millimetre</p></div></div>
+ <div class="tg-i w" onclick="openTLB(this)"><img src="/images/team/unicorn-full-villa-renovation-team.jpg" alt="Full renovation team across two levels of Dubai villa" loading="lazy"><div class="tg-c"><span class="tg-tag">Full Villa</span><p>Every trade, every level — structural, glass, timber, tiling, paint — one roof</p></div></div>
+ <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-painting-crew-villa-corridor.jpg" alt="Painting crew preparing villa corridor walls" loading="lazy"><div class="tg-c"><span class="tg-tag">Painting</span><p>Proper prep, proper primers, proper finish — no shortcuts</p></div></div>
+ <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-team-gypsum-timber-ceiling.jpg" alt="Crew working beneath timber beam ceiling" loading="lazy"><div class="tg-c"><span class="tg-tag">Boarding</span><p>Gypsum boarding in progress beneath hand-finished timber beams</p></div></div>
+ <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-villa-finishing-staircase.jpg" alt="Multiple trades finishing villa staircase" loading="lazy"><div class="tg-c"><span class="tg-tag">Finishing</span><p>Multiple trades working simultaneously — painting, electrical, detailing</p></div></div>
+ <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-joinery-shelving-installation.jpg" alt="Custom shelving installation by joinery team" loading="lazy"><div class="tg-c"><span class="tg-tag">Joinery</span><p>Handcrafted shelving installed to exact specifications</p></div></div>
+ <div class="tg-i w" onclick="openTLB(this)"><img src="/images/team/unicorn-high-level-drywall-scaffolding.jpg" alt="Drywall installation at height with branded safety vests" loading="lazy"><div class="tg-c"><span class="tg-tag">High-Level Works</span><p>Scaffolding work at ceiling height — safety first, always</p></div></div>
+ <div class="tg-i" onclick="openTLB(this)"><img src="/images/team/unicorn-structural-renovation-scaffolding.jpg" alt="Structural renovation works in double-height villa" loading="lazy"><div class="tg-c"><span class="tg-tag">Structural</span><p>Raw block walls being clad — the bones of a luxury transformation</p></div></div>
+ </div>
+ </div>
+ </section>
 
-  <!-- SERVICES MAPPED TO TRADES -->
-  <section style="background:var(--bg-secondary);padding:var(--section-padding) 0">
-    <div class="container">
-      <span class="label">Every Trade In-House</span>
-      <h2>The Trades Behind Every Transformation</h2>
-      <p>Each capability under one roof — our roof. That's how we control quality, hit deadlines, and keep your project on track.</p>
-      <div class="ts-grid">
-        <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-glass-balustrade-installation.jpg" alt="Glass and aluminium works" loading="lazy"></div><div class="ts-card-body"><h3>Glass & Aluminium</h3><p>Frameless shower enclosures, glass balustrades, aluminium facades — fabricated and installed by our specialist team.</p><a href="/renovation/glass-aluminium/" class="ts-link">View Service &rarr;</a></div></div>
-        <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-carpentry-timber-beam-assembly.jpg" alt="Joinery and cabinetry" loading="lazy"></div><div class="ts-card-body"><h3>Joinery & Cabinetry</h3><p>Custom wardrobes, vanities, kitchen cabinetry — built on site to your exact specifications. Every joint handcrafted.</p><a href="/renovation/joinery/" class="ts-link">View Service &rarr;</a></div></div>
-        <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-flooring-installation-team.jpg" alt="Flooring installation" loading="lazy"></div><div class="ts-card-body"><h3>Flooring</h3><p>Engineered hardwood, imported marble, large-format porcelain — installed with proper subfloor prep for Dubai's climate.</p><a href="/renovation/flooring/" class="ts-link">View Service &rarr;</a></div></div>
-        <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-painting-crew-villa-corridor.jpg" alt="Painting and finishing" loading="lazy"></div><div class="ts-card-body"><h3>Painting & Finishing</h3><p>Filling, sanding, priming — before a single roller touches the wall. Clean, even colour from floor to ceiling.</p><a href="/renovation/full-villa/" class="ts-link">View Service &rarr;</a></div></div>
-        <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-structural-renovation-scaffolding.jpg" alt="Structural works" loading="lazy"></div><div class="ts-card-body"><h3>Structural & Extensions</h3><p>Wall removal, room additions, mezzanine builds — all Dubai Municipality compliant, fully engineered.</p><a href="/contracting/structural-works/" class="ts-link">View Service &rarr;</a></div></div>
-        <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-team-drywall-villa-renovation.jpg" alt="Full villa renovation" loading="lazy"></div><div class="ts-card-body"><h3>Full Villa Renovation</h3><p>Every trade coordinated across every room. One project manager, one WhatsApp group, daily updates.</p><a href="/renovation/full-villa/" class="ts-link">View Service &rarr;</a></div></div>
-      </div>
-    </div>
-  </section>
+ <!-- SERVICES MAPPED TO TRADES -->
+ <section style="background:var(--bg-secondary);padding:var(--section-padding) 0">
+ <div class="container">
+ <span class="label">Every Trade In-House</span>
+ <h2>The Trades Behind Every Transformation</h2>
+ <p>Each capability under one roof — our roof. That's how we control quality, hit deadlines, and keep your project on track.</p>
+ <div class="ts-grid">
+ <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-glass-balustrade-installation.jpg" alt="Glass and aluminium works" loading="lazy"></div><div class="ts-card-body"><h3>Glass & Aluminium</h3><p>Frameless shower enclosures, glass balustrades, aluminium facades — fabricated and installed by our specialist team.</p><a href="/renovation/glass-aluminium/" class="ts-link">View Service &rarr;</a></div></div>
+ <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-carpentry-timber-beam-assembly.jpg" alt="Joinery and cabinetry" loading="lazy"></div><div class="ts-card-body"><h3>Joinery & Cabinetry</h3><p>Custom wardrobes, vanities, kitchen cabinetry — built on site to your exact specifications. Every joint handcrafted.</p><a href="/renovation/joinery/" class="ts-link">View Service &rarr;</a></div></div>
+ <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-flooring-installation-team.jpg" alt="Flooring installation" loading="lazy"></div><div class="ts-card-body"><h3>Flooring</h3><p>Engineered hardwood, imported marble, large-format porcelain — installed with proper subfloor prep for Dubai's climate.</p><a href="/renovation/flooring/" class="ts-link">View Service &rarr;</a></div></div>
+ <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-painting-crew-villa-corridor.jpg" alt="Painting and finishing" loading="lazy"></div><div class="ts-card-body"><h3>Painting & Finishing</h3><p>Filling, sanding, priming — before a single roller touches the wall. Clean, even colour from floor to ceiling.</p><a href="/renovation/full-villa/" class="ts-link">View Service &rarr;</a></div></div>
+ <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-structural-renovation-scaffolding.jpg" alt="Structural works" loading="lazy"></div><div class="ts-card-body"><h3>Structural & Extensions</h3><p>Wall removal, room additions, mezzanine builds — all Dubai Municipality compliant, fully engineered.</p><a href="/contracting/structural-works/" class="ts-link">View Service &rarr;</a></div></div>
+ <div class="ts-card"><div class="ts-card-img"><img src="/images/team/unicorn-team-drywall-villa-renovation.jpg" alt="Full villa renovation" loading="lazy"></div><div class="ts-card-body"><h3>Full Villa Renovation</h3><p>Every trade coordinated across every room. One project manager, one WhatsApp group, daily updates.</p><a href="/renovation/full-villa/" class="ts-link">View Service &rarr;</a></div></div>
+ </div>
+ </div>
+ </section>
 
-  <!-- PROCESS TIMELINE -->
-  <section style="padding:var(--section-padding) 0">
-    <div class="container">
-      <span class="label">How We Work</span>
-      <h2>From Raw Shell to Handover</h2>
-      <p>Every phase managed by our in-house team.</p>
-      <div class="tl">
-        <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-structural-renovation-scaffolding.jpg" alt="Structural phase" loading="lazy"></div><div><div class="tl-step">Phase 01</div><h3>Strip & Structure</h3><p>Demolition, structural modifications, MEP rough-in. The bones of your transformation take shape.</p></div></div>
-        <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-team-drywall-villa-renovation.jpg" alt="Boarding phase" loading="lazy"></div><div><div class="tl-step">Phase 02</div><h3>Frame & Board</h3><p>Gypsum boarding, partitioning, ceiling frameworks. Spaces start taking their final form.</p></div></div>
-        <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-carpentry-timber-beam-assembly.jpg" alt="Build phase" loading="lazy"></div><div><div class="tl-step">Phase 03</div><h3>Build & Install</h3><p>Joinery, cabinetry, glass installations, tiling, flooring. The craftsmanship layer.</p></div></div>
-        <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-painting-crew-villa-corridor.jpg" alt="Finishing phase" loading="lazy"></div><div><div class="tl-step">Phase 04</div><h3>Finish & Paint</h3><p>Walls prepped, primed, and painted. Light fixtures, hardware, and final touches installed.</p></div></div>
-        <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-villa-finishing-staircase.jpg" alt="Handover" loading="lazy"></div><div><div class="tl-step">Phase 05</div><h3>Detail & Handover</h3><p>Snagging, deep clean, final walkthrough. Keys back in your hands — with a 3-year warranty.</p></div></div>
-      </div>
-    </div>
-  </section>
+ <!-- PROCESS TIMELINE -->
+ <section style="padding:var(--section-padding) 0">
+ <div class="container">
+ <span class="label">How We Work</span>
+ <h2>From Raw Shell to Handover</h2>
+ <p>Every phase managed by our in-house team.</p>
+ <div class="tl">
+ <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-structural-renovation-scaffolding.jpg" alt="Structural phase" loading="lazy"></div><div><div class="tl-step">Phase 01</div><h3>Strip & Structure</h3><p>Demolition, structural modifications, MEP rough-in. The bones of your transformation take shape.</p></div></div>
+ <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-team-drywall-villa-renovation.jpg" alt="Boarding phase" loading="lazy"></div><div><div class="tl-step">Phase 02</div><h3>Frame & Board</h3><p>Gypsum boarding, partitioning, ceiling frameworks. Spaces start taking their final form.</p></div></div>
+ <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-carpentry-timber-beam-assembly.jpg" alt="Build phase" loading="lazy"></div><div><div class="tl-step">Phase 03</div><h3>Build & Install</h3><p>Joinery, cabinetry, glass installations, tiling, flooring. The craftsmanship layer.</p></div></div>
+ <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-painting-crew-villa-corridor.jpg" alt="Finishing phase" loading="lazy"></div><div><div class="tl-step">Phase 04</div><h3>Finish & Paint</h3><p>Walls prepped, primed, and painted. Light fixtures, hardware, and final touches installed.</p></div></div>
+ <div class="tl-item"><div class="tl-img"><img src="/images/team/unicorn-villa-finishing-staircase.jpg" alt="Handover" loading="lazy"></div><div><div class="tl-step">Phase 05</div><h3>Detail & Handover</h3><p>Snagging, deep clean, final walkthrough. Keys back in your hands — with a 3-year warranty.</p></div></div>
+ </div>
+ </div>
+ </section>
 
-  <!-- CTA -->
-  <section style="position:relative;padding:calc(var(--section-padding) * 1.5) 0;text-align:center;overflow:hidden">
-    <div style="position:absolute;inset:0;background:url('/images/team/unicorn-full-villa-renovation-team.jpg') center/cover no-repeat;filter:brightness(.18)"></div>
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 0%,var(--bg-primary) 75%)"></div>
-    <div style="position:relative;z-index:1;max-width:700px;margin:0 auto;padding:0 2rem">
-      <span class="label" style="padding-left:0">Start Your Transformation</span>
-      <span class="label" style="display:none"></span>
-      <h2>Your Villa. Our Team.<br>Let's Build Something Remarkable.</h2>
-      <p style="margin:0 auto 2.5rem;max-width:600px">800+ Dubai homeowners started with a simple WhatsApp message. Free site consultation — no obligation.</p>
-      <a href="https://wa.me/971585658002?text=Hi%2C%20I%20saw%20your%20team%20page%20and%20I'm%20interested%20in%20a%20free%20consultation" class="btn-whatsapp" target="_blank" rel="noopener" style="padding:18px 40px;font-size:1rem">WhatsApp Us Now</a>
-      <p style="margin-top:1rem;font-size:.78rem;color:var(--text-dim)">Reply in 2 minutes &middot; Free 3D design &middot; No spam</p>
-    </div>
-  </section>
+ <!-- CTA -->
+ <section style="position:relative;padding:calc(var(--section-padding) * 1.5) 0;text-align:center;overflow:hidden">
+ <div style="position:absolute;inset:0;background:url('/images/team/unicorn-full-villa-renovation-team.jpg') center/cover no-repeat;filter:brightness(.18)"></div>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 0%,var(--bg-primary) 75%)"></div>
+ <div style="position:relative;z-index:1;max-width:700px;margin:0 auto;padding:0 2rem">
+ <span class="label" style="padding-left:0">Start Your Transformation</span>
+ <span class="label" style="display:none"></span>
+ <h2>Your Villa. Our Team.<br>Let's Build Something Remarkable.</h2>
+ <p style="margin:0 auto 2.5rem;max-width:600px">800+ Dubai homeowners started with a simple WhatsApp message. Free site consultation — no obligation.</p>
+ <a href="https://wa.me/971585658002?text=Hi%2C%20I%20saw%20your%20team%20page%20and%20I'm%20interested%20in%20a%20free%20consultation" class="btn-whatsapp" target="_blank" rel="noopener" style="padding:18px 40px;font-size:1rem">WhatsApp Us Now</a>
+ <p style="margin-top:1rem;font-size:.78rem;color:var(--text-dim)">Reply in 2 minutes &middot; Free 3D design &middot; No spam</p>
+ </div>
+ </section>
 
-  </main>
+ </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="/" class="nav-brand-link">
-            <img class="nav-logo" src="/logo-nav.png" alt="First Unicorn" width="44" height="44">
-            <div class="nav-name">First <span>Unicorn</span> Interiors</div>
-          </a>
-          <p>Dubai's premier design, renovation & construction company. From concept to completion, under one roof.</p>
-        </div>
-        <div class="footer-col"><h3>Renovation</h3><a href="/renovation/full-villa/">Full Villa</a><a href="/renovation/kitchen/">Kitchen</a><a href="/renovation/bathroom/">Bathroom</a><a href="/renovation/pool/">Swimming Pool</a><a href="/renovation/glass-aluminium/">Glass & Aluminium</a><a href="/renovation/joinery/">Joinery</a><a href="/renovation/flooring/">Flooring</a></div>
-        <div class="footer-col"><h3>Communities</h3><a href="/areas/palm-jumeirah/">Palm Jumeirah</a><a href="/areas/emirates-hills/">Emirates Hills</a><a href="/areas/arabian-ranches/">Arabian Ranches</a><a href="/areas/dubai-hills/">Dubai Hills</a><a href="/areas/al-barari/">Al Barari</a><a href="/areas/" style="color:var(--gold)">All 46 Communities &rarr;</a></div>
-        <div class="footer-col"><h3>Resources</h3><a href="/pricing/">Pricing</a><a href="/faq/">FAQ</a><a href="/guides/">Guides</a><a href="/calculator/">Calculator</a><a href="/blog/">Blog</a><a href="/our-team/">Our Team</a></div>
-        <div class="footer-col"><h3>Connect</h3><a href="tel:+971585658002">+971 58 565 8002</a><a href="https://wa.me/971585658002" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:info@firstunicorninteriors.com">info@firstunicorninteriors.com</a><a href="/contact/">Regus, The Bridge, Sports City, Dubai</a></div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 First Unicorn Group. Dubai Municipality Licensed.</span>
-        <span><a href="/contact/">Contact</a> &middot; <a href="/get-quote/">Get Quote</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></span>
-      </div>
-    </div>
-  </footer>
+ <!-- FOOTER -->
+ <footer class="footer">
+ <div class="container">
+ <div class="footer-top">
+ <div class="footer-brand">
+ <a href="/" class="nav-brand-link">
+ <img class="nav-logo" src="/logo-nav.png" alt="First Unicorn" width="44" height="44">
+ <div class="nav-name">First <span>Unicorn</span> Interiors</div>
+ </a>
+ <p>Dubai's premier design, renovation & construction company. From concept to completion, under one roof.</p>
+ </div>
+ <div class="footer-col"><h3>Renovation</h3><a href="/renovation/full-villa/">Full Villa</a><a href="/renovation/kitchen/">Kitchen</a><a href="/renovation/bathroom/">Bathroom</a><a href="/renovation/pool/">Swimming Pool</a><a href="/renovation/glass-aluminium/">Glass & Aluminium</a><a href="/renovation/joinery/">Joinery</a><a href="/renovation/flooring/">Flooring</a></div>
+ <div class="footer-col"><h3>Communities</h3><a href="/areas/palm-jumeirah/">Palm Jumeirah</a><a href="/areas/emirates-hills/">Emirates Hills</a><a href="/areas/arabian-ranches/">Arabian Ranches</a><a href="/areas/dubai-hills/">Dubai Hills</a><a href="/areas/al-barari/">Al Barari</a><a href="/areas/" style="color:var(--gold)">All 46 Communities &rarr;</a></div>
+ <div class="footer-col"><h3>Resources</h3><a href="/pricing/">Pricing</a><a href="/faq/">FAQ</a><a href="/guides/">Guides</a><a href="/calculator/">Calculator</a><a href="/blog/">Blog</a><a href="/our-team/">Our Team</a></div>
+ <div class="footer-col"><h3>Connect</h3><a href="tel:+971585658002">+971 58 565 8002</a><a href="https://wa.me/971585658002" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:info@firstunicorninteriors.com">info@firstunicorninteriors.com</a><a href="/contact/">Regus, The Bridge, Sports City, Dubai</a></div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 First Unicorn Group. Dubai Municipality Licensed.</span>
+ <span><a href="/contact/">Contact</a> &middot; <a href="/get-quote/">Get Quote</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></span>
+ </div>
+ </div>
+ </footer>
 
-  <a href="https://wa.me/971585658002?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-  </a>
+ <a href="https://wa.me/971585658002?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+ <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+ </a>
 
-  <div class="team-lb" id="teamLB" onclick="closeTLB()">
-    <div class="team-lb-x">&times;</div>
-    <img id="teamLBImg" src="" alt="">
-  </div>
+ <div class="team-lb" id="teamLB" onclick="closeTLB()">
+ <div class="team-lb-x">&times;</div>
+ <img id="teamLBImg" src="" alt="">
+ </div>
 
-  <script src="/main.js"></script>
-  <script src="/conversion.js?v=4" defer></script>
-  <script>
-    function openTLB(el){var i=el.querySelector('img');document.getElementById('teamLBImg').src=i.src;document.getElementById('teamLBImg').alt=i.alt;document.getElementById('teamLB').classList.add('active');document.body.style.overflow='hidden'}
-    function closeTLB(){document.getElementById('teamLB').classList.remove('active');document.body.style.overflow=''}
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeTLB()});
-  </script>
+ <script src="/main.js?v=2"></script>
+ <script src="/conversion.js?v=4" defer></script>
+ <script>
+ function openTLB(el){var i=el.querySelector('img');document.getElementById('teamLBImg').src=i.src;document.getElementById('teamLBImg').alt=i.alt;document.getElementById('teamLB').classList.add('active');document.body.style.overflow='hidden'}
+ function closeTLB(){document.getElementById('teamLB').classList.remove('active');document.body.style.overflow=''}
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeTLB()});
+ </script>
 
 </body>
 </html>
