@@ -306,17 +306,18 @@ p { max-width: 720px; }
 
 /* ═══ PORTFOLIO GALLERY (horizontal scroll desktop, grid mobile) ═══ */
 .gallery-scroll {
-  display: flex; gap: 1.5rem; overflow-x: auto;
+  display: flex; gap: 1.2rem; overflow-x: auto;
   padding: 1rem 0 2rem; cursor: grab;
   scroll-snap-type: x mandatory;
+  align-items: stretch;
   -ms-overflow-style: none; scrollbar-width: none;
 }
 .gallery-scroll::-webkit-scrollbar { display: none; }
 .gallery-scroll.dragging { cursor: grabbing; scroll-snap-type: none; }
 
 .gallery-card {
-  flex: 0 0 350px; position: relative; overflow: hidden;
-  aspect-ratio: 3/4; scroll-snap-align: start;
+  flex: 0 0 280px; position: relative; overflow: hidden;
+  height: 380px; border-radius: 12px; scroll-snap-align: start;
 }
 .gallery-card img {
   width: 100%; height: 100%; object-fit: cover;
@@ -325,8 +326,9 @@ p { max-width: 720px; }
 .gallery-card:hover img { transform: scale(1.05); }
 .gallery-card-overlay {
   position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 2rem 1.5rem;
-  background: linear-gradient(to top, rgba(10,10,10,0.9), transparent);
+  padding: 1.5rem 1.2rem;
+  background: linear-gradient(to top, rgba(10,10,10,0.85), transparent);
+  border-radius: 0 0 12px 12px;
 }
 .gallery-card-overlay h3 { color: var(--text-primary); font-size: 1rem; text-transform: none; letter-spacing: 0; margin-bottom: 0.3rem; }
 .gallery-card-overlay p { color: var(--text-secondary); font-size: 0.85rem; margin: 0; }
@@ -708,7 +710,7 @@ p { max-width: 720px; }
   .credentials-grid { grid-template-columns: repeat(3, 1fr); }
   .services-list { grid-template-columns: repeat(2, 1fr); }
   .form-row { grid-template-columns: 1fr; }
-  .gallery-card { flex: 0 0 280px; }
+  .gallery-card { flex: 0 0 250px; height: 340px; }
 }
 
 @media (max-width: 768px) {
@@ -736,7 +738,7 @@ p { max-width: 720px; }
     padding: 0;
     cursor: default;
   }
-  .gallery-card { flex: none; aspect-ratio: 4/3; }
+  .gallery-card { flex: none; height: 280px; border-radius: 10px; }
   .hero { min-height: 90vh; }
   .page-hero { min-height: 40vh; padding-top: 8rem; }
   .division-card-icon img { height: 200px; }
