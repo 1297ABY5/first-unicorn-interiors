@@ -341,7 +341,7 @@ p { max-width: 720px; }
 }
 .feature-card:hover { border-color: var(--gold-glow); transform: translateY(-3px); }
 .feature-card-icon { margin: 0; line-height: 0; overflow: hidden; }
-.feature-card-icon img { width: 100%; height: 240px; object-fit: cover; display: block; border: none; border-radius: 0; }
+.feature-card-icon img { width: 100%; height: 280px; object-fit: cover; display: block; border: none; border-radius: 0; }
 .feature-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; padding: 1.5rem 1.5rem 0; }
 .feature-card p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; padding: 0 1.5rem 1.5rem; flex: 1; }
 
@@ -737,7 +737,7 @@ p { max-width: 720px; }
   .hero { min-height: 90vh; }
   .page-hero { min-height: 40vh; padding-top: 8rem; }
   .division-card-icon img { height: 200px; }
-  .feature-card-icon img { height: 200px; }
+  .feature-card-icon img { height: 220px; }
   .edu-card-icon img { height: 170px; }
 }
 
