@@ -316,31 +316,91 @@
  <div class="container">
  <div class="section-header fade-in">
  <div class="label">Our Work</div>
- <h2>Photo Gallery</h2>
+ <h2>Kitchen Portfolio</h2>
+ <p style="color:var(--text-secondary);margin-top:0.5rem">32+ completed kitchen projects across Dubai's premier communities</p>
  </div>
- <div class="service-gallery">
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0001.webp"><img src="/images/kitchen/FU-KIT-0001.webp" alt="Kitchen — Black Fluted Wood Island Desig, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0002.webp"><img src="/images/kitchen/FU-KIT-0002.webp" alt="Kitchen — Black Marble Feature Wall With, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0003.webp"><img src="/images/kitchen/FU-KIT-0003.webp" alt="Kitchen — Black Marble Feature Walls Wit, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0004.webp"><img src="/images/kitchen/FU-KIT-0004.webp" alt="Kitchen — Bold Red Glossy Cabinet Doors, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0019.webp"><img src="/images/kitchen/FU-KIT-0015.webp" alt="Kitchen — Dark Wood Veneer Cabinetry Wit, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0022.webp"><img src="/images/kitchen/FU-KIT-0020.webp" alt="Kitchen — Dramatic Black Marble Countert, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0009.webp"><img src="/images/kitchen/FU-KIT-0009.webp" alt="Kitchen — Exposed Brick Wall With Integr, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0010.webp"><img src="/images/kitchen/FU-KIT-0010.webp" alt="Kitchen — Exposed Red Brick Accent Wall, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen-real/FU-KTR-0005.webp"><img src="/images/kitchen-real/FU-KTR-0005.webp" alt="Kitchen sink and marble countertop detail, Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0012.webp"><img src="/images/kitchen/FU-KIT-0012.webp" alt="Kitchen — Handleless Beige Cabinet Doors, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0013.webp"><img src="/images/kitchen/FU-KIT-0013.webp" alt="Kitchen — Handleless Beige Kitchen Cabin, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0014.webp"><img src="/images/kitchen/FU-KIT-0014.webp" alt="Kitchen — Handleless Beige Kitchen Cabin, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0011.webp"><img src="/images/kitchen/FU-KIT-0008.webp" alt="Kitchen — Handleless Beige Kitchen Cabin, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0016.webp"><img src="/images/kitchen/FU-KIT-0016.webp" alt="Kitchen — Handleless Gray Kitchen Cabine, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0017.webp"><img src="/images/kitchen/FU-KIT-0017.webp" alt="Kitchen — Handleless Grey Kitchen Cabine, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0018.webp"><img src="/images/kitchen/FU-KIT-0018.webp" alt="Kitchen — High Gloss Black Kitchen Cabin, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0027.webp"><img src="/images/kitchen/FU-KIT-0023.webp" alt="Kitchen — Large Black Framed Bi Fold Doo, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0007.webp"><img src="/images/kitchen/FU-KIT-0005.webp" alt="Kitchen — Light Oak Kitchen Cabinetry Wi, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen/FU-KIT-0021.webp"><img src="/images/kitchen/FU-KIT-0021.webp" alt="Kitchen — Marble Countertops With Grey V, Kitchen renovation Dubai" loading="lazy"></div>
- <div class="service-gallery-item" data-lightbox="/images/kitchen-real/FU-KTR-0002.webp"><img src="/images/kitchen-real/FU-KTR-0002.webp" alt="Marble countertop close-up, kitchen renovation Dubai" loading="lazy"></div>
+
+ <style>
+ .masonry-gallery{columns:3;column-gap:0.75rem;orphans:1;widows:1}
+ .masonry-item{break-inside:avoid;margin-bottom:0.75rem;border-radius:10px;overflow:hidden;position:relative;cursor:pointer}
+ .masonry-item img{width:100%;display:block;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1)}
+ .masonry-item:hover img{transform:scale(1.04)}
+ .masonry-item::before{content:'';position:absolute;inset:0;border-radius:10px;border:2px solid transparent;transition:border-color 0.4s;z-index:2;pointer-events:none}
+ .masonry-item:hover::before{border-color:var(--gold)}
+ .masonry-item::after{content:attr(data-label);position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1rem 1rem;background:linear-gradient(transparent,rgba(0,0,0,0.85));color:#fff;font-size:0.82rem;letter-spacing:0.04em;font-family:var(--font-body);opacity:0;transform:translateY(6px);transition:all 0.4s;z-index:3;pointer-events:none}
+ .masonry-item:hover::after{opacity:1;transform:translateY(0)}
+ .masonry-hero{break-inside:avoid}
+ .masonry-hero img{min-height:420px;object-fit:cover}
+ @media(max-width:1024px){.masonry-gallery{columns:2}.masonry-hero img{min-height:320px}}
+ @media(max-width:600px){.masonry-gallery{columns:1}.masonry-hero img{min-height:280px}}
+ .gallery-counter{text-align:center;margin-top:2.5rem}
+ .gallery-counter a{display:inline-flex;align-items:center;gap:0.5rem;color:var(--gold);font-size:0.95rem;letter-spacing:0.03em;text-decoration:none;padding:0.8rem 2rem;border:1px solid var(--border);border-radius:50px;transition:all 0.3s}
+ .gallery-counter a:hover{border-color:var(--gold);background:rgba(200,165,94,0.08)}
+ </style>
+
+ <div class="masonry-gallery fade-in">
+ <!-- Hero: dramatic black island -->
+ <div class="masonry-item masonry-hero" data-lightbox="/images/kitchen/FU-KIT-0001.webp" data-label="Black Fluted Island — Custom Joinery">
+ <img src="/images/kitchen/FU-KIT-0001.webp" alt="Black fluted wood island with marble countertop, kitchen renovation Dubai" loading="lazy">
+ </div>
+ <!-- Marble feature wall -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0002.webp" data-label="Marble Feature Wall — Premium Stone">
+ <img src="/images/kitchen/FU-KIT-0002.webp" alt="Black marble feature wall kitchen with brass pendants, Dubai villa" loading="lazy">
+ </div>
+ <!-- Tall: elegant handleless -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0012.webp" data-label="Handleless Cabinetry — Modern Minimal">
+ <img src="/images/kitchen/FU-KIT-0012.webp" alt="Handleless beige kitchen cabinets floor to ceiling, Dubai" loading="lazy">
+ </div>
+ <!-- Bold red -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0004.webp" data-label="Bold Red Cabinets — Statement Kitchen">
+ <img src="/images/kitchen/FU-KIT-0004.webp" alt="Bold red glossy kitchen cabinets with integrated dining, Dubai villa" loading="lazy">
+ </div>
+ <!-- Industrial brick -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0009.webp" data-label="Exposed Brick — Industrial Chic">
+ <img src="/images/kitchen/FU-KIT-0009.webp" alt="Exposed brick wall kitchen with checkered floor tiles, Dubai" loading="lazy">
+ </div>
+ <!-- Tall: marble grey -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0021.webp" data-label="Grey Marble — Integrated Appliances">
+ <img src="/images/kitchen/FU-KIT-0021.webp" alt="Grey veneer kitchen with marble countertops, Dubai villa renovation" loading="lazy">
+ </div>
+ <!-- High gloss black luxury -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0018.webp" data-label="High Gloss Black — Luxury Dark Kitchen">
+ <img src="/images/kitchen/FU-KIT-0018.webp" alt="High gloss black kitchen cabinets with island, luxury Dubai villa" loading="lazy">
+ </div>
+ <!-- Hero: bi-fold lifestyle -->
+ <div class="masonry-item masonry-hero" data-lightbox="/images/kitchen/FU-KIT-0027.webp" data-label="Open-Plan Kitchen — Indoor-Outdoor Living">
+ <img src="/images/kitchen/FU-KIT-0027.webp" alt="Open plan kitchen with black framed bi-fold doors, Dubai villa" loading="lazy">
+ </div>
+ <!-- Warm wood veneer -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0006.webp" data-label="Wood Veneer — Warm Contemporary">
+ <img src="/images/kitchen/FU-KIT-0006.webp" alt="Dark wood veneer cabinetry with integrated handles, Dubai kitchen" loading="lazy">
+ </div>
+ <!-- Tall: light oak -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0005.webp" data-label="Light Oak — Scandinavian Inspired">
+ <img src="/images/kitchen/FU-KIT-0005.webp" alt="Light oak kitchen cabinetry with pendant lighting, Dubai" loading="lazy">
+ </div>
+ <!-- Wide white minimal -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0007.webp" data-label="White Island — Clean Contemporary">
+ <img src="/images/kitchen/FU-KIT-0007.webp" alt="Wide format white kitchen island with panoramic window, Dubai" loading="lazy">
+ </div>
+ <!-- Real detail shot -->
+ <div class="masonry-item" data-lightbox="/images/kitchen-real/FU-KTR-0005.webp" data-label="Marble Detail — Real Project Close-Up">
+ <img src="/images/kitchen-real/FU-KTR-0005.webp" alt="Marble countertop and sink detail, real kitchen project Dubai" loading="lazy">
+ </div>
+ <!-- Dark marble countertop -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0032.webp" data-label="Dark Marble Island — Premium Finish">
+ <img src="/images/kitchen/FU-KIT-0032.webp" alt="Dark marble kitchen island with gold pendant lighting, Dubai villa" loading="lazy">
+ </div>
+ <!-- Handleless grey modern -->
+ <div class="masonry-item" data-lightbox="/images/kitchen/FU-KIT-0017.webp" data-label="Handleless Grey — Minimalist Design">
+ <img src="/images/kitchen/FU-KIT-0017.webp" alt="Handleless grey kitchen cabinets with stone backsplash, Dubai" loading="lazy">
  </div>
  </div>
+
+ <div class="gallery-counter fade-in">
+ <a href="https://wa.me/971585658002?text=Hi%2C%20I%27d%20like%20to%20see%20more%20kitchen%20projects" target="_blank" rel="noopener">See All 32+ Projects — WhatsApp Us &rarr;</a>
+ </div>
+
  </div>
  </section>
 

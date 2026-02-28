@@ -202,7 +202,7 @@
   });
 
   // Attach lightbox to gallery items
-  document.querySelectorAll('.service-gallery, .portfolio-grid').forEach(container => {
+  document.querySelectorAll('.service-gallery, .portfolio-grid, .masonry-gallery').forEach(container => {
     const items = container.querySelectorAll('[data-lightbox]');
     items.forEach((item, i) => {
       item.addEventListener('click', () => {
