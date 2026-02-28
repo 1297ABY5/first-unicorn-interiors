@@ -501,7 +501,7 @@ p { max-width: 720px; }
 
 /* ═══ MASONRY SERVICE GALLERY ═══ */
 .service-gallery {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;
 }
 .service-gallery-item { overflow: hidden; cursor: pointer; aspect-ratio: 4/3; border-radius: 10px; }
 .service-gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
@@ -698,7 +698,7 @@ p { max-width: 720px; }
   .process-timeline { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .process-timeline::before { display: none; }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-  .service-gallery { grid-template-columns: repeat(2, 1fr); }
+  .service-gallery { grid-template-columns: repeat(3, 1fr); }
   .video-gallery { grid-template-columns: repeat(2, 1fr); }
   .video-testimonials { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
   .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
