@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>FUG Command Center</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0A1628; --navy-l: #132240; --navy-m: #1A2D4A; --slate: #2A3A52;
+  --gold: #C9A84C; --gold-dim: #9A7B2F; --white: #F0F0F0; --muted: #6B7B8D;
+  --green: #4ECB71; --red: #FF6B6B; --cyan: #4ECDC4; --orange: #FFB347; --blue: #60A5FA;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--navy); color: var(--white); font-family: 'Plus Jakarta Sans', sans-serif; min-height: 100vh; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--slate); border-radius: 3px; }
+
+.header { background: linear-gradient(135deg, var(--navy), var(--navy-l)); border-bottom: 1px solid var(--slate); padding: 20px 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.header-left { }
+.header-org { font-size: 10px; letter-spacing: 4px; color: var(--gold-dim); text-transform: uppercase; }
+.header-title { font-size: 22px; font-weight: 800; color: var(--gold); letter-spacing: 1px; }
+.header-right { display: flex; align-items: center; gap: 14px; }
+.refresh-time { text-align: right; font-size: 10px; color: var(--muted); }
+.refresh-val { font-size: 12px; color: var(--white); font-family: 'JetBrains Mono', monospace; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); }
+.dot.loading { background: var(--orange); box-shadow: 0 0 8px var(--orange); animation: pulse 1s infinite; }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+.btn { background: var(--navy-m); border: 1px solid var(--slate); color: var(--gold); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: 1px; font-family: inherit; }
+.btn:hover { border-color: var(--gold); }
+
+.tabs { display: flex; gap: 0; border-bottom: 1px solid var(--slate); padding: 0 28px; background: var(--navy-l); overflow-x: auto; }
+.tab { background: none; border: none; color: var(--muted); padding: 14px 18px; cursor: pointer; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-bottom: 2px solid transparent; font-family: inherit; white-space: nowrap; }
+.tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+.content { padding: 24px 28px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.grid-full { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+.card { background: var(--navy-l); border-radius: 16px; border: 1px solid var(--slate); overflow: hidden; position: relative; }
+.card.span2 { grid-column: span 2; }
+@media(max-width:700px) { .card.span2 { grid-column: span 1; } }
+.card-accent { position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.card-header { padding: 18px 22px 6px; font-size: 10px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; font-weight: 700; }
+.card-body { padding: 0 22px 18px; }
+
+.metric-val { font-size: 30px; font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+.metric-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.metric-sub { font-size: 11px; color: var(--gold-dim); margin-top: 4px; }
+.metric { margin-bottom: 14px; }
+
+.alert-box { margin-top: 12px; padding: 8px 12px; border-radius: 8px; font-size: 11px; font-weight: 600; }
+.alert-red { background: rgba(255,107,107,0.08); border: 1px solid rgba(255,107,107,0.2); color: var(--red); }
+.alert-gold { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); color: var(--gold); }
+.alert-blue { background: rgba(96,165,250,0.08); border: 1px solid rgba(96,165,250,0.2); color: var(--blue); }
+
+.row { display: flex; gap: 20px; flex-wrap: wrap; }
+.pair { }
+.pair-val { font-size: 17px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+.pair-label { font-size: 10px; color: var(--muted); }
+
+.company-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; }
+.company-row + .company-row { border-top: 1px solid rgba(42,58,82,0.3); }
+.company-name { font-size: 13px; font-weight: 600; }
+.company-type { font-size: 10px; color: var(--muted); }
+.badge { font-size: 9px; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; }
+.badge-green { background: rgba(78,203,113,0.12); color: var(--green); }
+.badge-muted { background: rgba(107,123,141,0.12); color: var(--muted); }
+
+.health-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.health-item { padding: 8px 10px; background: var(--navy-m); border-radius: 8px; }
+.health-row { display: flex; align-items: center; }
+.health-dot { width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+.health-name { font-size: 12px; font-weight: 600; }
+.health-detail { font-size: 10px; color: var(--muted); margin-left: 14px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th { text-align: left; padding: 8px 10px; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--slate); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+td { padding: 8px 10px; border-bottom: 1px solid rgba(42,58,82,0.15); }
+.empty-row { text-align: center; color: var(--slate); font-style: italic; padding: 20px 10px; }
+
+.agent-card { }
+.agent-status { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.agent-status-text { font-size: 14px; font-weight: 700; text-transform: uppercase; }
+.agent-detail { font-size: 12px; color: var(--muted); }
+
+.debt-phases { display: flex; gap: 28px; flex-wrap: wrap; }
+.phase-title { font-size: 14px; font-weight: 700; }
+.phase-sub { font-size: 12px; color: var(--muted); }
+
+.footer { padding: 16px 28px; border-top: 1px solid var(--slate); text-align: center; font-size: 10px; color: var(--muted); letter-spacing: 2px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="header-org">First Unicorn Group</div>
+    <div class="header-title">FINANCIAL COMMAND CENTER</div>
+  </div>
+  <div class="header-right">
+    <div>
+      <div class="refresh-time">Last refresh</div>
+      <div class="refresh-val" id="refreshTime">—</div>
+    </div>
+    <div class="dot" id="statusDot"></div>
+    <button class="btn" onclick="fetchAll()">REFRESH</button>
+  </div>
+</div>
+
+<div class="tabs" id="tabs">
+  <button class="tab active" data-tab="overview">Overview</button>
+  <button class="tab" data-tab="pipeline">Pipeline</button>
+  <button class="tab" data-tab="expenses">Expenses</button>
+  <button class="tab" data-tab="agents">Agents</button>
+  <button class="tab" data-tab="contacts">Contacts</button>
+</div>
+
+<div class="content" id="content"></div>
+
+<div class="footer">OPERATION OVERWATCH — FIRST UNICORN GROUP — AUTO-REFRESH 60s</div>
+
+<script>
+const SUPA_URL = "https://eoxkpgtcoxioqiehidys.supabase.co";
+const SUPA_KEY = "sb_publishable_gEdt8FMXHgm9zjRfNXL5ww_sO-za28H";
+let D = {};
+let activeTab = "overview";
+
+async function q(table, params = "") {
+  try {
+    const r = await fetch(`${SUPA_URL}/rest/v1/${table}?${params}`, {
+      headers: { apikey: SUPA_KEY, Authorization: `Bearer ${SUPA_KEY}`, Prefer: "count=exact" }
+    });
+    const cr = r.headers.get("content-range");
+    const count = cr ? parseInt(cr.split("/")[1]) || 0 : 0;
+    const data = await r.json();
+    return { data: Array.isArray(data) ? data : [], count: count || (Array.isArray(data) ? data.length : 0) };
+  } catch(e) { return { data: [], count: 0 }; }
+}
+
+async function fetchAll() {
+  document.getElementById("statusDot").className = "dot loading";
+  const [companies, contacts, opportunities, projects, expenses, invoices, agents, interactions, staff, pipeline, budgets] = await Promise.all([
+    q("companies","select=*"), q("contacts","select=*&order=created_at.desc&limit=20"), q("opportunities","select=*&order=created_at.desc"),
+    q("projects","select=*&order=created_at.desc"), q("expenses","select=*&order=created_at.desc&limit=50"), q("invoices","select=*&order=created_at.desc"),
+    q("agents","select=*&order=name"), q("interactions","select=*&order=created_at.desc&limit=20"), q("staff","select=*"),
+    q("pipeline_stages","select=*&order=sort_order"), q("budgets","select=*"),
+  ]);
+  const totExp = expenses.data.reduce((s,e) => s + parseFloat(e.amount||e.total_amount||0), 0);
+  const totInv = invoices.data.reduce((s,i) => s + parseFloat(i.total_amount||i.amount||0), 0);
+  D = { companies, contacts, opportunities, projects, expenses, invoices, agents, interactions, staff, pipeline, budgets, totExp, totInv };
+  document.getElementById("statusDot").className = "dot";
+  document.getElementById("refreshTime").textContent = new Date().toLocaleTimeString("en-AE",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
+  render();
+}
+
+function render() {
+  const c = document.getElementById("content");
+  if (activeTab === "overview") c.innerHTML = renderOverview();
+  else if (activeTab === "pipeline") c.innerHTML = renderPipeline();
+  else if (activeTab === "expenses") c.innerHTML = renderExpenses();
+  else if (activeTab === "agents") c.innerHTML = renderAgents();
+  else if (activeTab === "contacts") c.innerHTML = renderContacts();
+}
+
+function renderOverview() {
+  return `<div class="grid">
+    <div class="card"><div class="card-accent" style="background:var(--red)"></div>
+      <div class="card-header">Cash Position</div>
+      <div class="card-body">
+        <div class="metric"><div class="metric-val" style="color:var(--red)">< AED 50K</div><div class="metric-label">Available Cash</div></div>
+        <div class="row">
+          <div class="pair"><div class="pair-val" style="color:var(--orange)">AED 14,440</div><div class="pair-label">Monthly Burn</div></div>
+          <div class="pair"><div class="pair-val" style="color:var(--red)">AED 246,000</div><div class="pair-label">Monthly Target</div></div>
+        </div>
+        <div class="alert-box alert-red">RUNWAY: ~3 months at current burn (no revenue)</div>
+      </div>
+    </div>
+
+    <div class="card"><div class="card-accent" style="background:var(--green)"></div>
+      <div class="card-header">Revenue</div>
+      <div class="card-body">
+        <div class="metric"><div class="metric-val" style="color:${D.totInv>0?'var(--green)':'var(--muted)'}">AED ${D.totInv.toLocaleString()}</div><div class="metric-label">Total Invoiced</div></div>
+        <div class="metric"><div class="metric-val" style="color:${D.projects.count>0?'var(--cyan)':'var(--muted)'}">${D.projects.count}</div><div class="metric-label">Active Projects</div></div>
+        <div class="metric"><div class="metric-val" style="color:${D.opportunities.count>0?'var(--blue)':'var(--muted)'}">${D.opportunities.count}</div><div class="metric-label">Pipeline Opportunities</div></div>
+      </div>
+    </div>
+
+    <div class="card"><div class="card-accent" style="background:var(--orange)"></div>
+      <div class="card-header">Expenses</div>
+      <div class="card-body">
+        <div class="metric"><div class="metric-val" style="color:var(--orange)">AED ${D.totExp.toLocaleString()}</div><div class="metric-label">Total Expenses Logged</div></div>
+        <div class="row">
+          <div class="pair"><div class="pair-val">${D.expenses.count}</div><div class="pair-label">Transactions</div></div>
+          <div class="pair"><div class="pair-val">${D.invoices.count}</div><div class="pair-label">Invoices</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card"><div class="card-accent" style="background:var(--cyan)"></div>
+      <div class="card-header">Group Companies</div>
+      <div class="card-body">
+        ${D.companies.data.map(c => `<div class="company-row">
+          <div><div class="company-name">${c.trade_name||c.legal_name||c.code}</div><div class="company-type">${c.industry||c.type||'Renovation'}</div></div>
+          <span class="badge ${(c.status||'active')==='active'?'badge-green':'badge-muted'}">${(c.status||'active').toUpperCase()}</span>
+        </div>`).join('')}
+      </div>
+    </div>
+
+    <div class="card"><div class="card-accent" style="background:var(--blue)"></div>
+      <div class="card-header">Team &amp; Payroll</div>
+      <div class="card-body">
+        <div class="metric"><div class="metric-val" style="color:var(--blue)">${D.staff.count||4}</div><div class="metric-label">Team Members</div></div>
+        <div class="metric"><div class="metric-val">AED 14,220</div><div class="metric-label">Monthly Payroll</div><div class="metric-sub">Hamdan + Rajeev + Foreman (when hired) + Partner</div></div>
+        <div class="alert-box alert-blue">AI Infrastructure: AED 220/mo (13 agents, 6 systems)</div>
+      </div>
+    </div>
+
+    <div class="card"><div class="card-accent" style="background:var(--green)"></div>
+      <div class="card-header">System Health</div>
+      <div class="card-body">
+        <div class="health-grid">
+          ${[{n:"Supabase",s:"live",d:`${D.companies.count+D.contacts.count+D.expenses.count} records`},{n:"Houston",s:"live",d:"Telegram"},{n:"Sarah",s:"live",d:"WhatsApp"},{n:"Backup",s:"live",d:"Midnight GST"},{n:"Briefing",s:"live",d:"0800 GST"},{n:"Watchdog",s:"live",d:"Every 5m"}].map(s => `
+          <div class="health-item">
+            <div class="health-row"><div class="health-dot" style="background:var(--green)"></div><span class="health-name">${s.n}</span></div>
+            <div class="health-detail">${s.d}</div>
+          </div>`).join('')}
+        </div>
+      </div>
+    </div>
+
+    <div class="card span2"><div class="card-accent" style="background:var(--gold)"></div>
+      <div class="card-header">Google Ads</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="pair"><div class="pair-val" style="color:var(--orange);font-size:26px">NOT LIVE</div><div class="pair-label">Launch: Monday</div></div>
+          <div class="pair"><div class="pair-val">AED 85/day</div><div class="pair-label">Total Budget (4 campaigns)</div></div>
+          <div class="pair"><div class="pair-val">19</div><div class="pair-label">Ad Groups (8 live, 11 new)</div></div>
+          <div class="pair"><div class="pair-val" style="color:var(--green)">125</div><div class="pair-label">Historical Conversions (Pool)</div></div>
+        </div>
+        <div class="alert-box alert-gold">Swimming Pool campaign is #1 priority — highest conversion rate. Launch Monday when regional situation stabilizes.</div>
+      </div>
+    </div>
+
+    <div class="card span2"><div class="card-accent" style="background:var(--red)"></div>
+      <div class="card-header">Debt &amp; Obligations</div>
+      <div class="card-body">
+        <div class="debt-phases">
+          <div><div class="phase-title" style="color:var(--red)">Phase 1: Feb–Jun 2026</div><div class="phase-sub">Travel ban resolution</div></div>
+          <div><div class="phase-title" style="color:var(--orange)">Phase 2: Jul–Dec 2026</div><div class="phase-sub">Bank settlements & creditor payments</div></div>
+          <div><div class="phase-title" style="color:var(--cyan)">Phase 3: 2027–2028</div><div class="phase-sub">Family obligations</div></div>
+        </div>
+        <div style="margin-top:12px;font-size:12px;color:var(--muted)">Monthly requirement: AED 246K–322K to service all obligations while maintaining operations</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderPipeline() {
+  return `<div class="grid-full">
+    <div class="card"><div class="card-accent" style="background:var(--cyan)"></div>
+      <div class="card-header">Pipeline Stages</div>
+      <div class="card-body"><table><thead><tr><th>Stage</th><th>Order</th><th>Company</th></tr></thead><tbody>
+        ${D.pipeline.data.length===0?'<tr><td colspan="3" class="empty-row">No pipeline stages configured</td></tr>':D.pipeline.data.slice(0,15).map(s=>`<tr><td style="color:var(--cyan)">${s.stage_name||s.name||'—'}</td><td style="color:var(--muted)">${s.sort_order||'—'}</td><td style="color:var(--muted)">${(s.company_id||'').substring(0,8)||'—'}</td></tr>`).join('')}
+      </tbody></table></div>
+    </div>
+    <div class="card"><div class="card-accent" style="background:var(--green)"></div>
+      <div class="card-header">Opportunities</div>
+      <div class="card-body"><table><thead><tr><th>Name</th><th>Stage</th><th>Value</th><th>Status</th></tr></thead><tbody>
+        ${D.opportunities.data.length===0?'<tr><td colspan="4" class="empty-row">No opportunities yet — awaiting first leads</td></tr>':D.opportunities.data.map(o=>`<tr><td>${o.name||o.title||'Untitled'}</td><td style="color:var(--cyan)">${o.stage||o.pipeline_stage||'—'}</td><td style="color:var(--green)">${o.value?'AED '+parseFloat(o.value).toLocaleString():'—'}</td><td style="color:var(--muted)">${o.status||'new'}</td></tr>`).join('')}
+      </tbody></table></div>
+    </div>
+  </div>`;
+}
+
+function renderExpenses() {
+  return `<div class="grid-full">
+    <div class="card"><div class="card-accent" style="background:var(--orange)"></div>
+      <div class="card-header">Recent Expenses</div>
+      <div class="card-body"><table><thead><tr><th>Date</th><th>Description</th><th>Amount</th><th>Category</th></tr></thead><tbody>
+        ${D.expenses.data.length===0?'<tr><td colspan="4" class="empty-row">No expenses logged yet</td></tr>':D.expenses.data.map(e=>`<tr><td style="color:var(--muted)">${e.created_at?new Date(e.created_at).toLocaleDateString('en-AE'):'—'}</td><td>${e.description||e.notes||'—'}</td><td style="color:var(--orange)" class="mono">AED ${parseFloat(e.amount||e.total_amount||0).toLocaleString()}</td><td style="color:var(--cyan)">${e.category||'—'}</td></tr>`).join('')}
+      </tbody></table></div>
+    </div>
+    <div class="card"><div class="card-accent" style="background:var(--green)"></div>
+      <div class="card-header">Invoices</div>
+      <div class="card-body"><table><thead><tr><th>Date</th><th>Client</th><th>Amount</th><th>Status</th><th>Due</th></tr></thead><tbody>
+        ${D.invoices.data.length===0?'<tr><td colspan="5" class="empty-row">No invoices yet — awaiting first project</td></tr>':D.invoices.data.map(i=>`<tr><td style="color:var(--muted)">${i.created_at?new Date(i.created_at).toLocaleDateString('en-AE'):'—'}</td><td>${i.client_name||(i.contact_id||'').substring(0,8)||'—'}</td><td style="color:var(--green)" class="mono">AED ${parseFloat(i.total_amount||i.amount||0).toLocaleString()}</td><td style="color:var(--orange)">${i.status||'draft'}</td><td style="color:var(--muted)">${i.due_date?new Date(i.due_date).toLocaleDateString('en-AE'):'—'}</td></tr>`).join('')}
+      </tbody></table></div>
+    </div>
+  </div>`;
+}
+
+function renderAgents() {
+  return `<div class="grid">
+    ${D.agents.data.map(a => {
+      const col = a.status==='live'?'var(--green)':a.status==='built'?'var(--orange)':'var(--muted)';
+      return `<div class="card"><div class="card-accent" style="background:${col}"></div>
+        <div class="card-header">${a.display_name||a.name}</div>
+        <div class="card-body">
+          <div class="agent-status"><div class="health-dot" style="background:${col}"></div><span class="agent-status-text" style="color:${col}">${a.status||'planned'}</span></div>
+          <div class="agent-detail">${a.description||('Port: '+(a.port||'—')+' | Type: '+(a.agent_type||a.type||'—'))}</div>
+          ${a.model?`<div style="font-size:11px;color:var(--cyan);margin-top:4px">Model: ${a.model}</div>`:''}
+        </div>
+      </div>`;
+    }).join('')}
+  </div>`;
+}
+
+function renderContacts() {
+  return `<div class="grid-full">
+    <div class="card"><div class="card-accent" style="background:var(--blue)"></div>
+      <div class="card-header">Contacts (${D.contacts.count})</div>
+      <div class="card-body"><table><thead><tr><th>Name</th><th>Phone</th><th>Email</th><th>Source</th><th>Type</th><th>Created</th></tr></thead><tbody>
+        ${D.contacts.data.length===0?'<tr><td colspan="6" class="empty-row">No contacts yet — awaiting first leads</td></tr>':D.contacts.data.map(c=>`<tr><td>${c.full_name||c.name||'—'}</td><td style="color:var(--cyan)" class="mono">${c.phone||'—'}</td><td style="color:var(--muted)">${c.email||'—'}</td><td style="color:var(--orange)">${c.source||'—'}</td><td style="color:var(--blue)">${c.contact_type||c.type||'—'}</td><td style="color:var(--muted)">${c.created_at?new Date(c.created_at).toLocaleDateString('en-AE'):'—'}</td></tr>`).join('')}
+      </tbody></table></div>
+    </div>
+    <div class="card"><div class="card-accent" style="background:var(--gold)"></div>
+      <div class="card-header">Recent Interactions</div>
+      <div class="card-body"><table><thead><tr><th>Date</th><th>Type</th><th>Contact</th><th>Notes</th></tr></thead><tbody>
+        ${D.interactions.data.length===0?'<tr><td colspan="4" class="empty-row">No interactions logged yet</td></tr>':D.interactions.data.map(i=>`<tr><td style="color:var(--muted)">${i.created_at?new Date(i.created_at).toLocaleDateString('en-AE'):'—'}</td><td style="color:var(--cyan)">${i.interaction_type||i.type||'—'}</td><td>${(i.contact_id||'').substring(0,8)||'—'}</td><td style="color:var(--muted)">${(i.notes||i.summary||'—').substring(0,60)}</td></tr>`).join('')}
+      </tbody></table></div>
+    </div>
+  </div>`;
+}
+
+// Tab switching
+document.getElementById("tabs").addEventListener("click", e => {
+  if (e.target.classList.contains("tab")) {
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    e.target.classList.add("active");
+    activeTab = e.target.dataset.tab;
+    render();
+  }
+});
+
+// Auto-refresh every 60s
+fetchAll();
+setInterval(fetchAll, 60000);
+</script>
+</body>
+</html>
