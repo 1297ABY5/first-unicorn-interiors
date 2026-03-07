@@ -8,606 +8,90 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
-:root {
-  --navy:#0A1628;--navy-l:#132240;--navy-m:#1A2D4A;--slate:#2A3A52;
-  --gold:#C9A84C;--gold-dim:#9A7B2F;--white:#F0F0F0;--muted:#6B7B8D;
-  --green:#4ECB71;--red:#FF6B6B;--cyan:#4ECDC4;--orange:#FFB347;--blue:#60A5FA;--purple:#A78BFA;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--navy);color:var(--white);font-family:'Plus Jakarta Sans',sans-serif;min-height:100vh;}
-.mono{font-family:'JetBrains Mono',monospace;}
-::-webkit-scrollbar{width:6px;height:6px;}
-::-webkit-scrollbar-track{background:var(--navy);}
-::-webkit-scrollbar-thumb{background:var(--slate);border-radius:3px;}
-
-.header{background:linear-gradient(135deg,var(--navy),var(--navy-l));border-bottom:1px solid var(--slate);padding:20px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-.h-org{font-size:10px;letter-spacing:4px;color:var(--gold-dim);text-transform:uppercase;}
-.h-title{font-size:20px;font-weight:800;color:var(--gold);letter-spacing:1px;}
-.h-sub{font-size:11px;color:var(--muted);margin-top:2px;}
-
-.tabs{display:flex;gap:0;border-bottom:1px solid var(--slate);padding:0 28px;background:var(--navy-l);overflow-x:auto;}
-.tab{background:none;border:none;color:var(--muted);padding:14px 16px;cursor:pointer;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;font-family:inherit;white-space:nowrap;}
-.tab.active{color:var(--gold);border-bottom-color:var(--gold);}
-
-.content{padding:24px 28px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.grid1{display:grid;grid-template-columns:1fr;gap:16px;}
-@media(max-width:700px){.grid2{grid-template-columns:1fr;}.span2{grid-column:span 1 !important;}}
-
-.card{background:var(--navy-l);border-radius:16px;border:1px solid var(--slate);overflow:hidden;position:relative;}
-.span2{grid-column:span 2;}
-.card-acc{position:absolute;top:0;left:0;right:0;height:3px;}
-.card-h{padding:18px 22px 6px;font-size:10px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;font-weight:700;}
-.card-b{padding:0 22px 18px;}
-
-.mv{font-size:28px;font-weight:800;font-family:'JetBrains Mono',monospace;}
-.ml{font-size:12px;color:var(--muted);margin-top:2px;}
-.ms{font-size:11px;color:var(--gold-dim);margin-top:4px;}
-.met{margin-bottom:12px;}
-
-.bar-container{margin:8px 0;}
-.bar-label{display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;}
-.bar-track{height:10px;background:var(--navy-m);border-radius:5px;overflow:hidden;}
-.bar-fill{height:100%;border-radius:5px;transition:width 0.5s;}
-
-.alert{margin-top:10px;padding:8px 12px;border-radius:8px;font-size:11px;font-weight:600;}
-.a-red{background:rgba(255,107,107,0.08);border:1px solid rgba(255,107,107,0.2);color:var(--red);}
-.a-green{background:rgba(78,203,113,0.08);border:1px solid rgba(78,203,113,0.2);color:var(--green);}
-.a-gold{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);color:var(--gold);}
-.a-orange{background:rgba(255,179,71,0.08);border:1px solid rgba(255,179,71,0.2);color:var(--orange);}
-
-table{width:100%;border-collapse:collapse;font-size:12px;}
-th{text-align:left;padding:8px 10px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--slate);font-size:10px;letter-spacing:1px;text-transform:uppercase;}
-td{padding:7px 10px;border-bottom:1px solid rgba(42,58,82,0.15);}
-.tdr{text-align:right;}
-.empty{text-align:center;color:var(--slate);font-style:italic;padding:20px;}
-
-.row{display:flex;gap:20px;flex-wrap:wrap;}
-.pv{font-size:17px;font-weight:700;font-family:'JetBrains Mono',monospace;}
-.pl{font-size:10px;color:var(--muted);}
-
-.chart-wrap{position:relative;height:260px;margin:8px 0;}
-.footer{padding:16px 28px;border-top:1px solid var(--slate);text-align:center;font-size:10px;color:var(--muted);letter-spacing:2px;}
+:root{--navy:#0A1628;--navy-l:#132240;--navy-m:#1A2D4A;--slate:#2A3A52;--gold:#C9A84C;--gold-dim:#9A7B2F;--white:#F0F0F0;--muted:#6B7B8D;--green:#4ECB71;--red:#FF6B6B;--cyan:#4ECDC4;--orange:#FFB347;--blue:#60A5FA;--purple:#A78BFA;}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--navy);color:var(--white);font-family:'Plus Jakarta Sans',sans-serif;min-height:100vh}.mono{font-family:'JetBrains Mono',monospace}
+::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:var(--navy)}::-webkit-scrollbar-thumb{background:var(--slate);border-radius:3px}
+.header{background:linear-gradient(135deg,var(--navy),var(--navy-l));border-bottom:1px solid var(--slate);padding:20px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--slate);padding:0 28px;background:var(--navy-l);overflow-x:auto}
+.tab{background:none;border:none;color:var(--muted);padding:14px 16px;cursor:pointer;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-bottom:2px solid transparent;font-family:inherit;white-space:nowrap}.tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.content{padding:24px 28px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}.grid1{display:grid;grid-template-columns:1fr;gap:16px}
+@media(max-width:700px){.span2{grid-column:span 1!important}}
+.card{background:var(--navy-l);border-radius:16px;border:1px solid var(--slate);overflow:hidden;position:relative}.span2{grid-column:span 2}
+.card-acc{position:absolute;top:0;left:0;right:0;height:3px}.card-h{padding:18px 22px 6px;font-size:10px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;font-weight:700}.card-b{padding:0 22px 18px}
+.mv{font-size:28px;font-weight:800;font-family:'JetBrains Mono',monospace}.ml{font-size:12px;color:var(--muted);margin-top:2px}.ms{font-size:11px;color:var(--gold-dim);margin-top:4px}.met{margin-bottom:12px}
+.bar-container{margin:8px 0}.bar-label{display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px}.bar-track{height:10px;background:var(--navy-m);border-radius:5px;overflow:hidden}.bar-fill{height:100%;border-radius:5px;transition:width .5s}
+.alert{margin-top:10px;padding:8px 12px;border-radius:8px;font-size:11px;font-weight:600}
+.a-red{background:rgba(255,107,107,.08);border:1px solid rgba(255,107,107,.2);color:var(--red)}.a-green{background:rgba(78,203,113,.08);border:1px solid rgba(78,203,113,.2);color:var(--green)}.a-gold{background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);color:var(--gold)}.a-orange{background:rgba(255,179,71,.08);border:1px solid rgba(255,179,71,.2);color:var(--orange)}.a-cyan{background:rgba(78,205,196,.08);border:1px solid rgba(78,205,196,.2);color:var(--cyan)}
+table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;padding:8px 10px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--slate);font-size:10px;letter-spacing:1px;text-transform:uppercase}td{padding:7px 10px;border-bottom:1px solid rgba(42,58,82,.15)}.tdr{text-align:right}
+.row{display:flex;gap:20px;flex-wrap:wrap}.pv{font-size:17px;font-weight:700;font-family:'JetBrains Mono',monospace}.pl{font-size:10px;color:var(--muted)}
+.chart-wrap{position:relative;height:280px;margin:8px 0}.footer{padding:16px 28px;border-top:1px solid var(--slate);text-align:center;font-size:10px;color:var(--muted);letter-spacing:2px}
 </style>
 </head>
 <body>
-
-<div class="header">
-  <div>
-    <div class="h-org">First Unicorn Group</div>
-    <div class="h-title">FINANCIAL ANALYTICS</div>
-    <div class="h-sub">Real-time forecasting, budget analysis, P&L projections</div>
-  </div>
-  <div style="display:flex;align-items:center;gap:12px">
-    <div style="text-align:right"><div style="font-size:10px;color:var(--muted)">Live Data</div><div class="mono" style="font-size:12px" id="ts">—</div></div>
-    <div id="dot" style="width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)"></div>
-    <a href="/cmd-9x7k2m/" style="font-size:11px;color:var(--gold);text-decoration:none;border:1px solid var(--slate);padding:6px 14px;border-radius:6px;">← Command Center</a>
-  </div>
-</div>
-
-<div class="tabs" id="tabs">
-  <button class="tab active" data-t="forecast">12-Month Forecast</button>
-  <button class="tab" data-t="budget">Budget vs Actual</button>
-  <button class="tab" data-t="pnl">P&L Statement</button>
-  <button class="tab" data-t="cashflow">Cash Flow</button>
-  <button class="tab" data-t="debt">Debt Tracker</button>
-  <button class="tab" data-t="scenarios">Scenarios</button>
-</div>
-
+<div class="header"><div><div style="font-size:10px;letter-spacing:4px;color:var(--gold-dim);text-transform:uppercase">First Unicorn Group</div><div style="font-size:20px;font-weight:800;color:var(--gold)">FINANCIAL ANALYTICS — REAL DATA</div><div style="font-size:11px;color:var(--muted)">Commander's confirmed data — 7 March 2026</div></div><div style="display:flex;align-items:center;gap:12px"><a href="/cmd-9x7k2m/" style="font-size:11px;color:var(--gold);text-decoration:none;border:1px solid var(--slate);padding:6px 14px;border-radius:6px">← Command Center</a></div></div>
+<div class="tabs" id="tabs"><button class="tab active" data-t="overview">Overview</button><button class="tab" data-t="cashflow">Cash Flow</button><button class="tab" data-t="debt">Debt Tracker</button><button class="tab" data-t="forecast">Forecast</button><button class="tab" data-t="scenarios">Scenarios</button><button class="tab" data-t="timeline">Timeline</button></div>
 <div class="content" id="content"></div>
-<div class="footer">OPERATION OVERWATCH — FINANCIAL ANALYTICS — FIRST UNICORN GROUP</div>
-
+<div class="footer">OPERATION OVERWATCH — FINANCIAL ANALYTICS — DATA CONFIRMED 7 MARCH 2026</div>
 <script>
-const SUPA="https://eoxkpgtcoxioqiehidys.supabase.co",KEY="sb_publishable_gEdt8FMXHgm9zjRfNXL5ww_sO-za28H";
-let D={},activeTab="forecast",charts={};
-
-async function q(t,p=""){try{const r=await fetch(`${SUPA}/rest/v1/${t}?${p}`,{headers:{apikey:KEY,Authorization:`Bearer ${KEY}`,Prefer:"count=exact"}});const c=r.headers.get("content-range");const d=await r.json();return{data:Array.isArray(d)?d:[],count:c?parseInt(c.split("/")[1])||0:Array.isArray(d)?d.length:0};}catch(e){return{data:[],count:0};}}
-
-// BUSINESS MODEL — Based on Bond's actual targets
-const MODEL = {
-  cashStart: 50000,
-  monthlyBurn: 14440, // payroll 14220 + AI 220
-  adSpend: 2550, // AED 85/day
-  targetMonthlyRevenue: 246000,
-  avgProjectValue: 150000, // conservative villa reno
-  avgProjectMargin: 0.40,
-  avgProjectDuration: 45, // days
-  leadConversionRate: 0.08, // 8% of leads become projects
-  avgLeadsPerMonth: 30, // from Google Ads
-  costPerLead: 85, // AED per lead from ads
-  phases: [
-    { name: "Phase 1: Travel Ban", start: "2026-02", end: "2026-06", monthly: 15000, desc: "Travel ban resolution" },
-    { name: "Phase 2: Settlements", start: "2026-07", end: "2026-12", monthly: 35000, desc: "Bank & creditor payments" },
-    { name: "Phase 3: Family", start: "2027-01", end: "2028-12", monthly: 20000, desc: "Family obligations" },
-  ],
-  yearTargets: [
-    { year: 1, revenue: 4000000, profit: 1760000 },
-    { year: 2, revenue: 9800000, profit: 5860000 },
-    { year: 3, revenue: 21000000, profit: 12500000 },
-  ]
+let activeTab="overview",charts={};
+const R={
+  accounts:[{n:"RAK Bank (FUI)",b:221149,p:"Main receiving, 65% project"},{n:"Wio Bank (FUI)",b:11300,p:"15% overhead reserve"},{n:"Wio Bank (LAMAA)",b:6900,p:"Salaries & subcontractors"},{n:"ADCB (Renu)",b:17000,p:"20% profit/savings"},{n:"Physical Cash",b:63000,p:"Cash reserve"},{n:"Gold & Silver",b:85273,p:"Investment, 1-3 days liquidate"}],
+  get total(){return this.accounts.reduce((s,a)=>s+a.b,0)},
+  get liquid(){return this.total-85273},
+  burn:[{l:"Tareq",a:16500,d:"Last day",u:"Jun 2026"},{l:"RERA Case",a:4800,d:"22nd",u:"Nov 2026"},{l:"Salaries",a:8500,d:"Monthly",u:"Ongoing"},{l:"AI+Server+Claude",a:440,d:"Monthly",u:"Ongoing"}],
+  get monthlyBurn(){return this.burn.reduce((s,b)=>s+b.a,0)},
+  travelBan:[{c:"Dubai First",t:100000,f:78000,r:22000},{c:"RERA",t:43200,f:0,r:43200,monthly:4800},{c:"Shahid Building",t:15826,f:0,r:15826},{c:"Case 2024/22382",t:15506,f:0,r:15506},{c:"Labor 2024/3437",t:31316,f:0,r:31316},{c:"BCC",t:20926,f:0,r:20926}],
+  get travelBanTotal(){return this.travelBan.reduce((s,d)=>s+d.r,0)},
+  noBanDebts:[{c:"Sunil",a:7656},{c:"Commercial",a:1020},{c:"Imran",a:9116}],
+  longTerm:[{c:"Dana",a:450000,m:18750},{c:"CK Architecture",a:80000,m:3333}],
+  recovery:{total:85000,date:"June 2026"},
+  amc:{amount:32000,freq:"Quarterly",annual:128000,nextAvail:"Jul 2026"},
+  tareq:{total:66000,monthly:16500,payments:4,end:"Jun 2026"}
 };
-
-// Generate 12-month forecast
-function forecast12() {
-  const months = [];
-  const now = new Date();
-  let cash = MODEL.cashStart;
-  let cumulativeRevenue = 0;
-  let cumulativeExpense = 0;
-
-  for (let i = 0; i < 12; i++) {
-    const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
-    const label = d.toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
-    const monthKey = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
-
-    // Ramp-up: leads increase over time as ads optimize
-    const rampMultiplier = Math.min(1, 0.3 + (i * 0.1)); // 30% month 1, 100% by month 7
-    const leads = Math.round(MODEL.avgLeadsPerMonth * rampMultiplier);
-    const projects = Math.max(0, Math.round(leads * MODEL.leadConversionRate));
-    const revenue = projects * MODEL.avgProjectValue * MODEL.avgProjectMargin; // gross profit
-    const grossRevenue = projects * MODEL.avgProjectValue;
-
-    const adCost = i === 0 ? MODEL.adSpend * 0.8 : MODEL.adSpend; // partial first month
-    const opex = MODEL.monthlyBurn + adCost;
-
-    // Debt payments
-    let debtPayment = 0;
-    MODEL.phases.forEach(p => {
-      if (monthKey >= p.start && monthKey <= p.end) debtPayment += p.monthly;
-    });
-
-    const netCashFlow = revenue - opex - debtPayment;
-    cash += netCashFlow;
-    cumulativeRevenue += grossRevenue;
-    cumulativeExpense += opex + debtPayment;
-
-    months.push({
-      label, monthKey, leads, projects, grossRevenue, revenue, adCost, opex, debtPayment,
-      netCashFlow, cash: Math.round(cash), cumulativeRevenue, cumulativeExpense,
-      rampMultiplier
-    });
-  }
-  return months;
-}
-
-async function fetchAll() {
-  document.getElementById("dot").style.background = "var(--orange)";
-  const [expenses, invoices, budgets, projects, contacts, opportunities] = await Promise.all([
-    q("expenses","select=*&order=created_at.desc&limit=100"),
-    q("invoices","select=*&order=created_at.desc"),
-    q("budgets","select=*"),
-    q("projects","select=*"),
-    q("contacts","select=*"),
-    q("opportunities","select=*"),
-  ]);
-  const totExp = expenses.data.reduce((s,e) => s + parseFloat(e.amount||e.total_amount||0), 0);
-  const totInv = invoices.data.reduce((s,i) => s + parseFloat(i.total_amount||i.amount||0), 0);
-  const totBudget = budgets.data.reduce((s,b) => s + parseFloat(b.amount||b.total_amount||0), 0);
-
-  D = { expenses, invoices, budgets, projects, contacts, opportunities, totExp, totInv, totBudget, forecast: forecast12() };
-  document.getElementById("dot").style.background = "var(--green)";
-  document.getElementById("ts").textContent = new Date().toLocaleTimeString("en-AE",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
-  render();
-}
-
-function destroyCharts() { Object.values(charts).forEach(c => c.destroy()); charts = {}; }
-
-function render() {
-  destroyCharts();
-  const c = document.getElementById("content");
-  const fn = { forecast: renderForecast, budget: renderBudget, pnl: renderPnL, cashflow: renderCashflow, debt: renderDebt, scenarios: renderScenarios };
-  c.innerHTML = (fn[activeTab] || fn.forecast)();
-  buildCharts();
-}
-
-function renderForecast() {
-  const f = D.forecast;
-  const totalRev = f.reduce((s,m) => s + m.grossRevenue, 0);
-  const totalProfit = f.reduce((s,m) => s + m.revenue, 0);
-  const totalLeads = f.reduce((s,m) => s + m.leads, 0);
-  const totalProjects = f.reduce((s,m) => s + m.projects, 0);
-  const endCash = f[f.length-1].cash;
-
-  return `<div class="grid">
-    <div class="card"><div class="card-acc" style="background:var(--green)"></div>
-      <div class="card-h">12-Month Revenue Forecast</div>
-      <div class="card-b">
-        <div class="met"><div class="mv" style="color:var(--green)">AED ${(totalRev/1000000).toFixed(1)}M</div><div class="ml">Projected Gross Revenue</div></div>
-        <div class="met"><div class="mv" style="color:var(--cyan)">AED ${(totalProfit/1000000).toFixed(1)}M</div><div class="ml">Projected Gross Profit (40% margin)</div></div>
-        <div class="row">
-          <div><div class="pv" style="color:var(--blue)">${totalLeads}</div><div class="pl">Total Leads</div></div>
-          <div><div class="pv" style="color:var(--gold)">${totalProjects}</div><div class="pl">Projects Won</div></div>
-          <div><div class="pv" style="color:${endCash>0?'var(--green)':'var(--red)'}">AED ${(endCash/1000).toFixed(0)}K</div><div class="pl">End Cash Position</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="card"><div class="card-acc" style="background:var(--gold)"></div>
-      <div class="card-h">Year 1 Target vs Forecast</div>
-      <div class="card-b">
-        <div class="bar-container">
-          <div class="bar-label"><span style="color:var(--muted)">Revenue vs AED 4M Target</span><span class="mono" style="color:var(--green)">${((totalRev/4000000)*100).toFixed(0)}%</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100,(totalRev/4000000)*100)}%;background:var(--green)"></div></div>
-        </div>
-        <div class="bar-container">
-          <div class="bar-label"><span style="color:var(--muted)">Profit vs AED 1.76M Target</span><span class="mono" style="color:var(--cyan)">${((totalProfit/1760000)*100).toFixed(0)}%</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100,(totalProfit/1760000)*100)}%;background:var(--cyan)"></div></div>
-        </div>
-        <div class="bar-container">
-          <div class="bar-label"><span style="color:var(--muted)">Monthly Revenue vs AED 246K Requirement</span><span class="mono" style="color:var(--orange)">${((f[6]?.grossRevenue||0)/246000*100).toFixed(0)}%</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100,((f[6]?.grossRevenue||0)/246000)*100)}%;background:var(--orange)"></div></div>
-        </div>
-        <div class="alert ${endCash>0?'a-green':'a-red'}">${endCash>0?'Forecast shows positive cash position by month 12':'⚠️ Cash goes negative — need to accelerate revenue or reduce costs'}</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid1" style="margin-top:16px">
-    <div class="card span2"><div class="card-acc" style="background:var(--cyan)"></div>
-      <div class="card-h">Revenue & Cash Flow Projection</div>
-      <div class="card-b"><div class="chart-wrap"><canvas id="forecastChart"></canvas></div></div>
-    </div>
-  </div>
-
-  <div class="grid1" style="margin-top:16px">
-    <div class="card span2"><div class="card-acc" style="background:var(--blue)"></div>
-      <div class="card-h">Monthly Breakdown</div>
-      <div class="card-b"><table><thead><tr>
-        <th>Month</th><th class="tdr">Leads</th><th class="tdr">Projects</th><th class="tdr">Revenue</th><th class="tdr">OpEx</th><th class="tdr">Debt</th><th class="tdr">Net Cash Flow</th><th class="tdr">Cash Balance</th>
-      </tr></thead><tbody>
-        ${f.map(m => `<tr>
-          <td>${m.label}</td>
-          <td class="tdr mono">${m.leads}</td>
-          <td class="tdr mono" style="color:var(--gold)">${m.projects}</td>
-          <td class="tdr mono" style="color:var(--green)">AED ${(m.grossRevenue/1000).toFixed(0)}K</td>
-          <td class="tdr mono" style="color:var(--orange)">AED ${(m.opex/1000).toFixed(0)}K</td>
-          <td class="tdr mono" style="color:var(--red)">AED ${(m.debtPayment/1000).toFixed(0)}K</td>
-          <td class="tdr mono" style="color:${m.netCashFlow>=0?'var(--green)':'var(--red)'}">AED ${(m.netCashFlow/1000).toFixed(0)}K</td>
-          <td class="tdr mono" style="color:${m.cash>=0?'var(--cyan)':'var(--red)'}">AED ${(m.cash/1000).toFixed(0)}K</td>
-        </tr>`).join('')}
-      </tbody></table></div>
-    </div>
-  </div>`;
-}
-
-function renderBudget() {
-  const categories = [
-    { name: "Human Payroll", budget: 14220*12, actual: 14220 * 3, icon: "👥" },
-    { name: "AI Infrastructure", budget: 220*12, actual: 220 * 3, icon: "🤖" },
-    { name: "Google Ads", budget: 2550*12, actual: 0, icon: "📢" },
-    { name: "Server (Phoenix)", budget: 145*12, actual: 145 * 3, icon: "🖥️" },
-    { name: "Domains & Hosting", budget: 600, actual: 200, icon: "🌐" },
-    { name: "Project Materials", budget: 2000000, actual: D.totExp, icon: "🏗️" },
-    { name: "Debt Payments", budget: 15000*4+35000*6, actual: 0, icon: "💳" },
-    { name: "Office/Misc", budget: 12000, actual: 2000, icon: "📋" },
-  ];
-  const totalBudget = categories.reduce((s,c) => s + c.budget, 0);
-  const totalActual = categories.reduce((s,c) => s + c.actual, 0);
-
-  return `<div class="grid">
-    <div class="card"><div class="card-acc" style="background:var(--gold)"></div>
-      <div class="card-h">Annual Budget Overview</div>
-      <div class="card-b">
-        <div class="met"><div class="mv" style="color:var(--gold)">AED ${(totalBudget/1000000).toFixed(2)}M</div><div class="ml">Total Annual Budget</div></div>
-        <div class="met"><div class="mv" style="color:var(--orange)">AED ${(totalActual/1000).toFixed(0)}K</div><div class="ml">Spent to Date</div></div>
-        <div class="bar-container">
-          <div class="bar-label"><span>Budget Utilization</span><span class="mono">${((totalActual/totalBudget)*100).toFixed(1)}%</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100,(totalActual/totalBudget)*100)}%;background:${(totalActual/totalBudget)>0.8?'var(--red)':'var(--green)'}"></div></div>
-        </div>
-      </div>
-    </div>
-    <div class="card"><div class="card-acc" style="background:var(--cyan)"></div>
-      <div class="card-h">Budget vs Actual Chart</div>
-      <div class="card-b"><div class="chart-wrap"><canvas id="budgetChart"></canvas></div></div>
-    </div>
-  </div>
-  <div class="grid1" style="margin-top:16px">
-    <div class="card"><div class="card-acc" style="background:var(--blue)"></div>
-      <div class="card-h">Category Breakdown</div>
-      <div class="card-b"><table><thead><tr><th></th><th>Category</th><th class="tdr">Budget (AED)</th><th class="tdr">Actual (AED)</th><th class="tdr">%</th><th>Status</th></tr></thead><tbody>
-        ${categories.map(c => {
-          const pct = c.budget > 0 ? ((c.actual/c.budget)*100).toFixed(1) : '0.0';
-          const status = pct > 90 ? '🔴 Over' : pct > 70 ? '🟡 Watch' : '🟢 Good';
-          return `<tr>
-            <td>${c.icon}</td><td>${c.name}</td>
-            <td class="tdr mono">AED ${c.budget.toLocaleString()}</td>
-            <td class="tdr mono" style="color:var(--orange)">AED ${c.actual.toLocaleString()}</td>
-            <td class="tdr mono" style="color:${pct>90?'var(--red)':pct>70?'var(--orange)':'var(--green)'}">${pct}%</td>
-            <td>${status}</td>
-          </tr>`;
-        }).join('')}
-        <tr style="font-weight:700;border-top:2px solid var(--slate)">
-          <td></td><td>TOTAL</td>
-          <td class="tdr mono">AED ${totalBudget.toLocaleString()}</td>
-          <td class="tdr mono" style="color:var(--orange)">AED ${totalActual.toLocaleString()}</td>
-          <td class="tdr mono">${((totalActual/totalBudget)*100).toFixed(1)}%</td><td></td>
-        </tr>
-      </tbody></table></div>
-    </div>
-  </div>`;
-}
-
-function renderPnL() {
-  const f = D.forecast;
-  const months3 = f.slice(0,3), months6 = f.slice(0,6), months12 = f;
-  const calc = (arr) => ({
-    revenue: arr.reduce((s,m)=>s+m.grossRevenue,0),
-    cogs: arr.reduce((s,m)=>s+m.grossRevenue*(1-MODEL.avgProjectMargin),0),
-    grossProfit: arr.reduce((s,m)=>s+m.revenue,0),
-    opex: arr.reduce((s,m)=>s+m.opex,0),
-    debt: arr.reduce((s,m)=>s+m.debtPayment,0),
-  });
-  const q1=calc(months3), h1=calc(months6), y1=calc(months12);
-  const rows = [
-    { label: "Gross Revenue", q1: q1.revenue, h1: h1.revenue, y1: y1.revenue, color: "var(--green)", bold: true },
-    { label: "Cost of Goods Sold (60%)", q1: -q1.cogs, h1: -h1.cogs, y1: -y1.cogs, color: "var(--red)" },
-    { label: "Gross Profit (40%)", q1: q1.grossProfit, h1: h1.grossProfit, y1: y1.grossProfit, color: "var(--cyan)", bold: true, line: true },
-    { label: "Operating Expenses", q1: -q1.opex, h1: -h1.opex, y1: -y1.opex, color: "var(--orange)" },
-    { label: "  Payroll", q1: -14220*3, h1: -14220*6, y1: -14220*12, color: "var(--muted)" },
-    { label: "  AI & Infrastructure", q1: -365*3, h1: -365*6, y1: -365*12, color: "var(--muted)" },
-    { label: "  Google Ads", q1: -2550*3, h1: -2550*6, y1: -2550*12, color: "var(--muted)" },
-    { label: "EBITDA", q1: q1.grossProfit-q1.opex, h1: h1.grossProfit-h1.opex, y1: y1.grossProfit-y1.opex, color: "var(--gold)", bold: true, line: true },
-    { label: "Debt Service", q1: -q1.debt, h1: -h1.debt, y1: -y1.debt, color: "var(--red)" },
-    { label: "NET INCOME", q1: q1.grossProfit-q1.opex-q1.debt, h1: h1.grossProfit-h1.opex-h1.debt, y1: y1.grossProfit-y1.opex-y1.debt, color: "var(--green)", bold: true, line: true },
-  ];
-
-  return `<div class="grid1">
-    <div class="card span2"><div class="card-acc" style="background:var(--gold)"></div>
-      <div class="card-h">Projected Profit & Loss Statement — Year 1</div>
-      <div class="card-b"><table><thead><tr><th>Line Item</th><th class="tdr">Q1 (3mo)</th><th class="tdr">H1 (6mo)</th><th class="tdr">Year 1</th></tr></thead><tbody>
-        ${rows.map(r => `<tr style="${r.line?'border-top:2px solid var(--slate)':''}${r.bold?';font-weight:700':''}">
-          <td style="color:${r.bold?r.color:'var(--white)'}">${r.label}</td>
-          <td class="tdr mono" style="color:${r.q1>=0?r.color:'var(--red)'}">AED ${(Math.abs(r.q1)/1000).toFixed(0)}K${r.q1<0?' ':'  '}</td>
-          <td class="tdr mono" style="color:${r.h1>=0?r.color:'var(--red)'}">AED ${(Math.abs(r.h1)/1000).toFixed(0)}K</td>
-          <td class="tdr mono" style="color:${r.y1>=0?r.color:'var(--red)'}">AED ${(Math.abs(r.y1)/1000).toFixed(0)}K</td>
-        </tr>`).join('')}
-      </tbody></table></div>
-    </div>
-    <div class="card span2"><div class="card-acc" style="background:var(--green)"></div>
-      <div class="card-h">P&L Trend</div>
-      <div class="card-b"><div class="chart-wrap"><canvas id="pnlChart"></canvas></div></div>
-    </div>
-  </div>`;
-}
-
-function renderCashflow() {
-  const f = D.forecast;
-  const breakeven = f.findIndex(m => m.netCashFlow > 0);
-  const lowestCash = Math.min(...f.map(m => m.cash));
-  const lowestMonth = f.find(m => m.cash === lowestCash);
-
-  return `<div class="grid">
-    <div class="card"><div class="card-acc" style="background:var(--cyan)"></div>
-      <div class="card-h">Cash Flow Summary</div>
-      <div class="card-b">
-        <div class="met"><div class="mv" style="color:var(--cyan)">AED ${(MODEL.cashStart/1000).toFixed(0)}K</div><div class="ml">Starting Cash</div></div>
-        <div class="met"><div class="mv" style="color:${f[f.length-1].cash>0?'var(--green)':'var(--red)'}">AED ${(f[f.length-1].cash/1000).toFixed(0)}K</div><div class="ml">Projected End Cash (12 months)</div></div>
-        <div class="met"><div class="mv" style="color:var(--red)">AED ${(lowestCash/1000).toFixed(0)}K</div><div class="ml">Lowest Cash Point (${lowestMonth?.label})</div></div>
-        <div class="alert ${breakeven>=0?'a-green':'a-red'}">
-          ${breakeven >= 0 ? `Cash flow positive from month ${breakeven+1} (${f[breakeven].label})` : 'Cash flow remains negative for 12 months — increase revenue or cut costs'}
-        </div>
-      </div>
-    </div>
-    <div class="card"><div class="card-acc" style="background:var(--gold)"></div>
-      <div class="card-h">Monthly Cash Burn Rate</div>
-      <div class="card-b">
-        <div class="row">
-          <div><div class="pv" style="color:var(--orange)">AED ${(MODEL.monthlyBurn/1000).toFixed(1)}K</div><div class="pl">Fixed Burn (Payroll+AI)</div></div>
-          <div><div class="pv" style="color:var(--blue)">AED ${(MODEL.adSpend/1000).toFixed(1)}K</div><div class="pl">Ad Spend</div></div>
-          <div><div class="pv" style="color:var(--red)">AED ${((MODEL.monthlyBurn+MODEL.adSpend)/1000).toFixed(1)}K</div><div class="pl">Total Monthly Burn</div></div>
-        </div>
-        <div class="alert a-orange">Runway without revenue: ${Math.floor(MODEL.cashStart/(MODEL.monthlyBurn+MODEL.adSpend))} months</div>
-      </div>
-    </div>
-  </div>
-  <div class="grid1" style="margin-top:16px">
-    <div class="card span2"><div class="card-acc" style="background:var(--blue)"></div>
-      <div class="card-h">Cash Position Projection</div>
-      <div class="card-b"><div class="chart-wrap"><canvas id="cashChart"></canvas></div></div>
-    </div>
-  </div>`;
-}
-
-function renderDebt() {
-  const f = D.forecast;
-  const totalDebt = f.reduce((s,m)=>s+m.debtPayment,0);
-
-  return `<div class="grid">
-    <div class="card"><div class="card-acc" style="background:var(--red)"></div>
-      <div class="card-h">Debt Overview</div>
-      <div class="card-b">
-        <div class="met"><div class="mv" style="color:var(--red)">AED ${(totalDebt/1000).toFixed(0)}K</div><div class="ml">Total Debt Payments (12 months)</div></div>
-        <div class="met"><div class="mv" style="color:var(--orange)">AED ${(totalDebt/12/1000).toFixed(0)}K</div><div class="ml">Average Monthly Debt Service</div></div>
-      </div>
-    </div>
-    <div class="card"><div class="card-acc" style="background:var(--orange)"></div>
-      <div class="card-h">Debt Phases</div>
-      <div class="card-b">
-        ${MODEL.phases.map(p => `
-          <div style="margin-bottom:12px;padding:10px;background:var(--navy-m);border-radius:8px">
-            <div style="font-weight:700;color:var(--gold)">${p.name}</div>
-            <div style="font-size:12px;color:var(--muted);margin:4px 0">${p.desc}</div>
-            <div class="row">
-              <div><div class="pv" style="color:var(--red)">AED ${p.monthly.toLocaleString()}/mo</div></div>
-              <div><div class="pv" style="color:var(--muted)">${p.start} → ${p.end}</div></div>
-            </div>
-          </div>`).join('')}
-      </div>
-    </div>
-  </div>
-  <div class="grid1" style="margin-top:16px">
-    <div class="card span2"><div class="card-acc" style="background:var(--red)"></div>
-      <div class="card-h">Debt Payment Schedule</div>
-      <div class="card-b"><div class="chart-wrap"><canvas id="debtChart"></canvas></div></div>
-    </div>
-  </div>`;
-}
-
-function renderScenarios() {
-  const scenarios = [
-    { name: "Pessimistic", color: "var(--red)", convRate: 0.04, leadsPerMonth: 20, note: "4% conversion, 20 leads/mo" },
-    { name: "Base Case", color: "var(--gold)", convRate: 0.08, leadsPerMonth: 30, note: "8% conversion, 30 leads/mo" },
-    { name: "Optimistic", color: "var(--green)", convRate: 0.12, leadsPerMonth: 45, note: "12% conversion, 45 leads/mo" },
-  ];
-
-  const scenarioData = scenarios.map(s => {
-    let cash = MODEL.cashStart;
-    const months = [];
-    for (let i = 0; i < 12; i++) {
-      const d = new Date(2026, 2 + i, 1);
-      const mk = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
-      const ramp = Math.min(1, 0.3 + i * 0.1);
-      const leads = Math.round(s.leadsPerMonth * ramp);
-      const projects = Math.round(leads * s.convRate);
-      const rev = projects * MODEL.avgProjectValue * MODEL.avgProjectMargin;
-      let debt = 0;
-      MODEL.phases.forEach(p => { if (mk >= p.start && mk <= p.end) debt += p.monthly; });
-      const net = rev - MODEL.monthlyBurn - MODEL.adSpend - debt;
-      cash += net;
-      months.push({ label: d.toLocaleDateString('en-US',{month:'short'}), cash, rev, net });
-    }
-    return { ...s, months, endCash: cash, totalRev: months.reduce((s,m)=>s+m.rev,0) };
-  });
-
-  return `<div class="grid">
-    ${scenarioData.map(s => `
-      <div class="card"><div class="card-acc" style="background:${s.color}"></div>
-        <div class="card-h">${s.name}</div>
-        <div class="card-b">
-          <div style="font-size:11px;color:var(--muted);margin-bottom:8px">${s.note}</div>
-          <div class="met"><div class="mv" style="color:${s.color}">AED ${(s.totalRev/1000000).toFixed(1)}M</div><div class="ml">12-Month Revenue</div></div>
-          <div class="met"><div class="mv" style="color:${s.endCash>0?'var(--green)':'var(--red)'}">AED ${(s.endCash/1000).toFixed(0)}K</div><div class="ml">End Cash Position</div></div>
-          <div class="alert ${s.endCash>0?'a-green':'a-red'}">${s.endCash>0?'Sustainable':'⚠️ Cash runs out'}</div>
-        </div>
-      </div>`).join('')}
-  </div>
-  <div class="grid1" style="margin-top:16px">
-    <div class="card span2"><div class="card-acc" style="background:var(--purple)"></div>
-      <div class="card-h">Scenario Comparison — Cash Position</div>
-      <div class="card-b"><div class="chart-wrap"><canvas id="scenarioChart"></canvas></div></div>
-    </div>
-  </div>`;
-}
-
-function buildCharts() {
-  const f = D.forecast;
-  const labels = f.map(m => m.label);
-  const opts = (title) => ({
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { labels: { color: '#8899AA', font: { size: 11 } } }, title: { display: false } },
-    scales: {
-      x: { ticks: { color: '#6B7B8D', font: { size: 10 } }, grid: { color: '#2A3A5220' } },
-      y: { ticks: { color: '#6B7B8D', font: { size: 10 }, callback: v => 'AED '+(v/1000).toFixed(0)+'K' }, grid: { color: '#2A3A5240' } }
-    }
-  });
-
-  if (activeTab === "forecast") {
-    const ctx = document.getElementById("forecastChart");
-    if (ctx) charts.forecast = new Chart(ctx, {
-      type: "bar", data: {
-        labels, datasets: [
-          { label: "Revenue", data: f.map(m=>m.grossRevenue), backgroundColor: "#4ECB7180", borderColor: "#4ECB71", borderWidth: 1 },
-          { label: "Expenses", data: f.map(m=>m.opex+m.debtPayment), backgroundColor: "#FF6B6B60", borderColor: "#FF6B6B", borderWidth: 1 },
-          { label: "Cash Balance", data: f.map(m=>m.cash), type: "line", borderColor: "#4ECDC4", backgroundColor: "transparent", borderWidth: 2, tension: 0.3, pointRadius: 3 },
-        ]
-      }, options: opts()
-    });
-  }
-
-  if (activeTab === "budget") {
-    const ctx = document.getElementById("budgetChart");
-    const cats = ["Payroll","AI","Ads","Server","Domains","Materials","Debt","Misc"];
-    const budgets = [14220*12,220*12,2550*12,145*12,600,2000000,270000,12000];
-    const actuals = [14220*3,220*3,0,145*3,200,D.totExp,0,2000];
-    if (ctx) charts.budget = new Chart(ctx, {
-      type: "bar", data: {
-        labels: cats, datasets: [
-          { label: "Budget", data: budgets, backgroundColor: "#C9A84C40", borderColor: "#C9A84C", borderWidth: 1 },
-          { label: "Actual", data: actuals, backgroundColor: "#FFB34780", borderColor: "#FFB347", borderWidth: 1 },
-        ]
-      }, options: { ...opts(), indexAxis: 'y' }
-    });
-  }
-
-  if (activeTab === "pnl") {
-    const ctx = document.getElementById("pnlChart");
-    if (ctx) charts.pnl = new Chart(ctx, {
-      type: "line", data: {
-        labels, datasets: [
-          { label: "Revenue", data: f.map(m=>m.grossRevenue), borderColor: "#4ECB71", backgroundColor: "transparent", borderWidth: 2, tension: 0.3 },
-          { label: "Gross Profit", data: f.map(m=>m.revenue), borderColor: "#4ECDC4", backgroundColor: "transparent", borderWidth: 2, tension: 0.3 },
-          { label: "OpEx", data: f.map(m=>m.opex), borderColor: "#FFB347", backgroundColor: "transparent", borderWidth: 2, tension: 0.3, borderDash: [5,5] },
-          { label: "Net Income", data: f.map(m=>m.revenue-m.opex-m.debtPayment), borderColor: "#C9A84C", backgroundColor: "transparent", borderWidth: 2, tension: 0.3 },
-        ]
-      }, options: opts()
-    });
-  }
-
-  if (activeTab === "cashflow") {
-    const ctx = document.getElementById("cashChart");
-    if (ctx) charts.cash = new Chart(ctx, {
-      type: "line", data: {
-        labels, datasets: [
-          { label: "Cash Balance", data: f.map(m=>m.cash), borderColor: "#4ECDC4", backgroundColor: "#4ECDC410", fill: true, borderWidth: 2, tension: 0.3 },
-          { label: "Monthly Net", data: f.map(m=>m.netCashFlow), type: "bar", backgroundColor: f.map(m=>m.netCashFlow>=0?"#4ECB7160":"#FF6B6B60"), borderColor: f.map(m=>m.netCashFlow>=0?"#4ECB71":"#FF6B6B"), borderWidth: 1 },
-        ]
-      }, options: { ...opts(), plugins: { ...opts().plugins, annotation: { annotations: { zero: { type: 'line', yMin: 0, yMax: 0, borderColor: '#FF6B6B50', borderWidth: 1, borderDash: [5,5] } } } } }
-    });
-  }
-
-  if (activeTab === "debt") {
-    const ctx = document.getElementById("debtChart");
-    if (ctx) charts.debt = new Chart(ctx, {
-      type: "bar", data: {
-        labels, datasets: [
-          { label: "Debt Payments", data: f.map(m=>m.debtPayment), backgroundColor: "#FF6B6B60", borderColor: "#FF6B6B", borderWidth: 1 },
-          { label: "Revenue", data: f.map(m=>m.grossRevenue), type: "line", borderColor: "#4ECB71", backgroundColor: "transparent", borderWidth: 2, tension: 0.3 },
-        ]
-      }, options: opts()
-    });
-  }
-
-  if (activeTab === "scenarios") {
-    const ctx = document.getElementById("scenarioChart");
-    const scenarioLabels = D.forecast.map(m => m.label);
-    const scenarios = [
-      { name: "Pessimistic", color: "#FF6B6B", conv: 0.04, leads: 20 },
-      { name: "Base Case", color: "#C9A84C", conv: 0.08, leads: 30 },
-      { name: "Optimistic", color: "#4ECB71", conv: 0.12, leads: 45 },
-    ];
-    const datasets = scenarios.map(s => {
-      let cash = MODEL.cashStart;
-      const points = [];
-      for (let i = 0; i < 12; i++) {
-        const d = new Date(2026, 2+i, 1);
-        const mk = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
-        const ramp = Math.min(1, 0.3+i*0.1);
-        const rev = Math.round(s.leads*ramp)*s.conv*MODEL.avgProjectValue*MODEL.avgProjectMargin;
-        let debt = 0;
-        MODEL.phases.forEach(p => { if(mk>=p.start&&mk<=p.end) debt+=p.monthly; });
-        cash += rev - MODEL.monthlyBurn - MODEL.adSpend - debt;
-        points.push(cash);
-      }
-      return { label: s.name, data: points, borderColor: s.color, backgroundColor: "transparent", borderWidth: 2, tension: 0.3 };
-    });
-    if (ctx) charts.scenario = new Chart(ctx, {
-      type: "line", data: { labels: scenarioLabels, datasets },
-      options: { ...opts(), plugins: { ...opts().plugins, annotation: { annotations: { zero: { type: 'line', yMin: 0, yMax: 0, borderColor: '#FF6B6B50', borderWidth: 1, borderDash: [5,5] } } } } }
-    });
-  }
-}
-
-document.getElementById("tabs").addEventListener("click", e => {
-  if (e.target.classList.contains("tab")) {
-    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-    e.target.classList.add("active");
-    activeTab = e.target.dataset.t;
-    render();
-  }
-});
-
-fetchAll();
-setInterval(fetchAll, 60000);
+const labels=["Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan'27","Feb'27"];
+function fc(months){let cash=R.liquid;const d=[];for(let i=0;i<months;i++){let inf=0,out=8940;if(i<4)out+=16500;if(i<9)out+=4800;if(i>=4)out+=22083;out+=2550;if(i===1||i===4||i===7||i===10)inf+=32000;if(i===3)inf+=85000;const ramp=Math.min(1,.2+i*.12);inf+=Math.round(30*ramp)*.08*150000*.4;const net=inf-out;cash+=net;d.push({l:labels[i],inf:Math.round(inf),out:Math.round(out),net:Math.round(net),cash:Math.round(cash),leads:Math.round(30*ramp),proj:Math.round(30*ramp*.08),rev:Math.round(30*ramp*.08*150000)})}return d}
+function destroyCharts(){Object.values(charts).forEach(c=>c.destroy());charts={}}
+function render(){destroyCharts();const c=document.getElementById("content");const fn={overview:rOverview,cashflow:rCashflow,debt:rDebt,forecast:rForecast,scenarios:rScenarios,timeline:rTimeline};c.innerHTML=(fn[activeTab]||fn.overview)();buildCharts()}
+function rOverview(){const runway=Math.floor(R.liquid/R.monthlyBurn);const netBan=R.travelBanTotal-R.recovery.total;
+return`<div class="grid">
+<div class="card"><div class="card-acc" style="background:var(--cyan)"></div><div class="card-h">Total Assets</div><div class="card-b"><div class="met"><div class="mv" style="color:var(--cyan)">AED ${R.total.toLocaleString()}</div><div class="ml">Total (incl Gold)</div></div><div class="met"><div class="mv" style="color:var(--green)">AED ${R.liquid.toLocaleString()}</div><div class="ml">Liquid</div></div>${R.accounts.map(a=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(42,58,82,.15)"><div style="font-size:11px">${a.n}</div><div class="mono" style="font-size:12px;color:${a.b>50000?'var(--green)':'var(--white)'}">AED ${a.b.toLocaleString()}</div></div>`).join('')}</div></div>
+<div class="card"><div class="card-acc" style="background:var(--red)"></div><div class="card-h">Monthly Burn</div><div class="card-b"><div class="met"><div class="mv" style="color:var(--red)">AED ${R.monthlyBurn.toLocaleString()}</div><div class="ml">Zero Revenue Burn</div></div><div class="row"><div><div class="pv" style="color:var(--orange)">${runway} mo</div><div class="pl">Runway</div></div><div><div class="pv" style="color:var(--red)">AED 0</div><div class="pl">Current Revenue</div></div></div>${R.burn.map(b=>`<div style="display:flex;justify-content:space-between;padding:4px 0;font-size:11px"><span>${b.l} (${b.d})</span><span class="mono" style="color:var(--orange)">AED ${b.a.toLocaleString()}</span></div>`).join('')}</div></div>
+<div class="card"><div class="card-acc" style="background:var(--red)"></div><div class="card-h">Travel Ban — Price of Freedom</div><div class="card-b"><div class="met"><div class="mv" style="color:var(--red)">AED ${R.travelBanTotal.toLocaleString()}</div><div class="ml">Gross to Clear All Bans</div></div><div class="met"><div class="mv" style="color:var(--green)">-AED ${R.recovery.total.toLocaleString()}</div><div class="ml">Recoverable (June)</div></div><div class="met"><div class="mv" style="color:var(--gold)">AED ${Math.round(R.travelBanTotal-R.recovery.total-19200).toLocaleString()}</div><div class="ml">NET by June (after RERA payments)</div></div><div class="bar-container"><div class="bar-label"><span>Recovery covers</span><span class="mono">${((R.recovery.total/R.travelBanTotal)*100).toFixed(0)}%</span></div><div class="bar-track"><div class="bar-fill" style="width:${(R.recovery.total/R.travelBanTotal)*100}%;background:var(--green)"></div></div></div><div class="alert a-gold">One good project clears the travel ban</div></div></div>
+<div class="card"><div class="card-acc" style="background:var(--green)"></div><div class="card-h">Income Streams</div><div class="card-b"><div class="met"><div class="mv" style="color:var(--green)">AED ${R.amc.annual.toLocaleString()}/yr</div><div class="ml">AMC — Al Wasl Jumeirah (AED 32K/quarter)</div><div class="ms">Available for debt from July 2026</div></div><div style="margin-top:12px;padding:10px;background:var(--navy-m);border-radius:8px"><div style="font-weight:700;color:var(--orange)">Google Ads — NOT LIVE</div><div style="font-size:11px;color:var(--muted)">Launch Monday | AED 85/day | 4 campaigns | 19 ad groups | Pool: 125 historical conversions</div></div></div></div>
+<div class="card span2"><div class="card-acc" style="background:var(--purple)"></div><div class="card-h">Complete Debt Picture</div><div class="card-b"><div class="row" style="gap:32px"><div><div class="pv" style="color:var(--red)">AED ${(R.travelBanTotal+66000).toLocaleString()}</div><div class="pl">Phase 1: Travel Ban + Tareq</div></div><div><div class="pv" style="color:var(--orange)">AED 530,000</div><div class="pl">Phase 2-3: Dana + CK (2 years)</div></div><div><div class="pv" style="color:var(--muted)">AED ${R.noBanDebts.reduce((s,d)=>s+d.a,0).toLocaleString()}</div><div class="pl">Non-ban cases</div></div><div><div class="pv" style="color:var(--white)">AED ~762K</div><div class="pl">NET Total Commercial</div></div></div><div class="bar-container" style="margin-top:16px"><div class="bar-label"><span>Assets vs Debt</span><span class="mono">${((R.liquid/762000)*100).toFixed(0)}% covered</span></div><div class="bar-track"><div class="bar-fill" style="width:${Math.min(100,(R.liquid/762000)*100)}%;background:var(--cyan)"></div></div></div></div></div>
+</div>`}
+function rCashflow(){const d=fc(12);const lowest=Math.min(...d.map(m=>m.cash));const lm=d.find(m=>m.cash===lowest);const be=d.findIndex(m=>m.net>0);
+return`<div class="grid">
+<div class="card"><div class="card-acc" style="background:var(--cyan)"></div><div class="card-h">Cash Flow Summary</div><div class="card-b"><div class="met"><div class="mv" style="color:var(--cyan)">AED ${R.liquid.toLocaleString()}</div><div class="ml">Starting Cash (7 Mar)</div></div><div class="met"><div class="mv" style="color:${d[11].cash>0?'var(--green)':'var(--red)'}">AED ${d[11].cash.toLocaleString()}</div><div class="ml">End Cash (Feb 2027)</div></div><div class="met"><div class="mv" style="color:var(--red)">AED ${lowest.toLocaleString()}</div><div class="ml">Lowest Point (${lm?.l})</div></div>${be>=0?`<div class="alert a-green">Positive from ${d[be].l}</div>`:`<div class="alert a-red">Negative for 12 months</div>`}</div></div>
+<div class="card"><div class="card-acc" style="background:var(--gold)"></div><div class="card-h">Burn After July (with Dana+CK)</div><div class="card-b"><div class="row"><div><div class="pv" style="color:var(--red)">AED ${R.monthlyBurn.toLocaleString()}</div><div class="pl">Current (Mar-Jun)</div></div><div><div class="pv" style="color:var(--orange)">AED ${(R.monthlyBurn-16500+22083).toLocaleString()}</div><div class="pl">Jul onwards (no Tareq + Dana/CK)</div></div></div><div class="alert a-orange">AMC (32K/quarter) covers ~60% of Dana+CK payments</div></div></div>
+</div><div class="grid1" style="margin-top:16px">
+<div class="card span2"><div class="card-acc" style="background:var(--blue)"></div><div class="card-h">12-Month Cash Position</div><div class="card-b"><div class="chart-wrap"><canvas id="cashChart"></canvas></div></div></div>
+<div class="card span2"><div class="card-acc" style="background:var(--green)"></div><div class="card-h">Monthly Detail</div><div class="card-b"><table><thead><tr><th>Month</th><th class="tdr">Leads</th><th class="tdr">Projects</th><th class="tdr">Inflow</th><th class="tdr">Outflow</th><th class="tdr">Net</th><th class="tdr">Cash</th></tr></thead><tbody>${d.map(m=>`<tr><td>${m.l}</td><td class="tdr mono">${m.leads}</td><td class="tdr mono" style="color:var(--gold)">${m.proj}</td><td class="tdr mono" style="color:var(--green)">AED ${(m.inf/1000).toFixed(0)}K</td><td class="tdr mono" style="color:var(--orange)">AED ${(m.out/1000).toFixed(0)}K</td><td class="tdr mono" style="color:${m.net>=0?'var(--green)':'var(--red)'}">AED ${(m.net/1000).toFixed(0)}K</td><td class="tdr mono" style="color:${m.cash>=0?'var(--cyan)':'var(--red)'}">AED ${(m.cash/1000).toFixed(0)}K</td></tr>`).join('')}</tbody></table></div></div>
+</div>`}
+function rDebt(){return`<div class="grid1">
+<div class="card span2"><div class="card-acc" style="background:var(--red)"></div><div class="card-h">Travel Ban Cases</div><div class="card-b"><table><thead><tr><th>Creditor</th><th class="tdr">Total</th><th class="tdr">Frozen</th><th class="tdr">Remaining</th></tr></thead><tbody>${R.travelBan.map(d=>`<tr><td style="font-weight:600">${d.c}</td><td class="tdr mono">AED ${d.t.toLocaleString()}</td><td class="tdr mono" style="color:var(--green)">${d.f?'AED '+d.f.toLocaleString():'—'}</td><td class="tdr mono" style="color:var(--red);font-weight:700">AED ${d.r.toLocaleString()}</td></tr>`).join('')}<tr style="border-top:2px solid var(--slate);font-weight:700"><td>TOTAL</td><td class="tdr mono">AED ${R.travelBan.reduce((s,d)=>s+d.t,0).toLocaleString()}</td><td class="tdr mono" style="color:var(--green)">AED 78,000</td><td class="tdr mono" style="color:var(--red)">AED ${R.travelBanTotal.toLocaleString()}</td></tr></tbody></table><div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap"><div class="alert a-green" style="flex:1">Recovery (June): AED ${R.recovery.total.toLocaleString()}</div><div class="alert a-gold" style="flex:1">NET by June: AED ${Math.round(R.travelBanTotal-R.recovery.total-19200).toLocaleString()}</div></div></div></div>
+<div class="card span2"><div class="card-acc" style="background:var(--orange)"></div><div class="card-h">Active Payment Plans</div><div class="card-b"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">${[{n:"Tareq",t:66000,m:16500,p:4,e:"Jun 2026",d:"Last day"},{n:"RERA",t:43200,m:4800,p:9,e:"Nov 2026",d:"22nd"}].map(p=>`<div style="padding:12px;background:var(--navy-m);border-radius:8px"><div style="font-weight:700;color:var(--gold)">${p.n}</div><div style="font-size:11px;color:var(--muted)">AED ${p.t.toLocaleString()} | ${p.m.toLocaleString()}/mo x ${p.p}</div><div class="ms">Due: ${p.d} | Ends: ${p.e}</div></div>`).join('')}</div></div></div>
+<div class="card span2"><div class="card-acc" style="background:var(--purple)"></div><div class="card-h">Long-Term (Phase 2-3 from July)</div><div class="card-b"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">${R.longTerm.map(d=>`<div style="padding:12px;background:var(--navy-m);border-radius:8px"><div style="font-weight:700;color:var(--purple)">${d.c}</div><div class="row" style="margin-top:6px"><div><div class="pv" style="color:var(--orange)">AED ${d.a.toLocaleString()}</div><div class="pl">Total</div></div><div><div class="pv">AED ${d.m.toLocaleString()}/mo</div><div class="pl">Over 24 months</div></div></div></div>`).join('')}</div><div class="alert a-cyan">Combined: AED 22,083/mo | AMC (32K/quarter) covers ~60%</div></div></div>
+<div class="card span2"><div class="card-acc" style="background:var(--cyan)"></div><div class="card-h">Debt Payoff Projection</div><div class="card-b"><div class="chart-wrap"><canvas id="debtChart"></canvas></div></div></div>
+</div>`}
+function rForecast(){const d=fc(12);const totalRev=d.reduce((s,m)=>s+m.rev,0);const totalProfit=d.reduce((s,m)=>s+m.rev*.4,0);
+return`<div class="grid">
+<div class="card"><div class="card-acc" style="background:var(--green)"></div><div class="card-h">12-Month Revenue</div><div class="card-b"><div class="met"><div class="mv" style="color:var(--green)">AED ${(totalRev/1e6).toFixed(1)}M</div><div class="ml">Gross Revenue</div></div><div class="met"><div class="mv" style="color:var(--cyan)">AED ${(totalProfit/1e6).toFixed(1)}M</div><div class="ml">Gross Profit (40%)</div></div><div class="row"><div><div class="pv" style="color:var(--blue)">${d.reduce((s,m)=>s+m.leads,0)}</div><div class="pl">Leads</div></div><div><div class="pv" style="color:var(--gold)">${d.reduce((s,m)=>s+m.proj,0)}</div><div class="pl">Projects</div></div></div><div class="bar-container"><div class="bar-label"><span>vs AED 4M target</span><span class="mono">${((totalRev/4e6)*100).toFixed(0)}%</span></div><div class="bar-track"><div class="bar-fill" style="width:${Math.min(100,(totalRev/4e6)*100)}%;background:var(--green)"></div></div></div></div></div>
+<div class="card"><div class="card-acc" style="background:var(--gold)"></div><div class="card-h">Assumptions</div><div class="card-b"><div style="font-size:12px;line-height:2.2;color:var(--muted)">Project value: <span class="mono" style="color:var(--white)">AED 150K</span><br>Margin: <span class="mono" style="color:var(--white)">40%</span><br>Conversion: <span class="mono" style="color:var(--white)">8%</span><br>Leads/mo (peak): <span class="mono" style="color:var(--white)">30</span><br>Ramp: <span class="mono" style="color:var(--white)">20% → 100% over 7mo</span><br>Ad budget: <span class="mono" style="color:var(--white)">AED 85/day</span><br>Pool campaign: <span class="mono" style="color:var(--green)">125 conversions</span></div></div></div>
+</div><div class="grid1" style="margin-top:16px"><div class="card span2"><div class="card-acc" style="background:var(--green)"></div><div class="card-h">Revenue Projection</div><div class="card-b"><div class="chart-wrap"><canvas id="forecastChart"></canvas></div></div></div></div>`}
+function rScenarios(){const sc=[{n:"Pessimistic",c:"#FF6B6B",cv:.04,ld:15,note:"4% conv, 15 leads/mo"},{n:"Base Case",c:"#C9A84C",cv:.08,ld:30,note:"8% conv, 30 leads/mo"},{n:"Optimistic",c:"#4ECB71",cv:.12,ld:45,note:"12% conv, 45 leads/mo"}];
+const sd=sc.map(s=>{let cash=R.liquid;const pts=[];for(let i=0;i<12;i++){const ramp=Math.min(1,.2+i*.12);const rev=Math.round(s.ld*ramp)*s.cv*150000*.4;let out=8940+2550;if(i<4)out+=16500;if(i<9)out+=4800;if(i>=4)out+=22083;let inf=rev;if(i===1||i===4||i===7||i===10)inf+=32000;if(i===3)inf+=85000;cash+=inf-out;pts.push(Math.round(cash))}return{...s,pts,end:Math.round(cash)}});
+return`<div class="grid">${sd.map(s=>`<div class="card"><div class="card-acc" style="background:${s.c}"></div><div class="card-h">${s.n}</div><div class="card-b"><div style="font-size:11px;color:var(--muted);margin-bottom:8px">${s.note}</div><div class="met"><div class="mv" style="color:${s.end>0?'var(--green)':'var(--red)'}">AED ${s.end.toLocaleString()}</div><div class="ml">End Cash (12 months)</div></div><div class="alert ${s.end>0?'a-green':'a-red'}">${s.end>0?'Sustainable':'Cash runs out'}</div></div></div>`).join('')}</div><div class="grid1" style="margin-top:16px"><div class="card span2"><div class="card-acc" style="background:var(--purple)"></div><div class="card-h">Scenario Comparison</div><div class="card-b"><div class="chart-wrap"><canvas id="scenarioChart"></canvas></div></div></div></div>`}
+function rTimeline(){const ev=[{d:"7 Mar",l:"TODAY",t:"info",dt:"Houston & Sarah live. Systems wired."},{d:"10 Mar",l:"Google Ads Launch",t:"rev",dt:"Swimming Pool first. AED 85/day."},{d:"22 Mar",l:"RERA Payment",t:"debt",dt:"AED 4,800"},{d:"31 Mar",l:"Tareq Payment #1",t:"debt",dt:"AED 16,500"},{d:"1 Apr",l:"AMC Income",t:"inc",dt:"AED 32,000 (committed)"},{d:"22 Apr",l:"RERA Payment",t:"debt",dt:"AED 4,800"},{d:"30 Apr",l:"Tareq Payment #2",t:"debt",dt:"AED 16,500"},{d:"22 May",l:"RERA Payment",t:"debt",dt:"AED 4,800"},{d:"31 May",l:"Tareq Payment #3",t:"debt",dt:"AED 16,500"},{d:"Jun",l:"Avant Corp Recovery",t:"inc",dt:"AED 85,000 — GAME CHANGER"},{d:"30 Jun",l:"Tareq FINAL",t:"mile",dt:"AED 16,500 — TAREQ CLEARED ✓"},{d:"Jul",l:"FREEDOM MONTH",t:"mile",dt:"AMC available. Start Dana/CK. Travel ban clearable."},{d:"Nov 26",l:"RERA CLEARED",t:"mile",dt:"Final payment ✓"},{d:"Jun 28",l:"DEBT FREE",t:"mile",dt:"All commercial debt cleared ✓"}];
+const col={debt:"var(--red)",inc:"var(--green)",mile:"var(--gold)",info:"var(--blue)",rev:"var(--cyan)"};
+return`<div class="grid1"><div class="card span2"><div class="card-acc" style="background:var(--gold)"></div><div class="card-h">Payment & Milestone Timeline</div><div class="card-b">${ev.map(e=>`<div style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid rgba(42,58,82,.2)"><div style="min-width:70px;text-align:right"><div class="mono" style="font-size:11px;color:${col[e.t]};font-weight:700">${e.d}</div></div><div style="width:3px;background:${col[e.t]};border-radius:2px;flex-shrink:0"></div><div><div style="font-size:13px;font-weight:700;color:${col[e.t]}">${e.l}</div><div style="font-size:12px;color:var(--muted)">${e.dt}</div></div></div>`).join('')}</div></div></div>`}
+function buildCharts(){const opts={responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#8899AA',font:{size:11}}}},scales:{x:{ticks:{color:'#6B7B8D',font:{size:10}},grid:{color:'#2A3A5220'}},y:{ticks:{color:'#6B7B8D',font:{size:10},callback:v=>'AED '+(v/1000).toFixed(0)+'K'},grid:{color:'#2A3A5240'}}}};
+if(activeTab==="cashflow"){const ctx=document.getElementById("cashChart");if(ctx){const d=fc(12);charts.c=new Chart(ctx,{type:"line",data:{labels,datasets:[{label:"Cash Balance",data:d.map(m=>m.cash),borderColor:"#4ECDC4",backgroundColor:"#4ECDC410",fill:true,borderWidth:2,tension:.3},{label:"Monthly Net",data:d.map(m=>m.net),type:"bar",backgroundColor:d.map(m=>m.net>=0?"#4ECB7160":"#FF6B6B60"),borderColor:d.map(m=>m.net>=0?"#4ECB71":"#FF6B6B"),borderWidth:1}]},options:opts})}}
+if(activeTab==="debt"){const ctx=document.getElementById("debtChart");if(ctx){let tot=R.travelBanTotal+66000+530000+17790;const dd=[];for(let i=0;i<12;i++){if(i<4)tot-=16500;if(i<9)tot-=4800;if(i>=4)tot-=22083;if(i===3)tot-=85000;dd.push(Math.max(0,Math.round(tot)))}charts.d=new Chart(ctx,{type:"line",data:{labels,datasets:[{label:"Total Debt",data:dd,borderColor:"#FF6B6B",backgroundColor:"#FF6B6B10",fill:true,borderWidth:2,tension:.3}]},options:opts})}}
+if(activeTab==="forecast"){const ctx=document.getElementById("forecastChart");if(ctx){const d=fc(12);charts.f=new Chart(ctx,{type:"bar",data:{labels,datasets:[{label:"Revenue",data:d.map(m=>m.rev),backgroundColor:"#4ECB7180",borderColor:"#4ECB71",borderWidth:1},{label:"Profit (40%)",data:d.map(m=>m.rev*.4),backgroundColor:"#4ECDC480",borderColor:"#4ECDC4",borderWidth:1}]},options:opts})}}
+if(activeTab==="scenarios"){const ctx=document.getElementById("scenarioChart");if(ctx){const sc=[{n:"Pessimistic",c:"#FF6B6B",cv:.04,ld:15},{n:"Base Case",c:"#C9A84C",cv:.08,ld:30},{n:"Optimistic",c:"#4ECB71",cv:.12,ld:45}];const ds=sc.map(s=>{let cash=R.liquid;const pts=[];for(let i=0;i<12;i++){const ramp=Math.min(1,.2+i*.12);const rev=Math.round(s.ld*ramp)*s.cv*150000*.4;let out=8940+2550;if(i<4)out+=16500;if(i<9)out+=4800;if(i>=4)out+=22083;let inf=rev;if(i===1||i===4||i===7||i===10)inf+=32000;if(i===3)inf+=85000;cash+=inf-out;pts.push(Math.round(cash))}return{label:s.n,data:pts,borderColor:s.c,backgroundColor:"transparent",borderWidth:2,tension:.3}});charts.s=new Chart(ctx,{type:"line",data:{labels,datasets:ds},options:opts})}}}
+document.getElementById("tabs").addEventListener("click",e=>{if(e.target.classList.contains("tab")){document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));e.target.classList.add("active");activeTab=e.target.dataset.t;render()}});
+render();
 </script>
 </body>
 </html>
