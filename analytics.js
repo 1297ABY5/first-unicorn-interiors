@@ -58,14 +58,14 @@
     // WhatsApp click = conversion
     if (href.indexOf('wa.me') > -1) {
       e.preventDefault();
-      fireConversion('whatsapp_lead', 'whatsapp_click', href);
+      fireConversion('whatsapp_lead', '9wrRCKLwzIUcEIShnqQC', href);
       // Fallback: open after 1s if callback didn't fire
       setTimeout(function(){ window.open(href, '_blank'); }, 1000);
     }
 
     // Phone call click = conversion
     if (href.indexOf('tel:') === 0) {
-      fireConversion('phone_lead', 'phone_click', null);
+      fireConversion('phone_lead', 'uJBqCKXwzIUcEIShnqQC', null);
       // Don't prevent default — let the call happen
     }
   });
