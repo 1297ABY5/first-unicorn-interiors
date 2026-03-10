@@ -25,6 +25,36 @@
       "source": "/communities/:path*",
       "destination": "/areas/",
       "permanent": true
+    },
+    {
+      "source": "/arabian-ranches",
+      "destination": "/areas/arabian-ranches/",
+      "statusCode": 301
+    },
+    {
+      "source": "/dubai-hills",
+      "destination": "/areas/dubai-hills/",
+      "statusCode": 301
+    },
+    {
+      "source": "/emirates-hills",
+      "destination": "/areas/emirates-hills/",
+      "statusCode": 301
+    },
+    {
+      "source": "/palm-jumeirah",
+      "destination": "/areas/palm-jumeirah/",
+      "statusCode": 301
+    },
+    {
+      "source": "/kitchen-renovation",
+      "destination": "/renovation/kitchen/",
+      "statusCode": 301
+    },
+    {
+      "source": "/services",
+      "destination": "/renovation/",
+      "statusCode": 301
     }
   ],
   "headers": [
