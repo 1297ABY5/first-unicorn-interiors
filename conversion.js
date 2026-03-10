@@ -45,7 +45,7 @@
 
     var variants = [
       { id: 'cost_guide',
-        html: '<h2>Wait \u2014 Take This With You</h2><p>Download our <strong>free 2026 Villa Renovation Cost Guide</strong> \u2014 real pricing from 800+ projects, community breakdowns, and red flags to watch for.</p><a href="/guides/cost-guide/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">Download the Free Guide</a><br><a href="' + PHONE + '" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;">Or Call +971 58 565 8002</a>' },
+        html: '<h2>Wait \u2014 Take This With You</h2><p>Get our <strong>free 2026 Villa Renovation Cost Guide</strong> sent straight to your WhatsApp \u2014 real pricing from 800+ projects, community breakdowns, and red flags to watch for.</p><a href="#" data-wa-gate="Villa Renovation Cost Guide" data-wa-source="exit_popup" data-wa-target="/guides/cost-guide/guide.html" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">' + WA_SVG + ' Get Guide on WhatsApp</a><br><a href="' + PHONE + '" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;">Or Call +971 58 565 8002</a>' },
       { id: '3d_design',
         html: '<h2>Wait \u2014 Don\'t Leave Without This</h2><p>Get a <strong>free 3D design concept</strong> for your villa. See your renovation before it starts. No obligation.</p><a href="/free-design/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">' + WA_SVG + ' Get My Free Design</a><br><a href="' + PHONE + '" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;">Or Call +971 58 565 8002</a>' },
       { id: 'calculator',
@@ -92,7 +92,7 @@
     });
   }
 
-  // ═══ 3. EMAIL CAPTURE ═══
+  // ═══ 3. WHATSAPP CAPTURE (replaced email capture) ═══
   function injectEmailCapture() {
     var footer = document.querySelector('.footer');
     if (!footer || document.querySelector('.email-capture')) return;
@@ -100,7 +100,7 @@
     for (var i = 0; i < skip.length; i++) { if (location.pathname.indexOf(skip[i]) === 0) return; }
     var sec = document.createElement('section');
     sec.className = 'email-capture';
-    sec.innerHTML = '<div class="container" style="max-width:680px;text-align:center;"><div class="label">Free Resource</div><h2>The 2026 Dubai Villa Renovation Cost Guide</h2><p style="color:var(--text-secondary);margin-bottom:2rem;">Real pricing from 800+ projects. Material comparisons, community breakdowns, and red flags to watch for.</p><a href="/guides/cost-guide/" class="btn-primary" style="display:inline-flex;padding:14px 32px;font-size:.9rem;">Read the Free Guide</a></div>';
+    sec.innerHTML = '<div class="container" style="max-width:680px;text-align:center;"><div class="label">Free Resource</div><h2>The 2026 Dubai Villa Renovation Cost Guide</h2><p style="color:var(--text-secondary);margin-bottom:2rem;">Real pricing from 800+ projects. Material comparisons, community breakdowns, and red flags to watch for.</p><a href="#" data-wa-gate="Villa Renovation Cost Guide" data-wa-source="footer_cta" data-wa-target="/guides/cost-guide/guide.html" class="btn-primary" style="display:inline-flex;padding:14px 32px;font-size:.9rem;">' + WA_SVG + ' Get the Free Guide on WhatsApp</a></div>';
     footer.parentNode.insertBefore(sec, footer);
   }
 
