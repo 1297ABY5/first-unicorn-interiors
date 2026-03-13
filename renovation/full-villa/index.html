@@ -18,8 +18,9 @@
  <link rel="dns-prefetch" href="//www.googletagmanager.com">
  <link rel="dns-prefetch" href="//connect.facebook.net">
  <link rel="preconnect" href="https://fonts.googleapis.com">
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="/styles.css?v=9">
+ <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+ <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+ <link rel="stylesheet" href="/styles.css?v=9" fetchpriority="high">
  <script type="application/ld+json">
  [{
  "@context": "https://schema.org",
@@ -69,6 +70,7 @@
  ]
  }]
  </script>
+ <link rel="preload" as="image" href="/images/interiors/FU-INT-0064.webp" type="image/webp">
  <script src="/analytics.js?v=3" defer></script>
 
  <script type="application/ld+json">
@@ -245,7 +247,7 @@
 
  <!-- ═══ PAGE HERO ═══ -->
  <section class="page-hero">
- <div class="page-hero-bg" style="background-image:url('/images/interiors/FU-INT-0064.webp');background-size:cover;background-position:center;background-color:var(--bg-secondary)"></div>
+ <div class="page-hero-bg" style="position:absolute;inset:0;overflow:hidden;background-color:var(--bg-secondary)"><img src="/images/interiors/FU-INT-0064.webp" alt="" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center"></div>
  <div class="page-hero-content">
  <div class="breadcrumb fade-in"><a href="/">Home</a> <span>/</span> <a href="/renovation/">Renovation</a> <span>/</span> Full Villa</div>
  <h1 class="fade-in">Full Villa Renovation Dubai</h1>
@@ -478,7 +480,7 @@
  </div>
  <div class="fade-in" style="margin-top:40px;aspect-ratio:16/9;background:var(--bg-tertiary);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
  <div style="position:relative;width:100%;height:100%">
- <video id="walkthrough-video" playsinline preload="metadata" poster="/images/interiors/FU-INT-0050.webp" style="width:100%;height:100%;object-fit:cover"
+ <video id="walkthrough-video" playsinline preload="none" poster="/images/interiors/FU-INT-0050.webp" style="width:100%;height:100%;object-fit:cover"
  onclick="if(this.paused){this.play();this.nextElementSibling.style.display='none'}else{this.pause();this.nextElementSibling.style.display='flex'}">
  <source src="/videos/villa-montage.mp4" type="video/mp4">
  </video>
@@ -580,7 +582,7 @@
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
  <div>
  <label style="display:block;font-size:.8rem;font-weight:500;margin-bottom:3px;color:var(--text-primary,#222)">Service Needed *</label>
- <select id="qf-service" required style="width:100%;padding:10px 12px;border:1px solid var(--border,#ddd);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--bg-primary,#fff);color:var(--text-primary,#222)">
+ <select id="qf-service" aria-label="Service needed" required style="width:100%;padding:10px 12px;border:1px solid var(--border,#ddd);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--bg-primary,#fff);color:var(--text-primary,#222)">
  <option value="Full Villa Renovation" selected>Full Villa Renovation</option>
  <option value="Kitchen Renovation">Kitchen Renovation</option>
  <option value="Bathroom Renovation">Bathroom Renovation</option>
@@ -594,7 +596,7 @@
  </div>
  <div>
  <label style="display:block;font-size:.8rem;font-weight:500;margin-bottom:3px;color:var(--text-primary,#222)">Community / Area *</label>
- <select id="qf-community" required style="width:100%;padding:10px 12px;border:1px solid var(--border,#ddd);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--bg-primary,#fff);color:var(--text-primary,#222)">
+ <select id="qf-community" aria-label="Community or area" required style="width:100%;padding:10px 12px;border:1px solid var(--border,#ddd);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--bg-primary,#fff);color:var(--text-primary,#222)">
  <option value="" disabled selected>Select your area</option>
  <option>Arabian Ranches</option><option>Palm Jumeirah</option><option>Dubai Hills Estate</option><option>Emirates Hills</option><option>DAMAC Hills</option><option>Jumeirah Park</option><option>Jumeirah Islands</option><option>Jumeirah Golf Estates</option><option>Al Barari</option><option>The Villa</option><option>Victory Heights</option><option>The Meadows</option><option>The Springs</option><option>Al Barsha</option><option>JVC</option><option>Other</option>
  </select>
@@ -603,14 +605,14 @@
  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
  <div>
  <label style="display:block;font-size:.8rem;font-weight:500;margin-bottom:3px;color:var(--text-primary,#222)">Estimated Budget</label>
- <select id="qf-budget" style="width:100%;padding:10px 12px;border:1px solid var(--border,#ddd);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--bg-primary,#fff);color:var(--text-primary,#222)">
+ <select id="qf-budget" aria-label="Estimated budget" style="width:100%;padding:10px 12px;border:1px solid var(--border,#ddd);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--bg-primary,#fff);color:var(--text-primary,#222)">
  <option value="" disabled selected>Select range</option>
  <option>Under AED 100K</option><option>AED 100-250K</option><option>AED 250-500K</option><option>AED 500K-1M</option><option>AED 1M+</option><option>Not sure yet</option>
  </select>
  </div>
  <div>
  <label style="display:block;font-size:.8rem;font-weight:500;margin-bottom:3px;color:var(--text-primary,#222)">When do you want to start?</label>
- <select id="qf-timeline" style="width:100%;padding:10px 12px;border:1px solid var(--border,#ddd);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--bg-primary,#fff);color:var(--text-primary,#222)">
+ <select id="qf-timeline" aria-label="Project timeline" style="width:100%;padding:10px 12px;border:1px solid var(--border,#ddd);border-radius:8px;font-size:.9rem;font-family:inherit;background:var(--bg-primary,#fff);color:var(--text-primary,#222)">
  <option value="" disabled selected>Select timeline</option>
  <option>As soon as possible</option><option>Within 1-2 months</option><option>Within 3-6 months</option><option>Just exploring</option>
  </select>
@@ -652,14 +654,14 @@
  <h2>Video Gallery</h2>
  </div>
  <div class="video-gallery fade-in">
- <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-1.mp4" playsinline muted loop preload="metadata" onclick="this.paused?this.play():this.pause()"></video></div>
- <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-2.mp4" playsinline muted loop preload="metadata" onclick="this.paused?this.play():this.pause()"></video></div>
- <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-3.mp4" playsinline muted loop preload="metadata" onclick="this.paused?this.play():this.pause()"></video></div>
- <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-4.mp4" playsinline muted loop preload="metadata" onclick="this.paused?this.play():this.pause()"></video></div>
- <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-5.mp4" playsinline muted loop preload="metadata" onclick="this.paused?this.play():this.pause()"></video></div>
- <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-6.mp4" playsinline muted loop preload="metadata" onclick="this.paused?this.play():this.pause()"></video></div>
- <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-7.mp4" playsinline muted loop preload="metadata" onclick="this.paused?this.play():this.pause()"></video></div>
- <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-8.mp4" playsinline muted loop preload="metadata" onclick="this.paused?this.play():this.pause()"></video></div>
+ <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-1.mp4" playsinline muted loop preload="none" onclick="this.paused?this.play():this.pause()"></video></div>
+ <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-2.mp4" playsinline muted loop preload="none" onclick="this.paused?this.play():this.pause()"></video></div>
+ <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-3.mp4" playsinline muted loop preload="none" onclick="this.paused?this.play():this.pause()"></video></div>
+ <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-4.mp4" playsinline muted loop preload="none" onclick="this.paused?this.play():this.pause()"></video></div>
+ <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-5.mp4" playsinline muted loop preload="none" onclick="this.paused?this.play():this.pause()"></video></div>
+ <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-6.mp4" playsinline muted loop preload="none" onclick="this.paused?this.play():this.pause()"></video></div>
+ <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-7.mp4" playsinline muted loop preload="none" onclick="this.paused?this.play():this.pause()"></video></div>
+ <div class="video-gallery-item"><video src="/videos/palm-jumeirah/pj-project-8.mp4" playsinline muted loop preload="none" onclick="this.paused?this.play():this.pause()"></video></div>
  </div>
  </div>
  </section>

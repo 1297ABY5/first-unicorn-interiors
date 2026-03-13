@@ -106,8 +106,8 @@
 .wag-phone-row{display:flex;gap:0}\
 .wag-prefix{padding:12px 10px;background:#0a0a0a;border:1px solid rgba(183,149,87,.15);border-right:none;border-radius:8px 0 0 8px;color:#b79557;font-size:.9rem;font-weight:600;white-space:nowrap;display:flex;align-items:center}\
 .wag-phone-row input{border-radius:0 8px 8px 0}\
-.wag-btn{width:100%;padding:14px;background:#25d366;color:#fff;font-weight:700;font-size:.95rem;border:none;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;margin-top:.5rem}\
-.wag-btn:hover{background:#20bd5a;transform:translateY(-1px)}\
+.wag-btn{width:100%;padding:14px;background:#128C3E;color:#fff;font-weight:700;font-size:.95rem;border:none;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;margin-top:.5rem}\
+.wag-btn:hover{background:#15a349;transform:translateY(-1px)}\
 .wag-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}\
 .wag-privacy{font-size:.7rem;color:#666;text-align:center;margin-top:.8rem;line-height:1.5}\
 .wag-err{color:#ef4444;font-size:.78rem;margin-top:4px;display:none}\
