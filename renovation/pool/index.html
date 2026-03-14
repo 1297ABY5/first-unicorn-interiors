@@ -162,6 +162,42 @@
  <div class="trust-item"><span class="trust-check">&#10003;</span> 3-Year Warranty</div>
  </div>
 
+ 
+ <!-- ═══ BEFORE/AFTER SLIDER ═══ -->
+ <section class="section" style="padding-top:2rem;padding-bottom:2rem">
+ <div class="container" style="max-width:960px">
+ <div class="section-header center fade-in" style="margin-bottom:2rem">
+ <div class="label">See the Difference</div>
+ <h2>Drag to Reveal the Transformation</h2>
+ </div>
+ <div class="ba-slider fade-in" id="ba-slider-hero">
+ <img class="ba-after" src="/images/pool/real/FU-POLR-0002.webp" alt="Pool after renovation — glass edge LED lighting" loading="eager">
+ <img class="ba-before" src="/images/pool/FU-POL-0004.webp" alt="Pool before renovation Dubai" loading="eager">
+ <div class="ba-handle"></div>
+ <span class="ba-label ba-label-before">Before</span>
+ <span class="ba-label ba-label-after">After</span>
+ <span class="ba-tag">Real Dubai Pool Transformation</span>
+ </div>
+ <p style="text-align:center;margin-top:1rem;font-size:.82rem;color:var(--text-dim)">Drag the slider to see the full before &amp; after</p>
+ </div>
+ <script>
+ (function(){
+   document.querySelectorAll('.ba-slider').forEach(function(s){
+     var handle=s.querySelector('.ba-handle'),before=s.querySelector('.ba-before'),active=false;
+     function move(x){var r=s.getBoundingClientRect(),p=Math.max(0,Math.min(1,(x-r.left)/r.width));
+     before.style.clipPath='inset(0 '+(100-p*100)+'% 0 0)';handle.style.left=p*100+'%';}
+     s.addEventListener('mousedown',function(e){active=true;move(e.clientX);e.preventDefault();});
+     window.addEventListener('mousemove',function(e){if(active)move(e.clientX);});
+     window.addEventListener('mouseup',function(){active=false;});
+     s.addEventListener('touchstart',function(e){active=true;move(e.touches[0].clientX);},{passive:true});
+     window.addEventListener('touchmove',function(e){if(active)move(e.touches[0].clientX);},{passive:true});
+     window.addEventListener('touchend',function(){active=false;});
+   });
+ })();
+ </script>
+ </section>
+
+
  <!-- ═══ PROBLEM ═══ -->
  
  <!-- QUICK PRICING — visible immediately -->
