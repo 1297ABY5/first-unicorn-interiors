@@ -7,226 +7,223 @@
 <title>Atlas Command — Site Directory</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#e0e0e0;padding:20px;line-height:1.6}
-.header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #222;margin-bottom:24px}
-.header h1{font-size:1.4rem;color:#b79557}
-.header .stats{font-size:.85rem;color:#666}
-.section{margin-bottom:32px}
-.section-title{font-size:1rem;font-weight:700;color:#b79557;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1a1a1a}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
-a{color:#ccc;text-decoration:none;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;font-size:.85rem;transition:all .15s;border:1px solid transparent}
-a:hover{background:#141414;border-color:#222;color:#b79557}
-.badge{font-size:.65rem;padding:2px 8px;border-radius:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
-.badge-new{background:#b7955720;color:#b79557}
-.badge-service{background:#22c55e15;color:#22c55e}
-.badge-community{background:#3b82f615;color:#3b82f6}
-.badge-guide{background:#a855f715;color:#a855f7}
-.badge-blog{background:#f59e0b15;color:#f59e0b}
-.badge-admin{background:#ef444420;color:#ef4444}
-.badge-page{background:#64748b15;color:#64748b}
-.search{width:100%;padding:12px 16px;background:#141414;border:1px solid #222;border-radius:8px;color:#e0e0e0;font-size:.9rem;margin-bottom:24px}
-.search:focus{outline:none;border-color:#b79557}
-.count{font-size:.75rem;color:#555;margin-left:auto}
-.section-count{color:#555;font-weight:400;font-size:.85rem}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0d0c0a;color:#e0e0e0;padding:20px;line-height:1.6}
+.header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #222;margin-bottom:16px;flex-wrap:wrap;gap:12px}
+.header h1{font-size:1.4rem;color:#c4a265}
+.header .stats{font-size:.82rem;color:#666}
+.summary{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-bottom:24px}
+.summary-card{background:#171510;border:1px solid #222;border-radius:8px;padding:12px;text-align:center}
+.summary-card .num{font-size:1.5rem;font-weight:700;color:#c4a265}
+.summary-card .lbl{font-size:.65rem;color:#666;text-transform:uppercase;letter-spacing:1px}
+.section{margin-bottom:28px}
+.section-title{font-size:.85rem;font-weight:700;color:#c4a265;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #1e1b16;display:flex;justify-content:space-between;align-items:center}
+.section-count{color:#555;font-weight:400;font-size:.78rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:5px}
+a{color:#ccc;text-decoration:none;display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:6px;font-size:.82rem;transition:all .15s;border:1px solid transparent}
+a:hover{background:#171510;border-color:#222;color:#c4a265}
+.badge{font-size:.58rem;padding:2px 7px;border-radius:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
+.badge-new{background:#c4a26520;color:#c4a265}.badge-service{background:#22c55e15;color:#22c55e}
+.badge-community{background:#3b82f615;color:#3b82f6}.badge-apartment{background:#06b6d415;color:#06b6d4}
+.badge-guide{background:#a855f715;color:#a855f7}.badge-buying{background:#ec489915;color:#ec4899}
+.badge-cost{background:#f59e0b15;color:#f59e0b}.badge-handover{background:#14b8a615;color:#14b8a6}
+.badge-developer{background:#8b5cf615;color:#8b5cf6}.badge-blog{background:#f59e0b15;color:#f59e0b}
+.badge-admin{background:#ef444420;color:#ef4444}.badge-page{background:#64748b15;color:#64748b}
+.search{width:100%;padding:12px 16px;background:#171510;border:1px solid #222;border-radius:8px;color:#e0e0e0;font-size:.9rem;margin-bottom:20px}
+.search:focus{outline:none;border-color:#c4a265}
+.note{font-size:.7rem;color:#555;margin-left:auto;white-space:nowrap}
+.tag-new{background:#22c55e;color:#000;font-size:.55rem;padding:1px 5px;border-radius:3px;font-weight:700;margin-left:4px}
 </style>
 </head>
 <body>
-
 <div class="header">
 <h1>🦄 Atlas Command — Site Directory</h1>
 <div class="stats" id="stats">Loading...</div>
 </div>
-
-<input type="text" class="search" id="search" placeholder="Search pages... (type to filter)" autofocus>
-
+<div class="summary">
+<div class="summary-card"><div class="num" id="s-total">0</div><div class="lbl">Total Pages</div></div>
+<div class="summary-card"><div class="num" id="s-svc">0</div><div class="lbl">Services</div></div>
+<div class="summary-card"><div class="num" id="s-com">0</div><div class="lbl">Communities</div></div>
+<div class="summary-card"><div class="num" id="s-guide">0</div><div class="lbl">Guides</div></div>
+<div class="summary-card"><div class="num" id="s-blog">0</div><div class="lbl">Blog</div></div>
+<div class="summary-card"><div class="num" id="s-core">0</div><div class="lbl">Core</div></div>
+</div>
+<input type="text" class="search" id="search" placeholder="Search all pages..." autofocus>
 <div id="content"></div>
-
 <script>
-const PAGES = {
-  'Ad Landing Pages': {badge:'badge-new', items:[
-    ['Villa Renovation Dubai','/renovation/full-villa/','H1 match: villa renovation dubai'],
-    ['Home Renovation Dubai','/renovation/home/','H1 match: home renovation dubai'],
-    ['Interior Design Dubai','/renovation/interior-design/','H1 match: interior design dubai'],
-    ['Apartment Renovation Dubai','/renovation/apartment/','H1 match: apartment renovation dubai'],
-    ['Townhouse Renovation Dubai','/renovation/townhouse/','H1 match: townhouse renovation dubai'],
-    ['Penthouse Renovation Dubai','/renovation/penthouse/','H1 match: penthouse renovation dubai'],
-    ['Duplex Renovation Dubai','/renovation/duplex/','H1 match: duplex renovation dubai'],
-  ]},
-  'Service Pages': {badge:'badge-service', items:[
-    ['Kitchen Renovation','/renovation/kitchen/',''],
-    ['Bathroom Renovation','/renovation/bathroom/',''],
-    ['Swimming Pool','/renovation/pool/',''],
-    ['Glass & Aluminium','/renovation/glass-aluminium/',''],
-    ['Joinery & Cabinetry','/renovation/joinery/',''],
-    ['Flooring','/renovation/flooring/',''],
-    ['Landscaping','/renovation/landscaping/',''],
-    ['Solar','/renovation/solar/',''],
-    ['EV Charger','/renovation/ev-charger/',''],
-    ['Residential Interiors','/interiors/residential/',''],
-    ['Commercial Interiors','/interiors/commercial/',''],
-    ['Villa Fit-Out','/interiors/villa-fit-out/',''],
-    ['Furniture & Lighting','/interiors/furniture-lighting/',''],
-    ['Architectural Design','/design-approvals/architectural-design/',''],
-    ['Engineering Drawings','/design-approvals/engineering-drawings/',''],
-    ['3D Visualisation','/design-approvals/3d-visualisation/',''],
-    ['Municipality Approvals','/design-approvals/municipality-approvals/',''],
-    ['Building Permits','/design-approvals/building-permits/',''],
-    ['NOC Processing','/design-approvals/noc-processing/',''],
-    ['Villa Construction','/contracting/villa-construction/',''],
-    ['Low-Rise','/contracting/low-rise/',''],
-    ['Mid-Rise','/contracting/mid-rise/',''],
-    ['Structural Works','/contracting/structural-works/',''],
-    ['Civil Works','/contracting/civil-works/',''],
-  ]},
-  'Villa Communities (46)': {badge:'badge-community', items:[
-    ['Palm Jumeirah','/areas/palm-jumeirah/',''],
-    ['Emirates Hills','/areas/emirates-hills/',''],
-    ['Arabian Ranches','/areas/arabian-ranches/',''],
-    ['Arabian Ranches 2','/areas/arabian-ranches-2/',''],
-    ['Arabian Ranches 3','/areas/arabian-ranches-3/',''],
-    ['Dubai Hills','/areas/dubai-hills/',''],
-    ['DAMAC Hills','/areas/damac-hills/',''],
-    ['DAMAC Hills 2','/areas/damac-hills-2/',''],
-    ['DAMAC Lagoons','/areas/damac-lagoons/',''],
-    ['Al Barari','/areas/al-barari/',''],
-    ['Al Barsha / Mirdif','/areas/al-barsha-mirdif/',''],
-    ['Al Furjan','/areas/al-furjan/',''],
-    ['District One','/areas/district-one/',''],
-    ['Dubai Investment Park','/areas/dubai-investment-park/',''],
-    ['Dubai Islands','/areas/dubai-islands/',''],
-    ['Dubai Land','/areas/dubai-land/',''],
-    ['Dubai South','/areas/dubai-south/',''],
-    ['Dubai Sports City','/areas/dubai-sports-city/',''],
-    ['Expo City','/areas/expo-city/',''],
-    ['Falcon City','/areas/falcon-city/',''],
-    ['Jebel Ali','/areas/jebel-ali/',''],
-    ['Jumeirah','/areas/jumeirah/',''],
-    ['Jumeirah Golf Estates','/areas/jumeirah-golf-estates/',''],
-    ['Jumeirah Islands','/areas/jumeirah-islands/',''],
-    ['Jumeirah Park','/areas/jumeirah-park/',''],
-    ['JVC / JVT','/areas/jvc-jvt/',''],
-    ['Living Legends','/areas/living-legends/',''],
-    ['MBR City','/areas/mbr-city/',''],
-    ['Meydan','/areas/meydan/',''],
-    ['Motor City','/areas/motor-city/',''],
-    ['Mudon','/areas/mudon/',''],
-    ['Nad Al Sheba','/areas/nad-al-sheba/',''],
-    ['Palm Jebel Ali','/areas/palm-jebel-ali/',''],
-    ['Reem','/areas/reem/',''],
-    ['Sobha Hartland','/areas/sobha-hartland/',''],
-    ['Springs / Meadows','/areas/springs-meadows/',''],
-    ['Sustainable City','/areas/sustainable-city/',''],
-    ['The Heights','/areas/the-heights/',''],
-    ['The Lakes','/areas/the-lakes/',''],
-    ['The Oasis','/areas/the-oasis/',''],
-    ['The Valley','/areas/the-valley/',''],
-    ['The Villa','/areas/the-villa/',''],
-    ['Tilal Al Ghaf','/areas/tilal-al-ghaf/',''],
-    ['Town Square','/areas/town-square/',''],
-    ['Victory Heights','/areas/victory-heights/',''],
-    ['Villanova','/areas/villanova/',''],
-  ]},
-  'Apartment Areas (10)': {badge:'badge-community', items:[
-    ['Business Bay','/apartments/business-bay/',''],
-    ['City Walk','/apartments/city-walk/',''],
-    ['DIFC','/apartments/difc/',''],
-    ['Downtown Dubai','/apartments/downtown-dubai/',''],
-    ['Dubai Creek Harbour','/apartments/dubai-creek-harbour/',''],
-    ['Dubai Marina','/apartments/dubai-marina/',''],
-    ['JBR','/apartments/jbr/',''],
-    ['JLT','/apartments/jlt/',''],
-    ['Palm Jumeirah Apts','/apartments/palm-jumeirah-apartments/',''],
-  ]},
-  'Guides & Resources': {badge:'badge-guide', items:[
-    ['Renovation Cost Guide','/guides/cost-guide/',''],
-    ['Kitchen Reno Cost','/guides/kitchen-renovation-cost/',''],
-    ['Bathroom Reno Cost','/guides/bathroom-renovation-cost/',''],
-    ['Pool Construction Cost','/guides/pool-construction-cost/',''],
-    ['Renovation Cost by Community','/guides/renovation-cost/',''],
-    ['Best Renovation Company','/guides/best-renovation-company-dubai/',''],
-    ['NOC Guide','/guides/noc-renovation-dubai/',''],
-    ['Renovation Timeline','/guides/timeline/',''],
-    ['Renovation Checklist','/guides/checklist/',''],
-    ['Handover Guides','/guides/handover/',''],
-    ['Developer Finishes','/guides/developer-finishes/',''],
-    ['Lookbook','/guides/lookbook/',''],
-    ['Calculator','/calculator/',''],
-    ['Pricing','/pricing/',''],
-    ['FAQ','/faq/',''],
-  ]},
-  'Blog Posts': {badge:'badge-blog', items:[
-    ['Full Villa Renovation Cost','/blog/full-villa-renovation-cost-dubai/',''],
-    ['Kitchen Renovation Cost','/blog/kitchen-renovation-cost-dubai/',''],
-    ['Bathroom Renovation Guide','/blog/bathroom-renovation-dubai-guide/',''],
-    ['Renovation Mistakes','/blog/renovation-mistakes-dubai/',''],
-    ['How to Choose Contractor','/blog/how-to-choose-renovation-contractor-dubai/',''],
-    ['Palm Jumeirah Guide','/blog/palm-jumeirah-renovation-guide/',''],
-    ['Arabian Ranches Guide','/blog/villa-renovation-arabian-ranches/',''],
-    ['Summer Renovation','/blog/summer-renovation-dubai/',''],
-  ]},
-  'Core Pages': {badge:'badge-page', items:[
-    ['Homepage','/',''],
-    ['About','/about/',''],
-    ['Contact','/contact/',''],
-    ['Portfolio','/portfolio/',''],
-    ['Portfolio — Renovation','/portfolio/renovation/',''],
-    ['Portfolio — Interiors','/portfolio/interiors/',''],
-    ['Portfolio — Design','/portfolio/design-approvals/',''],
-    ['Portfolio — Contracting','/portfolio/contracting/',''],
-    ['Our Team','/our-team/',''],
-    ['Get Quote','/get-quote/',''],
-    ['Free Design','/free-design/',''],
-    ['Privacy','/privacy/',''],
-    ['Terms','/terms/',''],
-  ]},
-  'Admin / Hidden': {badge:'badge-admin', items:[
-    ['Financial Dashboard','/cmd-9x7k2m/','Login required'],
-    ['Site Directory (this page)','/atlas-cmd-4r8n/','You are here'],
-  ]},
+const P={
+'Ad Landing Pages':{b:'badge-new',i:[
+['Villa Renovation Dubai','/renovation/full-villa/',''],
+['Home Renovation Dubai','/renovation/home/',''],
+['Interior Design Dubai','/renovation/interior-design/',''],
+['Apartment Renovation','/renovation/apartment/',''],
+['Townhouse Renovation','/renovation/townhouse/',''],
+['Penthouse Renovation','/renovation/penthouse/',''],
+['Duplex Renovation','/renovation/duplex/',''],
+['Interior Renovation Company','/interior-renovation-company-dubai/','NEW Mar 14'],
+]},
+'Service Pages':{b:'badge-service',i:[
+['Full Villa Renovation','/renovation/full-villa/',''],
+['Kitchen Renovation','/renovation/kitchen/',''],
+['Bathroom Renovation','/renovation/bathroom/',''],
+['Swimming Pool','/renovation/pool/','#1 priority'],
+['Villa Extension','/renovation/villa-extension/','NEW Mar 14'],
+['Glass & Aluminium','/renovation/glass-aluminium/',''],
+['Joinery & Cabinetry','/renovation/joinery/',''],
+['Flooring','/renovation/flooring/',''],
+['Landscaping','/renovation/landscaping/',''],
+['Solar','/renovation/solar/',''],
+['EV Charger','/renovation/ev-charger/','421% growth'],
+['Residential Interiors','/interiors/residential/',''],
+['Commercial Interiors','/interiors/commercial/',''],
+['Villa Fit-Out','/interiors/villa-fit-out/',''],
+['Furniture & Lighting','/interiors/furniture-lighting/',''],
+['Architectural Design','/design-approvals/architectural-design/',''],
+['Engineering Drawings','/design-approvals/engineering-drawings/',''],
+['3D Visualisation','/design-approvals/3d-visualisation/',''],
+['Municipality Approvals','/design-approvals/municipality-approvals/',''],
+['Building Permits','/design-approvals/building-permits/',''],
+['NOC Processing','/design-approvals/noc-processing/',''],
+['Villa Construction','/contracting/villa-construction/',''],
+['Low-Rise (G+5)','/contracting/low-rise/',''],
+['Mid-Rise (G+10)','/contracting/mid-rise/',''],
+['Structural Works','/contracting/structural-works/',''],
+['Civil Works','/contracting/civil-works/',''],
+]},
+'Villa Communities (46)':{b:'badge-community',i:[
+['Palm Jumeirah','/areas/palm-jumeirah/',''],['Emirates Hills','/areas/emirates-hills/',''],
+['Arabian Ranches','/areas/arabian-ranches/',''],['Arabian Ranches 2','/areas/arabian-ranches-2/',''],
+['Arabian Ranches 3','/areas/arabian-ranches-3/',''],['Dubai Hills','/areas/dubai-hills/',''],
+['Al Barari','/areas/al-barari/',''],['Jumeirah Golf Estates','/areas/jumeirah-golf-estates/',''],
+['Jumeirah Islands','/areas/jumeirah-islands/',''],['Jumeirah Park','/areas/jumeirah-park/',''],
+['Tilal Al Ghaf','/areas/tilal-al-ghaf/',''],['DAMAC Hills','/areas/damac-hills/',''],
+['DAMAC Hills 2','/areas/damac-hills-2/',''],['DAMAC Lagoons','/areas/damac-lagoons/',''],
+['Springs & Meadows','/areas/springs-meadows/',''],['The Lakes','/areas/the-lakes/',''],
+['The Villa','/areas/the-villa/',''],['The Valley','/areas/the-valley/',''],
+['MBR City','/areas/mbr-city/',''],['District One','/areas/district-one/',''],
+['Meydan','/areas/meydan/',''],['Sobha Hartland','/areas/sobha-hartland/',''],
+['JVC / JVT','/areas/jvc-jvt/',''],['Al Barsha & Mirdif','/areas/al-barsha-mirdif/',''],
+['Al Furjan','/areas/al-furjan/',''],['Mudon','/areas/mudon/',''],
+['Motor City','/areas/motor-city/',''],['Dubai Sports City','/areas/dubai-sports-city/',''],
+['Town Square','/areas/town-square/',''],['Dubai South','/areas/dubai-south/',''],
+['Expo City','/areas/expo-city/',''],['Dubai Investment Park','/areas/dubai-investment-park/',''],
+['Dubai Land','/areas/dubai-land/',''],['Dubai Islands','/areas/dubai-islands/',''],
+['Jumeirah','/areas/jumeirah/',''],['Nad Al Sheba','/areas/nad-al-sheba/',''],
+['Victory Heights','/areas/victory-heights/',''],['Living Legends','/areas/living-legends/',''],
+['Villanova','/areas/villanova/',''],['Falcon City','/areas/falcon-city/',''],
+['The Heights','/areas/the-heights/',''],['The Oasis','/areas/the-oasis/',''],
+['Reem','/areas/reem/',''],['Palm Jebel Ali','/areas/palm-jebel-ali/',''],
+['Jebel Ali','/areas/jebel-ali/',''],['Sustainable City','/areas/sustainable-city/',''],
+]},
+'Apartments (9)':{b:'badge-apartment',i:[
+['Business Bay','/apartments/business-bay/',''],['City Walk','/apartments/city-walk/',''],
+['DIFC','/apartments/difc/',''],['Downtown Dubai','/apartments/downtown-dubai/',''],
+['Dubai Creek Harbour','/apartments/dubai-creek-harbour/',''],['Dubai Marina','/apartments/dubai-marina/',''],
+['JBR','/apartments/jbr/',''],['JLT','/apartments/jlt/',''],
+['Palm Jumeirah Apts','/apartments/palm-jumeirah-apartments/',''],
+]},
+'Guides — Cost & Planning':{b:'badge-guide',i:[
+['2026 Cost Guide','/guides/cost-guide/',''],['Kitchen Cost','/guides/kitchen-renovation-cost/',''],
+['Bathroom Cost','/guides/bathroom-renovation-cost/',''],['Pool Cost','/guides/pool-construction-cost/',''],
+['Cost Hub','/guides/renovation-cost/',''],['NOC Guide','/guides/noc-renovation-dubai/',''],
+['Timeline','/guides/timeline/',''],['Checklist','/guides/checklist/',''],
+['Best Company','/guides/best-renovation-company-dubai/',''],['Lookbook','/guides/lookbook/',''],
+['Calculator','/calculator/',''],['Pricing','/pricing/',''],['FAQ','/faq/',''],
+]},
+'Guides — Community Reno':{b:'badge-guide',i:[
+['Palm Jumeirah','/guides/palm-jumeirah/',''],['Emirates Hills','/guides/emirates-hills/',''],
+['Arabian Ranches','/guides/arabian-ranches/',''],['Dubai Hills','/guides/dubai-hills/',''],
+]},
+'Guides — Cost by Community (10)':{b:'badge-cost',i:[
+['Arabian Ranches','/guides/renovation-cost/arabian-ranches/',''],['DAMAC Hills','/guides/renovation-cost/damac-hills/',''],
+['DAMAC Lagoons','/guides/renovation-cost/damac-lagoons/',''],['Dubai Hills','/guides/renovation-cost/dubai-hills/',''],
+['Emirates Hills','/guides/renovation-cost/emirates-hills/',''],['JGE','/guides/renovation-cost/jumeirah-golf-estates/',''],
+['MBR City','/guides/renovation-cost/mbr-city/',''],['Palm Jumeirah','/guides/renovation-cost/palm-jumeirah/',''],
+['The Valley','/guides/renovation-cost/the-valley/',''],['Town Square','/guides/renovation-cost/town-square/',''],
+]},
+'Guides — Buying (44)':{b:'badge-buying',i:[
+['Hub','/guides/buying/',''],['Al Furjan','/guides/buying/al-furjan/',''],['AR 2','/guides/buying/arabian-ranches-2/',''],
+['AR 3','/guides/buying/arabian-ranches-3/',''],['Business Bay','/guides/buying/business-bay/',''],
+['City Walk','/guides/buying/city-walk/',''],['DAMAC Hills 2','/guides/buying/damac-hills-2/',''],
+['DAMAC Lagoons','/guides/buying/damac-lagoons/',''],['DIFC','/guides/buying/difc/',''],
+['District One','/guides/buying/district-one/',''],['Downtown','/guides/buying/downtown-dubai/',''],
+['Creek Harbour','/guides/buying/dubai-creek-harbour/',''],['DIP','/guides/buying/dubai-investment-park/',''],
+['Dubai Islands','/guides/buying/dubai-islands/',''],['Dubai Land','/guides/buying/dubai-land/',''],
+['Marina','/guides/buying/dubai-marina/',''],['Dubai South','/guides/buying/dubai-south/',''],
+['Sports City','/guides/buying/dubai-sports-city/',''],['Expo City','/guides/buying/expo-city/',''],
+['Falcon City','/guides/buying/falcon-city/',''],['JBR','/guides/buying/jbr/',''],
+['Jebel Ali','/guides/buying/jebel-ali/',''],['JLT','/guides/buying/jlt/',''],
+['Jumeirah','/guides/buying/jumeirah/',''],['JI','/guides/buying/jumeirah-islands/',''],
+['JP','/guides/buying/jumeirah-park/',''],['Living Legends','/guides/buying/living-legends/',''],
+['MBR City','/guides/buying/mbr-city/',''],['Meydan','/guides/buying/meydan/',''],
+['Motor City','/guides/buying/motor-city/',''],['Mudon','/guides/buying/mudon/',''],
+['Nad Al Sheba','/guides/buying/nad-al-sheba/',''],['Palm Jebel Ali','/guides/buying/palm-jebel-ali/',''],
+['Palm Apts','/guides/buying/palm-jumeirah-apartments/',''],['Reem','/guides/buying/reem/',''],
+['Sobha','/guides/buying/sobha-hartland/',''],['Sustainable','/guides/buying/sustainable-city/',''],
+['Heights','/guides/buying/the-heights/',''],['Lakes','/guides/buying/the-lakes/',''],
+['Oasis','/guides/buying/the-oasis/',''],['Valley','/guides/buying/the-valley/',''],
+['Villa','/guides/buying/the-villa/',''],['Town Square','/guides/buying/town-square/',''],
+['Victory Heights','/guides/buying/victory-heights/',''],['Villanova','/guides/buying/villanova/',''],
+]},
+'Guides — Handover (7)':{b:'badge-handover',i:[
+['Hub','/guides/handover/',''],['Emaar','/guides/handover/emaar/',''],['Nakheel','/guides/handover/nakheel/',''],
+['DAMAC','/guides/handover/damac/',''],['Meraas','/guides/handover/meraas/',''],
+['Nshama','/guides/handover/nshama/',''],['Sobha','/guides/handover/sobha/',''],
+]},
+'Guides — Developer Finishes (7)':{b:'badge-developer',i:[
+['Hub','/guides/developer-finishes/',''],['Emaar','/guides/developer-finishes/emaar/',''],
+['Nakheel','/guides/developer-finishes/nakheel/',''],['DAMAC','/guides/developer-finishes/damac/',''],
+['Meraas','/guides/developer-finishes/meraas/',''],['Nshama','/guides/developer-finishes/nshama/',''],
+['Sobha','/guides/developer-finishes/sobha/',''],
+]},
+'Blog (8)':{b:'badge-blog',i:[
+['Full Villa Cost','/blog/full-villa-renovation-cost-dubai/',''],['Kitchen Cost','/blog/kitchen-renovation-cost-dubai/',''],
+['Bathroom Guide','/blog/bathroom-renovation-dubai-guide/',''],['Mistakes','/blog/renovation-mistakes-dubai/',''],
+['Choose Contractor','/blog/how-to-choose-renovation-contractor-dubai/',''],['Palm Guide','/blog/palm-jumeirah-renovation-guide/',''],
+['AR Guide','/blog/villa-renovation-arabian-ranches/',''],['Summer Reno','/blog/summer-renovation-dubai/',''],
+]},
+'Core Pages':{b:'badge-page',i:[
+['Homepage','/','Authority Bridge live'],['About','/about/',''],['Contact','/contact/',''],
+['Portfolio','/portfolio/',''],['Portfolio — Reno','/portfolio/renovation/',''],
+['Portfolio — Interiors','/portfolio/interiors/',''],['Portfolio — Design','/portfolio/design-approvals/',''],
+['Portfolio — Contracting','/portfolio/contracting/',''],['Our Team','/our-team/',''],
+['Get Quote','/get-quote/','noindex'],['GQ Bathroom','/get-quote/bathroom/','noindex'],
+['GQ Kitchen','/get-quote/kitchen/','noindex'],['GQ Pool','/get-quote/pool/','noindex'],
+['GQ Villa','/get-quote/villa-renovation/','noindex'],['GQ Glass','/get-quote/glass-aluminium/','noindex'],
+['GQ Construction','/get-quote/construction/','noindex'],['Free Design','/free-design/','noindex'],
+['Privacy','/privacy/',''],['Terms','/terms/',''],
+]},
+'Admin':{b:'badge-admin',i:[
+['Financial Dashboard','/cmd-9x7k2m/','noindex'],['Analytics','/cmd-9x7k2m/analytics.html','noindex'],
+['Site Directory','/atlas-cmd-4r8n/','noindex — you are here'],
+]},
 };
-
-const BASE = 'https://www.firstunicorninteriors.com';
-let totalPages = 0;
-
-function render(filter='') {
-  const f = filter.toLowerCase();
-  let html = '';
-  let shown = 0;
-  
-  for (const [section, data] of Object.entries(PAGES)) {
-    const filtered = data.items.filter(([name, url, note]) => 
-      !f || name.toLowerCase().includes(f) || url.toLowerCase().includes(f) || note.toLowerCase().includes(f)
-    );
-    if (filtered.length === 0) continue;
-    shown += filtered.length;
-    
-    html += `<div class="section">
-      <div class="section-title">${section} <span class="section-count">(${filtered.length})</span></div>
-      <div class="grid">`;
-    
-    for (const [name, url, note] of filtered) {
-      const fullUrl = BASE + url;
-      const noteHtml = note ? `<span style="color:#555;font-size:.75rem">${note}</span>` : '';
-      html += `<a href="${fullUrl}" target="_blank">
-        <span class="badge ${data.badge}">${section.split(' ')[0]}</span>
-        ${name}
-        ${noteHtml}
-      </a>`;
-    }
-    html += '</div></div>';
-  }
-  
-  document.getElementById('content').innerHTML = html;
-  document.getElementById('stats').textContent = `${shown} pages shown / 208 total / ${new Date().toLocaleDateString('en-GB')}`;
+const B='https://www.firstunicorninteriors.com';
+function render(f=''){
+f=f.toLowerCase();let h='',n=0,c={s:0,co:0,g:0,bl:0,cr:0};
+for(const[sec,d]of Object.entries(P)){
+const fl=d.i.filter(([a,b,c])=>!f||a.toLowerCase().includes(f)||b.toLowerCase().includes(f)||c.toLowerCase().includes(f));
+if(!fl.length)continue;n+=fl.length;
+if(['badge-service','badge-new'].includes(d.b))c.s+=fl.length;
+if(['badge-community','badge-apartment'].includes(d.b))c.co+=fl.length;
+if(['badge-guide','badge-buying','badge-cost','badge-handover','badge-developer'].includes(d.b))c.g+=fl.length;
+if(d.b==='badge-blog')c.bl+=fl.length;
+if(d.b==='badge-page')c.cr+=fl.length;
+h+=`<div class="section"><div class="section-title">${sec}<span class="section-count">${fl.length}</span></div><div class="grid">`;
+for(const[nm,url,nt]of fl){
+const nw=nt.includes('NEW')?'<span class="tag-new">NEW</span>':'';
+const ntH=nt?`<span class="note">${nt}</span>`:'';
+h+=`<a href="${B+url}" target="_blank"><span class="badge ${d.b}">${sec.split('—')[0].split('(')[0].trim().split(' ')[0]}</span>${nm}${nw}${ntH}</a>`;
+}h+='</div></div>';}
+document.getElementById('content').innerHTML=h;
+document.getElementById('stats').textContent=n+' pages | Updated '+new Date().toLocaleDateString('en-GB');
+document.getElementById('s-total').textContent=n;
+document.getElementById('s-svc').textContent=c.s;
+document.getElementById('s-com').textContent=c.co;
+document.getElementById('s-guide').textContent=c.g;
+document.getElementById('s-blog').textContent=c.bl;
+document.getElementById('s-core').textContent=c.cr;
 }
-
-// Count total
-for (const data of Object.values(PAGES)) totalPages += data.items.length;
-
-// Search
-document.getElementById('search').addEventListener('input', e => render(e.target.value));
-
-// Initial render
+document.getElementById('search').addEventListener('input',e=>render(e.target.value));
 render();
 </script>
 </body>
