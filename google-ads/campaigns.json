@@ -22598,7 +22598,7 @@
     "location": "Regus, The Bridge, Sports City, Dubai"
   },
   "geo_targeting": {
-    "target": "All UAE except Abu Dhabi",
+    "target": "All UAE except Abu Dhabi city",
     "include": [
       "Dubai",
       "Sharjah",
@@ -22611,6 +22611,6 @@
     "exclude": [
       "Abu Dhabi"
     ],
-    "notes": "Sharjah/Ajman/RAK/Fujairah/UAQ/Al Ain are valid \u2014 many residents commute to Dubai or own Dubai property"
+    "notes": "Al Ain included \u2014 large villa community, residents seek quality contractors"
   }
 }
