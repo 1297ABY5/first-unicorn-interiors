@@ -3862,12 +3862,6 @@ Keyword,Match Type,Category
 "rahma decor",phrase,COMPETITOR
 "bond interiors dic industrial city",phrase,COMPETITOR
 "abu dhabi",phrase,WRONG_LOCATION
-"sharjah",broad,WRONG_LOCATION
-"ajman",broad,WRONG_LOCATION
-"al ain",phrase,WRONG_LOCATION
-"ras al khaimah",phrase,WRONG_LOCATION
-"fujairah",broad,WRONG_LOCATION
-"umm al quwain",phrase,WRONG_LOCATION
 "kerala",broad,WRONG_LOCATION
 "trivandrum",broad,WRONG_LOCATION
 "kochi",broad,WRONG_LOCATION

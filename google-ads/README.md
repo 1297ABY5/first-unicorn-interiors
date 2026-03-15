@@ -55,7 +55,7 @@ google-ads/
 ### Negative Keywords (3,976 phrases)
 Upload ALL negatives at ACCOUNT level (applies to all campaigns):
 - 3,400+ competitor brand names (AED 19,972 wasted historically)
-- 57 wrong locations (Abu Dhabi, Sharjah, Kerala, India, Pakistan, etc.)
+- Abu Dhabi (only UAE emirate excluded) + 50 international locations
 - 55 wrong intent phrases (maintenance, DIY, jobs, budget, education, etc.)
 
 ### Ad Copy
@@ -78,7 +78,8 @@ Upload ALL negatives at ACCOUNT level (applies to all campaigns):
 - FIX NEEDED: 4 other conversion tags showing "No recent conversions"
 
 ### Geo Targeting
-- Target: Dubai only (not all UAE — to avoid Abu Dhabi/Sharjah waste)
+- Target: All UAE EXCEPT Abu Dhabi (Dubai, Sharjah, Ajman, RAK, Fujairah, UAQ, Al Ain)
+- Negative location: Abu Dhabi only (other emirates are valid targets)
 - Language: English + Arabic
 - Device: All devices (mobile priority — most traffic is mobile)
 - Schedule: 8AM-10PM Dubai time (remove midnight-6AM)

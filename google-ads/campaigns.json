@@ -2571,6 +2571,83 @@
           "historical_clicks": 2,
           "historical_cost": 69.42,
           "historical_cpc": 34.71
+        },
+        {
+          "keyword": "swimming pool contractors in sharjah",
+          "match_type": "phrase",
+          "historical_clicks": 10,
+          "historical_cost": 279.81,
+          "historical_cpc": 27.98
+        },
+        {
+          "keyword": "interior fit out companies in sharjah",
+          "match_type": "phrase",
+          "historical_clicks": 6,
+          "historical_cost": 90.33,
+          "historical_cpc": 15.05
+        },
+        {
+          "keyword": "fit out companies in sharjah",
+          "match_type": "phrase",
+          "historical_clicks": 5,
+          "historical_cost": 77.91,
+          "historical_cpc": 15.58
+        },
+        {
+          "keyword": "interior design companies in sharjah",
+          "match_type": "phrase",
+          "historical_clicks": 5,
+          "historical_cost": 57.98,
+          "historical_cpc": 11.6
+        },
+        {
+          "keyword": "fitout companies in sharjah",
+          "match_type": "phrase",
+          "historical_clicks": 4,
+          "historical_cost": 108.13,
+          "historical_cpc": 27.03
+        },
+        {
+          "keyword": "interior design companies in fujairah",
+          "match_type": "phrase",
+          "historical_clicks": 3,
+          "historical_cost": 35.43,
+          "historical_cpc": 11.81
+        },
+        {
+          "keyword": "swimming pool companies in sharjah",
+          "match_type": "phrase",
+          "historical_clicks": 3,
+          "historical_cost": 75.52,
+          "historical_cpc": 25.17
+        },
+        {
+          "keyword": "interior design companies in ajman",
+          "match_type": "phrase",
+          "historical_clicks": 3,
+          "historical_cost": 58.67,
+          "historical_cpc": 19.56
+        },
+        {
+          "keyword": "interior company in sharjah",
+          "match_type": "phrase",
+          "historical_clicks": 2,
+          "historical_cost": 136.9,
+          "historical_cpc": 68.45
+        },
+        {
+          "keyword": "interior design companies in umm al quwain",
+          "match_type": "phrase",
+          "historical_clicks": 2,
+          "historical_cost": 16.07,
+          "historical_cpc": 8.04
+        },
+        {
+          "keyword": "sharjah interior design company",
+          "match_type": "phrase",
+          "historical_clicks": 2,
+          "historical_cost": 8.71,
+          "historical_cpc": 4.36
         }
       ]
     },
@@ -21926,36 +22003,6 @@
       "category": "WRONG_LOCATION"
     },
     {
-      "keyword": "sharjah",
-      "match_type": "broad",
-      "category": "WRONG_LOCATION"
-    },
-    {
-      "keyword": "ajman",
-      "match_type": "broad",
-      "category": "WRONG_LOCATION"
-    },
-    {
-      "keyword": "al ain",
-      "match_type": "phrase",
-      "category": "WRONG_LOCATION"
-    },
-    {
-      "keyword": "ras al khaimah",
-      "match_type": "phrase",
-      "category": "WRONG_LOCATION"
-    },
-    {
-      "keyword": "fujairah",
-      "match_type": "broad",
-      "category": "WRONG_LOCATION"
-    },
-    {
-      "keyword": "umm al quwain",
-      "match_type": "phrase",
-      "category": "WRONG_LOCATION"
-    },
-    {
       "keyword": "kerala",
       "match_type": "broad",
       "category": "WRONG_LOCATION"
@@ -22549,5 +22596,21 @@
     "call": "+971585658002",
     "whatsapp": "+971585658002",
     "location": "Regus, The Bridge, Sports City, Dubai"
+  },
+  "geo_targeting": {
+    "target": "All UAE except Abu Dhabi",
+    "include": [
+      "Dubai",
+      "Sharjah",
+      "Ajman",
+      "Ras Al Khaimah",
+      "Fujairah",
+      "Umm Al Quwain",
+      "Al Ain"
+    ],
+    "exclude": [
+      "Abu Dhabi"
+    ],
+    "notes": "Sharjah/Ajman/RAK/Fujairah/UAQ/Al Ain are valid \u2014 many residents commute to Dubai or own Dubai property"
   }
 }
