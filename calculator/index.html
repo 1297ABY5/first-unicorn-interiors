@@ -17,7 +17,7 @@
  {"@context":"https://schema.org","@type":"WebApplication","name":"Dubai Villa Renovation Cost Calculator","description":"Get an instant estimate for your Dubai renovation project.","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://www.firstunicorninteriors.com/calculator/","offers":{"@type":"Offer","price":"0","priceCurrency":"AED"},"author":{"@type":"Organization","name":"First Unicorn Interiors","url":"https://www.firstunicorninteriors.com"}}
  </script>
  <style>
- :root{--bk:#0a0a0a;--dk:#111;--cd:#161616;--ch:#1c1c1c;--gd:#7D8C6E;--gd12:rgba(200,165,94,.12);--gd06:rgba(200,165,94,.06);--cr:#f2ece0;--mu:#a09888;--ml:#c4b9a8;--gn:#15803d;--gn2:#16a34a;--bd:rgba(200,165,94,.08);--fd:'Inter',Georgia,serif;--fb:'DM Sans','Helvetica Neue',sans-serif}
+ :root{--bk:#FAFAF8;--dk:#F2F0EC;--cd:#E8E4DE;--ch:#E0DDD7;--gd:#7D8C6E;--gd12:rgba(125,140,110,.12);--gd06:rgba(125,140,110,.06);--cr:#f2ece0;--mu:#a09888;--ml:#c4b9a8;--gn:#15803d;--gn2:#16a34a;--bd:rgba(125,140,110,.08);--fd:'Inter',Georgia,serif;--fb:'DM Sans','Helvetica Neue',sans-serif}
  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
  html{scroll-behavior:smooth;font-size:16px}
  body{font-family:var(--fb);font-weight:400;font-size:16px;line-height:1.7;color:var(--mu);background:var(--bk);overflow-x:hidden;-webkit-font-smoothing:antialiased;min-height:100vh}
@@ -34,7 +34,7 @@
  /* MAIN CONTAINER */
  .calc-wrap{max-width:680px;margin:0 auto;padding:48px 24px 80px}
  .calc-hero{text-align:center;margin-bottom:48px}
- .calc-hero .lbl{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gd);margin-bottom:16px;padding:8px 20px;background:var(--gd06);border:1px solid rgba(200,165,94,.15);border-radius:50px}
+ .calc-hero .lbl{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gd);margin-bottom:16px;padding:8px 20px;background:var(--gd06);border:1px solid rgba(125,140,110,.15);border-radius:50px}
  .calc-hero h1{font-family:var(--fd);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;line-height:1.15;color:var(--cr);margin-bottom:14px}
  .calc-hero h1 em{font-style:normal;color:var(--gd)}
  .calc-hero p{color:var(--mu);font-size:.95rem;max-width:480px;margin:0 auto}
@@ -58,8 +58,8 @@
  .opts.g2{grid-template-columns:1fr 1fr}
  .opts.g3{grid-template-columns:1fr 1fr 1fr}
  .opt{background:var(--cd);border:1.5px solid var(--bd);padding:20px 24px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
- .opt:hover{border-color:rgba(200,165,94,.3);background:var(--ch)}
- .opt.sel{border-color:var(--gd);background:rgba(200,165,94,.06)}
+ .opt:hover{border-color:rgba(125,140,110,.3);background:var(--ch)}
+ .opt.sel{border-color:var(--gd);background:rgba(125,140,110,.06)}
  .opt.sel::after{content:'';position:absolute;top:12px;right:14px;width:22px;height:22px;background:var(--gd);display:flex;align-items:center;justify-content:center;border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%230a0a0a' stroke-width='3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-size:14px;background-repeat:no-repeat;background-position:center}
  .opt-ic{font-size:1.8rem;margin-bottom:8px}
  .opt-img{width:100%;height:100px;overflow:hidden;margin-bottom:12px;border-radius:2px}
@@ -124,7 +124,7 @@
  /* NAV BUTTONS */
  .nav-btns{display:flex;gap:12px;margin-top:28px}
  .btn-back{flex:0 0 auto;padding:12px 24px;background:0;border:1.5px solid var(--bd);color:var(--mu);font-family:var(--fb);font-size:.85rem;font-weight:500;cursor:pointer;transition:all .3s}
- .btn-back:hover{border-color:rgba(200,165,94,.3);color:var(--cr)}
+ .btn-back:hover{border-color:rgba(125,140,110,.3);color:var(--cr)}
 
  /* RESPONSIVE */
  @media(max-width:640px){
@@ -504,24 +504,24 @@ function showResult(){
  <script src="/whatsapp-gate.js?v=3" defer></script>
 
  <!-- Site Navigation -->
- <div style="background:#111;padding:1.5rem var(--container-padding,1.5rem);border-top:1px solid rgba(183,149,87,.15)">
+ <div style="background:var(--bg-secondary);padding:1.5rem var(--container-padding,1.5rem);border-top:1px solid rgba(0,0,0,.06)">
  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:.6rem .8rem;justify-content:center;font-size:.82rem">
- <a href="/" style="color:#999;text-decoration:none">Home</a>
- <a href="/renovation/" style="color:#999;text-decoration:none">Renovation</a>
- <a href="/design-approvals/" style="color:#999;text-decoration:none">Design</a>
- <a href="/interiors/" style="color:#999;text-decoration:none">Interiors</a>
- <a href="/contracting/" style="color:#999;text-decoration:none">Contracting</a>
+ <a href="/" style="color:#666;text-decoration:none">Home</a>
+ <a href="/renovation/" style="color:#666;text-decoration:none">Renovation</a>
+ <a href="/design-approvals/" style="color:#666;text-decoration:none">Design</a>
+ <a href="/interiors/" style="color:#666;text-decoration:none">Interiors</a>
+ <a href="/contracting/" style="color:#666;text-decoration:none">Contracting</a>
  <a href="/areas/" style="color:var(--gold);text-decoration:none">All Communities</a>
- <a href="/apartments/" style="color:#999;text-decoration:none">Apartments</a>
- <a href="/guides/" style="color:#999;text-decoration:none">Guides</a>
- <a href="/guides/buying/" style="color:#999;text-decoration:none">Buying Guides</a>
- <a href="/pricing/" style="color:#999;text-decoration:none">Pricing</a>
- <a href="/faq/" style="color:#999;text-decoration:none">FAQ</a>
- <a href="/calculator/" style="color:#999;text-decoration:none">Calculator</a>
- <a href="/blog/" style="color:#999;text-decoration:none">Blog</a>
- <a href="/portfolio/" style="color:#999;text-decoration:none">Portfolio</a>
- <a href="/contact/" style="color:#999;text-decoration:none">Contact</a>
- <a href="/get-quote/" style="color:#999;text-decoration:none">Get Quote</a>
+ <a href="/apartments/" style="color:#666;text-decoration:none">Apartments</a>
+ <a href="/guides/" style="color:#666;text-decoration:none">Guides</a>
+ <a href="/guides/buying/" style="color:#666;text-decoration:none">Buying Guides</a>
+ <a href="/pricing/" style="color:#666;text-decoration:none">Pricing</a>
+ <a href="/faq/" style="color:#666;text-decoration:none">FAQ</a>
+ <a href="/calculator/" style="color:#666;text-decoration:none">Calculator</a>
+ <a href="/blog/" style="color:#666;text-decoration:none">Blog</a>
+ <a href="/portfolio/" style="color:#666;text-decoration:none">Portfolio</a>
+ <a href="/contact/" style="color:#666;text-decoration:none">Contact</a>
+ <a href="/get-quote/" style="color:#666;text-decoration:none">Get Quote</a>
  </div>
  </div>
 </body>
