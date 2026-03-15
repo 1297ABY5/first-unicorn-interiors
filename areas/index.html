@@ -217,12 +217,20 @@
  </div>
 
  <style>
- .area-hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
- .area-hub-card{display:block;background:var(--bg-secondary);border:1px solid rgba(160,120,90,.12);border-radius:10px;padding:1.4rem 1.2rem;text-decoration:none;transition:all .25s ease}
- .area-hub-card:hover{transform:translateY(-3px);border-color:var(--gold);background:var(--bg-secondary)}
- .area-hub-name{font-family:var(--font-display);font-size:1.1rem;color:var(--text-primary);margin-bottom:.3rem}
-
- </style>
+.masonry-grid{columns:4;column-gap:12px;padding:0;}
+.masonry-card{display:inline-block;width:100%;margin-bottom:12px;position:relative;overflow:hidden;border-radius:10px;break-inside:avoid;cursor:pointer;transition:transform 0.4s ease;}
+.masonry-card:hover{transform:translateY(-4px);}
+.masonry-card img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;transition:transform 0.6s ease;filter:brightness(0.85);}
+.masonry-card:hover img{transform:scale(1.05);filter:brightness(0.75);}
+.masonry-card.premium img{aspect-ratio:3/4;}
+.masonry-card.featured img{aspect-ratio:1/1;}
+.masonry-label{position:absolute;bottom:0;left:0;right:0;padding:20px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.7));font-family:var(--font-display);font-size:1rem;font-weight:600;color:#fff;letter-spacing:0.01em;}
+.masonry-card.premium .masonry-label{font-size:1.2rem;padding:28px 20px 18px;}
+.masonry-card.premium .masonry-label::before{content:'★ ';color:#A0785A;font-size:0.7rem;vertical-align:middle;}
+@media(max-width:1024px){.masonry-grid{columns:3;}}
+@media(max-width:768px){.masonry-grid{columns:2;column-gap:8px;}.masonry-card{margin-bottom:8px;}}
+@media(max-width:480px){.masonry-grid{columns:2;}}
+</style>
 
  <!-- ═══ VILLA COMMUNITIES ═══ -->
  <section class="section">
@@ -232,190 +240,245 @@
  <h2>46 Villa Communities Across Dubai</h2>
  <p>From full villa renovations to kitchen, bathroom, pool and glass works — we have completed projects in every major villa community in Dubai.</p>
  </div>
- <div class="area-hub-grid">
- <a href="/areas/arabian-ranches/" class="area-hub-card fade-in">
- <div class="area-hub-name">Arabian Ranches</div>
- </a>
- <a href="/areas/arabian-ranches-2/" class="area-hub-card fade-in">
- <div class="area-hub-name">Arabian Ranches 2</div>
- </a>
- <a href="/areas/arabian-ranches-3/" class="area-hub-card fade-in">
- <div class="area-hub-name">Arabian Ranches 3</div>
- </a>
- <a href="/areas/palm-jumeirah/" class="area-hub-card fade-in">
- <div class="area-hub-name">Palm Jumeirah</div>
- </a>
- <a href="/areas/emirates-hills/" class="area-hub-card fade-in">
- <div class="area-hub-name">Emirates Hills</div>
- </a>
- <a href="/areas/dubai-hills/" class="area-hub-card fade-in">
- <div class="area-hub-name">Dubai Hills Estate</div>
- </a>
- <a href="/areas/jumeirah-golf-estates/" class="area-hub-card fade-in">
- <div class="area-hub-name">Jumeirah Golf Estates</div>
- </a>
- <a href="/areas/jumeirah-islands/" class="area-hub-card fade-in">
- <div class="area-hub-name">Jumeirah Islands</div>
- </a>
- <a href="/areas/jumeirah-park/" class="area-hub-card fade-in">
- <div class="area-hub-name">Jumeirah Park</div>
- </a>
- <a href="/areas/district-one/" class="area-hub-card fade-in">
- <div class="area-hub-name">District One</div>
- </a>
- <a href="/areas/al-barari/" class="area-hub-card fade-in">
- <div class="area-hub-name">Al Barari</div>
- </a>
- <a href="/areas/tilal-al-ghaf/" class="area-hub-card fade-in">
- <div class="area-hub-name">Tilal Al Ghaf</div>
- </a>
- <a href="/areas/damac-hills/" class="area-hub-card fade-in">
- <div class="area-hub-name">DAMAC Hills</div>
- </a>
- <a href="/areas/springs-meadows/" class="area-hub-card fade-in">
- <div class="area-hub-name">Springs & Meadows</div>
- </a>
- <a href="/areas/the-lakes/" class="area-hub-card fade-in">
- <div class="area-hub-name">The Lakes</div>
- </a>
- <a href="/areas/the-villa/" class="area-hub-card fade-in">
- <div class="area-hub-name">The Villa</div>
- </a>
- <a href="/areas/victory-heights/" class="area-hub-card fade-in">
- <div class="area-hub-name">Victory Heights</div>
- </a>
- <a href="/areas/meydan/" class="area-hub-card fade-in">
- <div class="area-hub-name">Meydan</div>
- </a>
- <a href="/areas/sobha-hartland/" class="area-hub-card fade-in">
- <div class="area-hub-name">Sobha Hartland</div>
- </a>
- <a href="/areas/mudon/" class="area-hub-card fade-in">
- <div class="area-hub-name">Mudon</div>
- </a>
- <a href="/areas/al-furjan/" class="area-hub-card fade-in">
- <div class="area-hub-name">Al Furjan</div>
- </a>
- <a href="/areas/jvc-jvt/" class="area-hub-card fade-in">
- <div class="area-hub-name">JVC & JVT</div>
- </a>
- <a href="/areas/al-barsha-mirdif/" class="area-hub-card fade-in">
- <div class="area-hub-name">Al Barsha & Mirdif</div>
- </a>
- <a href="/areas/motor-city/" class="area-hub-card fade-in">
- <div class="area-hub-name">Motor City</div>
- </a>
- <a href="/areas/dubai-south/" class="area-hub-card fade-in">
- <div class="area-hub-name">Dubai South</div>
- </a>
- <a href="/areas/nad-al-sheba/" class="area-hub-card fade-in">
- <div class="area-hub-name">Nad Al Sheba</div>
- </a>
- <a href="/areas/villanova/" class="area-hub-card fade-in">
- <div class="area-hub-name">Villanova</div>
- </a>
- <a href="/areas/sustainable-city/" class="area-hub-card fade-in">
- <div class="area-hub-name">Sustainable City</div>
- </a>
- <a href="/areas/the-valley/" class="area-hub-card fade-in">
- <div class="area-hub-name">The Valley</div>
- </a>
- <a href="/areas/dubai-land/" class="area-hub-card fade-in">
- <div class="area-hub-name">Dubai Land</div>
- </a>
- <a href="/areas/mbr-city/" class="area-hub-card fade-in">
- <div class="area-hub-name">MBR City</div>
- </a>
- <a href="/areas/the-oasis/" class="area-hub-card fade-in">
- <div class="area-hub-name">The Oasis by Emaar</div>
- </a>
- <a href="/areas/dubai-investment-park/" class="area-hub-card fade-in">
- <div class="area-hub-name">Dubai Investment Park</div>
- </a>
- <a href="/areas/damac-lagoons/" class="area-hub-card fade-in">
- <div class="area-hub-name">DAMAC Lagoons</div>
- </a>
- <a href="/areas/the-heights/" class="area-hub-card fade-in">
- <div class="area-hub-name">The Heights Country Club</div>
- </a>
- <a href="/areas/damac-hills-2/" class="area-hub-card fade-in">
- <div class="area-hub-name">DAMAC Hills 2</div>
- </a>
- <a href="/areas/palm-jebel-ali/" class="area-hub-card fade-in">
- <div class="area-hub-name">Palm Jebel Ali</div>
- </a>
- <a href="/areas/dubai-islands/" class="area-hub-card fade-in">
- <div class="area-hub-name">Dubai Islands</div>
- </a>
- <a href="/areas/jumeirah/" class="area-hub-card fade-in">
- <div class="area-hub-name">Jumeirah</div>
- </a>
- <a href="/areas/expo-city/" class="area-hub-card fade-in">
- <div class="area-hub-name">Expo City</div>
- </a>
- <a href="/areas/reem/" class="area-hub-card fade-in">
- <div class="area-hub-name">Reem</div>
- </a>
- <a href="/areas/jebel-ali/" class="area-hub-card fade-in">
- <div class="area-hub-name">Jebel Ali</div>
- </a>
- <a href="/areas/dubai-sports-city/" class="area-hub-card fade-in">
- <div class="area-hub-name">Dubai Sports City</div>
- </a>
- <a href="/areas/living-legends/" class="area-hub-card fade-in">
- <div class="area-hub-name">Living Legends</div>
- </a>
- <a href="/areas/falcon-city/" class="area-hub-card fade-in">
- <div class="area-hub-name">Falcon City of Wonders</div>
- </a>
- <a href="/areas/town-square/" class="area-hub-card fade-in">
- <div class="area-hub-name">Town Square</div>
- </a>
- </div>
- </div>
- </section>
+ <div class="masonry-grid">
+<a href="/areas/arabian-ranches/" class="masonry-card premium fade-in">
+  <img src="/images/portfolio/FU-PTF-0014.jpg" alt="Arabian Ranches villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Arabian Ranches</div>
+</a>
+<a href="/areas/palm-jumeirah/" class="masonry-card premium fade-in">
+  <img src="/images/portfolio/FU-PTF-0076.jpg" alt="Palm Jumeirah villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Palm Jumeirah</div>
+</a>
+<a href="/areas/emirates-hills/" class="masonry-card premium fade-in">
+  <img src="/images/interiors/FU-INT-0066.webp" alt="Emirates Hills villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Emirates Hills</div>
+</a>
+<a href="/areas/dubai-hills/" class="masonry-card premium fade-in">
+  <img src="/images/pool/FU-POL-0018.webp" alt="Dubai Hills Estate villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Dubai Hills Estate</div>
+</a>
+<a href="/areas/al-barari/" class="masonry-card featured fade-in">
+  <img src="/images/pool/FU-POL-0018.webp" alt="Al Barari villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Al Barari</div>
+</a>
+<a href="/areas/tilal-al-ghaf/" class="masonry-card featured fade-in">
+  <img src="/images/pool/FU-POL-0018.webp" alt="Tilal Al Ghaf villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Tilal Al Ghaf</div>
+</a>
+<a href="/areas/jumeirah-golf-estates/" class="masonry-card featured fade-in">
+  <img src="/images/portfolio/FU-PTF-0029.jpg" alt="Jumeirah Golf Estates villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Jumeirah Golf Estates</div>
+</a>
+<a href="/areas/district-one/" class="masonry-card featured fade-in">
+  <img src="/images/portfolio/FU-PTF-0009.jpg" alt="District One villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">District One</div>
+</a>
+<a href="/areas/arabian-ranches-2/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0020.jpg" alt="Arabian Ranches 2 villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Arabian Ranches 2</div>
+</a>
+<a href="/areas/arabian-ranches-3/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0039.webp" alt="Arabian Ranches 3 villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Arabian Ranches 3</div>
+</a>
+<a href="/areas/jumeirah-islands/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0058.jpg" alt="Jumeirah Islands villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Jumeirah Islands</div>
+</a>
+<a href="/areas/jumeirah-park/" class="masonry-card fade-in">
+  <img src="/images/kitchen/FU-KIT-0027.webp" alt="Jumeirah Park villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Jumeirah Park</div>
+</a>
+<a href="/areas/damac-hills/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0024.webp" alt="DAMAC Hills villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">DAMAC Hills</div>
+</a>
+<a href="/areas/springs-meadows/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0065.jpg" alt="Springs & Meadows villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Springs & Meadows</div>
+</a>
+<a href="/areas/the-lakes/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0065.jpg" alt="The Lakes villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">The Lakes</div>
+</a>
+<a href="/areas/the-villa/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0030.webp" alt="The Villa villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">The Villa</div>
+</a>
+<a href="/areas/victory-heights/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0083.jpg" alt="Victory Heights villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Victory Heights</div>
+</a>
+<a href="/areas/meydan/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0012.jpg" alt="Meydan villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Meydan</div>
+</a>
+<a href="/areas/sobha-hartland/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0040.webp" alt="Sobha Hartland villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Sobha Hartland</div>
+</a>
+<a href="/areas/mudon/" class="masonry-card fade-in">
+  <img src="/images/kitchen/FU-KIT-0016.webp" alt="Mudon villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Mudon</div>
+</a>
+<a href="/areas/al-furjan/" class="masonry-card fade-in">
+  <img src="/images/kitchen/FU-KIT-0027.webp" alt="Al Furjan villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Al Furjan</div>
+</a>
+<a href="/areas/jvc-jvt/" class="masonry-card fade-in">
+  <img src="/images/kitchen/FU-KIT-0029.webp" alt="JVC & JVT villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">JVC & JVT</div>
+</a>
+<a href="/areas/al-barsha-mirdif/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0024.webp" alt="Al Barsha & Mirdif villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Al Barsha & Mirdif</div>
+</a>
+<a href="/areas/motor-city/" class="masonry-card fade-in">
+  <img src="/images/kitchen/FU-KIT-0027.webp" alt="Motor City villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Motor City</div>
+</a>
+<a href="/areas/dubai-south/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0098.webp" alt="Dubai South villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Dubai South</div>
+</a>
+<a href="/areas/nad-al-sheba/" class="masonry-card fade-in">
+  <img src="/images/kitchen/FU-KIT-0027.webp" alt="Nad Al Sheba villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Nad Al Sheba</div>
+</a>
+<a href="/areas/villanova/" class="masonry-card fade-in">
+  <img src="/images/bathroom/FU-BTH-0016.webp" alt="Villanova villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Villanova</div>
+</a>
+<a href="/areas/sustainable-city/" class="masonry-card fade-in">
+  <img src="/images/kitchen/FU-KIT-0021.webp" alt="Sustainable City villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Sustainable City</div>
+</a>
+<a href="/areas/the-valley/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="The Valley villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">The Valley</div>
+</a>
+<a href="/areas/dubai-land/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Dubai Land villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Dubai Land</div>
+</a>
+<a href="/areas/mbr-city/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="MBR City villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">MBR City</div>
+</a>
+<a href="/areas/the-oasis/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="The Oasis by Emaar villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">The Oasis by Emaar</div>
+</a>
+<a href="/areas/dubai-investment-park/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Dubai Investment Park villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Dubai Investment Park</div>
+</a>
+<a href="/areas/damac-lagoons/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="DAMAC Lagoons villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">DAMAC Lagoons</div>
+</a>
+<a href="/areas/the-heights/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="The Heights villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">The Heights</div>
+</a>
+<a href="/areas/damac-hills-2/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="DAMAC Hills 2 villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">DAMAC Hills 2</div>
+</a>
+<a href="/areas/palm-jebel-ali/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Palm Jebel Ali villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Palm Jebel Ali</div>
+</a>
+<a href="/areas/dubai-islands/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Dubai Islands villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Dubai Islands</div>
+</a>
+<a href="/areas/jumeirah/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Jumeirah villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Jumeirah</div>
+</a>
+<a href="/areas/expo-city/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Expo City villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Expo City</div>
+</a>
+<a href="/areas/reem/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Reem villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Reem</div>
+</a>
+<a href="/areas/jebel-ali/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Jebel Ali villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Jebel Ali</div>
+</a>
+<a href="/areas/dubai-sports-city/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Dubai Sports City villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Dubai Sports City</div>
+</a>
+<a href="/areas/living-legends/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Living Legends villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Living Legends</div>
+</a>
+<a href="/areas/falcon-city/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Falcon City villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Falcon City</div>
+</a>
+<a href="/areas/town-square/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="Town Square villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Town Square</div>
+</a>
+</div>
+</div>
+</section>
 
- <!-- ═══ APARTMENT AREAS ═══ -->
- <section class="section section-dark">
- <div class="container">
- <div class="section-header fade-in">
- <div class="label">Apartment Areas</div>
- <h2>9 Apartment Districts</h2>
- <p>Apartment renovation, fit-out and refurbishment across Dubai's premium tower communities.</p>
- </div>
- <div class="area-hub-grid">
- <a href="/apartments/dubai-marina/" class="area-hub-card fade-in">
- <div class="area-hub-name">Dubai Marina</div>
- </a>
- <a href="/apartments/downtown-dubai/" class="area-hub-card fade-in">
- <div class="area-hub-name">Downtown Dubai</div>
- </a>
- <a href="/apartments/business-bay/" class="area-hub-card fade-in">
- <div class="area-hub-name">Business Bay</div>
- </a>
- <a href="/apartments/jbr/" class="area-hub-card fade-in">
- <div class="area-hub-name">JBR</div>
- </a>
- <a href="/apartments/jlt/" class="area-hub-card fade-in">
- <div class="area-hub-name">JLT</div>
- </a>
- <a href="/apartments/city-walk/" class="area-hub-card fade-in">
- <div class="area-hub-name">City Walk</div>
- </a>
- <a href="/apartments/difc/" class="area-hub-card fade-in">
- <div class="area-hub-name">DIFC</div>
- </a>
- <a href="/apartments/palm-jumeirah-apartments/" class="area-hub-card fade-in">
- <div class="area-hub-name">Palm Jumeirah Apartments</div>
- </a>
- <a href="/apartments/dubai-creek-harbour/" class="area-hub-card fade-in">
- <div class="area-hub-name">Dubai Creek Harbour</div>
- </a>
- </div>
- </div>
- </section>
+<!-- ═══ APARTMENT AREAS ═══ -->
+<section class="section section-dark">
+<div class="container">
+<div class="section-header fade-in">
+  <div class="label">Apartment Districts</div>
+  <h2>9 Premium Apartment Districts</h2>
+  <p>Apartment renovation, fit-out and refurbishment across Dubai's premium tower communities.</p>
+</div>
+<div class="masonry-grid">
+<a href="/apartments/dubai-marina/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0066.webp" alt="Dubai Marina villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Dubai Marina</div>
+</a>
+<a href="/apartments/downtown-dubai/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0024.webp" alt="Downtown Dubai villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Downtown Dubai</div>
+</a>
+<a href="/apartments/business-bay/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0098.webp" alt="Business Bay villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Business Bay</div>
+</a>
+<a href="/apartments/jbr/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0022.jpg" alt="JBR villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">JBR</div>
+</a>
+<a href="/apartments/jlt/" class="masonry-card fade-in">
+  <img src="/images/kitchen/FU-KIT-0029.webp" alt="JLT villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">JLT</div>
+</a>
+<a href="/apartments/city-walk/" class="masonry-card fade-in">
+  <img src="/images/interiors/FU-INT-0039.webp" alt="City Walk villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">City Walk</div>
+</a>
+<a href="/apartments/difc/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0009.jpg" alt="DIFC villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">DIFC</div>
+</a>
+<a href="/apartments/palm-jumeirah-apartments/" class="masonry-card fade-in">
+  <img src="/images/portfolio/FU-PTF-0076.jpg" alt="Palm Jumeirah Apartments villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Palm Jumeirah Apartments</div>
+</a>
+<a href="/apartments/dubai-creek-harbour/" class="masonry-card fade-in">
+  <img src="/images/pool/FU-POL-0018.webp" alt="Dubai Creek Harbour villa renovation Dubai" loading="lazy">
+  <div class="masonry-label">Dubai Creek Harbour</div>
+</a>
+</div>
+</div>
+</section>
 
- <!-- ═══ CTA ═══ -->
+<!-- ═══ CTA ═══ -->
  <section class="section">
  <div class="container" style="text-align:center">
  <h2 class="fade-in">Don't See Your Community?</h2>
