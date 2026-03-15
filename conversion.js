@@ -50,7 +50,7 @@
       { id: '3d_design',
         html: '<h2>Wait \u2014 Don\'t Leave Without This</h2><p>Get a <strong>free 3D design concept</strong> for your villa. See your renovation before it starts. No obligation.</p><a href="/free-design/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">' + WA_SVG + ' Get My Free Design</a><br><a href="' + PHONE + '" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;">Or Call +971 58 565 8002</a>' },
       { id: 'calculator',
-        html: '<h2>Curious What It\u2019ll Cost?</h2><p>Our <strong>free renovation calculator</strong> gives you a personalised estimate in 60 seconds. 5 quick questions, instant results.</p><a href="/calculator/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">Try the Free Calculator</a><br><a href="/guides/lookbook/" style="display:inline-flex;font-size:0.85rem;color:#7D8C6E;text-decoration:none;">Or browse 50 Before &amp; After transformations \u2192</a>' }
+        html: '<h2>Curious What It\u2019ll Cost?</h2><p>Our <strong>free renovation calculator</strong> gives you a personalised estimate in 60 seconds. 5 quick questions, instant results.</p><a href="/calculator/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">Try the Free Calculator</a><br><a href="/guides/lookbook/" style="display:inline-flex;font-size:0.85rem;color:#A0785A;text-decoration:none;">Or browse 50 Before &amp; After transformations \u2192</a>' }
     ];
 
     var idx;

@@ -101,10 +101,10 @@
 .wag-field{margin-bottom:1rem}\
 .wag-field label{display:block;font-size:.72rem;font-weight:600;color:#5A5A5A;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}\
 .wag-field input{width:100%;padding:12px 14px;background:#F2F0EC;border:1px solid rgba(0,0,0,.08);border-radius:8px;color:#1A1A1A;font-size:.9rem;font-family:"DM Sans",sans-serif;outline:none;transition:border-color .3s}\
-.wag-field input:focus{border-color:#7D8C6E}\
+.wag-field input:focus{border-color:#A0785A}\
 .wag-field input::placeholder{color:rgba(0,0,0,.3)}\
 .wag-phone-row{display:flex;gap:0}\
-.wag-prefix{padding:12px 10px;background:#F2F0EC;border:1px solid rgba(0,0,0,.08);border-right:none;border-radius:8px 0 0 8px;color:#7D8C6E;font-size:.9rem;font-weight:600;white-space:nowrap;display:flex;align-items:center}\
+.wag-prefix{padding:12px 10px;background:#F2F0EC;border:1px solid rgba(0,0,0,.08);border-right:none;border-radius:8px 0 0 8px;color:#A0785A;font-size:.9rem;font-weight:600;white-space:nowrap;display:flex;align-items:center}\
 .wag-phone-row input{border-radius:0 8px 8px 0}\
 .wag-btn{width:100%;padding:14px;background:#0e6b30;color:#fff;font-weight:700;font-size:.95rem;border:none;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;margin-top:.5rem}\
 .wag-btn:hover{background:#0e6b30;transform:translateY(-1px)}\
@@ -256,7 +256,7 @@
 .waq-section select{width:100%;padding:12px 14px;background:#F2F0EC;border:1px solid rgba(0,0,0,.08);border-radius:8px;color:#1A1A1A;font-size:.9rem;font-family:"DM Sans",sans-serif;outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23b79557\' stroke-width=\'2\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpolyline points=\'6 9 12 15 18 9\'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;cursor:pointer}\
 .waq-section select option{background:#fff;color:#1A1A1A}\
 .waq-section textarea{width:100%;padding:12px 14px;background:#F2F0EC;border:1px solid rgba(0,0,0,.08);border-radius:8px;color:#1A1A1A;font-size:.9rem;font-family:"DM Sans",sans-serif;outline:none;resize:vertical;min-height:60px;transition:border-color .3s}\
-.waq-section textarea:focus{border-color:#7D8C6E}\
+.waq-section textarea:focus{border-color:#A0785A}\
 .waq-section textarea::placeholder{color:rgba(0,0,0,.3)}\
 .waq-section .wag-btn{margin-top:.3rem}\
 .waq-done{text-align:center;padding:1rem 0}\
