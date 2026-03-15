@@ -85,6 +85,16 @@
       "source": "/services/",
       "destination": "/renovation/",
       "statusCode": 301
+    },
+    {
+      "source": "/contracting/civil-works/:path*",
+      "destination": "/contracting/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contracting/civil-works",
+      "destination": "/contracting/",
+      "statusCode": 301
     }
   ],
   "headers": [
