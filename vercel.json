@@ -95,6 +95,21 @@
       "source": "/contracting/civil-works",
       "destination": "/contracting/",
       "statusCode": 301
+    },
+    {
+      "source": "/pool-quote",
+      "destination": "/lp/swimming-pool-dubai/",
+      "statusCode": 302
+    },
+    {
+      "source": "/villa-quote",
+      "destination": "/lp/villa-renovation-dubai/",
+      "statusCode": 302
+    },
+    {
+      "source": "/kitchen-quote",
+      "destination": "/lp/kitchen-renovation-dubai/",
+      "statusCode": 302
     }
   ],
   "headers": [
