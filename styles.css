@@ -69,3 +69,12 @@
 .community-card:hover{transform:translateY(-3px);}
 .gallery-card{transition:transform 0.4s ease;}
 .gallery-card:hover{transform:translateY(-3px);}
+
+@media(max-width:1024px){.nav-call{display:none;}}
+
+@media(max-width:768px){
+  .seo-directory{padding:1.5rem var(--container-padding) !important;}
+  .seo-directory .seo-grid{grid-template-columns:1fr !important;gap:1.2rem !important;}
+  .seo-directory .seo-links{gap:0.15rem 0.8rem !important;font-size:0.75rem !important;}
+  .seo-directory h3{font-size:0.68rem !important;margin-bottom:0.5rem !important;}
+}
