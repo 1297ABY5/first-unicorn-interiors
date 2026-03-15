@@ -92,29 +92,29 @@
   var popupCSS = '\
 .wag-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:2001;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);opacity:0;transition:opacity .3s;pointer-events:none}\
 .wag-overlay.active{opacity:1;pointer-events:auto}\
-.wag-popup{background:#111;border:1px solid rgba(183,149,87,.25);border-radius:16px;padding:2rem 1.8rem;max-width:420px;width:92%;position:relative;transform:translateY(20px);transition:transform .3s}\
+.wag-popup{background:#fff;border:1px solid rgba(0,0,0,.06);box-shadow:0 20px 60px rgba(0,0,0,.12);border-radius:16px;padding:2rem 1.8rem;max-width:420px;width:92%;position:relative;transform:translateY(20px);transition:transform .3s}\
 .wag-overlay.active .wag-popup{transform:translateY(0)}\
-.wag-close{position:absolute;top:10px;right:14px;background:none;border:none;color:#888;font-size:1.5rem;cursor:pointer;line-height:1}\
+.wag-close{position:absolute;top:10px;right:14px;background:none;border:none;color:#999;font-size:1.5rem;cursor:pointer;line-height:1}\
 .wag-close:hover{color:#fff}\
-.wag-title{font-family:"Playfair Display",Georgia,serif;font-size:1.3rem;color:#fff;margin-bottom:.4rem;text-align:center}\
-.wag-sub{color:#999;font-size:.88rem;text-align:center;margin-bottom:1.5rem;line-height:1.5}\
+.wag-title{font-family:"Inter","Helvetica Neue",sans-serif;font-size:1.3rem;color:#1A1A1A;margin-bottom:.4rem;text-align:center}\
+.wag-sub{color:#666;font-size:.88rem;text-align:center;margin-bottom:1.5rem;line-height:1.5}\
 .wag-field{margin-bottom:1rem}\
-.wag-field label{display:block;font-size:.72rem;font-weight:600;color:#c4b9a8;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}\
-.wag-field input{width:100%;padding:12px 14px;background:#0a0a0a;border:1px solid rgba(183,149,87,.15);border-radius:8px;color:#fff;font-size:.9rem;font-family:"DM Sans",sans-serif;outline:none;transition:border-color .3s}\
-.wag-field input:focus{border-color:#b79557}\
-.wag-field input::placeholder{color:rgba(160,152,136,.4)}\
+.wag-field label{display:block;font-size:.72rem;font-weight:600;color:#5A5A5A;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}\
+.wag-field input{width:100%;padding:12px 14px;background:#F2F0EC;border:1px solid rgba(0,0,0,.08);border-radius:8px;color:#1A1A1A;font-size:.9rem;font-family:"DM Sans",sans-serif;outline:none;transition:border-color .3s}\
+.wag-field input:focus{border-color:#7D8C6E}\
+.wag-field input::placeholder{color:rgba(0,0,0,.3)}\
 .wag-phone-row{display:flex;gap:0}\
-.wag-prefix{padding:12px 10px;background:#0a0a0a;border:1px solid rgba(183,149,87,.15);border-right:none;border-radius:8px 0 0 8px;color:#b79557;font-size:.9rem;font-weight:600;white-space:nowrap;display:flex;align-items:center}\
+.wag-prefix{padding:12px 10px;background:#F2F0EC;border:1px solid rgba(0,0,0,.08);border-right:none;border-radius:8px 0 0 8px;color:#7D8C6E;font-size:.9rem;font-weight:600;white-space:nowrap;display:flex;align-items:center}\
 .wag-phone-row input{border-radius:0 8px 8px 0}\
 .wag-btn{width:100%;padding:14px;background:#0e6b30;color:#fff;font-weight:700;font-size:.95rem;border:none;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;margin-top:.5rem}\
 .wag-btn:hover{background:#0e6b30;transform:translateY(-1px)}\
 .wag-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}\
-.wag-privacy{font-size:.7rem;color:#666;text-align:center;margin-top:.8rem;line-height:1.5}\
+.wag-privacy{font-size:.7rem;color:#999;text-align:center;margin-top:.8rem;line-height:1.5}\
 .wag-err{color:#ef4444;font-size:.78rem;margin-top:4px;display:none}\
 .wag-success{text-align:center;padding:1rem 0}\
 .wag-success-icon{font-size:2.5rem;margin-bottom:.8rem}\
-.wag-success h3{font-family:"Playfair Display",Georgia,serif;font-size:1.3rem;color:#fff;margin-bottom:.5rem}\
-.wag-success p{color:#999;font-size:.88rem;margin-bottom:1.2rem}\
+.wag-success h3{font-family:"Inter","Helvetica Neue",sans-serif;font-size:1.3rem;color:#1A1A1A;margin-bottom:.5rem}\
+.wag-success p{color:#666;font-size:.88rem;margin-bottom:1.2rem}\
 .wag-success-wa{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:#25d366;color:#fff;font-weight:600;font-size:.9rem;border-radius:8px;text-decoration:none;transition:all .3s}\
 .wag-success-wa:hover{background:#20bd5a;transform:translateY(-1px);color:#fff}\
 ';
@@ -249,19 +249,19 @@
   // ── INLINE WHATSAPP QUOTE FORM ──
   // Inject into elements with class "wa-quote-inject"
   var injectCSS = '\
-.waq-section{background:linear-gradient(135deg,#0d0d0d,#161616);border:1px solid rgba(183,149,87,.15);border-radius:16px;padding:2rem 1.8rem;margin:2rem 0;max-width:560px}\
-.waq-section h3{font-family:"Playfair Display",Georgia,serif;font-size:1.3rem;color:#fff;margin-bottom:.3rem}\
-.waq-section .waq-sub{color:#999;font-size:.88rem;margin-bottom:1.2rem}\
+.waq-section{background:#fff;border:1px solid rgba(0,0,0,.06);box-shadow:0 4px 20px rgba(0,0,0,.04);border-radius:16px;padding:2rem 1.8rem;margin:2rem 0;max-width:560px}\
+.waq-section h3{font-family:"Inter","Helvetica Neue",sans-serif;font-size:1.3rem;color:#1A1A1A;margin-bottom:.3rem}\
+.waq-section .waq-sub{color:#666;font-size:.88rem;margin-bottom:1.2rem}\
 .waq-section .wag-field{margin-bottom:.8rem}\
-.waq-section select{width:100%;padding:12px 14px;background:#0a0a0a;border:1px solid rgba(183,149,87,.15);border-radius:8px;color:#fff;font-size:.9rem;font-family:"DM Sans",sans-serif;outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23b79557\' stroke-width=\'2\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpolyline points=\'6 9 12 15 18 9\'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;cursor:pointer}\
-.waq-section select option{background:#0a0a0a;color:#fff}\
-.waq-section textarea{width:100%;padding:12px 14px;background:#0a0a0a;border:1px solid rgba(183,149,87,.15);border-radius:8px;color:#fff;font-size:.9rem;font-family:"DM Sans",sans-serif;outline:none;resize:vertical;min-height:60px;transition:border-color .3s}\
-.waq-section textarea:focus{border-color:#b79557}\
-.waq-section textarea::placeholder{color:rgba(160,152,136,.4)}\
+.waq-section select{width:100%;padding:12px 14px;background:#F2F0EC;border:1px solid rgba(0,0,0,.08);border-radius:8px;color:#1A1A1A;font-size:.9rem;font-family:"DM Sans",sans-serif;outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23b79557\' stroke-width=\'2\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpolyline points=\'6 9 12 15 18 9\'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;cursor:pointer}\
+.waq-section select option{background:#fff;color:#1A1A1A}\
+.waq-section textarea{width:100%;padding:12px 14px;background:#F2F0EC;border:1px solid rgba(0,0,0,.08);border-radius:8px;color:#1A1A1A;font-size:.9rem;font-family:"DM Sans",sans-serif;outline:none;resize:vertical;min-height:60px;transition:border-color .3s}\
+.waq-section textarea:focus{border-color:#7D8C6E}\
+.waq-section textarea::placeholder{color:rgba(0,0,0,.3)}\
 .waq-section .wag-btn{margin-top:.3rem}\
 .waq-done{text-align:center;padding:1rem 0}\
-.waq-done h4{color:#fff;font-family:"Playfair Display",Georgia,serif;margin-bottom:.4rem}\
-.waq-done p{color:#999;font-size:.88rem}\
+.waq-done h4{color:#fff;font-family:"Inter","Helvetica Neue",sans-serif;margin-bottom:.4rem}\
+.waq-done p{color:#666;font-size:.88rem}\
 ';
 
   var inlineStyle = document.createElement('style');

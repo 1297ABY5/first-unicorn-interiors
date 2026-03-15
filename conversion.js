@@ -37,8 +37,9 @@
     }, { passive: true });
   }
 
-  // ═══ 2. A/B EXIT-INTENT POPUP (context-aware) ═══
+  // ═══ 2. EXIT-INTENT POPUP — DISABLED (hurts premium perception) ═══
   function injectExitPopup() {
+    return; // Disabled — exit popups reduce trust for premium renovation clients
     if (sessionStorage.getItem('ep_shown')) return;
     if (location.pathname.indexOf('/get-quote/') === 0) return;
     if (location.pathname.indexOf('/free-design/') === 0) return;
@@ -49,7 +50,7 @@
       { id: '3d_design',
         html: '<h2>Wait \u2014 Don\'t Leave Without This</h2><p>Get a <strong>free 3D design concept</strong> for your villa. See your renovation before it starts. No obligation.</p><a href="/free-design/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">' + WA_SVG + ' Get My Free Design</a><br><a href="' + PHONE + '" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;">Or Call +971 58 565 8002</a>' },
       { id: 'calculator',
-        html: '<h2>Curious What It\u2019ll Cost?</h2><p>Our <strong>free renovation calculator</strong> gives you a personalised estimate in 60 seconds. 5 quick questions, instant results.</p><a href="/calculator/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">Try the Free Calculator</a><br><a href="/guides/lookbook/" style="display:inline-flex;font-size:0.85rem;color:#b79557;text-decoration:none;">Or browse 50 Before &amp; After transformations \u2192</a>' }
+        html: '<h2>Curious What It\u2019ll Cost?</h2><p>Our <strong>free renovation calculator</strong> gives you a personalised estimate in 60 seconds. 5 quick questions, instant results.</p><a href="/calculator/" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;">Try the Free Calculator</a><br><a href="/guides/lookbook/" style="display:inline-flex;font-size:0.85rem;color:#7D8C6E;text-decoration:none;">Or browse 50 Before &amp; After transformations \u2192</a>' }
     ];
 
     var idx;
@@ -147,8 +148,9 @@
     btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   }
 
-  // ═══ 7. SOCIAL PROOF TOAST ═══
+  // ═══ 7. SOCIAL PROOF TOAST — DISABLED (fake urgency hurts premium brand) ═══
   function injectSocialProof() {
+    return; // Disabled — fabricated social proof reduces trust
     if (location.pathname.indexOf('/get-quote/') === 0) return;
     if (sessionStorage.getItem('sp_shown')) return;
     var proofs = [
@@ -226,11 +228,122 @@
     });
   }
 
+
+  // ═══ 11. QUOTE FORM (service pages) ═══
+  function injectQuoteForm() {
+    var path = location.pathname;
+    var servicePaths = ['/renovation/', '/interiors/', '/contracting/', '/design-approvals/'];
+    var isServicePage = false;
+    for (var i = 0; i < servicePaths.length; i++) {
+      if (path.indexOf(servicePaths[i]) === 0) { isServicePage = true; break; }
+    }
+    if (!isServicePage) return;
+    if (document.querySelector('.quote-form-section')) return;
+
+    var pageTitle = document.querySelector('.page-hero-content h1, h1');
+    var serviceName = pageTitle ? pageTitle.textContent.trim() : 'Renovation';
+
+    var sec = document.createElement('section');
+    sec.className = 'quote-form-section fade-in';
+    sec.innerHTML = '<div class="quote-form-wrap">' +
+      '<h2>Get Your Free Quote</h2>' +
+      '<p class="qf-sub">Tell us about your project. We\'ll reply within 2 hours with a detailed estimate.</p>' +
+      '<form id="quoteForm">' +
+      '<div class="qf-row">' +
+      '<div class="qf-field"><label>Your Name</label><input type="text" name="name" placeholder="Full name" required></div>' +
+      '<div class="qf-field"><label>Phone Number</label><input type="tel" name="phone" placeholder="+971 5X XXX XXXX" required></div>' +
+      '</div>' +
+      '<div class="qf-field"><label>Service Needed</label>' +
+      '<select name="service">' +
+      '<option value="Villa Renovation">Full Villa Renovation</option>' +
+      '<option value="Kitchen">Kitchen Renovation</option>' +
+      '<option value="Bathroom">Bathroom Renovation</option>' +
+      '<option value="Swimming Pool">Swimming Pool</option>' +
+      '<option value="Interior Fit-Out">Interior Fit-Out</option>' +
+      '<option value="Glass & Aluminium">Glass &amp; Aluminium</option>' +
+      '<option value="Joinery">Joinery &amp; Cabinetry</option>' +
+      '<option value="Flooring">Flooring</option>' +
+      '<option value="Landscaping">Landscaping</option>' +
+      '<option value="Design & Approvals">Design &amp; Approvals</option>' +
+      '<option value="Construction">Villa Construction</option>' +
+      '<option value="Other">Other</option>' +
+      '</select></div>' +
+      '<div class="qf-field"><label>Community / Area</label>' +
+      '<select name="area">' +
+      '<option value="">Select your area</option>' +
+      '<option value="Palm Jumeirah">Palm Jumeirah</option>' +
+      '<option value="Emirates Hills">Emirates Hills</option>' +
+      '<option value="Arabian Ranches">Arabian Ranches</option>' +
+      '<option value="Dubai Hills">Dubai Hills</option>' +
+      '<option value="Al Barari">Al Barari</option>' +
+      '<option value="Jumeirah Islands">Jumeirah Islands</option>' +
+      '<option value="DAMAC Hills">DAMAC Hills</option>' +
+      '<option value="Jumeirah Golf Estates">Jumeirah Golf Estates</option>' +
+      '<option value="The Lakes">The Lakes / Springs</option>' +
+      '<option value="Tilal Al Ghaf">Tilal Al Ghaf</option>' +
+      '<option value="MBR City">MBR City</option>' +
+      '<option value="Other">Other</option>' +
+      '</select></div>' +
+      '<div class="qf-field"><label>Tell us about your project <span style="font-weight:400;text-transform:none">(optional)</span></label>' +
+      '<textarea name="details" placeholder="E.g. I want to renovate my 4-bedroom villa, focusing on kitchen and bathrooms..."></textarea></div>' +
+      '<button type="submit" class="qf-submit">' + WA_SVG + ' Get My Free Quote</button>' +
+      '</form>' +
+      '<p class="qf-privacy">Your details go straight to our team via WhatsApp. No spam, ever.</p>' +
+      '<div class="qf-trust">' +
+      '<span><span class="qf-check">\u2713</span> Free consultation</span>' +
+      '<span><span class="qf-check">\u2713</span> Reply within 2 hours</span>' +
+      '<span><span class="qf-check">\u2713</span> No obligation</span>' +
+      '</div>' +
+      '</div>';
+
+    var ctaBlock = document.querySelector('.cta-block');
+    if (ctaBlock) {
+      ctaBlock.parentNode.insertBefore(sec, ctaBlock);
+    } else {
+      var footer = document.querySelector('.footer');
+      if (footer) footer.parentNode.insertBefore(sec, footer);
+    }
+
+    var select = sec.querySelector('select[name="service"]');
+    if (path.indexOf('/kitchen') > -1) select.value = 'Kitchen';
+    else if (path.indexOf('/bathroom') > -1) select.value = 'Bathroom';
+    else if (path.indexOf('/pool') > -1) select.value = 'Swimming Pool';
+    else if (path.indexOf('/full-villa') > -1) select.value = 'Villa Renovation';
+    else if (path.indexOf('/glass') > -1) select.value = 'Glass & Aluminium';
+    else if (path.indexOf('/joinery') > -1) select.value = 'Joinery';
+    else if (path.indexOf('/flooring') > -1) select.value = 'Flooring';
+    else if (path.indexOf('/landscaping') > -1) select.value = 'Landscaping';
+    else if (path.indexOf('/villa-fit-out') > -1 || path.indexOf('/residential') > -1 || path.indexOf('/commercial') > -1) select.value = 'Interior Fit-Out';
+    else if (path.indexOf('/design-approvals') > -1) select.value = 'Design & Approvals';
+    else if (path.indexOf('/contracting') > -1) select.value = 'Construction';
+
+    sec.querySelector('#quoteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var f = e.target;
+      var name = f.name.value.trim();
+      var phone = f.phone.value.trim();
+      var service = f.service.value;
+      var area = f.area.value;
+      var details = f.details.value.trim();
+      if (!name || !phone) return;
+      var msg = 'Hi, I\'d like a free quote.\n\n';
+      msg += 'Name: ' + name + '\n';
+      msg += 'Phone: ' + phone + '\n';
+      msg += 'Service: ' + service + '\n';
+      if (area) msg += 'Area: ' + area + '\n';
+      if (details) msg += 'Details: ' + details + '\n';
+      msg += '\n[Source: ' + serviceName + ' page - Quote Form]';
+      track('quote_form_submit', { service: service, area: area });
+      window.open('https://wa.me/971585658002?text=' + encodeURIComponent(msg), '_blank');
+    });
+  }
+
   // ═══ INIT ═══
   function init() {
     injectStickyCTA();
     injectExitPopup();
     injectEmailCapture();
+    injectQuoteForm();
     trackClicks();
     trackScrollDepth();
     trackTimeOnPage();
