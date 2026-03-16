@@ -9,7 +9,7 @@
 (function() {
   'use strict';
 
-  const WA = '971526455121'; // FUI ads number
+  const WA = '971585658002';
 
   // ── Page config map: path patterns → conversion data ──
   const CONFIG = {
@@ -263,7 +263,7 @@
     '  <div class="cv-right">',
     '    <div class="cv-price">' + cfg.price + '</div>',
     '    <a href="' + waURL + '" class="cv-wa" target="_blank" rel="noopener">' + waSVG + 'Get Free Quote</a>',
-    '    <a href="tel:+971526455121" class="cv-call">' + phoneSVG + 'Call Now</a>',
+    '    <a href="tel:+971585658002" class="cv-call">' + phoneSVG + 'Call Now</a>',
     '  </div>',
     '</div>'
   ].join('\n');
