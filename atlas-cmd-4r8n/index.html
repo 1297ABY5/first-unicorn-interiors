@@ -42,6 +42,7 @@ a:hover{background:var(--bg-secondary);border-color:#222;color:var(--gold)}
 </div>
 <div class="summary">
 <div class="summary-card"><div class="num" id="s-total">0</div><div class="lbl">Total Pages</div></div>
+<div class="summary-card"><div class="num" id="s-lp">0</div><div class="lbl">Landing Pages</div></div>
 <div class="summary-card"><div class="num" id="s-svc">0</div><div class="lbl">Services</div></div>
 <div class="summary-card"><div class="num" id="s-com">0</div><div class="lbl">Communities</div></div>
 <div class="summary-card"><div class="num" id="s-guide">0</div><div class="lbl">Guides</div></div>
@@ -52,6 +53,11 @@ a:hover{background:var(--bg-secondary);border-color:#222;color:var(--gold)}
 <div id="content"></div>
 <script>
 const P={
+'Google Ads Landing Pages':{b:'badge-new',i:[
+['LP — Swimming Pool Dubai','/lp/swimming-pool-dubai/','#1 campaign'],
+['LP — Villa Renovation Dubai','/lp/villa-renovation-dubai/',''],
+['LP — Kitchen Renovation Dubai','/lp/kitchen-renovation-dubai/',''],
+]},
 'Ad Landing Pages':{b:'badge-new',i:[
 ['Villa Renovation Dubai','/renovation/full-villa/',''],
 ['Home Renovation Dubai','/renovation/home/',''],
@@ -190,7 +196,14 @@ const P={
 ['GQ Kitchen','/get-quote/kitchen/','noindex'],['GQ Pool','/get-quote/pool/','noindex'],
 ['GQ Villa','/get-quote/villa-renovation/','noindex'],['GQ Glass','/get-quote/glass-aluminium/','noindex'],
 ['GQ Construction','/get-quote/construction/','noindex'],['Free Design','/free-design/','noindex'],
-['Privacy','/privacy/',''],['Terms','/terms/',''],
+['Privacy','/privacy/',''],['Terms','/terms/',''],['404 Page','/404/',''],
+]},
+'Hub / Index Pages':{b:'badge-page',i:[
+['Renovation Hub','/renovation/',''],['Services Hub','/interiors/',''],
+['Areas Hub','/areas/',''],['Apartments Hub','/apartments/',''],
+['Contracting Hub','/contracting/',''],['Design Approvals Hub','/design-approvals/',''],
+['Blog Hub','/blog/',''],['Guides Hub','/guides/',''],
+['Cost Guide (full)','/guides/cost-guide/guide/',''],['Checklist (full)','/guides/checklist/guide/',''],
 ]},
 'Referral Programmes':{b:'badge-referral',i:[
 ['Agent Partner Programme','/partners/','NEW — AED 2-5K/project'],
@@ -206,7 +219,7 @@ const P={
 };
 const B='https://www.firstunicorninteriors.com';
 function render(f=''){
-f=f.toLowerCase();let h='',n=0,c={s:0,co:0,g:0,bl:0,cr:0};
+f=f.toLowerCase();let h='',n=0,c={lp:0,s:0,co:0,g:0,bl:0,cr:0};
 for(const[sec,d]of Object.entries(P)){
 const fl=d.i.filter(([a,b,c])=>!f||a.toLowerCase().includes(f)||b.toLowerCase().includes(f)||c.toLowerCase().includes(f));
 if(!fl.length)continue;n+=fl.length;
@@ -215,6 +228,7 @@ if(['badge-community','badge-apartment'].includes(d.b))c.co+=fl.length;
 if(['badge-guide','badge-buying','badge-cost','badge-handover','badge-developer'].includes(d.b))c.g+=fl.length;
 if(d.b==='badge-blog')c.bl+=fl.length;
 if(d.b==='badge-page')c.cr+=fl.length;
+if(sec.includes('Google Ads Landing'))c.lp+=fl.length;
 h+=`<div class="section"><div class="section-title">${sec}<span class="section-count">${fl.length}</span></div><div class="grid">`;
 for(const[nm,url,nt]of fl){
 const nw=nt.includes('NEW')?'<span class="tag-new">NEW</span>':'';
@@ -224,6 +238,7 @@ h+=`<a href="${B+url}" target="_blank"><span class="badge ${d.b}">${sec.split('�
 document.getElementById('content').innerHTML=h;
 document.getElementById('stats').textContent=n+' pages | Updated '+new Date().toLocaleDateString('en-GB');
 document.getElementById('s-total').textContent=n;
+document.getElementById('s-lp').textContent=c.lp;
 document.getElementById('s-svc').textContent=c.s;
 document.getElementById('s-com').textContent=c.co;
 document.getElementById('s-guide').textContent=c.g;
