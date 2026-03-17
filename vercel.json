@@ -110,6 +110,16 @@
       "source": "/kitchen-quote",
       "destination": "/lp/kitchen-renovation-dubai/",
       "statusCode": 302
+    },
+    {
+      "source": "/villa-renovation-dubai",
+      "destination": "/renovation/full-villa/",
+      "statusCode": 301
+    },
+    {
+      "source": "/villa-renovation-dubai/",
+      "destination": "/renovation/full-villa/",
+      "statusCode": 301
     }
   ],
   "headers": [
