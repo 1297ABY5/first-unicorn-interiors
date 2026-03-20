@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Swimming Pool Renovation Cost Calculator Dubai | First Unicorn Interiors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#FAF8F5;--bronze:#A0785A;--bronze-light:#C9A87C;--bronze-dark:#7A5A3E;--text:#2C2C2A;--text-muted:#6B6860;--bg-card:#FFFFFF;--border:#E2DDD6;--green:#16A34A;--green-bg:#F0FDF4;--shadow:0 1px 3px rgba(0,0,0,0.06),0 4px 12px rgba(0,0,0,0.04)}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);line-height:1.6;padding:0}
+.calc-wrap{max-width:680px;margin:0 auto;padding:24px 16px}
+.calc-header{text-align:center;margin-bottom:32px}
+.calc-header h1{font-size:1.6rem;font-weight:700;color:var(--text);margin-bottom:8px;letter-spacing:-0.02em}
+.calc-header p{font-size:.9rem;color:var(--text-muted);max-width:480px;margin:0 auto}
+.calc-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px 24px;margin-bottom:16px;box-shadow:var(--shadow)}
+.calc-card h2{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--bronze);margin-bottom:16px}
+.option-grid{display:grid;gap:10px}
+.option-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.option-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.option-btn{background:var(--cream);border:2px solid var(--border);border-radius:12px;padding:16px 12px;text-align:center;cursor:pointer;transition:all .2s}
+.option-btn:hover{border-color:var(--bronze-light);background:#FAF6F0}
+.option-btn.selected{border-color:var(--bronze);background:#FAF6F0;box-shadow:0 0 0 1px var(--bronze)}
+.option-btn .icon{font-size:1.4rem;margin-bottom:6px;display:block}
+.option-btn .label{font-size:.82rem;font-weight:600;color:var(--text);display:block}
+.option-btn .sub{font-size:.7rem;color:var(--text-muted);display:block;margin-top:2px}
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.feature-btn{display:flex;align-items:center;gap:10px;background:var(--cream);border:2px solid var(--border);border-radius:10px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.feature-btn:hover{border-color:var(--bronze-light)}
+.feature-btn.selected{border-color:var(--bronze);background:#FAF6F0}
+.feature-btn .check{width:20px;height:20px;border:2px solid var(--border);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.feature-btn.selected .check{background:var(--bronze);border-color:var(--bronze)}
+.feature-btn.selected .check::after{content:'';display:block;width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);margin-top:-2px}
+.feature-btn .feat-text{flex:1}
+.feature-btn .feat-label{font-size:.82rem;font-weight:600;color:var(--text);display:block}
+.feature-btn .feat-price{font-size:.7rem;color:var(--text-muted);display:block}
+.result-card{background:var(--bg-card);border:2px solid var(--bronze);border-radius:16px;padding:28px 24px;margin-bottom:16px;box-shadow:var(--shadow);text-align:center}
+.result-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--bronze);margin-bottom:4px}
+.result-range{font-size:2.2rem;font-weight:700;color:var(--text);letter-spacing:-0.03em;margin-bottom:4px}
+.result-note{font-size:.78rem;color:var(--text-muted);margin-bottom:20px}
+.result-breakdown{text-align:left;border-top:1px solid var(--border);padding-top:16px;margin-top:8px}
+.breakdown-row{display:flex;justify-content:space-between;padding:6px 0;font-size:.82rem}
+.breakdown-row .bd-label{color:var(--text-muted)}
+.breakdown-row .bd-value{font-weight:600;color:var(--text)}
+.breakdown-row.total{border-top:1px solid var(--border);margin-top:8px;padding-top:12px}
+.breakdown-row.total .bd-label{font-weight:600;color:var(--text)}
+.breakdown-row.total .bd-value{color:var(--bronze);font-size:.95rem}
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--bronze);color:#fff;border:none;border-radius:12px;padding:16px 24px;font-size:1rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .2s;text-decoration:none;margin-top:16px}
+.wa-btn:hover{background:var(--bronze-dark);transform:translateY(-1px);box-shadow:0 4px 16px rgba(160,120,90,0.3)}
+.wa-btn svg{width:22px;height:22px;flex-shrink:0}
+.trust-bar{display:flex;justify-content:center;gap:24px;margin-top:20px;flex-wrap:wrap}
+.trust-item{font-size:.72rem;color:var(--text-muted);display:flex;align-items:center;gap:4px}
+.trust-item svg{width:14px;height:14px;fill:var(--bronze)}
+.disclaimer{text-align:center;font-size:.7rem;color:var(--text-muted);margin-top:16px;padding:0 20px}
+.progress-bar{display:flex;gap:6px;margin-bottom:24px}
+.progress-dot{height:4px;flex:1;background:var(--border);border-radius:2px;transition:background .3s}
+.progress-dot.active{background:var(--bronze)}
+@media(max-width:480px){
+.option-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.feature-grid{grid-template-columns:1fr}
+.calc-wrap{padding:16px 12px}
+.calc-card{padding:20px 16px}
+.result-range{font-size:1.8rem}
+.trust-bar{gap:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="calc-wrap" id="app">
+<div class="calc-header">
+<h1>Swimming pool renovation cost calculator</h1>
+<p>Get an instant estimate based on 150+ pool projects across Dubai. Real pricing, no guesswork.</p>
+</div>
+
+<div class="progress-bar">
+<div class="progress-dot active" id="p1"></div>
+<div class="progress-dot" id="p2"></div>
+<div class="progress-dot" id="p3"></div>
+<div class="progress-dot" id="p4"></div>
+</div>
+
+<!-- Step 1: Pool Size -->
+<div class="calc-card" id="step1">
+<h2>Step 1 — Your pool size</h2>
+<div class="option-grid cols-3">
+<div class="option-btn" data-group="size" data-value="small" onclick="selectOption(this)">
+<span class="icon">◻</span>
+<span class="label">Small</span>
+<span class="sub">Up to 25 sqm</span>
+</div>
+<div class="option-btn" data-group="size" data-value="medium" onclick="selectOption(this)">
+<span class="icon">◻◻</span>
+<span class="label">Medium</span>
+<span class="sub">25–50 sqm</span>
+</div>
+<div class="option-btn" data-group="size" data-value="large" onclick="selectOption(this)">
+<span class="icon">◻◻◻</span>
+<span class="label">Large</span>
+<span class="sub">50+ sqm</span>
+</div>
+</div>
+</div>
+
+<!-- Step 2: Renovation Type -->
+<div class="calc-card" id="step2" style="opacity:0.5;pointer-events:none">
+<h2>Step 2 — What do you need?</h2>
+<div class="option-grid cols-2">
+<div class="option-btn" data-group="type" data-value="retile" onclick="selectOption(this)">
+<span class="icon">🔲</span>
+<span class="label">Retiling only</span>
+<span class="sub">New tiles, grout, waterproofing</span>
+</div>
+<div class="option-btn" data-group="type" data-value="full" onclick="selectOption(this)">
+<span class="icon">🔄</span>
+<span class="label">Full renovation</span>
+<span class="sub">Tiles + filtration + plumbing + coping</span>
+</div>
+<div class="option-btn" data-group="type" data-value="new" onclick="selectOption(this)">
+<span class="icon">✨</span>
+<span class="label">New pool</span>
+<span class="sub">Build from scratch</span>
+</div>
+<div class="option-btn" data-group="type" data-value="upgrade" onclick="selectOption(this)">
+<span class="icon">⬆</span>
+<span class="label">Upgrade & enhance</span>
+<span class="sub">Add features to existing pool</span>
+</div>
+</div>
+</div>
+
+<!-- Step 3: Features -->
+<div class="calc-card" id="step3" style="opacity:0.5;pointer-events:none">
+<h2>Step 3 — Additional features (optional)</h2>
+<div class="feature-grid">
+<div class="feature-btn" data-feature="filtration" onclick="toggleFeature(this)">
+<div class="check"></div>
+<div class="feat-text">
+<span class="feat-label">Filtration upgrade</span>
+<span class="feat-price">New pump, filter & plumbing</span>
+</div>
+</div>
+<div class="feature-btn" data-feature="heating" onclick="toggleFeature(this)">
+<div class="check"></div>
+<div class="feat-text">
+<span class="feat-label">Pool heating</span>
+<span class="feat-price">Heat pump or solar</span>
+</div>
+</div>
+<div class="feature-btn" data-feature="lighting" onclick="toggleFeature(this)">
+<div class="check"></div>
+<div class="feat-text">
+<span class="feat-label">LED lighting</span>
+<span class="feat-price">Underwater + perimeter</span>
+</div>
+</div>
+<div class="feature-btn" data-feature="coping" onclick="toggleFeature(this)">
+<div class="check"></div>
+<div class="feat-text">
+<span class="feat-label">New coping & deck</span>
+<span class="feat-price">Stone or porcelain coping</span>
+</div>
+</div>
+<div class="feature-btn" data-feature="infinity" onclick="toggleFeature(this)">
+<div class="check"></div>
+<div class="feat-text">
+<span class="feat-label">Infinity edge</span>
+<span class="feat-price">Vanishing edge system</span>
+</div>
+</div>
+<div class="feature-btn" data-feature="automation" onclick="toggleFeature(this)">
+<div class="check"></div>
+<div class="feat-text">
+<span class="feat-label">Smart automation</span>
+<span class="feat-price">App-controlled pump & lights</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Result -->
+<div class="result-card" id="result" style="display:none">
+<div class="result-label">Your estimated cost</div>
+<div class="result-range" id="rangeText">AED 25,000 – 40,000</div>
+<div class="result-note">Based on 150+ pool projects in Dubai. Final price confirmed after free site visit.</div>
+
+<div class="result-breakdown" id="breakdown"></div>
+
+<a class="wa-btn" id="waBtn" href="#" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+Get your exact quote on WhatsApp
+</a>
+
+<div class="trust-bar">
+<span class="trust-item"><svg viewBox="0 0 20 20"><path d="M10 0l2.5 7.5H20l-6 4.5 2.5 7.5-6-4.5-6 4.5 2.5-7.5-6-4.5h7.5z"/></svg> 150+ pools completed</span>
+<span class="trust-item"><svg viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 00-1.4 0L8 12.6 4.7 9.3a1 1 0 00-1.4 1.4l4 4a1 1 0 001.4 0l8-8a1 1 0 000-1.4z"/></svg> Free site visit</span>
+<span class="trust-item"><svg viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v4.6L2.3 14.3a1 1 0 00.7 1.7h14a1 1 0 00.7-1.7L16 12.6V8a6 6 0 00-6-6zm-2 15a2 2 0 004 0H8z"/></svg> Response in 15 min</span>
+</div>
+</div>
+
+<div class="disclaimer">Prices are indicative estimates based on past projects. Your actual quote depends on pool condition, access, materials selected, and site-specific factors. A free site visit is required for an exact quotation. All prices in AED.</div>
+</div>
+
+<script>
+const state = { size: null, type: null, features: new Set() };
+
+const PRICING = {
+  base: {
+    retile:  { small: [25000,35000],  medium: [35000,55000],  large: [55000,85000] },
+    full:    { small: [60000,90000],  medium: [90000,140000], large: [140000,220000] },
+    new:     { small: [80000,120000], medium: [120000,200000],large: [200000,350000] },
+    upgrade: { small: [15000,25000],  medium: [25000,45000],  large: [45000,75000] }
+  },
+  features: {
+    filtration:  { small: [12000,18000], medium: [18000,28000], large: [28000,40000] },
+    heating:     { small: [8000,15000],  medium: [15000,25000], large: [25000,40000] },
+    lighting:    { small: [4000,8000],   medium: [8000,14000],  large: [14000,22000] },
+    coping:      { small: [10000,18000], medium: [18000,30000], large: [30000,50000] },
+    infinity:    { small: [35000,55000], medium: [55000,85000], large: [85000,130000] },
+    automation:  { small: [5000,10000],  medium: [8000,15000],  large: [12000,20000] }
+  },
+  labels: {
+    retile: 'Pool retiling', full: 'Full renovation', new: 'New pool construction', upgrade: 'Pool upgrade',
+    filtration: 'Filtration upgrade', heating: 'Pool heating', lighting: 'LED lighting',
+    coping: 'New coping & deck', infinity: 'Infinity edge', automation: 'Smart automation'
+  }
+};
+
+function fmt(n) { return 'AED ' + n.toLocaleString('en-AE'); }
+
+function selectOption(el) {
+  const group = el.dataset.group;
+  const value = el.dataset.value;
+  state[group] = value;
+  
+  document.querySelectorAll(`[data-group="${group}"]`).forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  
+  if (group === 'size') {
+    document.getElementById('step2').style.opacity = '1';
+    document.getElementById('step2').style.pointerEvents = 'auto';
+    document.getElementById('p2').classList.add('active');
+  }
+  if (group === 'type') {
+    document.getElementById('step3').style.opacity = '1';
+    document.getElementById('step3').style.pointerEvents = 'auto';
+    document.getElementById('p3').classList.add('active');
+  }
+  
+  calculate();
+}
+
+function toggleFeature(el) {
+  const feat = el.dataset.feature;
+  if (state.features.has(feat)) {
+    state.features.delete(feat);
+    el.classList.remove('selected');
+  } else {
+    state.features.add(feat);
+    el.classList.add('selected');
+  }
+  calculate();
+}
+
+function calculate() {
+  if (!state.size || !state.type) return;
+  
+  document.getElementById('p4').classList.add('active');
+  
+  const base = PRICING.base[state.type][state.size];
+  let totalLow = base[0];
+  let totalHigh = base[1];
+  
+  let breakdownHTML = `<div class="breakdown-row"><span class="bd-label">${PRICING.labels[state.type]}</span><span class="bd-value">${fmt(base[0])} – ${fmt(base[1])}</span></div>`;
+  
+  state.features.forEach(feat => {
+    const fp = PRICING.features[feat][state.size];
+    totalLow += fp[0];
+    totalHigh += fp[1];
+    breakdownHTML += `<div class="breakdown-row"><span class="bd-label">${PRICING.labels[feat]}</span><span class="bd-value">${fmt(fp[0])} – ${fmt(fp[1])}</span></div>`;
+  });
+  
+  breakdownHTML += `<div class="breakdown-row total"><span class="bd-label">Estimated total</span><span class="bd-value">${fmt(totalLow)} – ${fmt(totalHigh)}</span></div>`;
+  
+  document.getElementById('rangeText').textContent = `${fmt(totalLow)} – ${fmt(totalHigh)}`;
+  document.getElementById('breakdown').innerHTML = breakdownHTML;
+  
+  const result = document.getElementById('result');
+  if (result.style.display === 'none') {
+    result.style.display = 'block';
+    result.style.animation = 'fadeIn .4s ease';
+  }
+  
+  // Build WhatsApp message
+  const sizeLabel = state.size === 'small' ? 'Small (up to 25sqm)' : state.size === 'medium' ? 'Medium (25-50sqm)' : 'Large (50+ sqm)';
+  const typeLabel = PRICING.labels[state.type];
+  const featLabels = Array.from(state.features).map(f => PRICING.labels[f]).join(', ');
+  
+  let msg = `Hi, I used the pool cost calculator and got an estimate of ${fmt(totalLow)} – ${fmt(totalHigh)}.%0A%0A`;
+  msg += `Pool size: ${sizeLabel}%0A`;
+  msg += `Service: ${typeLabel}%0A`;
+  if (featLabels) msg += `Features: ${featLabels}%0A`;
+  msg += `%0AI'd like to book a free site visit for an exact quote. [Source: Pool Calculator]`;
+  
+  document.getElementById('waBtn').href = `https://wa.me/971585658002?text=${msg}`;
+}
+
+// Add fadeIn animation
+const style = document.createElement('style');
+style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}';
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>
